@@ -105,7 +105,7 @@ p {
             background-repeat: no-repeat;
             width: 120px;
             top: 8px;
-            left: 20px;
+            left: 80px;
         }
         .nav > li > a,
         .nav > li > a:focus {
@@ -222,48 +222,21 @@ section {
     }
 }
 
-section.download {
-    padding: 150px 0;
-    position: relative;
-    h2 {
-        margin-top: 0;
-        font-size: 50px;
-    }
-    .badges {
-        .badge-link {
-            display: block;
-            margin-bottom: 25px;
-            &:last-child {
-                margin-bottom: 0;
-            }
-            img {
-                height: 60px;
-            }
-            @media(min-width: 768px) {
-                display: inline-block;
-                margin-bottom: 0;
-            }
-        }
-    }
-    @media(min-width: 768px) {
-        h2 {
-            font-size: 70px;
-        }
-    }
-}
-
-section.features {
+section.features, section.benefits {
     .section-heading {
         h2 {
             margin-top: 0;
         }
         p {
             margin-bottom: 0;
+            font-weight: 300;
+        }
+        hr {
+            border-color: rgba(255,255,255,.6);
         }
         margin-bottom: 100px;
     }
-    .device-container,
-    .feature-item {
+    .device-container, .feature-item {
         max-width: 300px;
         margin: 0 auto;
     }
@@ -278,6 +251,9 @@ section.features {
         margin-bottom: 100px;
         h3 {
             font-size: 30px;
+        }
+        p {
+          font-weight: 300;
         }
         i {
             font-size: 80px;
@@ -295,6 +271,29 @@ section.features {
     }
 }
 
+section.features {
+  .section-heading {
+    p {
+        color: #ececec;
+    }
+  }
+  .device-container {
+    max-width: 400px;
+  }
+  .feature-item {
+    max-width: 500px;
+    text-align: left;
+    p {
+      color: #cecece;
+    }
+  }
+  @media (min-width: 768px) {
+    .device-container {
+      margin: 0
+    }
+  }
+}
+
 section.cta {
     position: relative;
     .background-cover;
@@ -308,8 +307,20 @@ section.cta {
             margin-top: 0;
             margin-bottom: 25px;
             color: white;
-            max-width: 450px;
+            max-width: 550px;
             font-size: 50px;
+        }
+        h3 {
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: #dcdcdc;
+            max-width: 550px;
+            font-size: 20px;
+        }
+        .hint {
+          font-size: 12px;
+          margin: 25px 0 0;
+          color: #999;
         }
         @media (min-width: 768px) {
             h2 {
@@ -406,8 +417,20 @@ footer {
 
 .bg-primary {
     background: @theme-primary;
-    background: -webkit-linear-gradient(@theme-primary , darken(@theme-primary, 5%));
-    background: linear-gradient(@theme-primary , darken(@theme-primary, 5%));
+    background: -webkit-linear-gradient(@theme-primary , darken(@theme-primary, 10%));
+    background: linear-gradient(@theme-primary , darken(@theme-primary, 10%));
+}
+
+.bg-secondary {
+    background: @theme-secondary;
+    background: -webkit-linear-gradient(@theme-secondary , darken(@theme-secondary, 10%));
+    background: linear-gradient(@theme-secondary , darken(@theme-secondary, 10%));
+}
+
+.bg-tertiary {
+    background: @theme-tertiary;
+    background: -webkit-linear-gradient(@theme-tertiary , darken(@theme-tertiary, 8%));
+    background: linear-gradient(@theme-tertiary , darken(@theme-tertiary, 8%));
 }
 
 .text-primary {

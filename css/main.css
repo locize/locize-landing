@@ -9,7 +9,7 @@
   letter-spacing: 1px;
 }
 .body-font {
-  font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'Roboto Condensed', 'Helvetica', 'Arial', 'sans-serif';
 }
 .alt-font {
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
@@ -22,17 +22,17 @@ body {
   width: 100%;
 }
 body {
-  font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'Roboto Condensed', 'Helvetica', 'Arial', 'sans-serif';
 }
 a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  color: #4B8DCE;
+  color: #2196f3;
 }
 a:hover,
 a:focus {
-  color: #3174b5;
+  color: #0c7cd5;
 }
 hr {
   max-width: 100px;
@@ -97,11 +97,11 @@ p {
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus:hover {
-  color: #4B8DCE;
+  color: #2196f3;
 }
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
-  color: #4B8DCE !important;
+  color: #2196f3 !important;
   background-color: transparent;
 }
 .navbar-default .nav > li.active > a:hover,
@@ -119,7 +119,7 @@ p {
     background-repeat: no-repeat;
     width: 120px;
     top: 8px;
-    left: 20px;
+    left: 80px;
   }
   .navbar-default .nav > li > a,
   .navbar-default .nav > li > a:focus {
@@ -142,7 +142,7 @@ p {
   }
   .navbar-default.affix .nav > li > a:hover,
   .navbar-default.affix .nav > li > a:focus:hover {
-    color: #4B8DCE;
+    color: #2196f3;
   }
 }
 header {
@@ -190,7 +190,7 @@ header .header-content .header-content-inner .list-badges img {
   margin-bottom: 25px;
 }
 header .header-content .header-content-inner .btn-outline {
-  background: #4B8DCE;
+  background: #2196f3;
 }
 header .device-container {
   max-width: 300px;
@@ -235,75 +235,85 @@ section {
 section h2 {
   font-size: 50px;
 }
-section.download {
-  padding: 150px 0;
-  position: relative;
-}
-section.download h2 {
-  margin-top: 0;
-  font-size: 50px;
-}
-section.download .badges .badge-link {
-  display: block;
-  margin-bottom: 25px;
-}
-section.download .badges .badge-link:last-child {
-  margin-bottom: 0;
-}
-section.download .badges .badge-link img {
-  height: 60px;
-}
-@media (min-width: 768px) {
-  section.download .badges .badge-link {
-    display: inline-block;
-    margin-bottom: 0;
-  }
-}
-@media (min-width: 768px) {
-  section.download h2 {
-    font-size: 70px;
-  }
-}
-section.features .section-heading {
+section.features .section-heading,
+section.benefits .section-heading {
   margin-bottom: 100px;
 }
-section.features .section-heading h2 {
+section.features .section-heading h2,
+section.benefits .section-heading h2 {
   margin-top: 0;
 }
-section.features .section-heading p {
+section.features .section-heading p,
+section.benefits .section-heading p {
   margin-bottom: 0;
+  font-weight: 300;
+}
+section.features .section-heading hr,
+section.benefits .section-heading hr {
+  border-color: rgba(255, 255, 255, 0.6);
 }
 section.features .device-container,
-section.features .feature-item {
+section.benefits .device-container,
+section.features .feature-item,
+section.benefits .feature-item {
   max-width: 300px;
   margin: 0 auto;
 }
-section.features .device-container {
+section.features .device-container,
+section.benefits .device-container {
   margin-bottom: 100px;
 }
 @media (min-width: 992px) {
-  section.features .device-container {
+  section.features .device-container,
+  section.benefits .device-container {
     margin-bottom: 0;
   }
 }
-section.features .feature-item {
+section.features .feature-item,
+section.benefits .feature-item {
   text-align: center;
   margin-bottom: 100px;
 }
-section.features .feature-item h3 {
+section.features .feature-item h3,
+section.benefits .feature-item h3 {
   font-size: 30px;
 }
-section.features .feature-item i {
+section.features .feature-item p,
+section.benefits .feature-item p {
+  font-weight: 300;
+}
+section.features .feature-item i,
+section.benefits .feature-item i {
   font-size: 80px;
-  background: -webkit-linear-gradient(to left, #2196f3, #1976d2);
-  background: linear-gradient(to left, #2196f3, #1976d2);
+  background: -webkit-linear-gradient(to left, #4B8DCE, #15419a);
+  background: linear-gradient(to left, #4B8DCE, #15419a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 @media (min-width: 992px) {
   section.features .device-container,
-  section.features .feature-item {
+  section.benefits .device-container,
+  section.features .feature-item,
+  section.benefits .feature-item {
     max-width: none;
+  }
+}
+section.features .section-heading p {
+  color: #ececec;
+}
+section.features .device-container {
+  max-width: 400px;
+}
+section.features .feature-item {
+  max-width: 500px;
+  text-align: left;
+}
+section.features .feature-item p {
+  color: #cecece;
+}
+@media (min-width: 768px) {
+  section.features .device-container {
+    margin: 0;
   }
 }
 section.cta {
@@ -324,8 +334,20 @@ section.cta .cta-content h2 {
   margin-top: 0;
   margin-bottom: 25px;
   color: white;
-  max-width: 450px;
+  max-width: 550px;
   font-size: 50px;
+}
+section.cta .cta-content h3 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: #dcdcdc;
+  max-width: 550px;
+  font-size: 20px;
+}
+section.cta .cta-content .hint {
+  font-size: 12px;
+  margin: 25px 0 0;
+  color: #999;
 }
 @media (min-width: 768px) {
   section.cta .cta-content h2 {
@@ -404,12 +426,22 @@ footer ul li a.active {
   text-decoration: none;
 }
 .bg-primary {
+  background: #2196f3;
+  background: -webkit-linear-gradient(#2196f3, #0c7cd5);
+  background: linear-gradient(#2196f3, #0c7cd5);
+}
+.bg-secondary {
   background: #4B8DCE;
-  background: -webkit-linear-gradient(#4B8DCE, #3780c9);
-  background: linear-gradient(#4B8DCE, #3780c9);
+  background: -webkit-linear-gradient(#4B8DCE, #3174b5);
+  background: linear-gradient(#4B8DCE, #3174b5);
+}
+.bg-tertiary {
+  background: #15419a;
+  background: -webkit-linear-gradient(#15419a, #103276);
+  background: linear-gradient(#15419a, #103276);
 }
 .text-primary {
-  color: #4B8DCE;
+  color: #2196f3;
 }
 .no-gutter > [class*='col-'] {
   padding-right: 0;
@@ -425,8 +457,8 @@ footer ul li a.active {
 .btn-outline:active,
 .btn-outline.active {
   color: white;
-  background-color: #4B8DCE;
-  border-color: #4B8DCE;
+  background-color: #2196f3;
+  border-color: #2196f3;
 }
 .btn {
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
