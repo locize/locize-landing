@@ -99,7 +99,7 @@ gulp.task('browserSync', function() {
 
 // Dev task with browserSync
 gulp.task('dev', ['browserSync', 'pug', 'less', 'minify-css', 'minify-js'], function() {
-    gulp.watch('/*.pug', ['pug']);
+    gulp.watch('*.pug', ['pug']);
     gulp.watch('less/*.less', ['less']);
     gulp.watch('css/*.css', ['minify-css']);
     gulp.watch('js/*.js', ['minify-js']);
