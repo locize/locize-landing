@@ -1,0 +1,54 @@
+section.customers {
+  padding: 10px 0;
+  background-color: @gray-lighter;
+  .flex-space {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  img {
+    display: inline-block;
+    max-height: 60px;
+  }
+}
+
+// overrides benefits, features
+section.testimonials {
+  background-color: @gray-lighter;
+  .section-heading {
+      hr {
+          border-color: rgba(0,0,0,.2);
+      }
+  }
+  .testimonial-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .testimonial {
+    display: inline-block;
+    border: solid 1px #ccc;
+    color: #555;
+    font-weight: 300;
+    max-width: 350px;
+    background-color: white;
+    padding: 30px 20px;
+    .author {
+      color: #222;
+      font-style: italic;
+      margin: 10px 0 0 ;
+    }
+    .testimonial-title {
+      min-height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      display: inline-block;
+      max-height: 60px;
+      margin-bottom: 40px;
+    }
+  }
+}

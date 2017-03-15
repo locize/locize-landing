@@ -1,0 +1,43 @@
+section.cta {
+    position: relative;
+    .background-cover;
+    background-position: center;
+    background-image: url('../img/bg-cta-0.png');
+    padding: 250px 0;
+    .cta-content {
+        position: relative;
+        z-index: 1;
+        h2 {
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: white;
+            max-width: 550px;
+            font-size: 50px;
+        }
+        h3 {
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: #dcdcdc;
+            max-width: 550px;
+            font-size: 20px;
+        }
+        .hint {
+          font-size: 12px;
+          margin: 25px 0 0;
+          color: #999;
+        }
+        @media (min-width: 768px) {
+            h2 {
+                font-size: 80px;
+            }
+        }
+    }
+    .overlay {
+        height: 100%;
+        width: 100%;
+        background-color: fade(black, 50%);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}

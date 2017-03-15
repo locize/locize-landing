@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
+var pug = require('gulp-pug');
 var browserSync = require('browser-sync').create();
 var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
@@ -25,6 +26,17 @@ gulp.task('less', function() {
         .pipe(browserSync.reload({
             stream: true
         }))
+});
+
+gulp.task('pug', function buildHTML() {
+  return gulp.src('index.pug')
+    .pipe(pug({
+      pretty: true
+    }))
+    .pipe(gulp.dest(''))
+    .pipe(browserSync.reload({
+        stream: true
+    }))
 });
 
 // Minify compiled CSS
@@ -74,7 +86,7 @@ gulp.task('copy', function() {
 })
 
 // Run everything
-gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy']);
+gulp.task('default', ['pug', 'less', 'minify-css', 'minify-js', 'copy']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
@@ -86,7 +98,8 @@ gulp.task('browserSync', function() {
 })
 
 // Dev task with browserSync
-gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() {
+gulp.task('dev', ['browserSync', 'pug', 'less', 'minify-css', 'minify-js'], function() {
+    gulp.watch('/*.pug', ['pug']);
     gulp.watch('less/*.less', ['less']);
     gulp.watch('css/*.css', ['minify-css']);
     gulp.watch('js/*.js', ['minify-js']);

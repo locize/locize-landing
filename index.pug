@@ -1,0 +1,299 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title locize - localization as a service
+    link(href='lib/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Lato', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='lib/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='lib/simple-line-icons/css/simple-line-icons.css')
+    link(rel='stylesheet', href='lib/device-mockups/device-mockups.min.css')
+    link(href='css/main.min.css', rel='stylesheet')
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+  body#page-top
+    nav#mainNav.navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            |  Menu
+            i.fa.fa-bars
+          a.navbar-brand.page-scroll(href='#page-top')
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a.page-scroll(href='#features') Features
+            li
+              a(href='/integration.html') Documentation
+            li
+              a(href='/blog.html') Blog
+            li
+              a.page-scroll(href='#contact') Contact
+            li
+              a(href='https://www.locize.io', target='_blank') Login
+    header
+      .header-overlay
+        .container
+          .row
+            .col-sm-7
+              .header-content
+                .header-content-inner
+                  img#brand-logo(src='img/locize_white.svg', style='max-width: 300px; margin-bottom: 30px;')
+                  h1 Bridging the gap between translation and development.
+                  |
+                  a.btn.btn-outline.btn-xl.page-scroll(href='#download') Start Now for Free!
+            .col-sm-5
+              .device-container
+                .device-mockup.iphone6_plus.portrait.white
+                  .device
+                    .screen
+                      img.img-responsive(src='img/screenshots/app_version.png', alt='')
+                    .button
+    section#customers.customers
+      .container
+        .row
+          .col-lg-12.flex-space
+            img.grayscale(src='img/customers/wuxus.png')
+            |
+            img.grayscale(style='max-height: 40px', src='img/customers/mergevr.png')
+            |
+            img.grayscale(style='max-height: 35px', src='img/customers/wusoma.png')
+            |
+            img.grayscale(style='max-height: 50px', src='img/customers/gamerefinery.png')
+    section#features.features.bg-primary.text-center
+      .container
+        .row
+          .col-lg-12.text-center
+            .section-heading
+              h2 Grow global &ndash; get locized
+              p
+                | Find out what locize can offer to make your localization experience a success story.
+              p
+                | You will ask yourself how could you live with sending around translation files in the past.
+              hr
+        .row
+          .col-md-12
+            .container-fluid
+              .row
+                .col-md-6
+                  .feature-item
+                    .device-container
+                      .device-mockup.macbook_2015.silver
+                        .device
+                          .screen
+                            img.img-responsive(src='img/demo-screen-1.jpg', alt='')
+                          .button
+                    h3 Time saving up to 90%
+                    p
+                      | Dropping one line of code on your website is all needed to get started. All your content gets extracted and send to your locize project ready to be translated.
+                    p
+                      | Every change on your websites content gets instantly reflected on your locize project and vice versa.
+                .col-md-6
+                  .feature-item
+                    .device-container
+                      .device-mockup.macbook_2015.silver
+                        .device
+                          .screen
+                            img.img-responsive(src='img/demo-screen-1.jpg', alt='')
+                    h3 Continuous Localization Lifecycle
+                    p
+                      | locize enables you to separate your development and translation process. Keep translating while the development adds new features to your project.
+                    p
+                      | Easily keep track of newly added segments. Never lose the overview over your translation progress.
+              .row
+                .col-md-6
+                  .feature-item
+                    .device-container
+                      .device-mockup.macbook_2015.silver
+                        .device
+                          .screen
+                            img.img-responsive(src='img/incontext_editor.png', alt='')
+                    h3 Context Matters &mdash; InContext Editing
+                    p
+                      | Doing correct translations needs more information by providing context informations. The best context is always the place where the content is used - your website!
+                    p
+                      | Our incontext editor enables you to directly change your translations from inside your website.
+                .col-md-6
+                  .feature-item
+                    .device-container
+                      .device-mockup.macbook_2015.silver
+                        .device
+                          .screen
+                            img.img-responsive(src='img/demo-screen-1.jpg', alt='')
+                    h3 Translation Management
+                    p
+                      | You can translate your content by using our powerful editor. Invite your inhouse translators giving them the rights for just the languages needed.
+                    p
+                      | Needing extra help or prefer to completely outsourcing the work? Choose one of our translation service partners.
+    section#testimonials.testimonials
+      .container
+        .row
+          .col-lg-12.text-center
+            .section-heading
+              h2 Customer Testimonials
+              p.text-muted Hear what our customers have to say!
+              hr
+        .row
+          .col-lg-12
+            .testimonial-container
+              .testimonial
+                .testimonial-title
+                  img.grayscale(src='img/customers/wuxus.png')
+                p
+                  | While working on i18next i always had the dream to improve the localization experience. This dream came true with locize.com.
+                p
+                  | We work hard to continuosly improve and learn from our customers. This is only the beginning.
+                hr
+                p.author
+                  | Jan M&uuml;hlemann
+                  br
+                  | Founder
+                  a(href='#') locize.com
+              .testimonial
+                .testimonial-title
+                  img.grayscale(style='max-height: 40px', src='img/customers/mergevr.png')
+                p
+                  | While working on i18next i always had the dream to improve the localization experience. This dream came true with locize.com.
+                p
+                  | We work hard to continuosly improve and learn from our customers. This is only the beginning.
+                hr
+                p.author
+                  | Jan M&uuml;hlemann
+                  br
+                  | Founder
+                  a(href='#') locize.com
+              .testimonial
+                .testimonial-title
+                  img.grayscale(style='max-height: 50px', src='img/customers/gamerefinery.png')
+                p
+                  | While working on i18next i always had the dream to improve the localization experience. This dream came true with locize.com.
+                p
+                  | We work hard to continuosly improve and learn from our customers. This is only the beginning.
+                hr
+                p.author
+                  | Jan M&uuml;hlemann
+                  br
+                  | Founder
+                  a(href='#') locize.com
+    section#benefits.benefits
+      .container
+        .row
+          .col-lg-12.text-center
+            .section-heading
+              h2 Get translated today. Effortless &amp; riskfree.
+              p.text-muted Check out what you can do with this app theme!
+              hr
+        .row
+          .col-md-4
+            .device-container
+              .device-mockup.ipad_air_2.portrait.silver
+                .device
+                  .screen
+                    img.img-responsive(src='img/demo-screen-1.jpg', alt='')
+          .col-md-8
+            .container-fluid
+              .row
+                .col-md-6
+                  .feature-item
+                    i.icon-directions.text-primary
+                    h3 Flexible Integration
+                    p.text-muted
+                      | Choose between flexible integration options meeting your needs. From integration to wordpress or instrumenting your app using react.js, angular, ...
+                    p.text-muted
+                      | From our one liner scripts enabling localization to non developers to instrumeting with i18next, formatjs, polyglot, ...
+                .col-md-6
+                  .feature-item
+                    i.icon-target.text-primary
+                    h3 Risk free
+                    p.text-muted
+                      | In contrast to other solutions out there we built on most popular open source frameworks.
+                    p.text-muted
+                      | So if you ever plan to stop using locize your translations could be used by i18next, formatjs or polyglot. Nothing is lost.
+                    p.text-muted
+                      | We believe in the value of our solution - no need to make you dependent on our solution.
+              .row
+                .col-md-6
+                  .feature-item
+                    i.icon-pie-chart.text-primary
+                    h3 Project progress
+                    p.text-muted
+                      | We provide you will all analytic information needed to be optimal informed about your progress!
+                    p.text-muted You will always keep the overview. Never lose the overview again.
+                .col-md-6
+                  .feature-item
+                    i.icon-credit-card.text-primary
+                    h3 Variable pricing
+                    p.text-muted
+                      | Pay for what you use. There are no intransparent plans forcing you to pay for stuff you do not need.
+                    p.text-muted
+                      | Costs adapt to your usage. Learn more using our
+                      a(href='/pricing.html') price calculator
+                      | .
+                    p.text-muted Further you find a billing forecast and history inside your project.
+    section.cta
+      .cta-content
+        .container
+          h2
+            | Stop waiting.
+            br
+            | Start localizing.
+          h3
+            | Start with trying our demo showcasing all features of locize or create a new project and translate your product.
+          |
+          a.btn.btn-outline.btn-xl.page-scroll(href='#contact') Let&apos;s Get Started!
+          p.hint * 14d free trial. No credit card needed! No obligations!
+      .overlay
+    section#contact.contact.bg-tertiary
+      .container
+        h2 Have questions?
+        p Building a global business can be challenging. We will help you getting there.
+        |
+        a.btn.btn-outline.btn-xl.page-scroll(href='#contact') Contact us!
+    footer
+      .container
+        .row
+          .col-md-4
+            img(src='img/locize_color.svg', style='max-width: 120px; margin-left: -5px;')
+            p inweso GmbH
+            p Switzerland
+          .col-md-4
+            ul.list-unstyled
+              li
+                a(href='#') Documentation
+              li
+                a(href='#') Pricing
+              li
+                a(href='#') Blog
+              li
+                a(href='#') FAQ
+          .col-md-4
+            ul.list-unstyled
+              li
+                ul.list-inline.list-social
+                  li.social-twitter
+                    a(href='#')
+                      i.fa.fa-twitter
+                  li.social-facebook
+                    a(href='#')
+                      i.fa.fa-facebook
+                  li.social-google-plus
+                    a(href='#')
+                      i.fa.fa-google-plus
+              li
+                a(href='#') Privacy
+              li
+                a(href='#') Terms
+        .text-center.footer-copyright
+          p &copy; 2017 inweso GmbH. All Rights Reserved.
+    script(src='lib/jquery/jquery.min.js')
+    script(src='lib/bootstrap/js/bootstrap.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')
+    script(src='js/main.min.js')
