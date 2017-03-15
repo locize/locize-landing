@@ -407,6 +407,7 @@ section.features .feature-item p {
 section.customers {
   padding: 10px 0;
   background-color: #eeeeee;
+  border-top: solid 1px #ccc;
 }
 section.customers .flex-space {
   display: flex;
