@@ -28,17 +28,27 @@ section.testimonials {
     justify-content: space-around;
   }
   .testimonial {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     border: solid 1px #ccc;
     color: #555;
     font-weight: 300;
     max-width: 350px;
     background-color: white;
     padding: 30px 20px;
+    .testimonial-content {
+      flex-grow: 1;
+      margin-bottom: auto;
+    }
     .author {
+      margin-top: auto;
       color: #222;
       font-style: italic;
-      margin: 10px 0 0 ;
+      margin: 10px 0 0;
+      hr {
+          margin-bottom: 40px;
+          border-color: rgba(0,0,0,.2);
+      }
     }
     .testimonial-title {
       min-height: 100px;

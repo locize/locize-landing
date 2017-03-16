@@ -59,7 +59,7 @@ html(lang='en')
                   .device
                     .screen
                       img.img-responsive(src='img/screenshots/iphone6/dashboard.png', alt='')
-                    .button
+                    // .button
 
     section#customers.customers
       .container
@@ -69,7 +69,8 @@ html(lang='en')
             |
             img.grayscale(style='max-height: 40px', src='img/customers/mergevr.png')
             |
-            img.grayscale(style='max-height: 35px', src='img/customers/wusoma.png')
+            a(href="https://www.shoprepublic.de/" target="_blank")
+              img.grayscale(style='max-height: 50px', src='img/customers/shoprepublic.png')
             |
             img.grayscale(style='max-height: 50px', src='img/customers/gamerefinery.png')
 
@@ -80,9 +81,9 @@ html(lang='en')
             .section-heading
               h2 Grow global &ndash; get locized
               p
-                | Find out what locize can offer to make your localization experience a success story.
+                | Locize is more then a traditional translation management system.
               p
-                | You will ask yourself how could you live with sending around translation files in the past.
+                | Find out what locize can offer to make your localization experience a success story.
               hr
         .row
           .col-md-12
@@ -96,11 +97,13 @@ html(lang='en')
                           .screen
                             img.img-responsive(src='img/screenshots/screen/integrate.png', alt='')
                           .button
-                    h3 Time saving up to 90%
+                    h3 Time saving over 60%
                     p
-                      | Dropping one line of code on your website is all needed to get started. All your content gets extracted and send to your locize project ready to be translated.
+                      | Adding one line of code to your website is all needed to get started. All your content gets extracted and send to your locize project ready to be translated.
                     p
                       | Every change on your websites content gets instantly reflected on your locize project and vice versa.
+                    p
+                      | Never again copy/paste translations from a to b.
                 .col-md-6
                   .feature-item
                     .device-container
@@ -110,7 +113,9 @@ html(lang='en')
                             img.img-responsive(src='img/screenshots/screen/stats.png', alt='')
                     h3 Continuous Localization Lifecycle
                     p
-                      | locize enables you to separate your development and translation process. Keep translating while the development adds new features to your project.
+                      | Locize enables you to separate your development and translation process. Keep translating while the development adds new features to your project.
+                    p
+                      | Update translations anytime, anywhere. No longer be dependent on your development adding the new translation files to your codebase.
                     p
                       | Easily keep track of newly added segments. Never lose the overview over your translation progress.
               .row
@@ -123,9 +128,11 @@ html(lang='en')
                             img.img-responsive(src='img/screenshots/screen/incontext_editor.png', alt='')
                     h3 Context Matters &mdash; InContext Editing
                     p
-                      | Doing correct translations needs more information by providing context informations. The best context is always the place where the content is used - your website!
+                      | Doing correct translations needs more information by providing the context of informations. The best context is always the place where the content is used - your website!
                     p
                       | Our incontext editor enables you to directly change your translations from inside your website.
+                    p
+                      | Every text segment is one click away! Stop loosing time searching...
                 .col-md-6
                   .feature-item
                     .device-container
@@ -135,9 +142,11 @@ html(lang='en')
                             img.img-responsive(src='img/screenshots/screen/editor.png', alt='')
                     h3 Translation Management
                     p
-                      | You can translate your content by using our powerful editor. Invite your inhouse translators giving them the rights for just the languages needed.
+                      | You can translate your content using our powerful editor.
                     p
-                      | Needing extra help or prefer to completely outsourcing the work? Choose one of our translation service partners.
+                      | Invite your inhouse translators giving them the rights for the languages needed.
+                    p
+                      | Got a language not covered? Need extra help or prefer to completely outsource the job? Choose one of our translation service partners.
     section#testimonials.testimonials
       .container
         .row
@@ -151,43 +160,37 @@ html(lang='en')
             .testimonial-container
               .testimonial
                 .testimonial-title
-                  img.grayscale(src='img/customers/wuxus.png')
-                p
-                  | While working on i18next i always had the dream to improve the localization experience. This dream came true with locize.com.
-                p
-                  | We work hard to continuosly improve and learn from our customers. This is only the beginning.
-                hr
-                p.author
-                  | Jan M&uuml;hlemann
+                  img.grayscale(style='max-height: 50px', src='img/customers/gamerefinery.png')
+                .testimonial-content
+                  p
+                    | "With locize.com we could speed up our whole translation process by more than 50%!"
+                .author
+                  hr
+                  | Christian Schab, Founder
                   br
-                  | Founder
-                  a(href='#') locize.com
-              .testimonial
-                .testimonial-title
-                  img.grayscale(style='max-height: 40px', src='img/customers/mergevr.png')
-                p
-                  | While working on i18next i always had the dream to improve the localization experience. This dream came true with locize.com.
-                p
-                  | We work hard to continuosly improve and learn from our customers. This is only the beginning.
-                hr
-                p.author
-                  | Jan M&uuml;hlemann
-                  br
-                  | Founder
-                  a(href='#') locize.com
+                  a(href='https://www.shoprepublic.de/') ShopRepublic GmbH
               .testimonial
                 .testimonial-title
                   img.grayscale(style='max-height: 50px', src='img/customers/gamerefinery.png')
-                p
-                  | While working on i18next i always had the dream to improve the localization experience. This dream came true with locize.com.
-                p
-                  | We work hard to continuosly improve and learn from our customers. This is only the beginning.
-                hr
-                p.author
-                  | Jan M&uuml;hlemann
+                .testimonial-content
+                  p
+                    | "With locize.com we could speed up our whole translation process by more than 50%!"
+                .author
+                  hr
+                  | Christian Schab, Founder
                   br
-                  | Founder
-                  a(href='#') locize.com
+                  a(href='https://www.shoprepublic.de/' target="_blank") ShopRepublic GmbH
+              .testimonial
+                .testimonial-title
+                  img.grayscale(style='max-height: 50px', src='img/customers/shoprepublic.png')
+                .testimonial-content
+                  p
+                    | "With locize.com we could speed up our whole translation process by more than 50%!"
+                .author
+                  hr
+                  | Christian Schab, Founder
+                  br
+                  a(href='https://www.shoprepublic.de/') ShopRepublic GmbH
 
 
     section#benefits.benefits
@@ -196,7 +199,7 @@ html(lang='en')
           .col-lg-12.text-center
             .section-heading
               h2 Get translated today. Effortless &amp; riskfree.
-              p.text-muted Check out what you can do with this app theme!
+              p.text-muted From small landing page to big web application - locize adapts to your demands!
               hr
         .row
           .col-md-4
@@ -213,27 +216,32 @@ html(lang='en')
                     i.icon-directions.text-primary
                     h3 Flexible Integration
                     p.text-muted
-                      | Choose between flexible integration options meeting your needs. From integration to wordpress or instrumenting your app using react.js, angular, ...
+                      | Choose between flexible integration options meeting your needs. From integration to wordpress or instrumenting your app using react.js, angular, vue, ...
                     p.text-muted
-                      | From our one liner scripts enabling localization to non developers to instrumeting with i18next, formatjs, polyglot, ...
+                      | From our one liner scripts enabling localization even for non developers to instrumenting your code using i18next, formatjs, polyglot, ...
+                    p.text-muted
+                      | Contact us to profit from our experience. We will help you to decide on the best options.
                 .col-md-6
                   .feature-item
                     i.icon-target.text-primary
                     h3 Risk free
                     p.text-muted
-                      | In contrast to other solutions out there we built on most popular open source frameworks.
+                      | In contrast to other solutions out there we built our solution on most popular open source frameworks.
                     p.text-muted
-                      | So if you ever plan to stop using locize your translations could be used by i18next, formatjs or polyglot. Nothing is lost.
+                      | If you ever plan to stop using locize your translations could be used by i18next, formatjs or polyglot. Nothing lost. Zero risk.
                     p.text-muted
-                      | We believe in the value of our solution - no need to make you dependent on our solution.
+                      | We believe in the value of our solution. No need to make you dependent on our solution by being incompatible to standards.
               .row
                 .col-md-6
                   .feature-item
                     i.icon-pie-chart.text-primary
                     h3 Project progress
                     p.text-muted
-                      | We provide you will all analytic information needed to be optimal informed about your progress!
-                    p.text-muted You will always keep the overview. Never lose the overview again.
+                      | We provide you with all analytic information needed to be informed on your progress!
+                    p.text-muted
+                      | Always keep the overview and keep up translating your solution just in time.
+                    p.text-muted
+                      | Never fall behind in translating your project. Stop being the bottleneck in your agile prozess.
                 .col-md-6
                   .feature-item
                     i.icon-credit-card.text-primary
@@ -241,10 +249,11 @@ html(lang='en')
                     p.text-muted
                       | Pay for what you use. There are no intransparent plans forcing you to pay for stuff you do not need.
                     p.text-muted
-                      | Costs adapt to your usage. Learn more using our
+                      | Costs adapt to your usage. Learn more using our 
                       a(href='/pricing.html') price calculator
                       | .
-                    p.text-muted Further you find a billing forecast and history inside your project.
+                    p.text-muted
+                      | Further you find a billing forecast and history inside your project.
     section.cta
       .cta-content
         .container

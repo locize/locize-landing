@@ -328,7 +328,7 @@ section.testimonials .section-heading p {
 section.features .section-heading hr,
 section.benefits .section-heading hr,
 section.testimonials .section-heading hr {
-  border-color: rgba(255, 255, 255, 0.6);
+  border-color: rgba(0, 0, 0, 0.1);
 }
 section.features .device-container,
 section.benefits .device-container,
@@ -389,6 +389,9 @@ section.testimonials .feature-item i {
 section.features .section-heading p {
   color: #ececec;
 }
+section.features .section-heading hr {
+  border-color: rgba(255, 255, 255, 0.6);
+}
 section.features .device-container {
   max-width: 400px;
 }
@@ -431,7 +434,8 @@ section.testimonials .testimonial-container {
   justify-content: space-around;
 }
 section.testimonials .testimonial {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   border: solid 1px #ccc;
   color: #555;
   font-weight: 300;
@@ -439,10 +443,19 @@ section.testimonials .testimonial {
   background-color: white;
   padding: 30px 20px;
 }
+section.testimonials .testimonial .testimonial-content {
+  flex-grow: 1;
+  margin-bottom: auto;
+}
 section.testimonials .testimonial .author {
+  margin-top: auto;
   color: #222;
   font-style: italic;
-  margin: 10px 0 0 ;
+  margin: 10px 0 0;
+}
+section.testimonials .testimonial .author hr {
+  margin-bottom: 40px;
+  border-color: rgba(0, 0, 0, 0.2);
 }
 section.testimonials .testimonial .testimonial-title {
   min-height: 100px;
