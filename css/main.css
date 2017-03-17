@@ -240,11 +240,11 @@ header #brand-logo {
   top: -20px;
 }
 header .header-overlay {
-  background: url("../img/bg-pattern.png"), rgba(25, 118, 210, 0.3);
+  background: url("../img/bg-pattern2.png"), rgba(25, 118, 210, 0.3);
   /* fallback for old browsers */
-  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, rgba(0, 107, 222, 0.6), rgba(33, 150, 243, 0.4));
+  background: url("../img/bg-pattern2.png"), -webkit-linear-gradient(to left, rgba(0, 107, 222, 0.6), rgba(33, 150, 243, 0.4));
   /* Chrome 10-25, Safari 5.1-6 */
-  background: url("../img/bg-pattern.png"), linear-gradient(to left, rgba(0, 107, 222, 0.6), rgba(33, 150, 243, 0.4));
+  background: url("../img/bg-pattern2.png"), linear-gradient(to left, rgba(0, 107, 222, 0.6), rgba(33, 150, 243, 0.4));
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 header .header-content {
@@ -278,6 +278,11 @@ header .device-container {
 }
 header .device-container .screen img {
   border-radius: 3px;
+}
+header #particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 @media (min-width: 768px) {
   header {

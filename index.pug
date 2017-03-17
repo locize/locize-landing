@@ -44,22 +44,23 @@ html(lang='en')
 
     header
       .header-overlay
-        .container
-          .row
-            .col-sm-7
-              .header-content
-                .header-content-inner
-                  img#brand-logo(src='img/locize_white.svg', style='max-width: 300px; margin-bottom: 30px;')
-                  h1 Bridging the gap between translation and development.
-                  |
-                  a.btn.btn-outline.btn-xl.page-scroll(href='#download') Start Now for Free!
-            .col-sm-5
-              .device-container
-                .device-mockup.iphone6_plus.portrait.white
-                  .device
-                    .screen
-                      img.img-responsive(src='img/screenshots/iphone6/dashboard.png', alt='')
-                    // .button
+          #particles-js
+          .container
+            .row
+              .col-sm-7
+                .header-content
+                  .header-content-inner
+                    img#brand-logo(src='img/locize_white.svg', style='max-width: 300px; margin-bottom: 30px;')
+                    h1 Bridging the gap between translation and development.
+                    |
+                    a.btn.btn-outline.btn-xl.page-scroll(href='#download') Start Now for Free!
+              .col-sm-5
+                .device-container
+                  .device-mockup.iphone6_plus.portrait.white
+                    .device
+                      .screen
+                        img.img-responsive(src='img/screenshots/iphone6/dashboard.png', alt='')
+                      // .button
 
     section#customers.customers
       .container
@@ -113,9 +114,9 @@ html(lang='en')
                             img.img-responsive(src='img/screenshots/screen/stats.png', alt='')
                     h3 Continuous Localization Lifecycle
                     p
-                      | Locize enables you to separate your development and translation process. Keep translating while the development adds new features to your project.
+                      | Locize enables you to separate your development and translation process. Keep translating while your development team adds new features to your project.
                     p
-                      | Update translations anytime, anywhere. No longer be dependent on your development adding the new translation files to your codebase.
+                      | Update translations anytime, anywhere. No longer be dependent on your development team adding the new translation files to your codebase.
                     p
                       | Easily keep track of newly added segments. Never lose the overview over your translation progress.
               .row
@@ -218,7 +219,7 @@ html(lang='en')
                     p.text-muted
                       | Choose between flexible integration options meeting your needs. From integration to wordpress or instrumenting your app using react.js, angular, vue, ...
                     p.text-muted
-                      | From our one liner scripts enabling localization even for non developers to instrumenting your code using i18next, formatjs, polyglot, ...
+                      | From our one liner script enabling localization even for non developers to instrumenting your code using i18next, formatjs, polyglot, ...
                     p.text-muted
                       | Profit from our experience. We will help you to decide on the best options.
                 .col-md-6
@@ -311,5 +312,6 @@ html(lang='en')
           p &copy; 2017 inweso GmbH. All Rights Reserved.
     script(src='lib/jquery/jquery.min.js')
     script(src='lib/bootstrap/js/bootstrap.min.js')
+    script(src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')
     script(src='js/main.min.js')
