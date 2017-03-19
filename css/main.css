@@ -324,6 +324,11 @@ section.benefits .section-heading h2,
 section.testimonials .section-heading h2 {
   margin-top: 0;
 }
+section.features .section-heading p.head,
+section.benefits .section-heading p.head,
+section.testimonials .section-heading p.head {
+  font-size: 24px;
+}
 section.features .section-heading p,
 section.benefits .section-heading p,
 section.testimonials .section-heading p {
