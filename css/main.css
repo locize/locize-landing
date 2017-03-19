@@ -138,6 +138,14 @@ img.grayscale {
   -webkit-filter: grayscale(100%);
   /* Chrome 19+, Safari 6+, Safari 6+ iOS */
 }
+.cc_banner.cc_container.cc_container--open {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+.cc_btn.cc_btn_accept_all {
+  border-radius: 0 !important;
+  color: #fff !important;
+  background-color: #1976D2 !important;
+}
 .navbar-default {
   background-color: white;
   border-color: rgba(34, 34, 34, 0.05);
@@ -161,9 +169,10 @@ img.grayscale {
   left: 10px;
 }
 .navbar-default .navbar-header .navbar-toggle {
-  font-size: 12px;
+  font-size: 20px;
   color: #222222;
-  padding: 8px 10px;
+  padding: 5px 10px 0;
+  border: none;
 }
 .navbar-default .nav > li > a {
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
@@ -188,6 +197,44 @@ img.grayscale {
 .navbar-default .nav > li.active > a:focus:hover {
   background-color: transparent;
 }
+.navbar-default .selectLng .fa {
+  position: relative;
+  margin-left: -10px;
+  margin-right: 10px;
+}
+.navbar-default select {
+  /* styling */
+  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 20px;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  display: inline-block;
+  cursor: pointer;
+  padding: 15px;
+  outline: none;
+  /* reset */
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.navbar-default .selectLng .fa,
+.navbar-default .selectLng select {
+  color: #222222;
+}
+.navbar-default .selectLng select:hover {
+  color: #2196f3;
+}
+.navbar-default select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
 @media (min-width: 768px) {
   .navbar-default {
     background-color: transparent;
@@ -209,6 +256,13 @@ img.grayscale {
   .navbar-default .nav > li > a:focus:hover {
     color: white;
   }
+  .navbar-default .selectLng .fa,
+  .navbar-default .selectLng select {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .navbar-default .selectLng select:hover {
+    color: white;
+  }
   .navbar-default.affix {
     background-color: white;
     border-color: rgba(34, 34, 34, 0.1);
@@ -222,6 +276,13 @@ img.grayscale {
   }
   .navbar-default.affix .nav > li > a:hover,
   .navbar-default.affix .nav > li > a:focus:hover {
+    color: #2196f3;
+  }
+  .navbar-default.affix .selectLng .fa,
+  .navbar-default.affix .selectLng select {
+    color: #222222;
+  }
+  .navbar-default.affix .selectLng select:hover {
     color: #2196f3;
   }
 }

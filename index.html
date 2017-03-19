@@ -20,12 +20,32 @@
     script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
     
     -->
+    <!-- consent script    -->
+    <script>window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":"http://locize.com/privacy.html","theme":"dark-bottom"};</script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    <!-- LOCIZIFY-->
+    <script src="https://unpkg.com/locizify@^2.0.0"></script>
+    <script>
+      locizify.init({
+        // saveMissing: true,
+        fallbackLng: 'en',
+        backend: {
+          projectId: '3d0aa5aa-4660-4154-b6d9-907dbef10bb2',
+          apiKey: 'key', // only needed if you like to add missing segments
+          referenceLng: 'en',
+          version: 'latest'
+        },
+      
+        namespace: 'landingpageV2'
+      });
+      
+    </script>
   </head>
-  <body id="page-top">
+  <body id="page-top" style="display: none;">
     <nav class="navbar navbar-default navbar-fixed-top" id="mainNav">
       <div class="container">
         <div class="navbar-header">
-          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span> Menu<i class="fa fa-bars"></i></button><a class="navbar-brand page-scroll" href="#page-top"></a>
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><i class="fa fa-bars"></i></button><a class="navbar-brand page-scroll" href="#page-top"></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
@@ -34,6 +54,9 @@
             <li><a href="/blog.html">Blog</a></li>
             <li><a class="page-scroll" href="#contact">Contact</a></li>
             <li><a href="https://www.locize.io/login" target="_blank">Login</a></li>
+            <li class="selectLng">
+              <select id="languageSelect" translated="" onChange="handleSelectChange()"></select><i class="fa fa-caret-down" aria-hidden="true"></i>
+            </li>
           </ul>
         </div>
       </div>
@@ -64,20 +87,6 @@
         </div>
       </div>
     </header>
-    <!--section#customers.customers
-    .container
-      .row
-        .col-lg-12.flex-space
-          img.grayscale(src='img/customers/wuxus.png')
-          |
-          img.grayscale(style='max-height: 40px', src='img/customers/mergevr.png')
-          |
-          a(href="https://www.shoprepublic.de/" target="_blank")
-            img.grayscale(style='max-height: 50px', src='img/customers/shoprepublic.png')
-          |
-          img.grayscale(style='max-height: 50px', src='img/customers/gamerefinery.png')
-    
-    -->
     <section class="features bg-primary text-center" id="features">
       <div class="container">
         <div class="row">
@@ -164,53 +173,6 @@
         </div>
       </div>
     </section>
-    <!--section#testimonials.testimonials
-    .container
-      .row
-        .col-lg-12.text-center
-          .section-heading
-            h2 Customer Testimonials
-            p.text-muted Hear what our customers have to say!
-            hr
-      .row
-        .col-lg-12
-          .testimonial-container
-            .testimonial
-              .testimonial-title
-                img.grayscale(style='max-height: 50px', src='img/customers/gamerefinery.png')
-              .testimonial-content
-                p
-                  | "With locize.com we could speed up our whole translation process by more than 50%!"
-              .author
-                hr
-                | Christian Schab, Founder
-                br
-                a(href='https://www.shoprepublic.de/') ShopRepublic GmbH
-            .testimonial
-              .testimonial-title
-                img.grayscale(style='max-height: 50px', src='img/customers/gamerefinery.png')
-              .testimonial-content
-                p
-                  | "With locize.com we could speed up our whole translation process by more than 50%!"
-              .author
-                hr
-                | Christian Schab, Founder
-                br
-                a(href='https://www.shoprepublic.de/' target="_blank") ShopRepublic GmbH
-            .testimonial
-              .testimonial-title
-                img.grayscale(style='max-height: 50px', src='img/customers/shoprepublic.png')
-              .testimonial-content
-                p
-                  | "With locize.com we could speed up our whole translation process by more than 50%!"
-              .author
-                hr
-                | Christian Schab, Founder
-                br
-                a(href='https://www.shoprepublic.de/') ShopRepublic GmbH
-    
-    
-    -->
     <section class="benefits" id="benefits">
       <div class="container">
         <div class="row">
@@ -265,7 +227,7 @@
                   <div class="feature-item"><i class="icon-credit-card text-primary"></i>
                     <h3>Variable pricing</h3>
                     <p class="text-muted">Pay for what you use. There are no intransparent plans forcing you to pay for stuff you do not need.</p>
-                    <p class="text-muted">Costs are based on your usage. Learn more using our<a href="/pricing.html"> price calculator</a>.</p>
+                    <p class="text-muted" merge="">Costs are based on your usage. Learn more using our&nbsp;<a href="/pricing.html">price calculator</a>.</p>
                     <p class="text-muted">Find a detailed billing forecast and history on your project.</p>
                   </div>
                 </div>
