@@ -63,6 +63,25 @@ p {
     background: linear-gradient(@theme-tertiary , darken(@theme-tertiary, 8%));
 }
 
+// enables locize editor
+@media (min-width: 768px) {
+  .container {
+    width: auto;
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: auto;
+    max-width: 970px;
+  }
+}
+
+.navbar {
+  z-index: 999;
+}
+
 .text-primary {
     color: @theme-primary;
 }

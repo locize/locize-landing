@@ -73,6 +73,21 @@ p {
   background: -webkit-linear-gradient(#15419a, #103276);
   background: linear-gradient(#15419a, #103276);
 }
+@media (min-width: 768px) {
+  .container {
+    width: auto;
+    max-width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: auto;
+    max-width: 970px;
+  }
+}
+.navbar {
+  z-index: 999;
+}
 .text-primary {
   color: #2196f3;
 }
