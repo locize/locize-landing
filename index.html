@@ -33,7 +33,7 @@
             <li><a href="/integration.html">Documentation</a></li>
             <li><a href="/blog.html">Blog</a></li>
             <li><a class="page-scroll" href="#contact">Contact</a></li>
-            <li><a href="https://www.locize.io" target="_blank">Login</a></li>
+            <li><a href="https://www.locize.io/login" target="_blank">Login</a></li>
           </ul>
         </div>
       </div>
@@ -64,13 +64,20 @@
         </div>
       </div>
     </header>
-    <section class="customers" id="customers">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 flex-space"><img class="grayscale" src="img/customers/wuxus.png"><img class="grayscale" style="max-height: 40px;" src="img/customers/mergevr.png"><a href="https://www.shoprepublic.de/" target="_blank"><img class="grayscale" style="max-height: 50px;" src="img/customers/shoprepublic.png"></a><img class="grayscale" style="max-height: 50px;" src="img/customers/gamerefinery.png"></div>
-        </div>
-      </div>
-    </section>
+    <!--section#customers.customers
+    .container
+      .row
+        .col-lg-12.flex-space
+          img.grayscale(src='img/customers/wuxus.png')
+          |
+          img.grayscale(style='max-height: 40px', src='img/customers/mergevr.png')
+          |
+          a(href="https://www.shoprepublic.de/" target="_blank")
+            img.grayscale(style='max-height: 50px', src='img/customers/shoprepublic.png')
+          |
+          img.grayscale(style='max-height: 50px', src='img/customers/gamerefinery.png')
+    
+    -->
     <section class="features bg-primary text-center" id="features">
       <div class="container">
         <div class="row">
@@ -99,7 +106,7 @@
                       </div>
                     </div>
                     <h3>Time saving over 60%</h3>
-                    <p>Adding one line of code to your website is all needed to get started. All your content gets extracted and send to your locize project ready to be translated.</p>
+                    <p>Adding one line of code to your website is all needed to get started. All your content gets extracted and sent to your locize project ready to be translated.</p>
                     <p>Every change to your translations gets instantly reflected on your website and vice versa.</p>
                     <p>Never again copy/paste translations from a to b.</p>
                   </div>
@@ -157,59 +164,60 @@
         </div>
       </div>
     </section>
-    <section class="testimonials" id="testimonials">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <div class="section-heading">
-              <h2>Customer Testimonials</h2>
-              <p class="text-muted">Hear what our customers have to say!</p>
-              <hr>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="testimonial-container">
-              <div class="testimonial">
-                <div class="testimonial-title"><img class="grayscale" style="max-height: 50px;" src="img/customers/gamerefinery.png"></div>
-                <div class="testimonial-content">
-                  <p>"With locize.com we could speed up our whole translation process by more than 50%!"</p>
-                </div>
-                <div class="author">
-                  <hr>Christian Schab, Founder<br><a href="https://www.shoprepublic.de/">ShopRepublic GmbH</a>
-                </div>
-              </div>
-              <div class="testimonial">
-                <div class="testimonial-title"><img class="grayscale" style="max-height: 50px;" src="img/customers/gamerefinery.png"></div>
-                <div class="testimonial-content">
-                  <p>"With locize.com we could speed up our whole translation process by more than 50%!"</p>
-                </div>
-                <div class="author">
-                  <hr>Christian Schab, Founder<br><a href="https://www.shoprepublic.de/" target="_blank">ShopRepublic GmbH</a>
-                </div>
-              </div>
-              <div class="testimonial">
-                <div class="testimonial-title"><img class="grayscale" style="max-height: 50px;" src="img/customers/shoprepublic.png"></div>
-                <div class="testimonial-content">
-                  <p>"With locize.com we could speed up our whole translation process by more than 50%!"</p>
-                </div>
-                <div class="author">
-                  <hr>Christian Schab, Founder<br><a href="https://www.shoprepublic.de/">ShopRepublic GmbH</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!--section#testimonials.testimonials
+    .container
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h2 Customer Testimonials
+            p.text-muted Hear what our customers have to say!
+            hr
+      .row
+        .col-lg-12
+          .testimonial-container
+            .testimonial
+              .testimonial-title
+                img.grayscale(style='max-height: 50px', src='img/customers/gamerefinery.png')
+              .testimonial-content
+                p
+                  | "With locize.com we could speed up our whole translation process by more than 50%!"
+              .author
+                hr
+                | Christian Schab, Founder
+                br
+                a(href='https://www.shoprepublic.de/') ShopRepublic GmbH
+            .testimonial
+              .testimonial-title
+                img.grayscale(style='max-height: 50px', src='img/customers/gamerefinery.png')
+              .testimonial-content
+                p
+                  | "With locize.com we could speed up our whole translation process by more than 50%!"
+              .author
+                hr
+                | Christian Schab, Founder
+                br
+                a(href='https://www.shoprepublic.de/' target="_blank") ShopRepublic GmbH
+            .testimonial
+              .testimonial-title
+                img.grayscale(style='max-height: 50px', src='img/customers/shoprepublic.png')
+              .testimonial-content
+                p
+                  | "With locize.com we could speed up our whole translation process by more than 50%!"
+              .author
+                hr
+                | Christian Schab, Founder
+                br
+                a(href='https://www.shoprepublic.de/') ShopRepublic GmbH
+    
+    
+    -->
     <section class="benefits" id="benefits">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
             <div class="section-heading">
               <h2>Get translated today. Effortless &amp; riskfree.</h2>
-              <p class="text-muted">Got a small landing page or big web application - locize gets you there!</p>
+              <p class="text-muted">Got a small landing page or a big web application - locize gets you there!</p>
               <hr>
             </div>
           </div>
@@ -248,7 +256,7 @@
                 <div class="col-md-6">
                   <div class="feature-item"><i class="icon-pie-chart text-primary"></i>
                     <h3>Project progress</h3>
-                    <p class="text-muted">We provide you with all analytic information needed to keep control over your localization progress!</p>
+                    <p class="text-muted">We provide you with all analytics information needed to keep control over your localization progress!</p>
                     <p class="text-muted">Always keep the overview and keep up translating your website just in time.</p>
                     <p class="text-muted">Never fall behind in translating your project. Stop being the bottleneck in your agile prozess.</p>
                   </div>
@@ -271,7 +279,7 @@
       <div class="cta-content">
         <div class="container">
           <h2>Stop waiting.<br>Start localizing.</h2>
-          <h3>Start by trying our demo generated on your newly registered account or create a new project and translate your application.</h3><a class="btn btn-outline btn-xl page-scroll" href="#contact">Let&apos;s Get Started!</a>
+          <h3>Start by trying our demo generated on your newly registered account or create a new project and translate your application.</h3><a class="btn btn-outline btn-xl page-scroll" href="https://www.locize.io/register" target="_blank">Let&apos;s Get Started!</a>
           <p class="hint">* 14d free trial. No credit card needed! No obligations!</p>
         </div>
       </div>
@@ -280,7 +288,7 @@
     <section class="contact bg-tertiary" id="contact">
       <div class="container">
         <h2>Have questions?</h2>
-        <p>Building a global business can be challenging. We will help you getting there.</p><a class="btn btn-outline btn-xl page-scroll" href="#contact">Contact us!</a>
+        <p>Building a global business can be challenging. We will help you getting there.</p><a class="btn btn-outline btn-xl page-scroll" href="mailto:support@locize.com">Contact us!</a>
       </div>
     </section>
     <footer>
@@ -292,23 +300,23 @@
           </div>
           <div class="col-md-4">
             <ul class="list-unstyled">
-              <li><a href="#">Documentation</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">FAQ</a></li>
+              <li><a href="/integration.html">Documentation</a></li>
+              <li><a href="/pricing.html">Pricing</a></li>
+              <li><a href="/blog.html">Blog</a></li>
+              <li><a href="/faq.html">FAQ</a></li>
             </ul>
           </div>
           <div class="col-md-4">
             <ul class="list-unstyled">
               <li>
                 <ul class="list-inline list-social">
-                  <li class="social-twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li class="social-google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li class="social-twitter"><a href="https://twitter.com/locize" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                  <li class="social-facebook"><a href="https://www.facebook.com/Locize-1672640746084189/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                  <li class="social-youtube"><a href="https://www.youtube.com/channel/UCPYQjBbbXojUcB8qjeIB3uA" target="_blank"><i class="fa fa-youtube"></i></a></li>
                 </ul>
               </li>
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Terms</a></li>
+              <li><a href="/privacy.html">Privacy</a></li>
+              <li><a href="/terms.html">Terms</a></li>
             </ul>
           </div>
         </div>
