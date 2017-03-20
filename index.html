@@ -29,6 +29,7 @@
       locizify.init({
         // saveMissing: true,
         fallbackLng: 'en',
+        debug: false,
         backend: {
           projectId: '3d0aa5aa-4660-4154-b6d9-907dbef10bb2',
           apiKey: 'key', // only needed if you like to add missing segments
@@ -38,7 +39,10 @@
         editor: {
           bodyStyle: 'width: calc(100% - 505px);'
         },
-        namespace: 'landingpageV2'
+        namespace: 'landingpageV2',
+        onInitialTranslate: function() {
+          window.initParticle();
+        }
       });
       
     </script>
@@ -111,7 +115,7 @@
                     <div class="device-container">
                       <div class="device-mockup macbook_2015 silver">
                         <div class="device">
-                          <div class="screen"><img class="img-responsive" src="img/screenshots/screen/integrate.png" alt=""></div>
+                          <div class="screen"><img class="img-responsive" src="img/screenshots/screen/integrate_s.jpg" alt=""></div>
                           <div class="button"></div>
                         </div>
                       </div>
@@ -127,7 +131,7 @@
                     <div class="device-container">
                       <div class="device-mockup macbook_2015 silver">
                         <div class="device">
-                          <div class="screen"><img class="img-responsive" src="img/screenshots/screen/stats.png" alt=""></div>
+                          <div class="screen"><img class="img-responsive" src="img/screenshots/screen/stats_s.jpg" alt=""></div>
                         </div>
                       </div>
                     </div>
@@ -144,7 +148,7 @@
                     <div class="device-container">
                       <div class="device-mockup macbook_2015 silver">
                         <div class="device">
-                          <div class="screen"><img class="img-responsive" src="img/screenshots/screen/incontext_editor.png" alt=""></div>
+                          <div class="screen"><img class="img-responsive" src="img/screenshots/screen/incontext_editor_s.jpg" alt=""></div>
                         </div>
                       </div>
                     </div>
@@ -159,7 +163,7 @@
                     <div class="device-container">
                       <div class="device-mockup macbook_2015 silver">
                         <div class="device">
-                          <div class="screen"><img class="img-responsive" src="img/screenshots/screen/editor.png" alt=""></div>
+                          <div class="screen"><img class="img-responsive" src="img/screenshots/screen/editor_s.jpg" alt=""></div>
                         </div>
                       </div>
                     </div>

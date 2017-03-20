@@ -83,7 +83,7 @@ function changeLanguage(lng) {
 
 
     // particles
-    setTimeout(function () {
+    window.initParticle = function() {
       particlesJS("particles-js", {
         "particles": {
           "number": {
@@ -194,6 +194,6 @@ function changeLanguage(lng) {
         },
         "retina_detect": true
       });
-    }, 1000);
+    };
 
 })(jQuery); // End of use strict

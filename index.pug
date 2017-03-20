@@ -33,6 +33,7 @@ html(lang='en')
       locizify.init({
         // saveMissing: true,
         fallbackLng: 'en',
+        debug: false,
         backend: {
           projectId: '3d0aa5aa-4660-4154-b6d9-907dbef10bb2',
           apiKey: 'key', // only needed if you like to add missing segments
@@ -42,7 +43,10 @@ html(lang='en')
         editor: {
           bodyStyle: 'width: calc(100% - 505px);'
         },
-        namespace: 'landingpageV2'
+        namespace: 'landingpageV2',
+        onInitialTranslate: function() {
+          window.initParticle();
+        }
       });
 
   body#page-top(style="display: none;")
@@ -126,7 +130,7 @@ html(lang='en')
                       .device-mockup.macbook_2015.silver
                         .device
                           .screen
-                            img.img-responsive(src='img/screenshots/screen/integrate.png', alt='')
+                            img.img-responsive(src='img/screenshots/screen/integrate_s.jpg', alt='')
                           .button
                     h3 Time saving over 60%
                     p
@@ -141,7 +145,7 @@ html(lang='en')
                       .device-mockup.macbook_2015.silver
                         .device
                           .screen
-                            img.img-responsive(src='img/screenshots/screen/stats.png', alt='')
+                            img.img-responsive(src='img/screenshots/screen/stats_s.jpg', alt='')
                     h3 Continuous Localization Lifecycle
                     p
                       | Locize enables you to separate your development and translation process. Keep translating while your development team adds new features to your project.
@@ -156,7 +160,7 @@ html(lang='en')
                       .device-mockup.macbook_2015.silver
                         .device
                           .screen
-                            img.img-responsive(src='img/screenshots/screen/incontext_editor.png', alt='')
+                            img.img-responsive(src='img/screenshots/screen/incontext_editor_s.jpg', alt='')
                     h3 Context Matters &mdash; InContext Editing
                     p
                       | Doing proper translations needs more information by providing the context. The best context is always the place where the content is used – your website!
@@ -170,7 +174,7 @@ html(lang='en')
                       .device-mockup.macbook_2015.silver
                         .device
                           .screen
-                            img.img-responsive(src='img/screenshots/screen/editor.png', alt='')
+                            img.img-responsive(src='img/screenshots/screen/editor_s.jpg', alt='')
                     h3 Translation Management
                     p
                       | You can translate your content using our powerful editor.
