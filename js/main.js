@@ -1,5 +1,6 @@
 // localization
-var ele = document.getElementById('languageSelect');
+var selectedEle = document.getElementById('selectedLng');
+var optionsEle = document.getElementById('lngSelectDropDown');
 var availableLngs = [];
 
 // create select options based on project languages
@@ -8,10 +9,12 @@ locizify.getLanguages(function(err, lngs) {
   availableLngs.forEach(function(l) {
     var lng = lngs[l];
     if (lng.translated.production < 0.9) return;
-    var optEle = document.createElement("OPTION");
-    optEle.setAttribute('value', l);
-    optEle.innerHTML = l; //lng.nativeName;
-    ele.appendChild(optEle);
+    var optEle = document.createElement('LI');
+    var aEle = document.createElement('A')
+    aEle.setAttribute('href', '/?lng=' + l);
+    aEle.innerHTML = lng.nativeName;
+    optEle.appendChild(aEle);
+    optionsEle.appendChild(optEle);
   });
 
   updateSelect();
@@ -23,31 +26,12 @@ function updateSelect() {
     if (!selected && availableLngs.indexOf(l) > -1) selected = l;
   });
 
-  ele.value = selected || 'en';
+  selectedEle.innerHTML= selected || 'en';
 }
 
 locizify.i18next.on('languageChanged', function(lng) {
   updateSelect();
 });
-
-function handleSelectChange() {
-  var value = ele.options[ele.selectedIndex].value;
-  changeLanguage(value);
-}
-
-function updateQueryStringParameter(uri, key, value) {
-  var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
-  var separator = uri.indexOf('?') !== -1 ? "&" : "?";
-  if (uri.match(re)) {
-    return uri.replace(re, '$1' + key + "=" + value + '$2');
-  }
-  else {
-    return uri + separator + key + "=" + value;
-  }
-}
-function changeLanguage(lng) {
-  window.location = updateQueryStringParameter(window.location.href, 'lng', lng);
-}
 
 
 

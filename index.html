@@ -20,8 +20,8 @@
     script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
     
     -->
-    <!-- consent script    -->
-    <script>window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":"http://locize.com/privacy.html","theme":"dark-bottom"};</script>
+    <!-- consent script-->
+    <script>window.cookieconsent_options = {'message':'This website uses cookies to ensure you get the best experience on our website','dismiss':'Got it!','learnMore':'More info','link':'http://locize.com/privacy.html','theme':'dark-bottom'};</script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
     <!-- LOCIZIFY-->
     <script src="https://unpkg.com/locizify@^2.0.0"></script>
@@ -60,8 +60,8 @@
             <li><a href="/categories/Post/">Blog</a></li>
             <li><a class="page-scroll" href="#contact">Contact</a></li>
             <li><a href="https://www.locize.io/login" target="_blank">Login</a></li>
-            <li class="selectLng">
-              <select id="languageSelect" translated="" onChange="handleSelectChange()"></select><i class="fa fa-caret-down" aria-hidden="true"></i>
+            <li class="dropdown" translated=""><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="selectedLng"></span><span class="caret" style="margin-top: -3px;"></span></a>
+              <ul class="dropdown-menu" id="lngSelectDropDown"></ul>
             </li>
           </ul>
         </div>

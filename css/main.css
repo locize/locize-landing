@@ -73,6 +73,24 @@ p {
   background: -webkit-linear-gradient(#15419a, #103276);
   background: linear-gradient(#15419a, #103276);
 }
+@media (min-width: 768px) {
+  .container {
+    width: auto;
+    max-width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: auto;
+    max-width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: auto;
+    max-width: 1170px;
+  }
+}
 .navbar {
   z-index: 999;
 }
@@ -200,44 +218,6 @@ img.grayscale {
 .navbar-default .nav > li.active > a:focus:hover {
   background-color: transparent;
 }
-.navbar-default .selectLng .fa {
-  position: relative;
-  margin-left: -10px;
-  margin-right: 10px;
-}
-.navbar-default select {
-  /* styling */
-  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-size: 11px;
-  line-height: 20px;
-  background-color: transparent;
-  border: none;
-  border-radius: 0;
-  display: inline-block;
-  cursor: pointer;
-  padding: 15px;
-  outline: none;
-  /* reset */
-  margin: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-.navbar-default .selectLng .fa,
-.navbar-default .selectLng select {
-  color: #222222;
-}
-.navbar-default .selectLng select:hover {
-  color: #2196f3;
-}
-.navbar-default select:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #000;
-}
 @media (min-width: 768px) {
   .navbar-default {
     background-color: transparent;
@@ -259,12 +239,13 @@ img.grayscale {
   .navbar-default .nav > li > a:focus:hover {
     color: white;
   }
-  .navbar-default .selectLng .fa,
-  .navbar-default .selectLng select {
-    color: rgba(255, 255, 255, 0.7);
+  .navbar-default:not(.affix) .dropdown.open .dropdown-toggle {
+    background-color: white;
+    color: black;
   }
-  .navbar-default .selectLng select:hover {
-    color: white;
+  .navbar-default:not(.affix) .dropdown-menu {
+    border-top-left-radius: 4px;
+    margin-right: -1px;
   }
   .navbar-default.affix {
     background-color: white;
@@ -281,12 +262,8 @@ img.grayscale {
   .navbar-default.affix .nav > li > a:focus:hover {
     color: #2196f3;
   }
-  .navbar-default.affix .selectLng .fa,
-  .navbar-default.affix .selectLng select {
-    color: #222222;
-  }
-  .navbar-default.affix .selectLng select:hover {
-    color: #2196f3;
+  .navbar-default.affix .dropdown-menu {
+    margin-right: -1px;
   }
 }
 header {

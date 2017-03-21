@@ -6,9 +6,9 @@ html(lang='en')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name='description', content='')
     meta(name='author', content='')
-      
+
     title locize - localization as a service
-    
+
     link(href='lib/bootstrap/css/bootstrap.min.css', rel='stylesheet')
     link(href='https://fonts.googleapis.com/css?family=Lato', rel='stylesheet')
     link(href='https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900', rel='stylesheet')
@@ -17,18 +17,18 @@ html(lang='en')
     link(rel='stylesheet', href='lib/simple-line-icons/css/simple-line-icons.css')
     link(rel='stylesheet', href='lib/device-mockups/device-mockups.min.css')
     link(href='css/main.min.css', rel='stylesheet')
-      
+
     //if lt IE 9
       script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
       script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
-    
-    // consent script    
+
+    // consent script
     script.
-      window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":"http://locize.com/privacy.html","theme":"dark-bottom"};
-    script(src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js")
+      window.cookieconsent_options = {'message':'This website uses cookies to ensure you get the best experience on our website','dismiss':'Got it!','learnMore':'More info','link':'http://locize.com/privacy.html','theme':'dark-bottom'};
+    script(src='//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js')
 
     // LOCIZIFY
-    script(src="https://unpkg.com/locizify@^2.0.0")
+    script(src='https://unpkg.com/locizify@^2.0.0')
     script.
       locizify.init({
         // saveMissing: true,
@@ -49,7 +49,7 @@ html(lang='en')
         }
       });
 
-  body#page-top(style="display: none;")
+  body#page-top(style='display: none;')
 
     nav#mainNav.navbar.navbar-default.navbar-fixed-top
       .container
@@ -70,9 +70,11 @@ html(lang='en')
               a.page-scroll(href='#contact') Contact
             li
               a(href='https://www.locize.io/login', target='_blank') Login
-            li.selectLng
-              select#languageSelect(translated="" onChange="handleSelectChange()")
-              i.fa.fa-caret-down(aria-hidden="true")
+            li.dropdown(translated="")
+              a(href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false')
+                span#selectedLng
+                span.caret(style="margin-top: -3px;")
+              ul#lngSelectDropDown.dropdown-menu
 
     header
       .header-overlay
@@ -102,7 +104,7 @@ html(lang='en')
             |
             img.grayscale(style='max-height: 40px', src='img/customers/mergevr.png')
             |
-            a(href="https://www.shoprepublic.de/" target="_blank")
+            a(href='https://www.shoprepublic.de/' target='_blank')
               img.grayscale(style='max-height: 50px', src='img/customers/shoprepublic.png')
             |
             img.grayscale(style='max-height: 50px', src='img/customers/gamerefinery.png')
@@ -117,7 +119,7 @@ html(lang='en')
                 | You're in need of a localization solution that keeps up with your vibrant business environment?
               p.head
                 | Does your current process break your agile development or continuous deployment process?
-              p(style="margin-top: 20px;")
+              p(style='margin-top: 20px;')
                 | Find out what locize can offer to make your localization experience a success story.
               hr
         .row
@@ -198,7 +200,7 @@ html(lang='en')
                   img.grayscale(style='max-height: 50px', src='img/customers/gamerefinery.png')
                 .testimonial-content
                   p
-                    | "With locize.com we could speed up our whole translation process by more than 50%!"
+                    | 'With locize.com we could speed up our whole translation process by more than 50%!'
                 .author
                   hr
                   | Christian Schab, Founder
@@ -209,18 +211,18 @@ html(lang='en')
                   img.grayscale(style='max-height: 50px', src='img/customers/gamerefinery.png')
                 .testimonial-content
                   p
-                    | "With locize.com we could speed up our whole translation process by more than 50%!"
+                    | 'With locize.com we could speed up our whole translation process by more than 50%!'
                 .author
                   hr
                   | Christian Schab, Founder
                   br
-                  a(href='https://www.shoprepublic.de/' target="_blank") ShopRepublic GmbH
+                  a(href='https://www.shoprepublic.de/' target='_blank') ShopRepublic GmbH
               .testimonial
                 .testimonial-title
                   img.grayscale(style='max-height: 50px', src='img/customers/shoprepublic.png')
                 .testimonial-content
                   p
-                    | "With locize.com we could speed up our whole translation process by more than 50%!"
+                    | 'With locize.com we could speed up our whole translation process by more than 50%!'
                 .author
                   hr
                   | Christian Schab, Founder
@@ -283,7 +285,7 @@ html(lang='en')
                     h3 Variable pricing
                     p.text-muted
                       | Pay for what you use. There are no intransparent plans forcing you to pay for stuff you do not need.
-                    p.text-muted(merge="")
+                    p.text-muted(merge='')
                       | Costs are based on your usage. Learn more using our&nbsp;
                       a(href='/pricing.html') price calculator
                       | .
