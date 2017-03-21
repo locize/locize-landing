@@ -54,7 +54,7 @@ locizify.i18next.on('languageChanged', function(lng) {
     });
 
     // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click(function() {
+    $('.navbar-collapse ul li a.closeOnClick').click(function() {
         $('.navbar-toggle:visible').click();
     });
 
