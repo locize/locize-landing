@@ -96,18 +96,21 @@ html(lang='en')
                         img.img-responsive(src='img/screenshots/iphone6/dashboard.png', alt='')
                       // .button
 
-    //- section#customers.customers
+    section#customers.customers(translated="")
       .container
         .row
           .col-lg-12.flex-space
-            img.grayscale(src='img/customers/wuxus.png')
-            |
-            img.grayscale(style='max-height: 40px', src='img/customers/mergevr.png')
-            |
+            a(href='https://www.wuxus.com/' target='_blank')
+              img.grayscale(src='img/customers/wuxus.png')
+  
+            a(href='https://http://vgpro.gg/' target='_blank')
+              img.grayscale(style='max-height: 50px', src='img/customers/vgpro.png')
+      
             a(href='https://www.shoprepublic.de/' target='_blank')
-              img.grayscale(style='max-height: 50px', src='img/customers/shoprepublic.png')
-            |
-            img.grayscale(style='max-height: 50px', src='img/customers/gamerefinery.png')
+              img.grayscale(style='max-height: 45px', src='img/customers/shoprepublic.png')
+            
+            a(href='https://classnet.info/?lng=en' target='_blank')
+              img.grayscale(style='max-height: 50px', src='img/customers/classnet.png')
 
     section#features.features.bg-primary.text-center
       .container
@@ -184,7 +187,8 @@ html(lang='en')
                       | Invite your inhouse translators giving them the rights for the languages needed.
                     p
                       | Got a language not covered? Need extra help or prefer to completely outsource the job? Choose one of our translation service partners.
-    //- section#testimonials.testimonials
+    
+    section#testimonials.testimonials(translated="")
       .container
         .row
           .col-lg-12.text-center
@@ -195,39 +199,61 @@ html(lang='en')
         .row
           .col-lg-12
             .testimonial-container
-              .testimonial
-                .testimonial-title
-                  img.grayscale(style='max-height: 50px', src='img/customers/gamerefinery.png')
-                .testimonial-content
-                  p
-                    | 'With locize.com we could speed up our whole translation process by more than 50%!'
-                .author
-                  hr
-                  | Christian Schab, Founder
-                  br
-                  a(href='https://www.shoprepublic.de/') ShopRepublic GmbH
-              .testimonial
-                .testimonial-title
-                  img.grayscale(style='max-height: 50px', src='img/customers/gamerefinery.png')
-                .testimonial-content
-                  p
-                    | 'With locize.com we could speed up our whole translation process by more than 50%!'
-                .author
-                  hr
-                  | Christian Schab, Founder
-                  br
-                  a(href='https://www.shoprepublic.de/' target='_blank') ShopRepublic GmbH
-              .testimonial
-                .testimonial-title
-                  img.grayscale(style='max-height: 50px', src='img/customers/shoprepublic.png')
-                .testimonial-content
-                  p
-                    | 'With locize.com we could speed up our whole translation process by more than 50%!'
-                .author
-                  hr
-                  | Christian Schab, Founder
-                  br
-                  a(href='https://www.shoprepublic.de/') ShopRepublic GmbH
+              .row
+                .col-lg-3.col-md-6.col-sm-12
+                  .testimonial
+                    .testimonial-title
+                      img.grayscale(style='max-height: 50px', src='img/customers/wuxus.png')
+                    .testimonial-content
+                      p
+                        | Locize enables Wuxus to roll out our digital infrastructure for the transportation industry, on a global scale, with ease.
+                      p
+                        | Great tool, easy to implement, easy to use, great service and support. Asked for a feature - available the next day.
+                    .author
+                      hr
+                      | Lars Bryrup, Head of Tech
+                      br
+                      a(href='https://www.wuxus.com/') wuxus.com
+                .col-lg-3.col-md-6.col-sm-12
+                  .testimonial
+                    .testimonial-title
+                      img.grayscale(style='max-height: 50px', src='img/customers/vgpro.png')
+                    .testimonial-content
+                      p
+                        | Having a platform that makes it easy to localize your website is great, but also integrating the translation in real time to your website is just amazing.
+                      p
+                        | I have been using Locize and it made it easier to connect with translators and get the job done. I would recommend to anyone looking for the same.
+                    .author
+                      hr
+                      | Pierre Ortega, Lead Developer
+                      br
+                      a(href='http://vgpro.gg' target='_blank') VGPRO.gg 
+                .col-lg-3.col-md-6.col-sm-12
+                  .testimonial
+                    .testimonial-title
+                      img.grayscale(style='max-height: 45px', src='img/customers/shoprepublic.png')
+                    .testimonial-content
+                      p
+                        | 'With locize.com we could speed up our whole translation process by more than 50%!'
+                    .author
+                      hr
+                      | Christian Schab, Founder
+                      br
+                      a(href='https://www.shoprepublic.de/') ShopRepublic GmbH
+                .col-lg-3.col-md-6.col-sm-12      
+                  .testimonial
+                    .testimonial-title
+                      img.grayscale(style='max-height: 50px', src='img/customers/classnet.png')
+                    .testimonial-content
+                      p
+                        | Locize is an awesome way to localize your website.
+                      p
+                        | It makes translating your existing content as easy as it could possibly get and the integration takes just one line of code.
+                    .author
+                      hr
+                      | Alexander Bayerl, Student
+                      br
+                      a(href='https://classnet.info/?lng=en') classnet
 
 
     section#benefits.benefits

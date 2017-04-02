@@ -4,13 +4,25 @@ section.customers {
   border-top: solid 1px #ccc;
   .flex-space {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
   img {
     display: inline-block;
     max-height: 60px;
+    margin-bottom: 40px;
+  }
+  @media (min-width: 768px) {
+    .flex-space {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+    img {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -36,6 +48,13 @@ section.testimonials {
     max-width: 350px;
     background-color: white;
     padding: 30px 20px;
+    margin: 10px auto;
+    @media (min-width: 992px) {
+      height: 520px;
+    }
+    @media (min-width: 1200px) {
+      height: 580px;
+    }
     .testimonial-content {
       flex-grow: 1;
       margin-bottom: auto;
