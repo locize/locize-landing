@@ -31,7 +31,7 @@ html(lang='en')
     script(src='https://unpkg.com/locizify@^2.0.0')
     script.
       locizify.init({
-        // saveMissing: true,
+        //saveMissing: true,
         fallbackLng: 'en',
         debug: false,
         backend: {
@@ -188,7 +188,7 @@ html(lang='en')
                     p
                       | Got a language not covered? Need extra help or prefer to completely outsource the job? Choose one of our translation service partners.
     
-    section#testimonials.testimonials(translated="")
+    section#testimonials.testimonials
       .container
         .row
           .col-lg-12.text-center
@@ -198,7 +198,7 @@ html(lang='en')
               hr
         .row
           .col-lg-12
-            .testimonial-container
+            .testimonial-container(translated="")
               .row
                 .col-lg-3.col-md-6.col-sm-12
                   .testimonial
@@ -313,7 +313,7 @@ html(lang='en')
                       | Pay for what you use. There are no intransparent plans forcing you to pay for stuff you do not need.
                     p.text-muted(merge='')
                       | Costs are based on your usage. Learn more using our&nbsp;
-                      a(href='/pricing.html') price calculator
+                      a(href='http://www.locize.com/pricing.html') price calculator
                       | .
                     p.text-muted
                       | Find a detailed billing forecast and history on your project.
