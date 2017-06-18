@@ -355,6 +355,34 @@ header #particles-js {
     font-size: 50px;
   }
 }
+section.section-white .section-heading {
+  margin-bottom: 100px;
+}
+section.section-white .section-heading h2 {
+  margin-top: 0;
+}
+section.section-white .section-heading p.head {
+  font-size: 24px;
+}
+section.section-white .section-heading p {
+  margin-bottom: 0;
+  font-weight: 300;
+}
+section.section-white .section-heading hr {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+section.section-white .device-container {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+@media (min-width: 768px) {
+  section.section-white .device-container {
+    max-width: none;
+    margin: 0;
+    margin-bottom: 0;
+  }
+}
 section.features .section-heading,
 section.benefits .section-heading,
 section.testimonials .section-heading {

@@ -1,0 +1,45 @@
+extends pug/layout.pug
+
+block content
+  
+  section.section-white
+    .container
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h2 No plans - no paywalls - no catch
+            p.text-muted 
+              | We offer no fix price plans. All our 
+              strong cost are variable 
+              | and based on your real usage.
+            hr
+
+  section(style="background-color: #eee; padding: 0;")
+    .container
+      .row
+        .col-md-8.col-md-offset-2(style="position: relative;")
+          .pricing(style="background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; height: 400px; width: 100%;")
+            .pricing-name.text-center Scales with you
+            .pricing-price
+              .pricing-price-subtitle.text-center.text-muted starts from
+              .pricing-price.text-center 
+                | $5
+                small.text-muted (billed monthly)
+              .pricing-start
+                a.btn.btn-outline.btn-xl.page-scroll(href='https://www.locize.io/register', target='_blank', style="background-color: #ccc") Start Now for Free!
+              .pricing-features
+                .text-center.text-muted All features included:
+                ul
+                  li Unlimited Languages, Files
+                  li Unlimited Users (Admin, Developers, Translators, ...)
+                  li Flexible integrations
+                  li Publish to our CDN
+                  li Continuous Localization Lifecycle
+                  li Online Translation Editor
+                  li InContext Editor
+                  li Translation ordering from our translation partners
+                  li Import / Export JSON, XLIFF, XML
+                  li Statistics
+                  li CLI and API Access
+                  li Email Support
+                  

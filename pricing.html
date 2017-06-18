@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>locize - localization as a service</title>
+    <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="/lib/device-mockups/device-mockups.min.css">
+    <link href="/css/main.min.css" rel="stylesheet">
+    <!--if lt IE 9
+    script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+    script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+    
+    -->
+    <!-- consent script-->
+    <script>window.cookieconsent_options = {'message':'This website uses cookies to ensure you get the best experience on our website','dismiss':'Got it!','learnMore':'More info','link':'http://locize.com/privacy.html','theme':'dark-bottom'};</script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+    <!-- LOCIZIFY-->
+    <script src="https://unpkg.com/locizify@^2.0.0"></script>
+    <script>
+      locizify.init({
+        saveMissing: false,
+        fallbackLng: 'en',
+        debug: false,
+        backend: {
+          projectId: '3d0aa5aa-4660-4154-b6d9-907dbef10bb2',
+          apiKey: 'key', // only needed if you like to add missing segments
+          referenceLng: 'en',
+          version: 'latest'
+        },
+        editor: {
+          bodyStyle: 'width: calc(100% - 505px);'
+        },
+        namespaceFromPath: true,
+        ns: ['common'],
+        onInitialTranslate: function() {
+          // window.initParticle();
+        }
+      });
+      
+    </script>
+  </head>
+  <body id="page-top" style="display: none;">
+    <nav class="navbar navbar-default navbar-fixed-top affix" id="mainNav" i18next-options="{&quot;ns&quot;: &quot;common&quot;}">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><i class="fa fa-bars"></i></button><a class="navbar-brand page-scroll" href="#page-top"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="page-scroll closeOnClick" href="#features">Features</a></li>
+            <li><a href="/integration.html">Documentation</a></li>
+            <li><a href="/categories/Post/">Blog</a></li>
+            <li><a class="page-scroll closeOnClick" href="#contact">Contact</a></li>
+            <li><a href="https://www.locize.io/login" target="_blank">Login</a></li>
+            <li class="dropdown" translated=""><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="selectedLng"></span><span class="caret" style="margin-top: -3px;"></span></a>
+              <ul class="dropdown-menu" id="lngSelectDropDown"></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div style="margin-top: 80px;">
+      <section class="section-white">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <div class="section-heading">
+                <h2>No plans - no paywalls - no catch</h2>
+                <p class="text-muted">
+                   We offer no fix price plans. All our <strong>cost are variable </strong>and based on your real usage.</p>
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section style="background-color: #eee; padding: 0;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2" style="position: relative;">
+              <div class="pricing" style="background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; height: 400px; width: 100%;">
+                <div class="pricing-name text-center">Scales with you</div>
+                <div class="pricing-price">
+                  <div class="pricing-price-subtitle text-center text-muted">starts from</div>
+                  <div class="pricing-price text-center">
+                     $5<small class="text-muted">(billed monthly)</small></div>
+                  <div class="pricing-start"><a class="btn btn-outline btn-xl page-scroll" href="https://www.locize.io/register" target="_blank" style="background-color: #ccc;">Start Now for Free!</a></div>
+                  <div class="pricing-features">
+                    <div class="text-center text-muted">All features included:</div>
+                    <ul>
+                      <li>Unlimited Languages, Files</li>
+                      <li>Unlimited Users (Admin, Developers, Translators, ...)</li>
+                      <li>Flexible integrations</li>
+                      <li>Publish to our CDN</li>
+                      <li>Continuous Localization Lifecycle</li>
+                      <li>Online Translation Editor</li>
+                      <li>InContext Editor</li>
+                      <li>Translation ordering from our translation partners</li>
+                      <li>Import / Export JSON, XLIFF, XML</li>
+                      <li>Statistics</li>
+                      <li>CLI and API Access</li>
+                      <li>Email Support</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer i18next-options="{&quot;ns&quot;: &quot;common&quot;}">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4"><img src="img/locize_color.svg" style="max-width: 120px; margin-left: -5px;">
+            <p>inweso GmbH</p>
+            <p>Switzerland</p>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li><a href="/integration.html">Documentation</a></li>
+              <li><a href="/pricing.html">Pricing</a></li>
+              <li><a href="/categories/Post/">Blog</a></li>
+              <li><a href="/faq.html">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <ul class="list-inline list-social">
+                  <li class="social-twitter"><a href="https://twitter.com/locize" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                  <li class="social-facebook"><a href="https://www.facebook.com/Locize-1672640746084189/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                  <li class="social-youtube"><a href="https://www.youtube.com/channel/UCPYQjBbbXojUcB8qjeIB3uA" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                </ul>
+              </li>
+              <li><a href="/privacy.html">Privacy</a></li>
+              <li><a href="/terms.html">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-center footer-copyright">
+          <p>&copy; 2017 inweso GmbH. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script>window.bindAffix = false;</script>
+    <script src="/lib/jquery/jquery.min.js"></script>
+    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="/js/main.min.js"></script>
+  </body>
+</html>

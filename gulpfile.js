@@ -29,7 +29,7 @@ gulp.task('less', function() {
 });
 
 gulp.task('pug', function buildHTML() {
-  return gulp.src('index.pug')
+  return gulp.src(['index.pug', 'pricing.pug'])
     .pipe(pug({
       pretty: true
     }))
@@ -99,7 +99,7 @@ gulp.task('browserSync', function() {
 
 // Dev task with browserSync
 gulp.task('dev', ['browserSync', 'pug', 'less', 'minify-css', 'minify-js'], function() {
-    gulp.watch('*.pug', ['pug']);
+    gulp.watch(['*.pug', 'pug/*.pug'], ['pug']);
     gulp.watch('less/*.less', ['less']);
     gulp.watch('less/components/*.less', ['less']);
     gulp.watch('css/*.css', ['minify-css']);

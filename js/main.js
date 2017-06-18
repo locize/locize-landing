@@ -59,12 +59,13 @@ locizify.i18next.on('languageChanged', function(lng) {
     });
 
     // Offset for Main Navigation
-    $('#mainNav').affix({
-        offset: {
-            top: 50
-        }
-    })
-
+    if (window.bindAffix !== false) {
+      $('#mainNav').affix({
+          offset: {
+              top: 50
+          }
+      })
+    }
 
     // particles
     window.initParticle = function() {

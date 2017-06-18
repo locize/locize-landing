@@ -1,0 +1,128 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+
+    title locize - localization as a service
+
+    link(href='/lib/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Lato', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='/lib/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/lib/simple-line-icons/css/simple-line-icons.css')
+    link(rel='stylesheet', href='/lib/device-mockups/device-mockups.min.css')
+    link(href='/css/main.min.css', rel='stylesheet')
+
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+
+    // consent script
+    script.
+      window.cookieconsent_options = {'message':'This website uses cookies to ensure you get the best experience on our website','dismiss':'Got it!','learnMore':'More info','link':'http://locize.com/privacy.html','theme':'dark-bottom'};
+    script(src='//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js')
+
+    // LOCIZIFY
+    script(src='https://unpkg.com/locizify@^2.0.0')
+    script.
+      locizify.init({
+        saveMissing: false,
+        fallbackLng: 'en',
+        debug: false,
+        backend: {
+          projectId: '3d0aa5aa-4660-4154-b6d9-907dbef10bb2',
+          apiKey: 'key', // only needed if you like to add missing segments
+          referenceLng: 'en',
+          version: 'latest'
+        },
+        editor: {
+          bodyStyle: 'width: calc(100% - 505px);'
+        },
+        namespaceFromPath: true,
+        ns: ['common'],
+        onInitialTranslate: function() {
+          // window.initParticle();
+        }
+      });
+
+  body#page-top(style='display: none;')
+
+    nav#mainNav.navbar.navbar-default.navbar-fixed-top.affix(i18next-options='{"ns": "common"}')
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            i.fa.fa-bars
+          a.navbar-brand.page-scroll(href='#page-top')
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a.page-scroll.closeOnClick(href='#features') Features
+            li
+              a(href='/integration.html') Documentation
+            li
+              a(href='/categories/Post/') Blog
+            li
+              a.page-scroll.closeOnClick(href='#contact') Contact
+            li
+              a(href='https://www.locize.io/login', target='_blank') Login
+            li.dropdown(translated="")
+              a.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false')
+                span#selectedLng
+                span.caret(style="margin-top: -3px;")
+              ul#lngSelectDropDown.dropdown-menu
+
+
+    div(style="margin-top: 80px;")
+      block content
+      
+
+    footer(i18next-options='{"ns": "common"}')
+      .container
+        .row
+          .col-md-4
+            img(src='img/locize_color.svg', style='max-width: 120px; margin-left: -5px;')
+            p inweso GmbH
+            p Switzerland
+          .col-md-4
+            ul.list-unstyled
+              li
+                a(href='/integration.html') Documentation
+              li
+                a(href='/pricing.html') Pricing
+              li
+                a(href='/categories/Post/') Blog
+              li
+                a(href='/faq.html') FAQ
+          .col-md-4
+            ul.list-unstyled
+              li
+                ul.list-inline.list-social
+                  li.social-twitter
+                    a(href='https://twitter.com/locize', target='_blank')
+                      i.fa.fa-twitter
+                  li.social-facebook
+                    a(href='https://www.facebook.com/Locize-1672640746084189/', target='_blank')
+                      i.fa.fa-facebook
+                  li.social-youtube
+                    a(href='https://www.youtube.com/channel/UCPYQjBbbXojUcB8qjeIB3uA', target='_blank')
+                      i.fa.fa-youtube
+              li
+                a(href='/privacy.html') Privacy
+              li
+                a(href='/terms.html') Terms
+        .text-center.footer-copyright
+          p &copy; 2017 inweso GmbH. All Rights Reserved.
+    
+    script.
+      window.bindAffix = false;
+    script(src='/lib/jquery/jquery.min.js')
+    script(src='/lib/bootstrap/js/bootstrap.min.js')
+    script(src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')
+    script(src='/js/main.min.js')
