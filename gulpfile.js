@@ -29,7 +29,7 @@ gulp.task('less', function() {
 });
 
 gulp.task('pug', function buildHTML() {
-  return gulp.src(['index.pug', 'pricing.pug'])
+  return gulp.src(['*.pug'])
     .pipe(pug({
       pretty: true
     }))

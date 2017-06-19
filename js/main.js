@@ -38,6 +38,15 @@ locizify.i18next.on('languageChanged', function(lng) {
 (function($) {
     "use strict"; // Start of use strict
 
+    $(document).ready(function() {
+      if (!window.location.hash) return;
+      setTimeout(function () {
+        $('html, body').stop().animate({
+            scrollTop: ($(window.location.hash).offset().top - 50)
+        }, 1250, 'easeInOutExpo');
+      }, 1000);
+    });
+
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $(document).on('click', 'a.page-scroll', function(event) {
         var $anchor = $(this);

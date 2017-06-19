@@ -1,0 +1,133 @@
+extends pug/layout.pug
+
+block content
+  
+  section.section-white
+    .container
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h2 There is an integration option for everyone
+            p.text-muted Locize offers a big variety of integrations options.
+            hr
+
+  section.section-gray(style="padding: 0;")
+    .container
+      .row
+        .col-md-4(style="position: relative;")
+          .integration(style="height: 600px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
+            .integration-name.text-center locizify
+            .text-center.text-muted Zero effort - drop one line of code.
+            .integration-features
+              | Where to use:
+              ul
+                li Optimal for websites
+                li Suitable for non developers, too
+                li Minimal overhead to instrument your code
+                li Flexible translations options like, plurals, interpolation, url fragments
+                li Based on our virtualdom implementation on top of i18next
+                li Optimal for Wordpress, Shopify and other site generators
+            .integration-start
+              a.btn.btn-outline.btn-xl(href='https://www.locize.io/register', target='_blank', style="background-color: #ccc") Learn more!
+        
+                
+        .col-md-4(style="position: relative;")
+          .integration(style="height: 600px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
+            .integration-name.text-center i18next
+            .text-center.text-muted Best translation management for i18next.
+            .integration-features
+              | Where to use:
+              ul
+                li Suitable for all UI Frameworks, reactjs, angular, vue, backbone, ember, ...
+                li Minimal programming skills required
+                li Flexible translations options like, plurals, interpolation, context, ...
+                li Based on open source i18n framework i18next
+                li Usable on web, mobile and desktop and server
+            .integration-start
+              a.btn.btn-outline.btn-xl(href='https://www.locize.io/register', target='_blank', style="background-color: #ccc") Learn more!
+        
+
+        .col-md-4(style="position: relative;")
+          .integration(style="height: 600px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
+            .integration-name.text-center other options
+            .text-center.text-muted File based solution.
+            .integration-features
+              | Where to use:
+              ul
+                li Using with frameworks like react-intl, messageformat, js-lingue, jquery-i18n, ...
+                li Optimal for solutions based on formats like xliff, mo, po, android xml, ...
+            .integration-start
+              a.btn.btn-outline.btn-xl(href='https://www.locize.io/register', target='_blank', style="background-color: #ccc") Learn more!
+
+
+  section.section-white
+    .container
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h2 Continuous Localization Lifecycle
+            hr
+              
+      .row
+        .col-lg-12
+          p.text-muted Our goal is to provide you with a complete set of features to enable a continuous localization process:
+          
+          h3 Save missing: Automatical adding of new text content
+          
+          p.light-font For both locizify and i18next you can enable the save missing feature. Once enabled new content will automatically added to your localization project.
+          
+          h3 Locize CDN: Publishing translation
+          
+          p.light-font If not turned off translations will automatically published to our CDN. No need to download translations or redeploying of your app for changes to take effect.
+          
+          h3 API / CLI client
+          
+          p.light-font Use our API or CLI client to automate your process - if you prefer not depending on our CDN.
+          
+          h3 Versioning
+          
+          p.light-font Like on your repository you can add multiple versions to your project at no extra cost - work on latest while developing and pull the latest translations to your production version when ready to deploy a new version of your application.
+
+        
+                
+  //- section.section-primary
+  //-   .container
+  //-     .row
+  //-       .col-lg-12.text-center
+  //-         .section-heading
+  //-           h2 Why no fixed plans?
+  //-           p.text-muted While fixed plans are more common - variable prices are fair.
+  //-           hr
+  //-             
+  //-     .row
+  //-       .col-lg-12
+  //-         .text-center
+  //-           img(src="/img/cost_comparison.gif", style="width: 100%;")
+  //-           
+  //-         p.light-font(style="margin-top: 20px;") There are no permanent big raises of costs which were introduced by having to switch to a bigger plan because your plan reached a limit or because you needed some feature that was locked behind a paywall.
+  //- 
+  //-         h3 What does this mean for you?
+  //-         
+  //-         ul.light-font
+  //-           li Never being forced to be auto upgraded from a $49 to a $199 plan just because you cross a limit (words, pageviews, languages, users) just marginally 
+  //-             i (your real usage would be around $50 - but the plan forces you to be a enterprisy $199 plan consumer).
+  //-             
+  //-           li Never pay a bigger plan just because of that one feature you need most but was not included in your current plan
+  //-           
+  //-           li Costs are based on your projects size and success
+  //-           
+  //-           li Costs adapt to your usage: having months with less modifications (usage of locize app) you pay less
+  //-           
+  //-           li Costs grow slower the bigger your project gets
+  //-           
+  //-           li No limit on users
+  //-           
+  //-           li No limit on languages
+  //-           
+  //-           li All the features - no paywalls
+            
+  section#contact.contact.bg-tertiary(i18next-options='{"ns": "common"}')
+    .container
+      h2 Need some help getting started?
+      p Get any questions you may have about integrating locize answered by one of our team members.
+      a.btn.btn-outline.btn-xl.page-scroll(href='mailto:support@locize.com') Contact us!
