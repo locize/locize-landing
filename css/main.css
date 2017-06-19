@@ -159,6 +159,15 @@ img.grayscale {
   -webkit-filter: grayscale(100%);
   /* Chrome 19+, Safari 6+, Safari 6+ iOS */
 }
+ul.unstyled {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 14px;
+}
+.light-font {
+  font-weight: 300;
+}
 .cc_banner.cc_container.cc_container--open {
   background-color: rgba(0, 0, 0, 0.7) !important;
 }
@@ -355,33 +364,74 @@ header #particles-js {
     font-size: 50px;
   }
 }
-section.section-white .section-heading {
+.section-white .section-heading,
+.section-gray .section-heading,
+.section-primary .section-heading {
   margin-bottom: 100px;
 }
-section.section-white .section-heading h2 {
+.section-white .section-heading h2,
+.section-gray .section-heading h2,
+.section-primary .section-heading h2 {
   margin-top: 0;
 }
-section.section-white .section-heading p.head {
+.section-white .section-heading p.head,
+.section-gray .section-heading p.head,
+.section-primary .section-heading p.head {
   font-size: 24px;
 }
-section.section-white .section-heading p {
+.section-white .section-heading p,
+.section-gray .section-heading p,
+.section-primary .section-heading p {
   margin-bottom: 0;
   font-weight: 300;
 }
-section.section-white .section-heading hr {
+.section-white .section-heading hr,
+.section-gray .section-heading hr,
+.section-primary .section-heading hr {
   border-color: rgba(255, 255, 255, 0.6);
 }
-section.section-white .device-container {
+.section-white .device-container,
+.section-gray .device-container,
+.section-primary .device-container {
   max-width: 400px;
   margin: 0 auto;
   margin-bottom: 100px;
 }
 @media (min-width: 768px) {
-  section.section-white .device-container {
+  .section-white .device-container,
+  .section-gray .device-container,
+  .section-primary .device-container {
     max-width: none;
     margin: 0;
     margin-bottom: 0;
   }
+}
+.section-gray {
+  background-color: #eee;
+}
+.section-primary {
+  background-color: #2196f3;
+  color: #efefef;
+}
+.section-primary h3,
+.section-primary h4,
+.section-primary h5 {
+  color: #ccc;
+}
+.section-primary ul li {
+  font-size: 18px;
+}
+.section-primary .section-heading h2 {
+  color: #fff;
+}
+.section-primary .section-heading p.head {
+  font-size: 24px;
+}
+.section-primary .section-heading p {
+  color: #efefef;
+}
+.section-primary p {
+  color: #efefef;
 }
 section.features .section-heading,
 section.benefits .section-heading,
@@ -657,4 +707,53 @@ footer ul.list-social li a {
 }
 footer .footer-copyright {
   margin-top: 30px;
+}
+.pricing-name {
+  color: #2196f3;
+  font-size: 20px;
+  margin: 30px 0;
+}
+.pricing-price {
+  position: relative;
+  font-size: 55px;
+  color: #000;
+  margin: -5px 0 20px;
+}
+.pricing-price small {
+  margin-left: 10px;
+  font-size: 12px;
+}
+.pricing-price .currency {
+  position: relative;
+  margin-right: 4px;
+  top: -17px;
+  font-size: 22px;
+}
+.pricing-start {
+  text-align: center;
+}
+.pricing-start .btn {
+  border-radius: 5px;
+  background-color: #2196f3 !important;
+}
+.pricing-features {
+  margin: 40px 20px 0 40px;
+}
+.pricing-features ul {
+  margin: 0 0 40px;
+  padding: 0;
+  list-style-type: none;
+}
+.pricing-features ul li {
+  color: #777777;
+  margin: 15px 0;
+}
+.graduated-prices {
+  width: 100%;
+}
+.graduated-prices td {
+  padding: 0 20px;
+}
+.graduated-prices .right {
+  text-align: right;
 }
