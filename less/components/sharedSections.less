@@ -1,4 +1,4 @@
-.section-white, .section-gray, .section-primary {
+.section-white, .section-gray, .section-primary, .section-secondary, .section-tertiary {
   .section-heading {
     h2 {
       margin-top: 0;
@@ -33,7 +33,7 @@
   background-color: #eee;
 }
 
-.section-primary {
+.section-primary, .section-secondary, .section-tertiary {
   background-color: @theme-primary;
   color: #efefef;
 
@@ -60,4 +60,12 @@
   p {
     color: #efefef;
   }
+}
+
+.section-secondary {
+  background-color: @theme-secondary;
+}
+
+.section-tertiary {
+  background-color: @theme-tertiary;
 }

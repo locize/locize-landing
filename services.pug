@@ -1,0 +1,114 @@
+extends pug/layout.pug
+
+block content
+  
+  a(name="services")
+  section.section-secondary
+    .container
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h2 Additional services provided by locize
+            p.text-muted Extend your locize experience with those additional services.
+            hr
+
+  section.section-gray(style="padding: 0;")
+    .container
+      .row
+        .col-md-4.col-md-offset-4(style="position: relative;")
+          .integration(style="height: 600px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
+            .integration-name.text-center 
+              img(src="/img/services/auditing.png")
+            .text-center.text-muted Track all changes to your translations.
+            .text-center(style="font-size: 16px; font-weight: 600; margin-top: 30px;")
+              | $0.02 per audit unit
+              sup 1)
+            .integration-features
+              p Auditing enables you to track any changes done to your translations. It empowers you to prove anytime when a content fragment was changed. You can choose between a time to live starting from 3 months up to 10 years.
+              
+              div(style="font-style: italic;")
+                | 1) Audit unit is calculated per modification multiplied with time to live, eg: 
+                br
+                | - You save 3 changes and auditing set to 3 years ttl: 3 * 3 -> 9 audit units
+                br
+                | - You save 4 changes and auditing set to 3 months ttl: 4 * 0.25 -> 1 audit unit
+  
+  a(name="translationservices")
+  section.section-primary
+    .container
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h2 Integrated translation partners
+            p.text-muted Order translations from our partners.
+            hr
+
+  section.section-gray(style="padding: 0;")
+    .container
+      .row
+        .col-md-4(style="position: relative;")
+          .integration(style="height: 600px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
+            .integration-name.text-center 
+              img(src="/img/services/matecat.png")
+            .text-center.text-muted The advanced cat tool.
+            .text-center(style="font-size: 16px; font-weight: 600; margin-top: 30px;")
+              | Free
+            .integration-features
+              p MateCat is a free and open source translation tool. Companies, translation agencies, freelance translators and any other users can use it for free with no limitations on the number of projects and users.
+              
+              div(style="font-style: italic;") You can directly export your namespaces to matecat from the namespace menu.
+            
+            .integration-start
+              a.btn.btn-outline.btn-xl(href='https://www.matecat.com', target='_blank', style="background-color: #ccc") Learn more!
+            
+                
+        .col-md-4(style="position: relative;")
+          .integration(style="height: 600px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
+            .integration-name.text-center
+              img(src="/img/services/textmaster.png")
+            .text-center.text-muted Your Professional SaaS Translation Service
+            .text-center(style="font-size: 16px; font-weight: 600; margin-top: 30px;")
+              | $0.066 - $0.132 per word
+            .integration-features
+              p TextMaster’s translation services are ideal for a variety of projects: simple web content, high volume product catalogs or complex documents..
+              p We offer general translation services as well as more specialized translation, including financial, technical, and legal. For complex projects, our account management services are the best way to take the work off your hands.
+              
+            .integration-start
+              a.btn.btn-outline.btn-xl(href='https://www.textmaster.com/', target='_blank', style="background-color: #ccc") Learn more!
+
+
+        .col-md-4(style="position: relative;")
+          .integration(style="height: 600px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
+            .integration-name.text-center 
+              img(src="/img/services/gengo.png")
+            .text-center.text-muted Scalable solution with fast turnaround.
+            .text-center(style="font-size: 16px; font-weight: 600; margin-top: 30px;")
+              | $0.06 - $0.12 per word
+            .integration-features
+              p Want to translate thousands of product descriptions? Publish user reviews in multiple languages? Or grow your revenue and conversion rates? With Gengo, you can do all this and more.
+              
+            .integration-start
+              a.btn.btn-outline.btn-xl(href='https://gengo.com/', target='_blank', style="background-color: #ccc") Learn more!
+                
+
+      .row(style="margin-top: 30px;")
+        .col-md-4(style="position: relative;")
+          .integration(style="height: 600px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
+            .integration-name.text-center 
+              img(src="/img/services/onehourtranslation.png")
+            .text-center.text-muted Like Having Your Own Translator On Staff
+            .text-center(style="font-size: 16px; font-weight: 600; margin-top: 30px;")
+              |  $0.079 - $0.139 per word
+              sup 1)
+            .integration-features
+              p One Hour Translation provides professional, fast and affordable human translation services, available 24/7.
+              
+            .integration-start
+              a.btn.btn-outline.btn-xl(href='https://www.onehourtranslation.com/', target='_blank', style="background-color: #ccc") Learn more!
+                
+
+  section#contact.contact.bg-tertiary(i18next-options='{"ns": "common"}')
+    .container
+      h2 Need some help getting started?
+      p Get any questions you may have about integrating locize answered by one of our team members.
+      a.btn.btn-outline.btn-xl.page-scroll(href='mailto:support@locize.com') Contact us!

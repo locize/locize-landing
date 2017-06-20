@@ -366,33 +366,45 @@ header #particles-js {
 }
 .section-white .section-heading,
 .section-gray .section-heading,
-.section-primary .section-heading {
+.section-primary .section-heading,
+.section-secondary .section-heading,
+.section-tertiary .section-heading {
   margin-bottom: 100px;
 }
 .section-white .section-heading h2,
 .section-gray .section-heading h2,
-.section-primary .section-heading h2 {
+.section-primary .section-heading h2,
+.section-secondary .section-heading h2,
+.section-tertiary .section-heading h2 {
   margin-top: 0;
 }
 .section-white .section-heading p.head,
 .section-gray .section-heading p.head,
-.section-primary .section-heading p.head {
+.section-primary .section-heading p.head,
+.section-secondary .section-heading p.head,
+.section-tertiary .section-heading p.head {
   font-size: 24px;
 }
 .section-white .section-heading p,
 .section-gray .section-heading p,
-.section-primary .section-heading p {
+.section-primary .section-heading p,
+.section-secondary .section-heading p,
+.section-tertiary .section-heading p {
   margin-bottom: 0;
   font-weight: 300;
 }
 .section-white .section-heading hr,
 .section-gray .section-heading hr,
-.section-primary .section-heading hr {
+.section-primary .section-heading hr,
+.section-secondary .section-heading hr,
+.section-tertiary .section-heading hr {
   border-color: rgba(255, 255, 255, 0.6);
 }
 .section-white .device-container,
 .section-gray .device-container,
-.section-primary .device-container {
+.section-primary .device-container,
+.section-secondary .device-container,
+.section-tertiary .device-container {
   max-width: 400px;
   margin: 0 auto;
   margin-bottom: 100px;
@@ -400,7 +412,9 @@ header #particles-js {
 @media (min-width: 768px) {
   .section-white .device-container,
   .section-gray .device-container,
-  .section-primary .device-container {
+  .section-primary .device-container,
+  .section-secondary .device-container,
+  .section-tertiary .device-container {
     max-width: none;
     margin: 0;
     margin-bottom: 0;
@@ -409,29 +423,53 @@ header #particles-js {
 .section-gray {
   background-color: #eee;
 }
-.section-primary {
+.section-primary,
+.section-secondary,
+.section-tertiary {
   background-color: #2196f3;
   color: #efefef;
 }
 .section-primary h3,
+.section-secondary h3,
+.section-tertiary h3,
 .section-primary h4,
-.section-primary h5 {
+.section-secondary h4,
+.section-tertiary h4,
+.section-primary h5,
+.section-secondary h5,
+.section-tertiary h5 {
   color: #ccc;
 }
-.section-primary ul li {
+.section-primary ul li,
+.section-secondary ul li,
+.section-tertiary ul li {
   font-size: 18px;
 }
-.section-primary .section-heading h2 {
+.section-primary .section-heading h2,
+.section-secondary .section-heading h2,
+.section-tertiary .section-heading h2 {
   color: #fff;
 }
-.section-primary .section-heading p.head {
+.section-primary .section-heading p.head,
+.section-secondary .section-heading p.head,
+.section-tertiary .section-heading p.head {
   font-size: 24px;
 }
-.section-primary .section-heading p {
+.section-primary .section-heading p,
+.section-secondary .section-heading p,
+.section-tertiary .section-heading p {
   color: #efefef;
 }
-.section-primary p {
+.section-primary p,
+.section-secondary p,
+.section-tertiary p {
   color: #efefef;
+}
+.section-secondary {
+  background-color: #4B8DCE;
+}
+.section-tertiary {
+  background-color: #15419a;
 }
 section.features .section-heading,
 section.benefits .section-heading,

@@ -22,6 +22,7 @@
     "url": "https://github.com/locize/locize-landing.git"
   },
   "dependencies": {
+    "jstransformer-markdown-it": "^2.0.0",
     "simple-line-icons": "^2.3.2"
   },
   "scripts": {
