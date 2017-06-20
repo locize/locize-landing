@@ -14,7 +14,7 @@ locizify.getLanguages(function(err, lngs) {
     aEle.setAttribute('href', '/?lng=' + l);
     aEle.innerHTML = lng.nativeName;
     optEle.appendChild(aEle);
-    optionsEle.appendChild(optEle);
+    if (optionsEle) optionsEle.appendChild(optEle);
   });
 
   updateSelect();
@@ -26,7 +26,7 @@ function updateSelect() {
     if (!selected && availableLngs.indexOf(l) > -1) selected = l;
   });
 
-  selectedEle.innerHTML= selected || 'en';
+  if (selectedEle) selectedEle.innerHTML= selected || 'en';
 }
 
 locizify.i18next.on('languageChanged', function(lng) {
