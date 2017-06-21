@@ -438,7 +438,12 @@ header #particles-js {
 .section-primary h5,
 .section-secondary h5,
 .section-tertiary h5 {
-  color: #ccc;
+  color: #fff;
+}
+.section-primary p.light-font,
+.section-secondary p.light-font,
+.section-tertiary p.light-font {
+  color: #cecece;
 }
 .section-primary ul li,
 .section-secondary ul li,

@@ -4,35 +4,36 @@ var optionsEle = document.getElementById('lngSelectDropDown');
 var availableLngs = [];
 
 // create select options based on project languages
-locizify.getLanguages(function(err, lngs) {
-  availableLngs = Object.keys(lngs || {});
-  availableLngs.forEach(function(l) {
-    var lng = lngs[l];
-    if (lng.translated.production < 0.9) return;
-    var optEle = document.createElement('LI');
-    var aEle = document.createElement('A')
-    aEle.setAttribute('href', '/?lng=' + l);
-    aEle.innerHTML = lng.nativeName;
-    optEle.appendChild(aEle);
-    if (optionsEle) optionsEle.appendChild(optEle);
+if (locizify) {
+  locizify.getLanguages(function(err, lngs) {
+    availableLngs = Object.keys(lngs || {});
+    availableLngs.forEach(function(l) {
+      var lng = lngs[l];
+      if (lng.translated.production < 0.9) return;
+      var optEle = document.createElement('LI');
+      var aEle = document.createElement('A')
+      aEle.setAttribute('href', '/?lng=' + l);
+      aEle.innerHTML = lng.nativeName;
+      optEle.appendChild(aEle);
+      if (optionsEle) optionsEle.appendChild(optEle);
+    });
+
+    updateSelect();
   });
 
-  updateSelect();
-});
+  function updateSelect() {
+    var selected;
+    locizify.i18next.languages.forEach(function(l) {
+      if (!selected && availableLngs.indexOf(l) > -1) selected = l;
+    });
 
-function updateSelect() {
-  var selected;
-  locizify.i18next.languages.forEach(function(l) {
-    if (!selected && availableLngs.indexOf(l) > -1) selected = l;
+    if (selectedEle) selectedEle.innerHTML= selected || 'en';
+  }
+
+  locizify.i18next.on('languageChanged', function(lng) {
+    updateSelect();
   });
-
-  if (selectedEle) selectedEle.innerHTML= selected || 'en';
 }
-
-locizify.i18next.on('languageChanged', function(lng) {
-  updateSelect();
-});
-
 
 
 (function($) {
