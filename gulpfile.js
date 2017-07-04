@@ -109,3 +109,5 @@ gulp.task('dev', ['browserSync', 'pug', 'less', 'minify-css', 'minify-js'], func
     gulp.watch('*.html', browserSync.reload);
     gulp.watch('js/**/*.js', browserSync.reload);
 });
+
+gulp.task('build', ['pug', 'less', 'minify-css', 'minify-js']);

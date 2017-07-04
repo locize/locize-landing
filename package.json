@@ -26,6 +26,7 @@
     "simple-line-icons": "^2.3.2"
   },
   "scripts": {
-    "start": "gulp dev"
+    "start": "gulp dev",
+    "build": "gulp build"
   }
 }
