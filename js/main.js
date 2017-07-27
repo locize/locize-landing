@@ -42,8 +42,10 @@ if (locizify) {
     $(document).ready(function() {
       if (!window.location.hash) return;
       setTimeout(function () {
+        var offset = $(window.location.hash).offset();
+        if (!offset) return;
         $('html, body').stop().animate({
-            scrollTop: ($(window.location.hash).offset().top - 50)
+            scrollTop: (offset.top - 50)
         }, 1250, 'easeInOutExpo');
       }, 1000);
     });
@@ -51,8 +53,10 @@ if (locizify) {
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $(document).on('click', 'a.page-scroll', function(event) {
         var $anchor = $(this);
+        var offset = $($anchor.attr('href')).offset();
+        if (!offset) return;
         $('html, body').stop().animate({
-            scrollTop: ($($anchor.attr('href')).offset().top - 50)
+            scrollTop: (offset.top - 50)
         }, 1250, 'easeInOutExpo');
         event.preventDefault();
     });

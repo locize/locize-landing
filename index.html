@@ -88,7 +88,7 @@
             <div class="col-sm-7">
               <div class="header-content">
                 <div class="header-content-inner"><img id="brand-logo" src="img/locize_white.svg" style="max-width: 300px; margin-bottom: 30px;">
-                  <h1>Bridging the gap between translation and development.</h1><a class="btn btn-outline btn-xl page-scroll" href="https://www.locize.io/register" target="_blank">Start Now for Free!</a>
+                  <h1>Bridging the gap between translation and development.</h1><a class="btn btn-outline btn-xl page-scroll" href="https://www.locize.io/register" target="_blank">Start Now for Free!</a><a class="btn btn-outline btn-second-outline btn-xl page-scroll" href="#" data-toggle="modal" data-target="#videoModal" data-thevideo="https://www.youtube.com/embed/YQryHo1iHb8?rel=0&amp;controls=0&amp;showinfo=0">Watch Video</a>
                 </div>
               </div>
             </div>
@@ -113,6 +113,11 @@
         </div>
       </div>
     </section>
+    <selection id="video" translated="">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" width="1280" height="720" src="https://www.youtube.com/embed/YQryHo1iHb8?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+      </div>
+    </selection>
     <section class="features bg-primary text-center" id="features">
       <div class="container">
         <div class="row">
@@ -385,6 +390,22 @@
         </div>
       </div>
     </footer>
+    <!-- MODAL-->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-video">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" width="1280" height="720" src="" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -410,6 +431,22 @@
           if (window.addEventListener) {window.addEventListener('load', _onload, false);}
           else {window.attachEvent('onload', _onload)}
       }());
+      
+      $(document).ready(function() {
+        //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
+        (function () {
+          var trigger = $("body").find('[data-toggle="modal"]');
+          trigger.click(function() {
+            var theModal = $(this).data( "target" ),
+            videoSRC = $(this).attr( "data-theVideo" ),
+            videoSRCauto = videoSRC+"&autoplay=1" ;
+            $(theModal+' iframe').attr('src', videoSRCauto);
+            $(theModal+' button.close').click(function () {
+              $(theModal+' iframe').attr('src', videoSRC);
+            });
+          });
+        })();
+      });
     </script>
   </body>
 </html>

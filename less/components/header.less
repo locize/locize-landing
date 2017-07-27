@@ -43,6 +43,17 @@ header {
             }
             .btn-outline {
               background: @theme-primary;
+              margin-bottom: 25px;
+            }
+            .btn-second-outline {
+              margin-left: 25px;
+              background: transparent;
+              &:hover,
+              &:focus,
+              &:active,
+              &.active {
+                  background: @theme-primary;
+              }
             }
         }
     }
