@@ -1,0 +1,138 @@
+extends pug/layout.pug
+
+block head
+  title locize - how it works
+
+block content
+
+  section.section-primary
+    .container
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h2 Customer Testimonials
+            p.text-muted Hear what our customers have to say!
+            hr
+
+  section#testimonials.testimonials.section-gray
+    .container
+      .testimonial-container(translated="")  
+        .row
+          .col-lg-3.col-md-6.col-sm-12
+            .testimonial
+              .testimonial-title
+                img.grayscale(style='max-height: 50px; max-width: 100%;', src='img/customers/chilldev.png')
+              .testimonial-content
+                p
+                  | Locize took all the technical efforts related to localizing our frontend off from our shoulders with just a few lines of configuration.
+                p
+                  | Replaced our old complex toolchain with just few API calls providing a user-friendly solution for translators at once.
+              .author
+                hr
+                | Rafał Wrzeszcz, Owner
+                br
+                a(href='https://chilldev.pl/') chilldev.pl
+          .col-lg-3.col-md-6.col-sm-12
+            .testimonial
+              .testimonial-title
+                //- img.grayscale(style='max-height: 50px', src='img/customers/vgpro.png')
+              .testimonial-content
+                //- p
+                //-   | Having a platform that makes it easy to localize your website is great, but also integrating the translation in real time to your website is just amazing.
+                //- p
+                //-   | I have been using Locize and it made it easier to connect with translators and get the job done. I would recommend to anyone looking for the same.
+              .author
+                //- hr
+                //- | Pierre Ortega, Lead Developer
+                //- br
+                //- a(href='http://vgpro.gg' target='_blank') VGPRO.gg
+          .col-lg-3.col-md-6.col-sm-12
+            .testimonial
+              .testimonial-title
+                //- img.grayscale(style='max-height: 45px', src='img/customers/shoprepublic.png')
+              .testimonial-content
+                //- p
+                //-   | 'With locize.com we could speed up our whole translation process by more than 50%!'
+              .author
+                //- hr
+                //- | Christian Schab, Founder
+                //- br
+                //- a(href='https://www.shoprepublic.de/') ShopRepublic GmbH
+          .col-lg-3.col-md-6.col-sm-12
+            .testimonial
+              .testimonial-title
+                //- img.grayscale(style='max-height: 50px', src='img/customers/classnet.png')
+              .testimonial-content
+                //- p
+                //-   | Locize is an awesome way to localize your website.
+                //- p
+                //-   | It makes translating your existing content as easy as it could possibly get and the integration takes just one line of code.
+              .author
+                //- hr
+                //- | Alexander Bayerl, Student
+                //- br
+                //- a(href='https://classnet.info/?lng=en') classnet
+
+
+        .row
+          .col-lg-3.col-md-6.col-sm-12
+            .testimonial
+              .testimonial-title
+                img.grayscale(style='max-height: 50px', src='img/customers/wuxus.png')
+              .testimonial-content
+                p
+                  | Locize enables Wuxus to roll out our digital infrastructure for the transportation industry, on a global scale, with ease.
+                p
+                  | Great tool, easy to implement, easy to use, great service and support. Asked for a feature - available the next day.
+              .author
+                hr
+                | Lars Bryrup, Head of Tech
+                br
+                a(href='http://www.wuxus.com/') wuxus.com
+          .col-lg-3.col-md-6.col-sm-12
+            .testimonial
+              .testimonial-title
+                img.grayscale(style='max-height: 50px', src='img/customers/vgpro.png')
+              .testimonial-content
+                p
+                  | Having a platform that makes it easy to localize your website is great, but also integrating the translation in real time to your website is just amazing.
+                p
+                  | I have been using Locize and it made it easier to connect with translators and get the job done. I would recommend to anyone looking for the same.
+              .author
+                hr
+                | Pierre Ortega, Lead Developer
+                br
+                a(href='http://vgpro.gg' target='_blank') VGPRO.gg
+          .col-lg-3.col-md-6.col-sm-12
+            .testimonial
+              .testimonial-title
+                img.grayscale(style='max-height: 45px', src='img/customers/shoprepublic.png')
+              .testimonial-content
+                p
+                  | 'With locize.com we could speed up our whole translation process by more than 50%!'
+              .author
+                hr
+                | Christian Schab, Founder
+                br
+                a(href='https://www.shoprepublic.de/') ShopRepublic GmbH
+          .col-lg-3.col-md-6.col-sm-12
+            .testimonial
+              .testimonial-title
+                img.grayscale(style='max-height: 50px', src='img/customers/classnet.png')
+              .testimonial-content
+                p
+                  | Locize is an awesome way to localize your website.
+                p
+                  | It makes translating your existing content as easy as it could possibly get and the integration takes just one line of code.
+              .author
+                hr
+                | Alexander Bayerl, Student
+                br
+                a(href='https://classnet.info/?lng=en') classnet
+
+
+  section#contact.contact.bg-tertiary(i18next-options='{"ns": "common"}')
+    .container
+      h2 Need some help getting started?
+      p Get any questions you may have about integrating locize answered by one of our team members.
+      a.btn.btn-outline.btn-xl.page-scroll(href='mailto:support@locize.com') Contact us!

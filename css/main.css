@@ -623,11 +623,6 @@ section.testimonials {
 section.testimonials .section-heading hr {
   border-color: rgba(0, 0, 0, 0.2);
 }
-section.testimonials .testimonial-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
 section.testimonials .testimonial {
   display: flex;
   flex-direction: column;
