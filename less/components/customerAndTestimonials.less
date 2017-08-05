@@ -34,6 +34,9 @@ section.testimonials {
           border-color: rgba(0,0,0,.2);
       }
   }
+  .btn-outline {
+    background: @theme-primary;
+  }
   .testimonial-container {
     // display: flex;
     // flex-direction: row;
@@ -49,11 +52,17 @@ section.testimonials {
     background-color: white;
     padding: 30px 20px;
     margin: 10px auto;
+    overflow-x: scroll;
     @media (min-width: 992px) {
       height: 520px;
     }
     @media (min-width: 1200px) {
-      height: 580px;
+      height: 600px;
+    }
+    &.testimonial-fullwidth {
+      @media (min-width: 992px) {
+        max-width: 100%;
+      }
     }
     .testimonial-content {
       flex-grow: 1;

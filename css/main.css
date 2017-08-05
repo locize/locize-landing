@@ -623,6 +623,9 @@ section.testimonials {
 section.testimonials .section-heading hr {
   border-color: rgba(0, 0, 0, 0.2);
 }
+section.testimonials .btn-outline {
+  background: #2196f3;
+}
 section.testimonials .testimonial {
   display: flex;
   flex-direction: column;
@@ -633,6 +636,7 @@ section.testimonials .testimonial {
   background-color: white;
   padding: 30px 20px;
   margin: 10px auto;
+  overflow-x: scroll;
 }
 @media (min-width: 992px) {
   section.testimonials .testimonial {
@@ -641,7 +645,12 @@ section.testimonials .testimonial {
 }
 @media (min-width: 1200px) {
   section.testimonials .testimonial {
-    height: 580px;
+    height: 600px;
+  }
+}
+@media (min-width: 992px) {
+  section.testimonials .testimonial.testimonial-fullwidth {
+    max-width: 100%;
   }
 }
 section.testimonials .testimonial .testimonial-content {
