@@ -39,28 +39,6 @@ html(lang='en')
       window.cookieconsent_options = {'message':'This website uses cookies to ensure you get the best experience on our website','dismiss':'Got it!','learnMore':'More info','link':'http://locize.com/privacy.html','theme':'dark-bottom'};
     script(src='//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js')
 
-    // LOCIZIFY
-    script(src='https://unpkg.com/locizify@^2.0.0')
-    script.
-      locizify.init({
-        saveMissing: false,
-        fallbackLng: 'en',
-        debug: false,
-        backend: {
-          projectId: '3d0aa5aa-4660-4154-b6d9-907dbef10bb2',
-          apiKey: 'key', // only needed if you like to add missing segments
-          referenceLng: 'en',
-          version: 'production'
-        },
-        editor: {
-          bodyStyle: 'width: calc(100% - 505px);'
-        },
-        namespaceFromPath: true,
-        ns: ['common'],
-        onInitialTranslate: function() {
-          // window.initParticle();
-        }
-      });
 
     // google-analytics
     script.
@@ -89,6 +67,8 @@ html(lang='en')
               a.closeOnClick(href='/#features') Features
             li
               a(href='/how-it-works.html') How it works
+            li
+              a(href='/for-your-team.html') For your team
             li
               a(href='/services.html') Services
             li
