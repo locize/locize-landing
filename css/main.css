@@ -648,7 +648,7 @@ section.testimonials .testimonial {
     height: 600px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   section.testimonials .testimonial.testimonial-fullwidth {
     max-width: 100%;
   }
