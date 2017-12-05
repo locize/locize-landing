@@ -58,6 +58,9 @@ p {
   line-height: 1.5;
   margin-bottom: 20px;
 }
+.strong {
+  font-weight: 600;
+}
 .bg-primary {
   background: #2196f3;
   background: -webkit-linear-gradient(#2196f3, #0c7cd5);
@@ -617,7 +620,7 @@ section.customers img {
     margin-bottom: 0;
   }
 }
-section.testimonials {
+#testimonials {
   background-color: #eeeeee;
 }
 section.testimonials .section-heading hr {
@@ -656,6 +659,10 @@ section.testimonials .testimonial {
 section.testimonials .testimonial .testimonial-content {
   flex-grow: 1;
   margin-bottom: auto;
+  color: #333;
+}
+section.testimonials .testimonial .testimonial-content p {
+  color: #333;
 }
 section.testimonials .testimonial .author {
   margin-top: auto;

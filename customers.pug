@@ -5,7 +5,45 @@ block head
 
 block content
 
-  section.section-primary
+  section.testimonials.section-primary
+    .container
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h2 Customer Success Stories
+            p.text-muted Learn from the success stories of our customers!
+            hr
+              
+      .testimonial-container(translated="") 
+        .row
+          .col-lg-4.col-md-4.col-sm-12
+            .testimonial(style="height: 580px;")
+              div(style='margin: -30px -20px 0;')
+                img(style='width: 100%; max-height: initial; margin-bottom: 0;', src='img/stories/hypertrend.gif')
+              .text-center(style='background-color: #ddd; margin: 0px -20px 10px; padding: 10px;')
+                a.btn.btn-outline.btn-sm(href='http://www.hypertrends.com/2017/11/localization-using-locize/' target="_blank") Read the full story              
+              .testimonial-content
+                p.strong Localization as a Service using Locize
+                p So you manage Localizations in Word? Excel? JSON? XML? Notepad? Believe it or not, we’ve tried it all.
+              .author
+                hr
+                | Anup Marwadi, Hypertrends.com
+                
+          .col-lg-4.col-md-4.col-sm-12
+            .testimonial(style="height: 580px;")
+              div(style='margin: -30px -20px 0;')
+                img(style='width: 100%; max-height: initial; margin-bottom: 0;', src='img/stories/avocode.gif')
+              .text-center(style='background-color: #ddd; margin: 0px -20px 10px; padding: 10px;')
+                a.btn.btn-outline.btn-sm(href='http://www.hypertrends.com/2017/11/localization-using-locize/' target="_blank") Read the full story              
+              .testimonial-content
+                p.strong How we translated the Avocode website written in Next.js with the i18next package
+                p How to translate a website that is always changing?
+              .author
+                hr
+                | Matouš Roskovec, Avocode.com
+
+
+  section#testimonials.testimonials.section-gray
     .container
       .row
         .col-lg-12.text-center
@@ -13,9 +51,6 @@ block content
             h2 Customer Testimonials
             p.text-muted Hear what our customers have to say!
             hr
-
-  section#testimonials.testimonials.section-gray
-    .container
       .testimonial-container(translated="") 
         .row
           .col-lg-3.col-md-4.col-sm-12
@@ -174,6 +209,22 @@ block content
                 | Rafał Wrzeszcz, Owner
                 br
                 a(href='https://chilldev.pl/') chilldev.pl
+                
+                
+          .col-lg-3.col-md-4.col-sm-12
+            .testimonial
+              .testimonial-title
+                img.grayscale(style='max-height: 50px; max-width: 100%;', src='img/customers/hypertrend.png')
+              .testimonial-content
+                p “Locize promises a Continuous Localization Lifecycle and delivers it with a bang.”
+                p Using Locize, we have been able to translate over 40,000 key/value pairs for a significantly large application within a matter of days. It cannot get better than this.
+                p Read the full 
+                  a(href="http://www.hypertrends.com/2017/11/localization-using-locize/", target="_blank") success story.
+              .author
+                hr
+                | Anup Marwadi, CEO
+                br
+                a(href='http://www.hypertrends.com/') Hypertrends Global Inc
 
   section#contact.contact.bg-tertiary(i18next-options='{"ns": "common"}')
     .container
