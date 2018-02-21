@@ -53,7 +53,9 @@ h6 {
   font-weight: 200;
   letter-spacing: 1px;
 }
-p {
+p,
+ul,
+ol {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 20px;
@@ -888,4 +890,14 @@ footer .footer-copyright {
   font-weight: 300;
   text-shadow: none;
   opacity: 1;
+}
+.legal h3 {
+  margin-top: 40px;
+}
+.legal h3:first-child {
+  margin-top: 0px;
+}
+.legal h4 {
+  margin-top: 30px;
+  font-size: 22px;
 }
