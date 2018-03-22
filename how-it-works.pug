@@ -5,6 +5,102 @@ block head
 
 block content
   
+  section.section-tertiary.features.text-center
+    .container
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h2 For Traditionalists
+            p.head
+              | Use locize like your traditional desktop based translation tool (just better).
+            hr
+      .row
+        .col-md-12
+          .container-fluid
+            .row
+              .col-md-6
+                .feature-item
+                  .device-container(style="margin: 0 auto 0;")
+                    .device-mockup.macbook_2015.silver
+                      .device
+                        .screen
+                          img.img-responsive(src='img/screenshots/screen/mt_s.jpg', alt='locize editor')
+              .col-md-6
+                .feature-item
+                  h3 Manual Import / Export
+                  p Use locize by importing and exporting the translation files.
+                  p Take advantage from the smart translation memory and machine translations.
+                  p 
+                    | Learn more about the 
+                    a(href="https://docs.locize.com/supported-formats.html" target="_blank") supported formats.
+
+  
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h2 For Automators
+            p.head
+              | Automating parts of the process.
+            hr
+              
+      .row
+        .col-md-12
+          .container-fluid
+            .row
+              .col-md-6
+                .feature-item
+                  h3 Powerful API / Sync tool
+                  p 
+                    | You can control your localization project by using our full fledged 
+                    a(href="https://docs.locize.com/api.html" target="_blank") API.
+                  p 
+                    | Want to sync with your local code repository or during build time. All possible using our 
+                    a(href="https://github.com/locize/locize-cli#synchronize-locize-with-your-repository-or-any-other-local-directory" target="_blank") Sync tool.
+
+              .col-md-6
+                .feature-item
+                  .device-container(style="margin: 0 auto 0;")
+                    .device-mockup.macbook_2015.silver
+                      .device
+                        .screen
+                          img.img-responsive(src='img/screenshots/screen/cli_s.jpg', alt='locize cli')
+
+              
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h2 For Innovators
+            p.head
+              | Being more efficient using locize.
+            hr
+              
+      .row
+        .col-md-12
+          .container-fluid
+            .row
+              .col-md-6
+                .feature-item
+                  .device-container(style="margin: 0 auto 0;")
+                    .device-mockup.macbook_2015.silver
+                      .device
+                        .screen
+                          img.img-responsive(src='img/screenshots/screen/incontext_editor_s.jpg', alt='locize incontext')
+              .col-md-6
+                .feature-item
+                  h3 The next level of localization
+                  p Directly connect your project with locize.
+                  ul 
+                    li Automatically get new untranslated segments send to locize.
+                    li Directly consume translations from our CDN.
+                    li Directly translate in the context of you web application.
+                  p 
+                    | See the full power in this 
+                    a(href="https://www.youtube.com/watch?v=9NOzJhgmyQE" target="_blank") video sample 
+                    | for react.js. Learn more about the integration options using i18next or other i18n frameworks below.
+
+                  
+
+  
   section.section-white
     .container
       .row
@@ -18,7 +114,7 @@ block content
     .container
       .row
         .col-md-4(style="position: relative;")
-          .integration(style="height: 800px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
+          .integration(style="height: 840px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
             .integration-name.text-center 
               img(src="/img/howto/locizify.svg" style="height: 40px")
             .text-center.text-muted Zero effort - drop one line of code.
@@ -38,7 +134,7 @@ block content
         
                 
         .col-md-4(style="position: relative;")
-          .integration(style="height: 800px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
+          .integration(style="height: 840px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
             .integration-name.text-center
               img(src="/img/howto/i18next.svg" style="height: 40px")
             .text-center.text-muted Best translation management for i18next.
@@ -57,7 +153,7 @@ block content
         
 
         .col-md-4(style="position: relative;")
-          .integration(style="height: 800px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
+          .integration(style="height: 840px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
             .integration-name.text-center other options
             .text-center.text-muted(style="margin-top: 12px;") File based solution.
             .text-center
@@ -65,7 +161,7 @@ block content
             .integration-features
               | Where to use:
               ul
-                li Using with frameworks like react-intl, messageformat, js-lingui, jquery-i18n, ...
+                li Using with frameworks like react-intl, vue-i18n, i18n.js, angular-i18n, jquery-i18n, ...
                 li We provide you with a script to simplify loading translations to your javascript client,...
                 li Optimal for solutions based on formats like xliff, mo, po, android xml, ...
                 li Using our API you can build anything you could think of
