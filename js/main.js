@@ -4,7 +4,7 @@ var optionsEle = document.getElementById('lngSelectDropDown');
 var availableLngs = [];
 
 // create select options based on project languages
-if (locizify) {
+if (typeof locizify !== 'undefined') {
   locizify.getLanguages(function(err, lngs) {
     availableLngs = Object.keys(lngs || {});
     availableLngs.forEach(function(l) {

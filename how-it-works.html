@@ -35,30 +35,6 @@
     <!-- consent script-->
     <script>window.cookieconsent_options = {'message':'This website uses cookies to ensure you get the best experience on our website','dismiss':'Got it!','learnMore':'More info','link':'http://locize.com/privacy.html','theme':'dark-bottom'};</script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
-    <!-- LOCIZIFY-->
-    <script src="https://unpkg.com/locizify@^2.0.0"></script>
-    <script>
-      locizify.init({
-        saveMissing: false,
-        fallbackLng: 'en',
-        debug: false,
-        backend: {
-          projectId: '3d0aa5aa-4660-4154-b6d9-907dbef10bb2',
-          apiKey: 'key', // only needed if you like to add missing segments
-          referenceLng: 'en',
-          version: 'production'
-        },
-        editor: {
-          bodyStyle: 'width: calc(100% - 505px);'
-        },
-        namespaceFromPath: true,
-        ns: ['common'],
-        onInitialTranslate: function() {
-          // window.initParticle();
-        }
-      });
-      
-    </script>
     <!-- google-analytics-->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -72,7 +48,7 @@
     </script>
     <title>locize - how it works</title>
   </head>
-  <body id="page-top" style="display: none;">
+  <body id="page-top">
     <nav class="navbar navbar-default navbar-fixed-top affix" id="mainNav" i18next-options="{&quot;ns&quot;: &quot;common&quot;}">
       <div class="container">
         <div class="navbar-header">
@@ -230,7 +206,7 @@
           <div class="row">
             <div class="col-md-4" style="position: relative;">
               <div class="integration" style="height: 840px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;">
-                <div class="integration-name text-center"> <img src="/img/howto/locizify.svg" style="height: 40px;"></div>
+                <div class="integration-name text-center"> <img src="/img/howto/locizify.svg" style="height: 40px"></div>
                 <div class="text-center text-muted">Zero effort - drop one line of code.</div>
                 <div class="text-center"> <img src="/img/howto/locizify-frameworks.png" style="width: 80%; margin: 10px 0 0;"></div>
                 <div class="integration-features">Where to use:
@@ -243,12 +219,12 @@
                     <li>Optimal for Wordpress, Shopify and other site generators</li>
                   </ul>
                 </div>
-                <div class="integration-start"><a class="btn btn-outline btn-xl" href="https://docs.locize.com/instrumenting-your-code.html#locizify" target="_blank" style="background-color: #ccc;">Learn more!</a></div>
+                <div class="integration-start"><a class="btn btn-outline btn-xl" href="https://docs.locize.com/instrumenting-your-code.html#locizify" target="_blank" style="background-color: #ccc">Learn more!</a></div>
               </div>
             </div>
             <div class="col-md-4" style="position: relative;">
               <div class="integration" style="height: 840px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;">
-                <div class="integration-name text-center"><img src="/img/howto/i18next.svg" style="height: 40px;"></div>
+                <div class="integration-name text-center"><img src="/img/howto/i18next.svg" style="height: 40px"></div>
                 <div class="text-center text-muted">Best translation management for i18next.</div>
                 <div class="text-center"> <img src="/img/howto/i18next-frameworks.png" style="width: 80%; margin: 10px 0 0;"></div>
                 <div class="integration-features">Where to use:
@@ -260,7 +236,7 @@
                     <li>Usable on web, mobile and desktop and server</li>
                   </ul>
                 </div>
-                <div class="integration-start"><a class="btn btn-outline btn-xl" href="https://docs.locize.com/instrumenting-your-code.html#i18next" target="_blank" style="background-color: #ccc;">Learn more!</a></div>
+                <div class="integration-start"><a class="btn btn-outline btn-xl" href="https://docs.locize.com/instrumenting-your-code.html#i18next" target="_blank" style="background-color: #ccc">Learn more!</a></div>
               </div>
             </div>
             <div class="col-md-4" style="position: relative;">
@@ -276,7 +252,7 @@
                     <li>Using our API you can build anything you could think of</li>
                   </ul>
                 </div>
-                <div class="integration-start"><a class="btn btn-outline btn-xl" href="https://docs.locize.com/instrumenting-your-code.html#other-options" target="_blank" style="background-color: #ccc;">Learn more!</a></div>
+                <div class="integration-start"><a class="btn btn-outline btn-xl" href="https://docs.locize.com/instrumenting-your-code.html#other-options" target="_blank" style="background-color: #ccc">Learn more!</a></div>
               </div>
             </div>
           </div>
@@ -357,7 +333,7 @@
       qp('init', '6dc05287a85844ad952b71cbde9b5ebb');
       qp('track', 'ViewContent');
     </script>
-    <noscript><img height="1" width="1" style="display:none;" src="https://q.quora.com/_/ad/6dc05287a85844ad952b71cbde9b5ebb/pixel?tag=ViewContent&amp;noscript=1"></noscript>
+    <noscript><img height="1" width="1" style="display:none" src="https://q.quora.com/_/ad/6dc05287a85844ad952b71cbde9b5ebb/pixel?tag=ViewContent&amp;noscript=1"></noscript>
     <script>window.bindAffix = false;</script>
     <script src="/lib/jquery/jquery.min.js"></script>
     <script src="/lib/bootstrap/js/bootstrap.min.js"></script>

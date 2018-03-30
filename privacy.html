@@ -35,30 +35,6 @@
     <!-- consent script-->
     <script>window.cookieconsent_options = {'message':'This website uses cookies to ensure you get the best experience on our website','dismiss':'Got it!','learnMore':'More info','link':'http://locize.com/privacy.html','theme':'dark-bottom'};</script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
-    <!-- LOCIZIFY-->
-    <script src="https://unpkg.com/locizify@^2.0.0"></script>
-    <script>
-      locizify.init({
-        saveMissing: false,
-        fallbackLng: 'en',
-        debug: false,
-        backend: {
-          projectId: '3d0aa5aa-4660-4154-b6d9-907dbef10bb2',
-          apiKey: 'key', // only needed if you like to add missing segments
-          referenceLng: 'en',
-          version: 'production'
-        },
-        editor: {
-          bodyStyle: 'width: calc(100% - 505px);'
-        },
-        namespaceFromPath: true,
-        ns: ['common'],
-        onInitialTranslate: function() {
-          // window.initParticle();
-        }
-      });
-      
-    </script>
     <!-- google-analytics-->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -72,7 +48,7 @@
     </script>
     <title>locize - privacy policy</title>
   </head>
-  <body id="page-top" style="display: none;">
+  <body id="page-top">
     <nav class="navbar navbar-default navbar-fixed-top affix" id="mainNav" i18next-options="{&quot;ns&quot;: &quot;common&quot;}">
       <div class="container">
         <div class="navbar-header">
@@ -192,7 +168,7 @@ Information we collect may be stored or processed on computers located in any co
       qp('init', '6dc05287a85844ad952b71cbde9b5ebb');
       qp('track', 'ViewContent');
     </script>
-    <noscript><img height="1" width="1" style="display:none;" src="https://q.quora.com/_/ad/6dc05287a85844ad952b71cbde9b5ebb/pixel?tag=ViewContent&amp;noscript=1"></noscript>
+    <noscript><img height="1" width="1" style="display:none" src="https://q.quora.com/_/ad/6dc05287a85844ad952b71cbde9b5ebb/pixel?tag=ViewContent&amp;noscript=1"></noscript>
     <script>window.bindAffix = false;</script>
     <script src="/lib/jquery/jquery.min.js"></script>
     <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
