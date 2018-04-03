@@ -46,7 +46,7 @@ html(lang='en')
     script(src='//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js')
 
     // LOCIZIFY
-    script(src='https://unpkg.com/locizify@^2.0.0')
+    script(src='https://unpkg.com/locizify@^2.6.0')
     script.
       locizify.init({
         //saveMissing: true,
@@ -57,7 +57,8 @@ html(lang='en')
           projectId: '3d0aa5aa-4660-4154-b6d9-907dbef10bb2',
           apiKey: 'key', // only needed if you like to add missing segments
           referenceLng: 'en',
-          version: 'production'
+          version: 'production',
+          autoPilot: true
         },
         editor: {
           bodyStyle: 'width: calc(100% - 505px);'
