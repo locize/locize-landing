@@ -40,7 +40,7 @@ block content
               ul
                 li Unlimited Languages, Files, Users (Admin, Developers, Translators, ...)
                 li Flexible integrations, InContext Editor
-                li Publish to our CDN
+                li Publish to our CDN (public or private)
                 li Continuous Localization Lifecycle
                 li Online Translation Editor
                 li Rich support for i18next, icu/messageformat, i18n-js (plurals, ...)
@@ -80,6 +80,11 @@ block content
           h3 Downloads
 
           p.light-font Download of translations from our CDN to your users get accounted. This costs are only charged if you directly use the translations served from our CDN.
+
+          h3 Private Downloads
+
+          p.light-font Regular downloads are public. So those translations would be visible to public even during development. To avoid leaking confidation informations during development (eg. new features) you can use private publish options which only enables downloads using an API key - so the translations are not public accessible.
+
 
         .col-md-4
           p.text-muted Prices are graduated:
@@ -134,6 +139,19 @@ block content
             tr
               td: strong more:
               td.right $0.00005
+              
+          h6 Private Downloads
+
+          table.graduated-prices
+            tr
+              td: strong first 500000:
+              td.right $0.001
+            tr
+              td: strong next 1000000:
+              td.right $0.00075
+            tr
+              td: strong more:
+              td.right $0.0005
 
       .row
         .col-lg-12.text-center
