@@ -845,7 +845,8 @@ footer .footer-copyright {
   background-color: #15419a !important;
 }
 .integration-features {
-  margin: 40px 20px 0 40px;
+  margin: 40px 20px 80px 40px;
+  overflow-x: scroll;
 }
 .integration-features ul {
   margin: 0 0 40px;
@@ -855,6 +856,10 @@ footer .footer-copyright {
 .integration-features ul li {
   color: #777777;
   margin: 15px 0;
+}
+.integration-features.no-overflow {
+  margin: 40px 20px 0 40px;
+  overflow-x: none;
 }
 /***** Modal *****/
 .modal-backdrop.in {
