@@ -371,7 +371,7 @@ header #particles-js {
   }
   header .device-container {
     max-width: 400px;
-    max-height: calc(0vh);
+    max-height: calc(100vh - 100px);
     margin: 250px auto 0;
   }
 }
