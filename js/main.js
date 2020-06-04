@@ -9,7 +9,7 @@ if (typeof locizify !== 'undefined') {
     availableLngs = Object.keys(lngs || {});
     availableLngs.forEach(function(l) {
       var lng = lngs[l];
-      if (lng.translated.production < 0.9) return;
+      if (lng.translated[locizify.i18next.options.backend.version] === undefined || lng.translated[locizify.i18next.options.backend.version] < 0.9) return;
       var optEle = document.createElement('LI');
       var aEle = document.createElement('A')
       aEle.setAttribute('href', '/?lng=' + l);
