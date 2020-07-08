@@ -338,11 +338,11 @@ header .header-content .header-content-inner .btn-second-outline:active,
 header .header-content .header-content-inner .btn-second-outline.active {
   background: #2196f3;
 }
-header .device-container {
+header .device-wrapper {
   max-width: 300px;
   margin: 0 auto 100px;
 }
-header .device-container .screen img {
+header .device-wrapper .screen img {
   border-radius: 3px;
 }
 header #particles-js {
@@ -369,7 +369,7 @@ header #particles-js {
   header .header-content .header-content-inner h1 {
     font-size: 35px;
   }
-  header .device-container {
+  header .device-wrapper {
     max-width: 400px;
     max-height: calc(100vh - 100px);
     margin: 250px auto 0;
@@ -416,21 +416,21 @@ header #particles-js {
 .section-tertiary .section-heading hr {
   border-color: rgba(255, 255, 255, 0.6);
 }
-.section-white .device-container,
-.section-gray .device-container,
-.section-primary .device-container,
-.section-secondary .device-container,
-.section-tertiary .device-container {
+.section-white .device-wrapper,
+.section-gray .device-wrapper,
+.section-primary .device-wrapper,
+.section-secondary .device-wrapper,
+.section-tertiary .device-wrapper {
   max-width: 400px;
   margin: 0 auto;
   margin-bottom: 100px;
 }
 @media (min-width: 768px) {
-  .section-white .device-container,
-  .section-gray .device-container,
-  .section-primary .device-container,
-  .section-secondary .device-container,
-  .section-tertiary .device-container {
+  .section-white .device-wrapper,
+  .section-gray .device-wrapper,
+  .section-primary .device-wrapper,
+  .section-secondary .device-wrapper,
+  .section-tertiary .device-wrapper {
     max-width: none;
     margin: 0;
     margin-bottom: 0;
@@ -518,24 +518,24 @@ section.benefits .section-heading hr,
 section.testimonials .section-heading hr {
   border-color: rgba(0, 0, 0, 0.1);
 }
-section.features .device-container,
-section.benefits .device-container,
-section.testimonials .device-container,
+section.features .device-wrapper,
+section.benefits .device-wrapper,
+section.testimonials .device-wrapper,
 section.features .feature-item,
 section.benefits .feature-item,
 section.testimonials .feature-item {
   max-width: 300px;
   margin: 0 auto;
 }
-section.features .device-container,
-section.benefits .device-container,
-section.testimonials .device-container {
+section.features .device-wrapper,
+section.benefits .device-wrapper,
+section.testimonials .device-wrapper {
   margin-bottom: 100px;
 }
 @media (min-width: 992px) {
-  section.features .device-container,
-  section.benefits .device-container,
-  section.testimonials .device-container {
+  section.features .device-wrapper,
+  section.benefits .device-wrapper,
+  section.testimonials .device-wrapper {
     margin-bottom: 0;
   }
 }
@@ -565,9 +565,9 @@ section.testimonials .feature-item i {
   -webkit-text-fill-color: transparent;
 }
 @media (min-width: 992px) {
-  section.features .device-container,
-  section.benefits .device-container,
-  section.testimonials .device-container,
+  section.features .device-wrapper,
+  section.benefits .device-wrapper,
+  section.testimonials .device-wrapper,
   section.features .feature-item,
   section.benefits .feature-item,
   section.testimonials .feature-item {
@@ -580,7 +580,7 @@ section.features .section-heading p {
 section.features .section-heading hr {
   border-color: rgba(255, 255, 255, 0.6);
 }
-section.features .device-container {
+section.features .device-wrapper {
   max-width: 400px;
 }
 section.features .feature-item {
@@ -591,7 +591,7 @@ section.features .feature-item p {
   color: #cecece;
 }
 @media (min-width: 768px) {
-  section.features .device-container {
+  section.features .device-wrapper {
     margin: 0;
   }
 }
