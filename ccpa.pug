@@ -1,0 +1,41 @@
+extends pug/layout.pug
+
+block head
+  title locize - CCPA terms
+
+block content
+
+  section.section-tertiary
+    .container
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h2 CCPA terms
+            hr
+
+  section.section-gray(style="padding: 0;")
+    .container
+      .row
+        .col-md-8.col-md-offset-2(style="position: relative;")
+          .legal(style="background-color: #fff; padding: 20px; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
+            :markdown-it(linkify)
+
+              These CCPA Terms supplements the [Terms and Conditions](/terms.html) (the "Agreement") and the [privacy policy](/privacy.html) or other agreement between you or the entity you represent when the California Consumer Privacy Act of 2018 (“CCPA”) applies to your use of the Services to process “personal information” (as defined in CCPA) that is uploaded to the Services under your locize accounts (“Personal Information”).
+              
+              Unless otherwise defined in these CCPA Terms, all capitalized terms used in these CCPA Terms will have the meanings given to them in the Agreement.
+
+              locize agrees and certifies that locize will not:
+              - (a) retain, use, or disclose Personal Information except as permitted in the Agreement and under CCPA; or
+              - (b) sell Personal Information.
+
+              These CCPA Terms do not limit or reduce any other data privacy commitments locize makes to you in the Agreement.
+
+              ------------
+
+              ### Change log
+
+              #### 09/09/2020
+
+              - made CCPA publicly available
+
+              ------------
