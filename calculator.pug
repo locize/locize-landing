@@ -1,0 +1,217 @@
+extends pug/layout.pug
+
+block head
+  style.
+    .pricing-slider {
+      width: 400px;
+      margin-left: 10px;
+    }
+    .pricing-input {
+      width: 80px;
+      margin-left: 10px;
+    }
+    .pricing-fromto {
+      width: 80px;
+      margin: 0 10px;
+    }
+    .pricing-row {
+      display: flex;
+      align-items: center;
+    }
+    .pricing-subResult {
+      display: inline-block;
+      margin-left: 30px;
+    }
+    .pricing-label {
+      display: inline-block;
+      width: 150px;
+      margin-right: 10px;
+    }
+    .pricing-results {
+      margin-top: 40px;
+    }
+    .pricing-resultTotal {
+      font-weight: 700;
+    }
+    .pricing-sets {
+      margin: 0 0 40px 0;
+    }
+  title locize - pricing calculator
+
+block content
+
+  section.section-tertiary
+    .container
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h2 Pricing Calculator
+            hr
+
+  section.section-gray(style="padding: 0;")
+    .container
+      .row
+        .col-md-8.col-md-offset-2(style="position: relative;")
+          .legal(style="background-color: #fff; padding: 20px; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
+            .pricing-table
+              #sets.pricing-sets
+              div
+                .pricing-row
+                  span.pricing-label words
+                  span(translated='') 0
+                  input#words.pricing-slider(translated='' type='range' min='0' max='200000' value='9000' step='1')
+                  span.pricing-fromto(translated='') 200000
+                  input#words_input.pricing-input(type='number')
+                .pricing-row
+                  span.pricing-label modifications
+                  span(translated='') 0
+                  input#modifications.pricing-slider(translated='' type='range' min='0' max='20000' value='400' step='1')
+                  span.pricing-fromto(translated='') 20000
+                  input#modifications_input.pricing-input(type='number')
+                .pricing-row
+                  span.pricing-label downloads
+                  span(translated='') 0
+                  input#downloads.pricing-slider(translated='' type='range' min='0' max='10000000' value='40000' step='1')
+                  span.pricing-fromto(translated='') 10000000
+                  input#downloads_input.pricing-input(type='number')
+              .pricing-results
+                div
+                  span.pricing-label subscription
+                  span#resultSubscription(translated='')
+                div
+                  span.pricing-label words
+                  span#resultWords(translated='')
+                div
+                  span.pricing-label modifications
+                  span#resultModifications(translated='')
+                div
+                  span.pricing-label downloads
+                  span#resultDownloads(translated='')
+                div
+                  span.pricing-label
+                    strong total
+                  span#resultTotal.pricing-resultTotal(translated='')
+                  div
+                    small(style='font-size: 12px;') prices excl. VAT | billed on a recurring monthly basis
+
+  script.
+    var prices = {
+      subscription: 5,
+      words: [
+        { next: 10000, price: 0.004 },
+        { next: 20000, price: 0.003 },
+        { next: 20000, price: 0.002 },
+        { next: 20000, price: 0.001 },
+        { price: 0.0005 }
+      ],
+      downloads: [
+        { next: 500000, price: 0.0001 },
+        { next: 1000000, price: 0.000075 },
+        { price: 0.00005 }
+      ],
+      modifications: [
+        { next: 1000, price: 0.04 },
+        { next: 2000, price: 0.03 },
+        { next: 2000, price: 0.02 },
+        { next: 2000, price: 0.01 },
+        { price: 0.005 }
+      ],
+      auditEntries: [
+        { price: 0.02 }
+      ]
+    };
+
+    var setData = [
+      { name: 'small', words: 2000, downloads: 10000, modifications: 100 },
+      { name: 'medium', words: 10000, downloads: 50000, modifications: 200 },
+      { name: 'large', words: 37000, downloads: 1000000, modifications: 500 },
+      // { name: 'xlarge', words: 75000, downloads: 500000, modifications: 750 },
+    ];
+
+    // elements
+    var selWord = document.getElementById('words');
+    var resWord = document.getElementById('resultWords');
+    var wordsInput = document.getElementById('words_input');
+    var selDownload = document.getElementById('downloads');
+    var resDownload = document.getElementById('resultDownloads');
+    var downloadsInput = document.getElementById('downloads_input');
+    var selModification = document.getElementById('modifications');
+    var resModification = document.getElementById('resultModifications');
+    var modificationsInput = document.getElementById('modifications_input');
+    var resSubscription = document.getElementById('resultSubscription');
+    var resTotal = document.getElementById('resultTotal');
+    var sets = document.getElementById('sets');
+
+    // buttons with presets
+    function setValues(data) {
+      selWord.value = data.words;
+      selDownload.value = data.downloads;
+      selModification.value = data.modifications;
+
+      render(calculate());
+    };
+
+    setData.forEach(function(d) {
+      var btn = document.createElement('button');
+      btn.innerHTML = d.name;
+      btn.setAttribute('class', 'btn btn-signup');
+      btn.setAttribute('style', 'margin-right: 20px');
+      btn.addEventListener('click', function(e) {
+        setValues(d);
+      });
+      sets.appendChild(btn);
+    });
+
+
+    function calcOne(name, amount) {
+      var ret = 0;
+      var rest = amount;
+      var itemPrices = prices[name];
+
+      itemPrices.forEach(function(p) {
+        if (rest <= 0) return;
+
+        var newRest = p.next ? rest - p.next : -1;
+        var charge = newRest >= 0 ? p.next : rest;
+        ret = ret + (charge * p.price);
+
+        rest = newRest;
+      });
+
+      return ret;
+    }
+
+    function calculate() {
+      if (selWord.value !== wordsInput.value) wordsInput.value = selWord.value
+      if (selDownload.value !== downloadsInput.value) downloadsInput.value = selDownload.value
+      if (selModification.value !== modificationsInput.value) modificationsInput.value = selModification.value
+      var costWords = calcOne('words', selWord.value);
+      var costDownloads = calcOne('downloads', selDownload.value);
+      var costModifications = calcOne('modifications', selModification.value);
+
+      return {
+        words: selWord.value,
+        costWords: costWords,
+        downloads: selDownload.value,
+        costDownloads: costDownloads,
+        modifications: selModification.value,
+        costModifications: costModifications
+      }
+    }
+
+    function render(costs) {
+      resWord.innerHTML = costs.costWords.toFixed(2) + '$ (' + costs.words + ')';
+      resDownload.innerHTML = costs.costDownloads.toFixed(2) + '$ (' + costs.downloads + ')';
+      resModification.innerHTML = costs.costModifications.toFixed(2) + '$ (' + costs.modifications + ')';
+      resSubscription.innerHTML = prices.subscription.toFixed(2) + '$ (' + 1 + ')';
+      resTotal.innerHTML = (costs.costModifications + costs.costWords + costs.costDownloads + prices.subscription).toFixed(2) + '$';
+    }
+
+    selWord.addEventListener('change', function(e) { render(calculate()); });
+    selDownload.addEventListener('change', function(e) { render(calculate()); });
+    selModification.addEventListener('change', function(e) { render(calculate()); });
+    wordsInput.addEventListener('change', function(e) { selWord.value = wordsInput.value; render(calculate()); });
+    downloadsInput.addEventListener('change', function(e) { selDownload.value = downloadsInput.value; render(calculate()); });
+    modificationsInput.addEventListener('change', function(e) { selModification.value = modificationsInput.value; render(calculate()); });
+
+    render(calculate());
