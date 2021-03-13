@@ -2,7 +2,7 @@
   "name": "locize-landing",
   "title": "Landing",
   "version": "3.3.7",
-  "homepage": "http://locize.com",
+  "homepage": "https://locize.com",
   "author": "locize.com",
   "devDependencies": {
     "bootstrap": "^4.3.1",
@@ -27,6 +27,7 @@
   },
   "scripts": {
     "start": "gulp dev",
-    "build": "gulp build"
+    "build": "gulp build",
+    "sitemap": "npx sitemap-generator-cli https://locize.com"
   }
 }
