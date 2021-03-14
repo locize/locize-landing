@@ -479,7 +479,8 @@ html(lang='en')
           layer: '#stickLayer',
           //- trigger: ['all'],
           cookie: true,
-          maxamount: 1
+          maxamount: 1,
+          cookieExpiration: 2 * 30 * 24 * 60 * 60 // 2 months
         });
       });
     script(type="text/javascript").
