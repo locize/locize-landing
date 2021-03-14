@@ -1,5 +1,5 @@
 /*!
- * Landing v3.3.7 (http://locize.com)
+ * Landing v3.3.7 (https://locize.com)
  * Copyright 2017 -2021 locize.com
  * All rights reserved
  */
