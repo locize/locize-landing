@@ -33,7 +33,7 @@
     
     -->
     <link href="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" rel="stylesheet" type="text/css">
-    <link href="https://www.unpkg.com/stick-to-me@1.0.1/src/stick-to-me.css" rel="stylesheet" type="text/css">
+    <link href="https://www.unpkg.com/stick-to-me@1.0.2/src/stick-to-me.css" rel="stylesheet" type="text/css">
     <title>locize - privacy policy</title>
   </head>
   <body id="page-top">
@@ -306,7 +306,7 @@ Email: <a href="mailto:privacy@locize.com">privacy@locize.com</a></p>
     <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="/js/main.min.js"></script>
-    <script src="https://www.unpkg.com/stick-to-me@1.0.1/src/stick-to-me.js"></script>
+    <script src="https://www.unpkg.com/stick-to-me@1.0.2/src/stick-to-me.js"></script>
     <script type="text/javascript">
       function closeStick() {
         $.stick_close();
@@ -316,7 +316,8 @@ Email: <a href="mailto:privacy@locize.com">privacy@locize.com</a></p>
           layer: '#stickLayer',
           //- trigger: ['all'],
           cookie: true,
-          maxamount: 1
+          maxamount: 1,
+          cookieExpiration: 2 * 30 * 24 * 60 * 60 // 2 months
         });
       });
       
