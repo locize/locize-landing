@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/pixelsign/html5-device-mockups/blob/master/LICENSE.txt)
  * Last Build: Thu Dec 20 2018 14:05:50
  */
-.device-wrapper {
+ .device-wrapper {
   max-width: 300px;
   width: 100%; }
 
@@ -1582,6 +1582,40 @@
     content: '';
     background-image: url(../device-mockups/iPhoneX/landscape_black.png); }
   .device[data-device="iPhoneX"][data-orientation="landscape"][data-color="black"] .button {
+    display: none;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%; }
+
+.device[data-device="iPhoneXnoNotch"][data-orientation="portrait"][data-color="black"] {
+  padding-bottom: 198.898071625%; }
+  .device[data-device="iPhoneXnoNotch"][data-orientation="portrait"][data-color="black"] .screen {
+    top: 3.1855955679%;
+    left: 6.8870523416%;
+    width: 86.2258953168%;
+    height: 93.6288088643%; }
+  .device[data-device="iPhoneXnoNotch"][data-orientation="portrait"][data-color="black"]::after {
+    content: '';
+    background-image: url(../device-mockups/iPhoneXnoNotch/portrait_black.png); }
+  .device[data-device="iPhoneXnoNotch"][data-orientation="portrait"][data-color="black"] .button {
+    display: none;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%; }
+
+.device[data-device="iPhoneXnoNotch"][data-orientation="landscape"][data-color="black"] {
+  padding-bottom: 50.2770083102%; }
+  .device[data-device="iPhoneXnoNotch"][data-orientation="landscape"][data-color="black"] .screen {
+    top: 6.3360881543%;
+    left: 3.4626038781%;
+    width: 93.0747922438%;
+    height: 87.3278236915%; }
+  .device[data-device="iPhoneXnoNotch"][data-orientation="landscape"][data-color="black"]::after {
+    content: '';
+    background-image: url(../device-mockups/iPhoneXnoNotch/landscape_black.png); }
+  .device[data-device="iPhoneXnoNotch"][data-orientation="landscape"][data-color="black"] .button {
     display: none;
     top: 0%;
     left: 0%;
