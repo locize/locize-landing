@@ -4,7 +4,7 @@ html(lang='en')
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(name='description', content='locize - Bridging the gap between translation and development. With locize we remove the pain in the translation process. No more delays in shipping your software because of missing translations. Translator could keep up with changes from day one. The continuous localization process keeps up with your demanding business. Stop waiting - start localizing. The translation management system created by the creators of i18next. Designed for every type of i18n framework.')
+    meta(name='description', content='Locize is a pay-per-use localization management platform for cost-saving translation management. Reduce manual processes by integrating all of your tools.')
     meta(name='author', content='inweso GmbH')
     meta(name='copyright', content='inweso GmbH')
     meta(name='keywords', content='localization,internationalization,localize,translate,locize,l10n,i18n,javascript,nodejs,localization as a service,saas translation,saas localization,laas,continuous localization,DevOps,process,free,website localization,service,software,web app,web,mobile,desktop,game,translation management,online,automate,process of localization,localization process,translation service,localization service,translation software,landing page,javascript localize,localization tool,localizing a website,localization solution,cloud localization,cloud translation,serverless,cloud,cdn,react,react.js,reactjs,next,next.js,nextjs,angular,vue,vue-js,jquery,nodejs,i18next,json,api,react-native,localization api,translation api,localistars,app localization services,localization management platform,localization platform,professional translation and localization services,website translation management,app localization service,online translation management,i18next translation management,i18next translation,manage translations,manage translation files')
@@ -25,7 +25,7 @@ html(lang='en')
     meta(name='twitter:creator', content='@locize')
     meta(name='slack-app-id', content='A71NM84Q6')
 
-    title locize - continuous localization (by the creators of i18next)
+    title locize - the pay-per-use continuous localization management platform
 
     link(href='lib/bootstrap/css/bootstrap.min.css', rel='stylesheet')
     link(href='https://fonts.googleapis.com/css?family=Lato', rel='stylesheet')
@@ -107,18 +107,19 @@ html(lang='en')
                 .header-content
                   .header-content-inner
                     img#brand-logo(src='img/locize_white.svg', style='max-width: 300px; margin-bottom: 30px;', alt='locize logo')
-                    h1 Bridging the gap between translation and development.
+                    h1 The pay-per-use continuous localization management platform
+                    h3(i18next-key='whatIsLocize') Bridging the gap between translation and development with locize, a modern and affordable localization-management-platform. It makes your website, app, game or whatever your project is, global, vibrant, and more engaging especially when unleashing the continuous localization capabilities.
                     |
                     a.btn.btn-outline.btn-xl.page-scroll(href='https://www.locize.app/register', target='_blank') Start Now for Free!
                     a.btn.btn-outline.btn-second-outline.btn-xl.page-scroll(href='#', data-toggle='modal', data-target='#videoModal', data-thevideo='https://www.youtube.com/embed/YQryHo1iHb8?rel=0&controls=0&showinfo=0') Watch Video
-                    h3(i18next-key='whatIsLocize') locize is a modern and affordable localization management solution. It makes your website, app, game or whatever your project is, global, vibrant, and more engaging especially when unleashing the continuous localization capabilities.
+                    
                     h3(i18next-key='whatIsLocizeI18next', style="font-size: 18px; font-weight: bold;") The translation management system created by the creators of <a href="/i18next.html" style="color: white;">i18next</a>. Designed for every type of i18n framework.
 
               .col-sm-5
                 .device-wrapper
                   .device(data-device="iPhoneXnoNotch", data-orientation="portrait", data-color="black")
                     .screen
-                      img.img-responsive(src='img/screenshots/iphone6/dashboard.png', alt='locize dashboard')
+                      img.img-responsive(src='img/screenshots/iphone6/localization-management-platform.png', alt='localization management platform')
                     // .button
 
     section#customers.customers(translated="")
@@ -151,6 +152,7 @@ html(lang='en')
             .embed-responsive.embed-responsive-16by9
               iframe.embed-responsive-item(width='1280', height='720', src='https://www.youtube.com/embed/YQryHo1iHb8?rel=0&controls=0&showinfo=0', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
 
+
     section#features.features.bg-primary.text-center
       .container
         .row
@@ -158,7 +160,7 @@ html(lang='en')
             .section-heading
               h2 Grow global &ndash; get locized
               p.head
-                | You're in need of a localization solution that keeps up with your vibrant business environment?
+                | You're in need of a #[strong localization management platform] that keeps up with your vibrant business environment?
               p.head
                 | Does your current process break your agile development or continuous deployment process?
               p(style='margin-top: 20px;')
@@ -255,6 +257,26 @@ html(lang='en')
                       | Keep track over all changes done to your project's translations. The last translation changes are audited per key.
                     p
                       | Need to provide those information - who did when change which segment? We get you covered.
+
+ 
+    section.integration
+      .container
+        .row
+          .col-md-6
+            h2 Easy integration for your operating tools
+            p There is an integration option for all tools. Start to reduce manual processes and everday tasks with easy integration of locize for busy people. We are your cost-effective translation management platform and help move your software automation to a new level. This includes <a href="/how-it-works.html" title="">Javascript-localization</a> for apps built with React, Angular and Vue but not limited to this only.
+          .col-md-6
+            a(href='/how-it-works.html')
+              img(src="/img/howto/i18next-frameworks.png" style="width: 80%; margin: 10px 0 0;")
+        .row
+          div(style="padding: 5rem 0 0 0")
+            .col-md-6.text-center
+              a(href='/pricing.html')
+                  img(src="/img/localization-pricing.webp" style="max-width:50%")
+            .col-md-6
+              h2 Pay only for what you use
+              p A heavy save in cost for localization management with a varying pricing. <b>Save up to 40% of translation cost </b> compared to traditional services with fixed prices. Check out our <a href="/pricing.html" title="localization pricing">pricing details</a> for more information. There are also more software-localization-tools available on the locize platform for free usage.
+
 
 
     section#testimonials.testimonials
@@ -377,6 +399,60 @@ html(lang='en')
                       | .
                     p.text-muted
                       | Find a detailed billing forecast and history on your project.
+    
+    section#process.process
+      .container
+        .row
+          .col-md-12
+            h2 What is the software localization process
+            p Software-localization is the process of transforming the language of a web app, game or any web content to the end user's locale. A translation management platform helps tech companies and developers to increase the confidence for new potential customers, as localized products are best for local markets. The primary benefit of locize is #[strong to simplify the core process of localization] with a very easy to use translation management platform. Starting with just one piece of code the translations can be managed with an easy interface and can be deloyed separately with no delays.
+
+            img(style='max-width: 100%;', src='img/localization_process.png', alt='localization-process')
+
+    section#platform.platform
+      .container
+        .row
+          .col-md-12
+            h2 What can our localization platform do?
+            p You and your team can manage the following types on our localization platform. We help you start your language localisation on all apps, games and documents. A localization-management-tool will improve the quality of your process management by store all your files in one place during the development.
+
+            .col-md-4.text-center
+              a(href='#')
+                img(style='max-width: 100%;', src='img/website_localization.png', alt='website-localization.png')
+              h3 Website
+              p Use our tool for web applications of any kind. This can be frontend, backend, landingpage or blogs - choose your fit. 
+
+            .col-md-4.text-center
+              a(href='#')
+                img(style='max-width: 100%;', src='img/app_localization.png', alt='app-localization')
+              h3 Mobile App
+              p Take your mobile app to next level. Manage your mobile platform language easily and eliminate unnecessary communication in your team.
+
+            .col-md-4.text-center
+              a(href='/customers.html')
+                img(style='max-width: 100%;', src='img/game_localization.png', alt='game-localization')
+              h3 Video game
+              p Automate your game translation management with Locize and let your team save a lot of time during development process.
+
+            .col-md-4.text-center
+              a(href='#')
+                img(style='max-width: 100%;', src='img/platform_localization.png', alt='platform_localization')
+              h3 Platforms
+              p We helped platforms to include multiple languages into their software solutions, that they can provide a more advanced service for their users and suppliers.  
+
+            .col-md-4.text-center
+              a(href='/how-it-works.html')
+                img(style='max-width: 100%;', src='img/website_builder.png', alt='website_builder')
+              h3 Website builders
+              p We have built a custom script for Website Builders where flexible translation options are available. This can be used with Wordpress, Shopify and other Website Builders. 
+
+            
+
+
+
+
+
+
     section.cta
       .cta-content
         .container
@@ -390,6 +466,9 @@ html(lang='en')
           a.btn.btn-outline.btn-xl.page-scroll(href='https://www.locize.app/register', target='_blank') Let&apos;s Get Started!
           p.hint * 14d free trial. No credit card needed! No obligations!
       .overlay
+
+    
+
     section#contact.contact.bg-tertiary
       .container
         h2 Have questions?
