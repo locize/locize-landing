@@ -596,7 +596,7 @@ section.features .feature-item p {
   }
 }
 section.customers {
-  padding: 10px 0;
+  padding: 5rem 0;
   background-color: #eeeeee;
   border-top: solid 1px #ccc;
 }
@@ -686,6 +686,15 @@ section.testimonials .testimonial img {
   display: inline-block;
   max-height: 60px;
   margin-bottom: 40px;
+}
+section.process {
+  background-color: #eeeeee;
+}
+section.platform {
+  background-color: #eeeeee;
+}
+section.platform .col-md-4 {
+  margin: 3rem 0;
 }
 section.cta {
   position: relative;
