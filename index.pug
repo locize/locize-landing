@@ -63,7 +63,7 @@ html(lang='en')
 
     link(href='//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css', rel='stylesheet', type="text/css")
 
-    link(href='https://www.unpkg.com/stick-to-me@1.0.1/src/stick-to-me.css', rel='stylesheet', type="text/css")
+    //- link(href='https://www.unpkg.com/stick-to-me@1.0.1/src/stick-to-me.css', rel='stylesheet', type="text/css")
 
   body#page-top(style='display: none;')
 
@@ -536,45 +536,45 @@ html(lang='en')
               iframe.embed-responsive-item(width='1280', height='720', src='', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
 
 
-    #stickLayer.stick_popup(style='display:none;')
-      .stick_close(onclick='$.stick_close()') X
-      .stick_content
-        .container
-          .row
-            .col-sm-6(style="width: 49%; text-align: center;")
-              h3(style="height: 105px;")
-                | Why not experience a carefree way of localization?
-                br
-                i You can try it for free!
-              img(src="img/happy_localization.png", style="max-width: 100%;")
-              a.btn.btn-outline.btn-xl(href='https://www.locize.app/register', target='_blank', style="background: #2196f3; font-size: 14px; margin-top: 10px;") Ok, I'll give it a try!
-            .col-sm-6(style="width: 49%; text-align: center;")
-              h3(style="height: 105px;")
-                | I don't want to improve my localization process!
-                br
-                i Let me go!
-              img(src="img/frustrating_localization.png", style="max-width: 100%;")
-              a.btn.btn-outline.btn-second-outline.btn-xl(onclick="closeStick()", style="background: #646464; font-size: 14px; margin-top: 10px;") Good Bye!
+    //- #stickLayer.stick_popup(style='display:none;')
+    //-   .stick_close(onclick='$.stick_close()') X
+    //-   .stick_content
+    //-     .container
+    //-       .row
+    //-         .col-sm-6(style="width: 49%; text-align: center;")
+    //-           h3(style="height: 105px;")
+    //-             | Why not experience a carefree way of localization?
+    //-             br
+    //-             i You can try it for free!
+    //-           img(src="img/happy_localization.png", style="max-width: 100%;")
+    //-           a.btn.btn-outline.btn-xl(href='https://www.locize.app/register', target='_blank', style="background: #2196f3; font-size: 14px; margin-top: 10px;") Ok, I'll give it a try!
+    //-         .col-sm-6(style="width: 49%; text-align: center;")
+    //-           h3(style="height: 105px;")
+    //-             | I don't want to improve my localization process!
+    //-             br
+    //-             i Let me go!
+    //-           img(src="img/frustrating_localization.png", style="max-width: 100%;")
+    //-           a.btn.btn-outline.btn-second-outline.btn-xl(onclick="closeStick()", style="background: #646464; font-size: 14px; margin-top: 10px;") Good Bye!
 
     script(src='lib/jquery/jquery.min.js')
     script(src='lib/bootstrap/js/bootstrap.min.js')
     script(src='//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')
     script(src='js/main.min.js')
 
-    script(src='https://www.unpkg.com/stick-to-me@1.0.2/src/stick-to-me.js')
-    script(type="text/javascript").
-      function closeStick() {
-        $.stick_close();
-      }
-      $(document).ready(function() {
-        $.stickToMe({
-          layer: '#stickLayer',
-          //- trigger: ['all'],
-          cookie: true,
-          maxamount: 1,
-          cookieExpiration: 2 * 30 * 24 * 60 * 60 // 2 months
-        });
-      });
+    //- script(src='https://www.unpkg.com/stick-to-me@1.0.2/src/stick-to-me.js')
+    //- script(type="text/javascript").
+    //-   function closeStick() {
+    //-     $.stick_close();
+    //-   }
+    //-   $(document).ready(function() {
+    //-     $.stickToMe({
+    //-       layer: '#stickLayer',
+    //-       //- trigger: ['all'],
+    //-       cookie: true,
+    //-       maxamount: 1,
+    //-       cookieExpiration: 2 * 30 * 24 * 60 * 60 // 2 months
+    //-     });
+    //-   });
     script(type="text/javascript").
       $(document).ready(function() {
         //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG

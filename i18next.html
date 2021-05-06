@@ -33,7 +33,6 @@
     
     -->
     <link href="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" rel="stylesheet" type="text/css">
-    <link href="https://www.unpkg.com/stick-to-me@1.0.2/src/stick-to-me.css" rel="stylesheet" type="text/css">
     <title>locize - Translation Management for i18next</title>
   </head>
   <body id="page-top">
@@ -225,43 +224,12 @@ i18next
         </div>
       </div>
     </footer>
-    <div class="stick_popup" id="stickLayer" style="display:none;">
-      <div class="stick_close" onclick="$.stick_close()">X</div>
-      <div class="stick_content">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6" style="width: 49%; text-align: center;">
-              <h3 style="height: 105px;">Why not experience a carefree way of localization?<br><i>You can try it for free!</i></h3><img src="img/happy_localization.png" style="max-width: 100%;"><a class="btn btn-outline btn-xl" href="https://www.locize.app/register" target="_blank" style="background: #2196f3; font-size: 14px; margin-top: 10px;">Ok, I'll give it a try!</a>
-            </div>
-            <div class="col-sm-6" style="width: 49%; text-align: center;">
-              <h3 style="height: 105px;">I don't want to improve my localization process!<br><i>Let me go!</i></h3><img src="img/frustrating_localization.png" style="max-width: 100%;"><a class="btn btn-outline btn-second-outline btn-xl" onclick="closeStick()" style="background: #646464; font-size: 14px; margin-top: 10px;">Good Bye!</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <script>window.bindAffix = false;</script>
     <script src="/lib/jquery/jquery.min.js"></script>
     <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="/js/main.min.js"></script>
-    <script src="https://www.unpkg.com/stick-to-me@1.0.2/src/stick-to-me.js"></script>
-    <script type="text/javascript">
-      function closeStick() {
-        $.stick_close();
-      }
-      $(document).ready(function() {
-        $.stickToMe({
-          layer: '#stickLayer',
-          //- trigger: ['all'],
-          cookie: true,
-          maxamount: 1,
-          cookieExpiration: 2 * 30 * 24 * 60 * 60 // 2 months
-        });
-      });
-      
-    </script>
     <script src="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
     <script>
       function enableCookies() {
