@@ -229,24 +229,27 @@
       }
       
       window.cookieconsent.initialise({
-          "palette": {
-              "popup": {
-                  "background": "#2196f3",
-                  "text": "#ffffff"
+          palette: {
+              popup: {
+                  background: "#2196f3",
+                  text: "#ffffff"
               },
-              "button": {
-                  "background": "#1976d2",
-                  "text": "#ffffff"
+              button: {
+                  background: "#1976d2",
+                  text: "#ffffff"
               }
           },
-          "theme": "edgeless",
-          "type": "opt-in",
-          "content": {
-              "message": "This website uses cookies to ensure you get the best experience on our website.",
-              "allow": "Accept",
-              "dismiss": "Decline",
-              "link": "learn",
-              "href": "https://locize.com/privacy.html"
+          theme: "edgeless",
+          type: "opt-in",
+          content: {
+              message: "This website uses cookies to ensure you get the best experience on our website.",
+              allow: "Accept",
+              dismiss: "Decline",
+              link: "learn",
+              href: "https://locize.com/privacy.html"
+          },
+          elements: {
+              deny: '<a style="font-weight: 100; color: #ffffffa8; font-size: smaller;" aria-label="deny cookies" role="button" tabindex="0" class="cc-btn cc-deny">Decline</a>'
           },
           onInitialise: function (status) {
               var type = this.options.type;
