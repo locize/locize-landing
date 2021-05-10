@@ -205,12 +205,12 @@ block content
             hr
               
               
-  section.section-gray#video
+  section.section-gray#video(style="display: none;")
     .container
       .row
         .col-xs-10.col-xs-offset-1
           .embed-responsive.embed-responsive-16by9
-            iframe.embed-responsive-item(width='1280', height='720', src='https://www.youtube.com/embed/osScyaGMVqo?rel=0&controls=0&showinfo=0', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+            iframe.embed-responsive-item(width='1280', height='720', src='https://www.youtube-nocookie.com/embed/osScyaGMVqo?rel=0&controls=0&showinfo=0', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
 
   section.section-secondary.features.text-center
     .container
@@ -282,3 +282,11 @@ block content
       h2 Need some help getting started?
       p Get any questions you may have about integrating locize answered by one of our team members.
       a.btn.btn-outline.btn-xl.page-scroll(href='mailto:support@locize.com') Contact us!
+
+  script.
+    window.enableCookiesHook = function () {
+      $('#video').show();
+    };
+    window.disableCookiesHook = function () {
+      $('#video').hide();
+    };

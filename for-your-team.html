@@ -310,12 +310,12 @@
           </div>
         </div>
       </section>
-      <section class="section-gray" id="video">
+      <section class="section-gray" id="video" style="display: none;">
         <div class="container">
           <div class="row">
             <div class="col-xs-10 col-xs-offset-1">
               <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" width="1280" height="720" src="https://www.youtube.com/embed/osScyaGMVqo?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                <iframe class="embed-responsive-item" width="1280" height="720" src="https://www.youtube-nocookie.com/embed/osScyaGMVqo?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
               </div>
             </div>
           </div>
@@ -419,6 +419,14 @@
           <p>Get any questions you may have about integrating locize answered by one of our team members.</p><a class="btn btn-outline btn-xl page-scroll" href="mailto:support@locize.com">Contact us!</a>
         </div>
       </section>
+      <script>
+        window.enableCookiesHook = function () {
+          $('#video').show();
+        };
+        window.disableCookiesHook = function () {
+          $('#video').hide();
+        };
+      </script>
     </div>
     <footer i18next-options="{&quot;ns&quot;: &quot;common&quot;}">
       <div class="container">
@@ -475,6 +483,8 @@
           ga('create', 'UA-78143856-1', 'auto');
           ga('send', 'pageview');
           ga('set', 'anonymizeIp', true);
+      
+          if (typeof window.enableCookiesHook === 'function') window.enableCookiesHook();
       }
       
       function disableCookies() {
@@ -485,6 +495,8 @@
               var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
               document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
           }
+      
+        if (typeof window.disableCookiesHook === 'function') window.disableCookiesHook();
       }
       
       window.cookieconsent.initialise({
