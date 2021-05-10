@@ -149,6 +149,8 @@
           ga('create', 'UA-78143856-1', 'auto');
           ga('send', 'pageview');
           ga('set', 'anonymizeIp', true);
+      
+          if (typeof window.enableCookiesHook === 'function') window.enableCookiesHook();
       }
       
       function disableCookies() {
@@ -159,6 +161,8 @@
               var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
               document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
           }
+      
+        if (typeof window.disableCookiesHook === 'function') window.disableCookiesHook();
       }
       
       window.cookieconsent.initialise({
