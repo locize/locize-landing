@@ -43,12 +43,24 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a class="closeOnClick" href="/#features">Features</a></li>
-            <li><a href="/how-it-works.html">How it works</a></li>
-            <li><a href="/for-your-team.html">For your team</a></li>
+            <li class="dropdown" id="featuresd"><a class="dropdown-toogle" data-toggle="dropdown" href="#featuresd">Features<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/how-it-works.html">How it works</a></li>
+                <li><a href="/for-your-team.html">For your team</a></li>
+                <li><a href="/javascript-localization.html">JavaScript localization</a></li>
+              </ul>
+            </li>
             <li><a href="/services.html">Services</a></li>
             <li><a href="/pricing.html">Pricing</a></li>
             <li><a href="http://blog.locize.com">Blog</a></li>
+            <li class="dropdown" id="resources"><a class="dropdown-toogle" data-toggle="dropdown" href="#resources">Resources<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="https://docs.locize.com/">Locize documentation</a></li>
+                <li><a href="https://www.i18next.com/">Our i18next framework</a></li>
+                <li><a href="https://react.i18next.com/">Our react i18next framework</a></li>
+                <li><a href="https://localistars.com/">Our translation marketplace</a></li>
+              </ul>
+            </li>
             <li><a class="closeOnClick" href="/#contact">Contact</a></li>
             <li><a href="https://www.locize.app/login" target="_blank">Login</a></li>
           </ul>
@@ -307,7 +319,7 @@
                 <div class="integration-features">
                   <p>Orange Translations provides professional translation services in 50+ languages specializing in website translation / localization.</p>
                   <div style="font-style: italic;">A lot of our work involves TYPO3 and WordPress websites. Our translators specialize in fields such as technical marketing, food & beverage and consumer electronics, plus a range of other industries. Our aim is to assign translators to your projects who are perfectly qualified and familiar with your industry.</div><br>
-                  <div style="font-style: italic;">For any projects in Locize feel free to send us your exported namespaces and we’ll prepare a free quote for you promptly. Simply use our<a href="https://www.orangetranslations.com/contact/" target="_blank">&nbsp;quotation form&nbsp;</a>&nbsp;or email us at<a href="mailto:locize-projects@orangetranslations.com">&nbsp;locize-projects@orangetranslations.com&nbsp;</a></div><br>
+                  <div style="font-style: italic;">For any projects in locize feel free to send us your exported namespaces and we’ll prepare a free quote for you promptly. Simply use our<a href="https://www.orangetranslations.com/contact/" target="_blank">&nbsp;quotation form&nbsp;</a>&nbsp;or email us at<a href="mailto:locize-projects@orangetranslations.com">&nbsp;locize-projects@orangetranslations.com&nbsp;</a></div><br>
                   <div style="font-style: italic;">We’re looking forward to hearing from you!</div>
                 </div>
                 <div class="integration-start"><a class="btn btn-outline btn-xl" href="https://www.orangetranslations.com/services/website-localization/" target="_blank" style="background-color: #ccc">Learn more!</a></div>
