@@ -52,18 +52,39 @@ html(lang='en')
           a.navbar-brand(href='/#page-top')
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
-            li
-              a.closeOnClick(href='/#features') Features
-            li
-              a(href='/how-it-works.html') How it works
-            li
-              a(href='/for-your-team.html') For your team
+            li(id="featuresd").dropdown
+              a(data-toggle='dropdown', href='#featuresd').dropdown-toogle Features
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='/how-it-works.html') How it works
+
+                li
+                  a(href='/for-your-team.html') For your team
+
+                li
+                  a(href='/javascript-localization.html') Javascript localization
             li
               a(href='/services.html') Services
             li
               a(href='/pricing.html') Pricing
             li
               a(href='http://blog.locize.com') Blog
+            li(id="resources").dropdown
+              a(data-toggle='dropdown', href='#resources').dropdown-toogle Resources
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='https://docs.locize.com/') Locize documentation
+
+                li
+                  a(href='https://www.i18next.com/') Our i18next framework
+
+                li
+                  a(href='https://react.i18next.com/') Our react i18next framework
+
+                li
+                  a(href='https://localistars.com/') Our translation marketplace
             li
               a.closeOnClick(href='/#contact') Contact
             li

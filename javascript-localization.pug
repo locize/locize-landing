@@ -1,0 +1,254 @@
+extends pug/layout.pug
+
+
+block head
+  title JavaScript localization: A step-by-step introductory guide (2021)
+  
+
+block headDescription
+  meta(name='description', content='Javascript Localization: In this article we provide a step-by-step guide to internationalize (i18n) your javascript applications using different approaches.')
+
+  section.section-white#introduction(style="padding-bottom:0")
+    .container
+      .row
+        .col-md-6
+          .section-heading
+            h1 JavaScript localization:<br> A step-by-step introductory guide (2021)
+            p The process of converting your JavaScript Code to multiple languages during the internationalization of your company. I18N means to design software in the way it can handle multiple locations, languages or regions. There are a lot of possibilities out there, but we have definitely the most advanced platform for any use-case of i18n.
+            <br><br>
+            p This article helps you to start your software-localization project based on a javascript environment. 
+            <br><br>
+            h3 Table of contents
+            ul.nav 
+              li.nav-item
+                a.nav-link(href='#start') Prepare your app
+              li.nav-item
+                a.nav-link(href='#library') Choose your framework
+              li.nav-item
+                a.nav-link(href='#bestpractices') Best practices
+              li.nav-item
+                a.nav-link(href='#internationalize') Checklist multiple languages
+              li.nav-item
+                a.nav-link(href='#automate') Automate translation work
+              li.nav-item
+                a.nav-link(href='#conclusion') Conclusion
+        .col-md-6
+          img.img-responsive(src='img/localization/javascript-localization.png', alt='javascript localization')      
+  
+  
+  section.section-white.gettingstarted#start(style="padding:0")
+     .container
+       .row
+         .col-lg-12
+           .section-heading
+            h2 Prepare your app
+            p How to have multiple languages on your website or application with i18next, follow the below steps. First install the dependencies, use the following <a href="https://www.npmjs.com/package/i18next" title="npm package">npm package</a> or use a script tag load from unkpg, esm, cjs or cdnjs.com CDN.
+            <br><br>
+            pre
+              code
+                |     #npm
+                |     $ npm install i18next --save
+                |    
+                |     # yarn
+                |     $ yarn add i18next
+            <br><br>
+            h3 Localization in JavaScript example
+            p  These lines of code give you a brief overview about localization in javascript can work and what functions are available in i18next. If you want to use the library for javascript production please refer to the detailed instructions of each framework in our resources. There is a much easier integration than with innerHTML.
+
+            <br><br>
+            
+              pre
+                code
+                  |     import i18next from 'i18next';
+                  |
+                  |     i18next.init({
+                  |       lng: 'en',
+                  |       debug: true,
+                  |       resources: {
+                  |         en: {
+                  |           translation: {
+                  |             "key": "hello world"
+                  |           }
+                  |         }
+                  |       }
+                  |     }, function(err, t) {
+                  |       // initialized and ready to go!
+                  |       document.getElementById('output').innerHTML = i18next.t('key');
+                  |     });   }
+
+              <br>
+              p Check out a real time example on jsfiddle <a href="https://jsfiddle.net/jamuhl/dvk0e8a9/#tabs=js,result,html" title="here">here</a>. 
+   
+  section.section-tertiary.library#library.text-center
+    .container
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h2 Choose your framework
+            p.head
+              | For famous javascript frameworks Locize is very easy to integrate through the 
+              <a href="https://www.i18next.com/" title="javascript-localization-library">javascript-localization-library</a> i18next.
+
+            hr
+      .row
+        .col-md-12
+          .container-fluid
+            .row
+              .col-md-6
+                img.img-responsive(src='img/localization/react.png', alt='javascript localization react', style='max-width: 250px',)
+                <br><br>
+                p.text-left Read the detailed instructions for using <a href="https://react.i18next.com/" title="i18next react">i18next react</a> for your project.
+                <br><br>
+                p.text-left Basic procedure of using React:
+                <br>
+                ul.nav.text-left
+                  li.nav-item 1. Installation of i18next package needed
+                  li.nav-item 2. Add react-i18next to expand the functionality
+                  li.nav-item 3. Add a new file i18n.js inside same directory as index.js
+                  li.nav-item 4. Translate the content with "hook", "HOC" or "render prop"
+                
+                
+              .col-md-6
+                img.img-responsive(src='img/localization/angular.png', alt='angular', style='max-width: 250px',)
+                <br><br>
+                p.text-left Read the detailed instructions for using <a href="https://github.com/Romanchuk/angular-i18next" title="i18next angular">i18next angular</a> for your project.
+                <br><br>
+                p.text-left Basic procedure of using Angular:
+                <br>
+                ul.nav.text-left
+                  li.nav-item 1. Installation of i18next and angular-i18next package needed
+                  li.nav-item 2. Import I18NextModule to AppModule
+                  li.nav-item 3. Import I18NextModule.forRoot() to App Module <br>and setup provider with "init"
+                  li.nav-item 4. Use i18next pipe to translate key
+
+              .col-md-6
+                img.img-responsive(src='img/localization/vue.png', alt='vue', style='max-width: 250px',)
+                <br><br>
+                p.text-left Read the detailed instructions for using <a href="https://github.com/rse/vue-i18next" title="i18next vue">i18next vue</a> for your project.
+                <br><br>
+                p.text-left Basic procedure of using Vue:
+                <br>
+                ul.nav.text-left
+                  li.nav-item 1. Installation of one vue plugins and vue-i18next
+                  li.nav-item 2. Initial Setup with Vue.use
+                  li.nav-item 3. Set up a view 
+                  li.nav-item 4. Global or local Context usage
+
+              .col-md-6
+                img.img-responsive(src='img/localization/supported-frameworks.png', alt='supported frameworks', style='max-width: 250px',)
+                <br><br>
+                h4 There are more <a href="https://www.i18next.com/overview/supported-frameworks" title="i18next vue">supported frameworks</a> like Node.js, Next.js and more. Check them out now.
+
+  section.section-white.bestpractices#bestpractices(style="padding-bottom:0")
+   .container
+     .row
+       .col-lg-12
+         .section-heading
+          h2 Checklist best practices
+          p This questions help to find the right way for i18n with javascript.
+          div(style="background:#b7cbd4;padding:3rem;margin:2rem 0")
+            ul(style="list-style-type:none;color:black;margin:1rem 0;")
+              li(style="margin:1rem 0;") <i style="font-size:3rem;" class="far fa-square"></i> Which is the <a href="#library" title="javascript-environment">javascript-environment</a> you start with 
+              li(style="margin:1rem 0;") <i style="font-size:3rem;" class="far fa-square"></i> Do you need a language detector?
+              li(style="margin:1rem 0;") <i style="font-size:3rem;" class="far fa-square"></i> Do you want to bundle the translations?
+              li(style="margin:1rem 0;") <i style="font-size:3rem;" class="far fa-square"></i> Do you want to load the translations separate via http?
+              li(style="margin:1rem 0;") <i style="font-size:3rem;" class="far fa-square"></i> Do you want to manage with a translation management system?
+
+
+  section.section-white.internationalize#internationalize(style="padding:0")
+   .container
+     .row
+       .col-lg-12
+         .section-heading
+          h2 Step-by-step code implementation (the manual way)
+          p This process is based on a sample react app how to implement multiple languages.
+          <br>
+          ul.text-left
+            li Install i18next and framework package
+            li Install a browser-language-detector
+            li Prepare the i18n.js file and import it in index.js
+            li Translate the content with "hook", "HOC" or "render prop"
+            li Define a language switcher
+            li Add some translations for new language
+            li Use pluralization and interpolation
+            li Install packages for date and time management with interpolation
+            li Use the context function for gender specific translations
+            li Separate translations from code, for web applications use i18next-http-backend
+            li Load your translation files into multiple files if needed
+            li If you want to add a new language add a new folder with json file.
+            li localization strings`?
+          <br><br>
+          p You want to read more about this? Check out the detailed instructions about <a href="https://blog.locize.com/2021-04-14-how-to-internationalize-react-i18next/" title="react internationalization vue">react internationalization</a> of an application using i18next.
+          <br>
+          p For extensive projects finally this can not be the best solution. Lots of files and strings for sure drive a confusion to a clean translation process alongside the development. Take a minute and read about <b>automating</b> this process with a <b>smart translation</b> management system below.
+
+
+  section.section-white.automate#automate(style="padding:0")
+   .container
+     .row
+       .col-lg-12
+         .section-heading
+          h2 Automate translation work (the smart way)
+          p Congratulations you have decided to read about a robotic way of switch the language for any type of software. If you looking for an open source system, this is not for you. But it's incredible what functions you can unleash for a small amount of money. Look over our video, this is what you get for just five USD a month.
+
+          <br><br>
+          .div(style="display:flex;flex-wrap:wrap;align-items: stretch;")
+            .div(style="width:500px;margin: 2rem;")
+              .embed-responsive.embed-responsive-16by9
+                iframe.embed-responsive-item(width='100%', height='250', src='https://www.youtube.com/embed/osScyaGMVqo?rel=0&controls=0&showinfo=0', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+
+            .div(style="width:500px;padding: 2rem;")
+              p Use the full power of the i18next library together with Locize, a <a href="/?lng=en" title="localization management platform">localization management platform</a> by the founders of i18next which can automate translation work in the Locize-App.
+
+            .div(style="width:500px;margin: 2rem;")
+              .embed-responsive.embed-responsive-16by9
+                iframe.embed-responsive-item(width='100%', height='250', src='https://www.youtube.com/embed/VfxBpSXarlU?rel=0&controls=0&showinfo=0', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+            
+            .div(style="width:500px;padding: 2rem;")
+              p The Machine Translation feature enables every new content to get automatically  translated into a chosen language like it works for Google Translate.
+              div(style="border-left: 5px solid red")
+                p(style="margin: 1rem;") <a href="https://www.locize.app/register" title="Register for free">Register for free</a> and unlock everything for a 14 days trial period. Offer only valid for a short period of time.         
+
+
+  section.section-white.faq#faq(style="padding:0")
+   .container
+     .row
+       .col-lg-12
+         .section-heading
+          h2 Frequently asked questions
+
+          h3 What is localization javascript?
+          p Read the <a href="#introduction" title="introduction">introduction</a> to this article about internationalization (also known as i18n) of javascript software (client side). Localization (also known as L10n) are the steps a developer or project manager takes to change a software to local-language. This also includes dates and spelling.
+
+          h3 How use Javascript multilingual?
+          p Use an i18n framework (like Globalize or i18next) of your choice and implement the code to any project respectively. Navigate to the <a href="#internationalize" title="detailed checklist">detailed checklist</a> about how to make a javascript application multilingual.
+
+          h3 What is I18N Javascript?
+          p Software products are primarily prepared for your main-market and -language. During the internationalization of a company or product new targets arrive to context. To adjust the software product to handle this new circumstances with languages, locales and regions, these series of actions are called i18n process.
+
+          h3 How can I have multiple languages on my website?
+          p Decide which javascript-framework to use. Then install the i18next npm-package and next add the "i18next.init" code to your application. Follow the <a href="#start" title="javascript example">javascript example</a> to take your first steps with i18next.
+
+
+  section.section-white.conclusion#conclusion(style="padding:0")
+   .container
+     .row
+       .col-lg-12
+         .section-heading
+          h2 Conclusion
+          p We hope you found everything out of this article, just need to switch language for an application or complete translation-management-solution for bigger projects. Plan and classify the preconditions well to have a good result for your overall project in terms of time and money. <b>Best for javascript localization</b> is to start with the <a href="#bestpractices" title="best practices questions">best practices questions</a> we provided above, if you decided you need a one-time-solution then you follow the guides and video instructions for selected framework. If you have more questions or want to use a more-qualified way, <a href="https://www.locize.app/register" title="Register for free">register for free</a> to Locize or contact our support team at <a href="mailto:support@locize.com">support@locize.com</a> for any questions you may have. <b>In any case the library to choose is "i18next"</b> because of its richness (splitting translations to multiple files, string interpolation, plugins for <b>detect language</b> for most environments and much more), maturity (for any case) and extensibility (for all modern javascript framework, jquery, laravel and more). For example if you are a game developer, our <a href="/?lng=en" title="localization management platform">localization management platform</a> is also for you.
+
+          <br>
+
+          p How big is your network? Now we like to invite you to share that to any developer, project manager or business this would help.
+          
+          p Recommend this article on 
+            a(href='https://www.facebook.com/sharer/sharer.php?u=https://locize.com/javascript-localization.html', target='_blank')
+              i.fa.fa-facebook(style="font-size:2.5rem")
+
+            a(href='https://twitter.com/intent/tweet?url=https://locize.com/javascript-localization.html', target='_blank')
+              i.fa.fa-twitter(style="font-size:2.5rem")
+         
+          
+
+
