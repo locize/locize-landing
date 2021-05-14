@@ -68,14 +68,26 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a class="page-scroll closeOnClick" href="#features">Features</a></li>
-            <li><a href="/how-it-works.html">How it works</a></li>
-            <li><a href="/for-your-team.html">For your team</a></li>
+            <li class="dropdown" id="featuresd"><a class="dropdown-toogle" data-toggle="dropdown" href="#featuresd">Features<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/how-it-works.html">How it works</a></li>
+                <li><a href="/for-your-team.html">For your team</a></li>
+                <li><a href="/javascript-localization.html">Javascript localization</a></li>
+              </ul>
+            </li>
             <li><a href="/services.html">Services</a></li>
             <li><a href="/pricing.html">Pricing</a></li>
             <li><a href="http://blog.locize.com">Blog</a></li>
-            <li><a class="page-scroll closeOnClick" href="#contact">Contact</a></li>
-            <li><a href="https://www.locize.app/login" target="_blank">Login</a></li>
+            <li class="dropdown" id="resources"><a class="dropdown-toogle" data-toggle="dropdown" href="#resources">Resources<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="https://docs.locize.com/">Locize documentation</a></li>
+                <li><a href="https://www.i18next.com/">Our i18next framework</a></li>
+                <li><a href="https://react.i18next.com/">Our react i18next framework</a></li>
+                <li><a href="https://localistars.com/">Our translation marketplace</a></li>
+              </ul>
+            </li>
+            <li><a class="closeOnClick" href="/#contact">Contact</a></li>
+            <li><a href="https://www.locize.app/login" target="_blank">Login<i class="fa fa-lock" aria-hidden="true">  </i></a></li>
             <li class="dropdown" translated=""><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="selectedLng"></span><span class="caret" style="margin-top: -3px;"></span></a>
               <ul class="dropdown-menu" id="lngSelectDropDown"></ul>
             </li>
@@ -237,7 +249,7 @@
         <div class="row">
           <div class="col-md-6">
             <h2>Easy integration for your operating tools</h2>
-            <p>There is an integration option for all tools. Start to reduce manual processes and everyday tasks with easy integration of locize for busy people. We are your cost-effective translation management platform and help move your software automation to a new level. This includes <a href="/how-it-works.html#integrationforeveryone" title="">JavaScript-localization</a> for apps built with <a href="https://blog.locize.com/2021-04-14-how-to-internationalize-react-i18next/">React</a>, Angular and Vue but not limited to this only.</p>
+            <p>There is an integration option for all tools. Start to reduce manual processes and everyday tasks with easy integration of locize for busy people. We are your cost-effective translation management platform and help move your software automation to a new level. This includes <a href="/javascript-localization.html" title="">JavaScript-localization</a> for apps built with <a href="https://blog.locize.com/2021-04-14-how-to-internationalize-react-i18next/">React</a>, Angular and Vue but not limited to this only.</p>
           </div>
           <div class="col-md-6"><a href="/how-it-works.html"><img src="/img/howto/i18next-frameworks.png" style="width: 80%; margin: 10px 0 0;"></a></div>
         </div>

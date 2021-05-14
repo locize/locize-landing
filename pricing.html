@@ -43,12 +43,24 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a class="closeOnClick" href="/#features">Features</a></li>
-            <li><a href="/how-it-works.html">How it works</a></li>
-            <li><a href="/for-your-team.html">For your team</a></li>
+            <li class="dropdown" id="featuresd"><a class="dropdown-toogle" data-toggle="dropdown" href="#featuresd">Features<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/how-it-works.html">How it works</a></li>
+                <li><a href="/for-your-team.html">For your team</a></li>
+                <li><a href="/javascript-localization.html">Javascript localization</a></li>
+              </ul>
+            </li>
             <li><a href="/services.html">Services</a></li>
             <li><a href="/pricing.html">Pricing</a></li>
             <li><a href="http://blog.locize.com">Blog</a></li>
+            <li class="dropdown" id="resources"><a class="dropdown-toogle" data-toggle="dropdown" href="#resources">Resources<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="https://docs.locize.com/">Locize documentation</a></li>
+                <li><a href="https://www.i18next.com/">Our i18next framework</a></li>
+                <li><a href="https://react.i18next.com/">Our react i18next framework</a></li>
+                <li><a href="https://localistars.com/">Our translation marketplace</a></li>
+              </ul>
+            </li>
             <li><a class="closeOnClick" href="/#contact">Contact</a></li>
             <li><a href="https://www.locize.app/login" target="_blank">Login</a></li>
           </ul>
@@ -61,6 +73,7 @@
           <div class="row">
             <div class="col-lg-12 text-center">
               <div class="section-heading">
+                <h1 style="font-size:7rem;">Pricing of Locize</h1>
                 <h2>No plans - no paywalls - no catch</h2>
                 <p class="text-muted">No fix price plans - all our<strong>&nbsp;costs are variable&nbsp;</strong>and based on your real usage.</p>
                 <hr>
