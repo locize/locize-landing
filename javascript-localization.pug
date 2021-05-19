@@ -2,9 +2,11 @@ extends pug/layout.pug
 
 block head
   title JavaScript localization: A step-by-step introductory guide
+  
 
 block headDescription
   meta(name='description', content='JavaScript Localization: In this article we provide a step-by-step guide to internationalize (i18n) your javascript applications using different approaches.')
+
 
 block content
   section.section-white#introduction(style="padding-bottom:0")
@@ -19,7 +21,7 @@ block content
             p The process of converting your JavaScript code to multiple languages during the internationalization of your project. I18N means to design software in the way it can handle multiple locations, languages or regions. There are a lot of possibilities out there, but we have definitely the most advanced platform for any use-case of i18n.
             br
             br
-            p This page helps you to start your software-localization project based on a JavaScript environment. 
+            p This step-by-step-guide helps you to start your software-localization project based on a JavaScript environment. 
             br
             br
             h3 Table of contents
@@ -49,9 +51,7 @@ block content
           .section-heading
             h2 Prepare your app
             p
-              | Locize can be used with any i18n framework. Even with no i18n framework at all, for example with the 
-              a(href="https://github.com/locize/locizify", target="_blank") locizify script
-              | .
+              | Locize can be used with any i18n framework. Even with no i18n framework at all, for example with the locizify script.
             h3 Example by i18next
             p
               | Below we will continue with i18next as i18n framework.
@@ -61,7 +61,7 @@ block content
             br
             p
               | To have multiple languages on your website or application with 
-              a(href="/i18next.html") i18next
+              i18next
               | , follow the below steps. First install the dependencies, use the following <a href="https://www.npmjs.com/package/i18next" title="npm package">npm package</a> or use a script tag load umd, esm or cjs from unkpg or cdnjs.com CDN.
             br
             br
@@ -76,8 +76,7 @@ block content
             br
             h3 Localization in JavaScript example
             p
-              | These lines of code give you a brief overview about localization in JavaScript can work and what functions are available in 
-              a(href="https://www.i18next.com", target="_blank") 18next
+              | These lines of code give you a brief overview about localization in JavaScript can work and what functions are available in 18next
               | . If you want to use the library for JavaScript production please refer to the detailed instructions of each framework in our resources. There is a much easier integration than with innerHTML.
 
               br
@@ -105,14 +104,14 @@ block content
               br
               p
                 | Check out the 
-                a(href='https://www.i18next.com/overview/getting-started', target='_blank') Getting started guide on the i18next page
-                | .
+                a(href='https://www.i18next.com/overview/getting-started', target='_blank') i18n 
+                |  getting started guide on the i18next page.
 
             h3 Do you already know i18next?
             h4
               | Then just use 
               a(href="https://github.com/locize/i18next-locize-backend", target="_blank") i18next-locize-backend
-              |  as i18next backend
+              |  as i18next backend.
 
             figure
               pre
@@ -210,17 +209,19 @@ block content
         .col-lg-12
           .section-heading
             h2 Checklist best practices
-            p
-              | These 
-              a(href='https://www.i18next.com/overview/first-setup-help', target='_blank') questions
-              |  will help you to find the best setup to internationalize with JavaScript.
+            p These questions will help you to find the best setup to internationalize with JavaScript.
             div(style="background:#b7cbd4;padding:3rem;margin:2rem 0")
               ul(style="list-style-type:none;color:black;margin:1rem 0;")
-                li(style="margin:1rem 0;") <i style="font-size:3rem;" class="far fa-square"></i> For which environment are you looking for an i18n solution?
+                li(style="margin:1rem 0;") <i style="font-size:3rem;" class="far fa-square"></i> For which javascript-environment are you looking for an i18n solution?
                 li(style="margin:1rem 0;") <i style="font-size:3rem;" class="far fa-square"></i> Do you need a language detector for your environment?
                 li(style="margin:1rem 0;") <i style="font-size:3rem;" class="far fa-square"></i> Do you want to bundle the translations with your app?
                 li(style="margin:1rem 0;") <i style="font-size:3rem;" class="far fa-square"></i> Do you want to load the translations separate from your app via http?
                 li(style="margin:1rem 0;") <i style="font-size:3rem;" class="far fa-square"></i> Do you want to manage your translations with an awesome translation management system?
+            p 
+                | There is also a more detailed
+                a(href="https://www.i18next.com/overview/supported-frameworks", title="i18next vue")  guide for first setup help
+                |  at i18next directly, which covers also more than just javascript.
+
 
 
   section.section-white.internationalize#internationalize(style="padding:0")
@@ -249,7 +250,7 @@ block content
             br
             br
             p But there is more.... 
-            p Take a minute and read about <b>automating</b> this process with a <b>smart translation</b> management system below.
+            p Take a minute and read about <b>automating</b> this process with a <b>smart translation</b> management system below. For extensive projects using just a library may too inefficient. 
 
 
   section.section-white.automate#automate(style="padding:0")
@@ -292,7 +293,7 @@ block content
             h3 What is JavaScript localization?
             p Read the <a href="#introduction" title="introduction">introduction</a> to this page about internationalization (also known as i18n) of JavaScript software (client or server side). Localization (also known as l10n) is more about the content. The translator, developer or project manager prepares texts, graphics, sounds etc. so you can target a specific language or region.
 
-            h3 How to make my JavaScript app multilingual?
+            h3 How to make my JavaScript app multilingual (open source)?
             p Use an i18n framework (like i18next) of your choice and instrument your code respectively. Navigate to the <a href="#internationalize" title="detailed checklist">detailed checklist</a> to know how to make a JavaScript application multilingual.
 
             h3 What is i18n (internationalization)?
@@ -302,24 +303,36 @@ block content
             p Decide which JavaScript framework to use. Then install the i18next npm-package and next add the "i18next.init" code to your application. Follow the <a href="#start" title="javascript example">JavaScript example</a> to take your first steps with i18next.
 
 
-  //- section.section-white.conclusion#conclusion(style="padding:0")
-  //-   .container
-  //-     .row
-  //-       .col-lg-12
-  //-         .section-heading
-  //-       h2 Conclusion
-  //-       p We hope you found everything out of this article, just need to switch language for an application or complete translation-management-solution for bigger projects. Plan and classify the preconditions well to have a good result for your overall project in terms of time and money. <b>Best for JavaScript localization</b> is to start with the <a href="#bestpractices" title="best practices questions">best practices questions</a> we provided above, if you decided you need a one-time-solution then you follow the guides and video instructions for selected framework. If you have more questions or want to use a more-qualified way, <a href="https://www.locize.app/register" title="Register for free">register for free</a> to locize or contact our support team at <a href="mailto:support@locize.com">support@locize.com</a> for any questions you may have. <b>In any case the library to choose is "i18next"</b> because of its richness (splitting translations to multiple files, string interpolation, plugins for <b>detect language</b> for most environments and much more), maturity (for any case) and extensibility (for all modern JavaScript framework, jquery, laravel and more). For example if you are a game developer, our <a href="/?lng=en" title="localization management platform">localization management platform</a> is also for you.
+  section.section-white.conclusion#conclusion(style="padding:0")
+   .container
+     .row
+       .col-lg-12
+         .section-heading
+          h2 Now it's your turn
+          p We hope this step-by-step-guide was helpful... <b>Best for javascript localization</b> is to start with the <a href="#bestpractices" title="best practices questions">best practices questions</a> we provided above. There are several methods to choose from in order to successfully localize your project with JavaScript: First of all, if you only need to switch the language for an application, it might be easier to use a javascript translation library like i18next or our locizify script. If you have a huge project with various components to be internationalized and you want to keep up with time, then it might be a good opportunity to use a complete translation management solution like locize. 
+          br
+          div(style="border-left: 5px solid red")
+                  p(style="margin: 1rem;") Since we're offering you a free 14-day trial for locize, there might be a good chance to test all included features anyway. <a href="https://www.locize.app/register" title="Register now for the free">Register now for the free</a> trial period and start your best experience with localising an application.
+          br
+          p If you decide that you do not need a translation-management, you should follow the guides and video instructions for the specified framework (react, angular or vue).
+          br
+          p In any case <b>the javascript-library to choose</b> is "i18next" because of the following properties: 
+          br
+          ul 
+            li Richness (splitting translations to multiple files, string interpolation, plugins for <b>detect language</b>)
+            li Maturity (for any use-case) 
+            li Extensibility (for all modern javascript framework, jquery, laravel and more). 
 
-  //-       br
+          br
 
-  //-       p How big is your network? Now we like to invite you to share that to any developer, project manager or business this would help.
-        
-  //-       p Share this on 
-  //-         a(href='https://www.facebook.com/sharer/sharer.php?u=https://locize.com/javascript-localization.html', target='_blank')
-  //-           i.fa.fa-facebook(style="font-size:2.5rem")
-  //-         |  
-  //-         a(href='https://twitter.com/intent/tweet?url=https://locize.com/javascript-localization.html', target='_blank')
-  //-           i.fa.fa-twitter(style="font-size:2.5rem")
+          p Now we like to invite you to share that to any developer, project manager or business this would help.
+          
+          p Recommend our step-by-step-guide on 
+            a(href='https://www.facebook.com/sharer/sharer.php?u=https://locize.com/javascript-localization.html', target='_blank')
+              i.fa.fa-facebook(style="font-size:2.5rem")
+
+            a(href='https://twitter.com/intent/tweet?url=https://locize.com/javascript-localization.html', target='_blank')
+              i.fa.fa-twitter(style="font-size:2.5rem")
 
   script.
     window.enableCookiesHook = function () {
@@ -330,3 +343,29 @@ block content
       $('.yt-video').hide();
       $('.watch-yt-video-btn').show();
     };
+
+  script(type="application/ld+json").
+          {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://locize.com/javascript-localization.html"
+        },
+        "headline": "JavaScript localization: A step-by-step introductory guide",
+        "image": "https://locize.com/img/localization/javascript-localization.png",  
+        "author": {
+          "@type": "Person",
+          "name": "Sandro Huber"
+        },  
+        "publisher": {
+          "@type": "Organization",
+          "name": "inweso GmbH",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://locize.com/img/locize_white.svg"
+          }
+        },
+        "datePublished": "2021-05-14",
+        "dateModified": "2021-05-19"
+      }
