@@ -2,14 +2,14 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://blog.locize.com/blog/</loc>
+        <loc>https://locize.com/blog/</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
 
 
     <url>
-        <loc>https://blog.locize.com/blog/2017-02-21-locizify-v2/</loc>
+        <loc>https://locize.com/blog/2017-02-21-locizify-v2/</loc>
         <lastmod>2021-05-19T12:31:38.878Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -17,7 +17,7 @@
     </url>
 
     <url>
-        <loc>https://blog.locize.com/blog/2017-06-22-how-locize-leverages-serverless/</loc>
+        <loc>https://locize.com/blog/2017-06-22-how-locize-leverages-serverless/</loc>
         <lastmod>2021-05-19T12:31:38.878Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -25,7 +25,7 @@
     </url>
 
     <url>
-        <loc>https://blog.locize.com/blog/2017-08-15-8-signs-you-should-improve-your-localization-process/</loc>
+        <loc>https://locize.com/blog/2017-08-15-8-signs-you-should-improve-your-localization-process/</loc>
         <lastmod>2021-05-19T12:31:38.878Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -33,7 +33,7 @@
     </url>
 
     <url>
-        <loc>https://blog.locize.com/blog/2016-02-27-day-zero/</loc>
+        <loc>https://locize.com/blog/2016-02-27-day-zero/</loc>
         <lastmod>2021-05-19T12:31:38.878Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -41,7 +41,7 @@
     </url>
 
     <url>
-        <loc>https://blog.locize.com/blog/2016-06-11-eat-our-own-dogfood/</loc>
+        <loc>https://locize.com/blog/2016-06-11-eat-our-own-dogfood/</loc>
         <lastmod>2021-05-19T12:31:38.878Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -49,7 +49,7 @@
     </url>
 
     <url>
-        <loc>https://blog.locize.com/blog/2016-08-18-the-freedom-of-choice/</loc>
+        <loc>https://locize.com/blog/2016-08-18-the-freedom-of-choice/</loc>
         <lastmod>2021-05-19T12:31:38.878Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -57,7 +57,7 @@
     </url>
 
     <url>
-        <loc>https://blog.locize.com/blog/2016-10-05-continuous-development-integration-and-localization-cd/</loc>
+        <loc>https://locize.com/blog/2016-10-05-continuous-development-integration-and-localization-cd/</loc>
         <lastmod>2021-05-19T12:31:38.878Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -65,7 +65,7 @@
     </url>
 
     <url>
-        <loc>https://blog.locize.com/blog/2016-11-16-localization-fun/</loc>
+        <loc>https://locize.com/blog/2016-11-16-localization-fun/</loc>
         <lastmod>2021-05-19T12:31:38.878Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -73,7 +73,7 @@
     </url>
 
     <url>
-        <loc>https://blog.locize.com/blog/2018-02-23-is-your-software-ready-for-localization/</loc>
+        <loc>https://locize.com/blog/2018-02-23-is-your-software-ready-for-localization/</loc>
         <lastmod>2021-05-19T12:31:38.878Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -81,7 +81,7 @@
     </url>
 
     <url>
-        <loc>https://blog.locize.com/blog/2018-04-30-locize-double-win-2018-for-translation-software/</loc>
+        <loc>https://locize.com/blog/2018-04-30-locize-double-win-2018-for-translation-software/</loc>
         <lastmod>2021-05-19T12:31:38.878Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -89,7 +89,7 @@
     </url>
 
     <url>
-        <loc>https://blog.locize.com/blog/2018-08-28-a-tale-of-the-last-10-years-in-web-development/</loc>
+        <loc>https://locize.com/blog/2018-08-28-a-tale-of-the-last-10-years-in-web-development/</loc>
         <lastmod>2021-05-19T12:31:38.878Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -97,7 +97,7 @@
     </url>
 
     <url>
-        <loc>https://blog.locize.com/blog/2020-12-02-new-locize/</loc>
+        <loc>https://locize.com/blog/2020-12-02-new-locize/</loc>
         <lastmod>2021-05-19T12:31:38.878Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -105,7 +105,7 @@
     </url>
 
     <url>
-        <loc>https://blog.locize.com/blog/2020-06-13-localistars/</loc>
+        <loc>https://locize.com/blog/2020-06-13-localistars/</loc>
         <lastmod>2021-05-19T12:31:38.878Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -113,7 +113,7 @@
     </url>
 
     <url>
-        <loc>https://blog.locize.com/blog/2021-04-14-how-to-internationalize-react-i18next/</loc>
+        <loc>https://locize.com/blog/2021-04-14-how-to-internationalize-react-i18next/</loc>
         <lastmod>2021-05-19T12:31:20.885Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -121,7 +121,7 @@
     </url>
 
     <url>
-        <loc>https://blog.locize.com/blog/2016-04-07-technology-stack/</loc>
+        <loc>https://locize.com/blog/2016-04-07-technology-stack/</loc>
         <lastmod>2016-11-10T07:17:23.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

@@ -7,23 +7,24 @@
     <title>how we eat our own dogfood | locize - localization as a service</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
+    
         <meta name="keywords" content="locizify,locize" />
     
     <meta name="description" content="After relaunching our website with new templates for our documentation, post pages and adding a new landing page, we decided to have at least the landing page translated. As we use hexo to generate ou">
 <meta property="og:type" content="article">
 <meta property="og:title" content="how we eat our own dogfood">
-<meta property="og:url" content="https://blog.locize.com/blog/2016-06-11-eat-our-own-dogfood/index.html">
+<meta property="og:url" content="https://locize.com/blog/2016-06-11-eat-our-own-dogfood/index.html">
 <meta property="og:site_name" content="locize - localization as a service">
 <meta property="og:description" content="After relaunching our website with new templates for our documentation, post pages and adding a new landing page, we decided to have at least the landing page translated. As we use hexo to generate ou">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://blog.locize.com/blog/2016-06-11-eat-our-own-dogfood/2016-06-11-eat-our-own-dogfood/result.png">
+<meta property="og:image" content="https://locize.com/blog/2016-06-11-eat-our-own-dogfood/2016-06-11-eat-our-own-dogfood/result.png">
 <meta property="article:published_time" content="2016-06-10T22:00:00.000Z">
 <meta property="article:modified_time" content="2021-05-19T12:31:38.878Z">
 <meta property="article:author" content="inweso GmbH">
 <meta property="article:tag" content="locizify">
 <meta property="article:tag" content="locize">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://blog.locize.com/blog/2016-06-11-eat-our-own-dogfood/2016-06-11-eat-our-own-dogfood/result.png">
+<meta name="twitter:image" content="https://locize.com/blog/2016-06-11-eat-our-own-dogfood/2016-06-11-eat-our-own-dogfood/result.png">
 <meta name="twitter:creator" content="@locize">
     
 
@@ -194,7 +195,7 @@
 
         <div class="article-entry" itemprop="articleBody">
             <p>After relaunching our website with new templates for our documentation, post pages and adding a new landing page, we decided to have at least the landing page translated.</p>
-<p>As we use <a target="_blank" rel="noopener" href="https://hexo.io/">hexo</a> to generate our static content it was just a natural fit to use our <a target="_blank" rel="noopener" href="http://locize.com/integration.html">locizify script</a> so we don&#39;t have to instrument the page ourself.</p>
+<p>As we use <a target="_blank" rel="noopener" href="https://hexo.io/">hexo</a> to generate our static content it was just a natural fit to use our <a href="http://locize.com/integration.html">locizify script</a> so we don&#39;t have to instrument the page ourself.</p>
 <p>As we might add other areas later we decided to have a fixed namespace (filename) for the landing page. We used the advanced option to init locizify like described <a target="_blank" rel="noopener" href="https://github.com/locize/locizify#via-init-function">here</a>.</p>
 <p>We ended with following snipplet:</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;https://unpkg.com/locizify@^2.0.0&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  locizify.init(&#123;</span><br><span class="line">    namespace: <span class="string">&#x27;landingpage&#x27;</span>,</span><br><span class="line">    saveMissing: <span class="literal">true</span>,</span><br><span class="line">    fallbackLng: <span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">    backend: &#123;</span><br><span class="line">      projectId: <span class="string">&#x27;3d0aa5aa-4660-4154-b6d9-907dbef10bb2&#x27;</span>,</span><br><span class="line">      apiKey: <span class="string">&#x27;******** private ********&#x27;</span>,</span><br><span class="line">      referenceLng: <span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">      version: <span class="string">&#x27;production&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// ignore some dynamic widgets</span></span><br><span class="line">    ignoreIds: [<span class="string">&#x27;nudgespotInappContainer&#x27;</span>, <span class="string">&#x27;nudgespotInappMessagesContainer&#x27;</span>, <span class="string">&#x27;nudgespotInappConversationsContainer&#x27;</span>, <span class="string">&#x27;__bs_notify__&#x27;</span>],</span><br><span class="line">    ignoreClasses: [<span class="string">&#x27;nudgespot-clean&#x27;</span>]</span><br><span class="line">  &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
@@ -239,7 +240,7 @@
 
 
 
-    <a data-url="https://blog.locize.com/blog/2016-06-11-eat-our-own-dogfood/" data-id="cknh6trff000bi8xra7dh6qw9" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://locize.com/blog/2016-06-11-eat-our-own-dogfood/" data-id="cknh6trff000bi8xra7dh6qw9" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {

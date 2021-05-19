@@ -3,11 +3,11 @@
   <title>locize - localization as a service</title>
   
   
-  <link href="https://blog.locize.com/blog/atom.xml" rel="self"/>
+  <link href="https://locize.com/blog/atom.xml" rel="self"/>
   
-  <link href="https://blog.locize.com/blog/"/>
+  <link href="https://locize.com/blog/"/>
   <updated>2021-05-19T12:31:20.885Z</updated>
-  <id>https://blog.locize.com/blog/</id>
+  <id>https://locize.com/blog/</id>
   
   <author>
     <name>inweso GmbH</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>How to properly internationalize a React application using i18next</title>
-    <link href="https://blog.locize.com/blog/2021-04-14-how-to-internationalize-react-i18next/"/>
-    <id>https://blog.locize.com/blog/2021-04-14-how-to-internationalize-react-i18next/</id>
+    <link href="https://locize.com/blog/2021-04-14-how-to-internationalize-react-i18next/"/>
+    <id>https://locize.com/blog/2021-04-14-how-to-internationalize-react-i18next/</id>
     <published>2021-04-13T22:00:00.000Z</published>
     <updated>2021-05-19T12:31:20.885Z</updated>
     
@@ -34,25 +34,25 @@
     
     
     
-    <category term="Post" scheme="https://blog.locize.com/blog/categories/Post/"/>
+    <category term="Post" scheme="https://locize.com/blog/categories/Post/"/>
     
     
-    <category term="locize" scheme="https://blog.locize.com/blog/tags/locize/"/>
+    <category term="locize" scheme="https://locize.com/blog/tags/locize/"/>
     
-    <category term="localization" scheme="https://blog.locize.com/blog/tags/localization/"/>
+    <category term="localization" scheme="https://locize.com/blog/tags/localization/"/>
     
-    <category term="internationalization" scheme="https://blog.locize.com/blog/tags/internationalization/"/>
+    <category term="internationalization" scheme="https://locize.com/blog/tags/internationalization/"/>
     
-    <category term="i18next" scheme="https://blog.locize.com/blog/tags/i18next/"/>
+    <category term="i18next" scheme="https://locize.com/blog/tags/i18next/"/>
     
-    <category term="translation" scheme="https://blog.locize.com/blog/tags/translation/"/>
+    <category term="translation" scheme="https://locize.com/blog/tags/translation/"/>
     
   </entry>
   
   <entry>
     <title>What&#39;s new in locize</title>
-    <link href="https://blog.locize.com/blog/2020-12-02-new-locize/"/>
-    <id>https://blog.locize.com/blog/2020-12-02-new-locize/</id>
+    <link href="https://locize.com/blog/2020-12-02-new-locize/"/>
+    <id>https://locize.com/blog/2020-12-02-new-locize/</id>
     <published>2020-12-01T23:00:00.000Z</published>
     <updated>2021-05-19T12:31:38.878Z</updated>
     
@@ -67,23 +67,23 @@
     
     
     
-    <category term="Post" scheme="https://blog.locize.com/blog/categories/Post/"/>
+    <category term="Post" scheme="https://locize.com/blog/categories/Post/"/>
     
     
-    <category term="locize" scheme="https://blog.locize.com/blog/tags/locize/"/>
+    <category term="locize" scheme="https://locize.com/blog/tags/locize/"/>
     
-    <category term="localization" scheme="https://blog.locize.com/blog/tags/localization/"/>
+    <category term="localization" scheme="https://locize.com/blog/tags/localization/"/>
     
-    <category term="internationalization" scheme="https://blog.locize.com/blog/tags/internationalization/"/>
+    <category term="internationalization" scheme="https://locize.com/blog/tags/internationalization/"/>
     
-    <category term="translation" scheme="https://blog.locize.com/blog/tags/translation/"/>
+    <category term="translation" scheme="https://locize.com/blog/tags/translation/"/>
     
   </entry>
   
   <entry>
     <title>Stay ahead of the game with localistars</title>
-    <link href="https://blog.locize.com/blog/2020-06-13-localistars/"/>
-    <id>https://blog.locize.com/blog/2020-06-13-localistars/</id>
+    <link href="https://locize.com/blog/2020-06-13-localistars/"/>
+    <id>https://locize.com/blog/2020-06-13-localistars/</id>
     <published>2020-06-12T22:00:00.000Z</published>
     <updated>2021-05-19T12:31:38.878Z</updated>
     
@@ -98,29 +98,29 @@
     
     
     
-    <category term="Post" scheme="https://blog.locize.com/blog/categories/Post/"/>
+    <category term="Post" scheme="https://locize.com/blog/categories/Post/"/>
     
     
-    <category term="service" scheme="https://blog.locize.com/blog/tags/service/"/>
+    <category term="service" scheme="https://locize.com/blog/tags/service/"/>
     
-    <category term="locize" scheme="https://blog.locize.com/blog/tags/locize/"/>
+    <category term="locize" scheme="https://locize.com/blog/tags/locize/"/>
     
-    <category term="localization" scheme="https://blog.locize.com/blog/tags/localization/"/>
+    <category term="localization" scheme="https://locize.com/blog/tags/localization/"/>
     
-    <category term="internationalization" scheme="https://blog.locize.com/blog/tags/internationalization/"/>
+    <category term="internationalization" scheme="https://locize.com/blog/tags/internationalization/"/>
     
-    <category term="translation" scheme="https://blog.locize.com/blog/tags/translation/"/>
+    <category term="translation" scheme="https://locize.com/blog/tags/translation/"/>
     
-    <category term="localistars" scheme="https://blog.locize.com/blog/tags/localistars/"/>
+    <category term="localistars" scheme="https://locize.com/blog/tags/localistars/"/>
     
-    <category term="order" scheme="https://blog.locize.com/blog/tags/order/"/>
+    <category term="order" scheme="https://locize.com/blog/tags/order/"/>
     
   </entry>
   
   <entry>
     <title>A tale of the last 10 years in web development</title>
-    <link href="https://blog.locize.com/blog/2018-08-28-a-tale-of-the-last-10-years-in-web-development/"/>
-    <id>https://blog.locize.com/blog/2018-08-28-a-tale-of-the-last-10-years-in-web-development/</id>
+    <link href="https://locize.com/blog/2018-08-28-a-tale-of-the-last-10-years-in-web-development/"/>
+    <id>https://locize.com/blog/2018-08-28-a-tale-of-the-last-10-years-in-web-development/</id>
     <published>2018-08-27T22:00:00.000Z</published>
     <updated>2021-05-19T12:31:38.878Z</updated>
     
@@ -136,25 +136,25 @@
     
     
     
-    <category term="Post" scheme="https://blog.locize.com/blog/categories/Post/"/>
+    <category term="Post" scheme="https://locize.com/blog/categories/Post/"/>
     
     
-    <category term="locize" scheme="https://blog.locize.com/blog/tags/locize/"/>
+    <category term="locize" scheme="https://locize.com/blog/tags/locize/"/>
     
-    <category term="localization" scheme="https://blog.locize.com/blog/tags/localization/"/>
+    <category term="localization" scheme="https://locize.com/blog/tags/localization/"/>
     
-    <category term="internationalization" scheme="https://blog.locize.com/blog/tags/internationalization/"/>
+    <category term="internationalization" scheme="https://locize.com/blog/tags/internationalization/"/>
     
-    <category term="i18next" scheme="https://blog.locize.com/blog/tags/i18next/"/>
+    <category term="i18next" scheme="https://locize.com/blog/tags/i18next/"/>
     
-    <category term="web" scheme="https://blog.locize.com/blog/tags/web/"/>
+    <category term="web" scheme="https://locize.com/blog/tags/web/"/>
     
   </entry>
   
   <entry>
     <title>locize - Translation Software Distinguished by Platform for SaaS Reviews as a Great User Experience and Rising Star for 2018</title>
-    <link href="https://blog.locize.com/blog/2018-04-30-locize-double-win-2018-for-translation-software/"/>
-    <id>https://blog.locize.com/blog/2018-04-30-locize-double-win-2018-for-translation-software/</id>
+    <link href="https://locize.com/blog/2018-04-30-locize-double-win-2018-for-translation-software/"/>
+    <id>https://locize.com/blog/2018-04-30-locize-double-win-2018-for-translation-software/</id>
     <published>2018-04-29T22:00:00.000Z</published>
     <updated>2021-05-19T12:31:38.878Z</updated>
     
@@ -168,21 +168,21 @@
     
     
     
-    <category term="Post" scheme="https://blog.locize.com/blog/categories/Post/"/>
+    <category term="Post" scheme="https://locize.com/blog/categories/Post/"/>
     
     
-    <category term="locize" scheme="https://blog.locize.com/blog/tags/locize/"/>
+    <category term="locize" scheme="https://locize.com/blog/tags/locize/"/>
     
-    <category term="continuous localization" scheme="https://blog.locize.com/blog/tags/continuous-localization/"/>
+    <category term="continuous localization" scheme="https://locize.com/blog/tags/continuous-localization/"/>
     
-    <category term="award" scheme="https://blog.locize.com/blog/tags/award/"/>
+    <category term="award" scheme="https://locize.com/blog/tags/award/"/>
     
   </entry>
   
   <entry>
     <title>Is your software ready for localization?</title>
-    <link href="https://blog.locize.com/blog/2018-02-23-is-your-software-ready-for-localization/"/>
-    <id>https://blog.locize.com/blog/2018-02-23-is-your-software-ready-for-localization/</id>
+    <link href="https://locize.com/blog/2018-02-23-is-your-software-ready-for-localization/"/>
+    <id>https://locize.com/blog/2018-02-23-is-your-software-ready-for-localization/</id>
     <published>2018-02-22T23:00:00.000Z</published>
     <updated>2021-05-19T12:31:38.878Z</updated>
     
@@ -198,35 +198,35 @@
     
     
     
-    <category term="Post" scheme="https://blog.locize.com/blog/categories/Post/"/>
+    <category term="Post" scheme="https://locize.com/blog/categories/Post/"/>
     
     
-    <category term="locize" scheme="https://blog.locize.com/blog/tags/locize/"/>
+    <category term="locize" scheme="https://locize.com/blog/tags/locize/"/>
     
-    <category term="localization" scheme="https://blog.locize.com/blog/tags/localization/"/>
+    <category term="localization" scheme="https://locize.com/blog/tags/localization/"/>
     
-    <category term="internationalization" scheme="https://blog.locize.com/blog/tags/internationalization/"/>
+    <category term="internationalization" scheme="https://locize.com/blog/tags/internationalization/"/>
     
-    <category term="i18next" scheme="https://blog.locize.com/blog/tags/i18next/"/>
+    <category term="i18next" scheme="https://locize.com/blog/tags/i18next/"/>
     
-    <category term="formatjs" scheme="https://blog.locize.com/blog/tags/formatjs/"/>
+    <category term="formatjs" scheme="https://locize.com/blog/tags/formatjs/"/>
     
-    <category term="continuous development" scheme="https://blog.locize.com/blog/tags/continuous-development/"/>
+    <category term="continuous development" scheme="https://locize.com/blog/tags/continuous-development/"/>
     
-    <category term="continuous integration" scheme="https://blog.locize.com/blog/tags/continuous-integration/"/>
+    <category term="continuous integration" scheme="https://locize.com/blog/tags/continuous-integration/"/>
     
-    <category term="continuous localization" scheme="https://blog.locize.com/blog/tags/continuous-localization/"/>
+    <category term="continuous localization" scheme="https://locize.com/blog/tags/continuous-localization/"/>
     
-    <category term="continuous delivery" scheme="https://blog.locize.com/blog/tags/continuous-delivery/"/>
+    <category term="continuous delivery" scheme="https://locize.com/blog/tags/continuous-delivery/"/>
     
-    <category term="continuous translation" scheme="https://blog.locize.com/blog/tags/continuous-translation/"/>
+    <category term="continuous translation" scheme="https://locize.com/blog/tags/continuous-translation/"/>
     
   </entry>
   
   <entry>
     <title>8 signs you should improve your localization process</title>
-    <link href="https://blog.locize.com/blog/2017-08-15-8-signs-you-should-improve-your-localization-process/"/>
-    <id>https://blog.locize.com/blog/2017-08-15-8-signs-you-should-improve-your-localization-process/</id>
+    <link href="https://locize.com/blog/2017-08-15-8-signs-you-should-improve-your-localization-process/"/>
+    <id>https://locize.com/blog/2017-08-15-8-signs-you-should-improve-your-localization-process/</id>
     <published>2017-08-14T22:00:00.000Z</published>
     <updated>2021-05-19T12:31:38.878Z</updated>
     
@@ -241,21 +241,21 @@
     
     
     
-    <category term="Post" scheme="https://blog.locize.com/blog/categories/Post/"/>
+    <category term="Post" scheme="https://locize.com/blog/categories/Post/"/>
     
     
-    <category term="locize" scheme="https://blog.locize.com/blog/tags/locize/"/>
+    <category term="locize" scheme="https://locize.com/blog/tags/locize/"/>
     
-    <category term="localization" scheme="https://blog.locize.com/blog/tags/localization/"/>
+    <category term="localization" scheme="https://locize.com/blog/tags/localization/"/>
     
-    <category term="internationalization" scheme="https://blog.locize.com/blog/tags/internationalization/"/>
+    <category term="internationalization" scheme="https://locize.com/blog/tags/internationalization/"/>
     
   </entry>
   
   <entry>
     <title>How locize leverages serverless</title>
-    <link href="https://blog.locize.com/blog/2017-06-22-how-locize-leverages-serverless/"/>
-    <id>https://blog.locize.com/blog/2017-06-22-how-locize-leverages-serverless/</id>
+    <link href="https://locize.com/blog/2017-06-22-how-locize-leverages-serverless/"/>
+    <id>https://locize.com/blog/2017-06-22-how-locize-leverages-serverless/</id>
     <published>2017-06-21T22:00:00.000Z</published>
     <updated>2021-05-19T12:31:38.878Z</updated>
     
@@ -270,23 +270,23 @@
     
     
     
-    <category term="Post" scheme="https://blog.locize.com/blog/categories/Post/"/>
+    <category term="Post" scheme="https://locize.com/blog/categories/Post/"/>
     
     
-    <category term="serverless" scheme="https://blog.locize.com/blog/tags/serverless/"/>
+    <category term="serverless" scheme="https://locize.com/blog/tags/serverless/"/>
     
-    <category term="backend" scheme="https://blog.locize.com/blog/tags/backend/"/>
+    <category term="backend" scheme="https://locize.com/blog/tags/backend/"/>
     
-    <category term="aws" scheme="https://blog.locize.com/blog/tags/aws/"/>
+    <category term="aws" scheme="https://locize.com/blog/tags/aws/"/>
     
-    <category term="service" scheme="https://blog.locize.com/blog/tags/service/"/>
+    <category term="service" scheme="https://locize.com/blog/tags/service/"/>
     
   </entry>
   
   <entry>
     <title>locizify v2 - improvements</title>
-    <link href="https://blog.locize.com/blog/2017-02-21-locizify-v2/"/>
-    <id>https://blog.locize.com/blog/2017-02-21-locizify-v2/</id>
+    <link href="https://locize.com/blog/2017-02-21-locizify-v2/"/>
+    <id>https://locize.com/blog/2017-02-21-locizify-v2/</id>
     <published>2017-02-20T23:00:00.000Z</published>
     <updated>2021-05-19T12:31:38.878Z</updated>
     
@@ -300,17 +300,17 @@
     
     
     
-    <category term="Post" scheme="https://blog.locize.com/blog/categories/Post/"/>
+    <category term="Post" scheme="https://locize.com/blog/categories/Post/"/>
     
     
-    <category term="locizify" scheme="https://blog.locize.com/blog/tags/locizify/"/>
+    <category term="locizify" scheme="https://locize.com/blog/tags/locizify/"/>
     
   </entry>
   
   <entry>
     <title>Localization should be fun</title>
-    <link href="https://blog.locize.com/blog/2016-11-16-localization-fun/"/>
-    <id>https://blog.locize.com/blog/2016-11-16-localization-fun/</id>
+    <link href="https://locize.com/blog/2016-11-16-localization-fun/"/>
+    <id>https://locize.com/blog/2016-11-16-localization-fun/</id>
     <published>2016-11-15T23:00:00.000Z</published>
     <updated>2021-05-19T12:31:38.878Z</updated>
     
@@ -326,17 +326,17 @@
     
     
     
-    <category term="Post" scheme="https://blog.locize.com/blog/categories/Post/"/>
+    <category term="Post" scheme="https://locize.com/blog/categories/Post/"/>
     
     
-    <category term="locize" scheme="https://blog.locize.com/blog/tags/locize/"/>
+    <category term="locize" scheme="https://locize.com/blog/tags/locize/"/>
     
   </entry>
   
   <entry>
     <title>Continuous Development, Integration and Localization =&gt; Continuous Deployment</title>
-    <link href="https://blog.locize.com/blog/2016-10-05-continuous-development-integration-and-localization-cd/"/>
-    <id>https://blog.locize.com/blog/2016-10-05-continuous-development-integration-and-localization-cd/</id>
+    <link href="https://locize.com/blog/2016-10-05-continuous-development-integration-and-localization-cd/"/>
+    <id>https://locize.com/blog/2016-10-05-continuous-development-integration-and-localization-cd/</id>
     <published>2016-10-04T22:00:00.000Z</published>
     <updated>2021-05-19T12:31:38.878Z</updated>
     
@@ -354,37 +354,37 @@
     
     
     
-    <category term="Post" scheme="https://blog.locize.com/blog/categories/Post/"/>
+    <category term="Post" scheme="https://locize.com/blog/categories/Post/"/>
     
     
-    <category term="locize" scheme="https://blog.locize.com/blog/tags/locize/"/>
+    <category term="locize" scheme="https://locize.com/blog/tags/locize/"/>
     
-    <category term="localization" scheme="https://blog.locize.com/blog/tags/localization/"/>
+    <category term="localization" scheme="https://locize.com/blog/tags/localization/"/>
     
-    <category term="internationalization" scheme="https://blog.locize.com/blog/tags/internationalization/"/>
+    <category term="internationalization" scheme="https://locize.com/blog/tags/internationalization/"/>
     
-    <category term="i18next" scheme="https://blog.locize.com/blog/tags/i18next/"/>
+    <category term="i18next" scheme="https://locize.com/blog/tags/i18next/"/>
     
-    <category term="polyglot" scheme="https://blog.locize.com/blog/tags/polyglot/"/>
+    <category term="polyglot" scheme="https://locize.com/blog/tags/polyglot/"/>
     
-    <category term="formatjs" scheme="https://blog.locize.com/blog/tags/formatjs/"/>
+    <category term="formatjs" scheme="https://locize.com/blog/tags/formatjs/"/>
     
-    <category term="continuous development" scheme="https://blog.locize.com/blog/tags/continuous-development/"/>
+    <category term="continuous development" scheme="https://locize.com/blog/tags/continuous-development/"/>
     
-    <category term="continuous integration" scheme="https://blog.locize.com/blog/tags/continuous-integration/"/>
+    <category term="continuous integration" scheme="https://locize.com/blog/tags/continuous-integration/"/>
     
-    <category term="continuous localization" scheme="https://blog.locize.com/blog/tags/continuous-localization/"/>
+    <category term="continuous localization" scheme="https://locize.com/blog/tags/continuous-localization/"/>
     
-    <category term="continuous delivery" scheme="https://blog.locize.com/blog/tags/continuous-delivery/"/>
+    <category term="continuous delivery" scheme="https://locize.com/blog/tags/continuous-delivery/"/>
     
-    <category term="continuous translation" scheme="https://blog.locize.com/blog/tags/continuous-translation/"/>
+    <category term="continuous translation" scheme="https://locize.com/blog/tags/continuous-translation/"/>
     
   </entry>
   
   <entry>
     <title>The freedom of choice…i18next, polyglot or formatJS</title>
-    <link href="https://blog.locize.com/blog/2016-08-18-the-freedom-of-choice/"/>
-    <id>https://blog.locize.com/blog/2016-08-18-the-freedom-of-choice/</id>
+    <link href="https://locize.com/blog/2016-08-18-the-freedom-of-choice/"/>
+    <id>https://locize.com/blog/2016-08-18-the-freedom-of-choice/</id>
     <published>2016-08-17T22:00:00.000Z</published>
     <updated>2021-05-19T12:31:38.878Z</updated>
     
@@ -402,25 +402,25 @@
     
     
     
-    <category term="Post" scheme="https://blog.locize.com/blog/categories/Post/"/>
+    <category term="Post" scheme="https://locize.com/blog/categories/Post/"/>
     
     
-    <category term="locizify" scheme="https://blog.locize.com/blog/tags/locizify/"/>
+    <category term="locizify" scheme="https://locize.com/blog/tags/locizify/"/>
     
-    <category term="locize" scheme="https://blog.locize.com/blog/tags/locize/"/>
+    <category term="locize" scheme="https://locize.com/blog/tags/locize/"/>
     
-    <category term="i18next" scheme="https://blog.locize.com/blog/tags/i18next/"/>
+    <category term="i18next" scheme="https://locize.com/blog/tags/i18next/"/>
     
-    <category term="polyglot" scheme="https://blog.locize.com/blog/tags/polyglot/"/>
+    <category term="polyglot" scheme="https://locize.com/blog/tags/polyglot/"/>
     
-    <category term="formatjs" scheme="https://blog.locize.com/blog/tags/formatjs/"/>
+    <category term="formatjs" scheme="https://locize.com/blog/tags/formatjs/"/>
     
   </entry>
   
   <entry>
     <title>how we eat our own dogfood</title>
-    <link href="https://blog.locize.com/blog/2016-06-11-eat-our-own-dogfood/"/>
-    <id>https://blog.locize.com/blog/2016-06-11-eat-our-own-dogfood/</id>
+    <link href="https://locize.com/blog/2016-06-11-eat-our-own-dogfood/"/>
+    <id>https://locize.com/blog/2016-06-11-eat-our-own-dogfood/</id>
     <published>2016-06-10T22:00:00.000Z</published>
     <updated>2021-05-19T12:31:38.878Z</updated>
     
@@ -434,19 +434,19 @@
     
     
     
-    <category term="Post" scheme="https://blog.locize.com/blog/categories/Post/"/>
+    <category term="Post" scheme="https://locize.com/blog/categories/Post/"/>
     
     
-    <category term="locizify" scheme="https://blog.locize.com/blog/tags/locizify/"/>
+    <category term="locizify" scheme="https://locize.com/blog/tags/locizify/"/>
     
-    <category term="locize" scheme="https://blog.locize.com/blog/tags/locize/"/>
+    <category term="locize" scheme="https://locize.com/blog/tags/locize/"/>
     
   </entry>
   
   <entry>
     <title>technology stack - locize is serverless</title>
-    <link href="https://blog.locize.com/blog/2016-04-07-technology-stack/"/>
-    <id>https://blog.locize.com/blog/2016-04-07-technology-stack/</id>
+    <link href="https://locize.com/blog/2016-04-07-technology-stack/"/>
+    <id>https://locize.com/blog/2016-04-07-technology-stack/</id>
     <published>2016-04-06T22:00:00.000Z</published>
     <updated>2016-11-10T07:17:23.000Z</updated>
     
@@ -460,23 +460,23 @@
     
     
     
-    <category term="Post" scheme="https://blog.locize.com/blog/categories/Post/"/>
+    <category term="Post" scheme="https://locize.com/blog/categories/Post/"/>
     
     
-    <category term="backend" scheme="https://blog.locize.com/blog/tags/backend/"/>
+    <category term="backend" scheme="https://locize.com/blog/tags/backend/"/>
     
-    <category term="aws" scheme="https://blog.locize.com/blog/tags/aws/"/>
+    <category term="aws" scheme="https://locize.com/blog/tags/aws/"/>
     
-    <category term="service" scheme="https://blog.locize.com/blog/tags/service/"/>
+    <category term="service" scheme="https://locize.com/blog/tags/service/"/>
     
-    <category term="technology" scheme="https://blog.locize.com/blog/tags/technology/"/>
+    <category term="technology" scheme="https://locize.com/blog/tags/technology/"/>
     
   </entry>
   
   <entry>
     <title>day zero - how all began</title>
-    <link href="https://blog.locize.com/blog/2016-02-27-day-zero/"/>
-    <id>https://blog.locize.com/blog/2016-02-27-day-zero/</id>
+    <link href="https://locize.com/blog/2016-02-27-day-zero/"/>
+    <id>https://locize.com/blog/2016-02-27-day-zero/</id>
     <published>2016-02-26T23:00:00.000Z</published>
     <updated>2021-05-19T12:31:38.878Z</updated>
     
@@ -490,12 +490,12 @@
     
     
     
-    <category term="Post" scheme="https://blog.locize.com/blog/categories/Post/"/>
+    <category term="Post" scheme="https://locize.com/blog/categories/Post/"/>
     
     
-    <category term="beginning" scheme="https://blog.locize.com/blog/tags/beginning/"/>
+    <category term="beginning" scheme="https://locize.com/blog/tags/beginning/"/>
     
-    <category term="i18next" scheme="https://blog.locize.com/blog/tags/i18next/"/>
+    <category term="i18next" scheme="https://locize.com/blog/tags/i18next/"/>
     
   </entry>
   
