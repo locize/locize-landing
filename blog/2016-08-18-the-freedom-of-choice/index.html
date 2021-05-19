@@ -1,0 +1,698 @@
+
+  <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>The freedom of choice…i18next, polyglot or formatJS | locize - localization as a service</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="locizify,locize,i18next,polyglot,formatjs" />
+    
+    <meta name="description" content="![](idea.jpg &quot;locize flexibility&quot;)   When we started work on locize.com our localization as a service platform we basically had in mind to solve the translation process for developers using our i18n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The freedom of choice…i18next, polyglot or formatJS">
+<meta property="og:url" content="https://blog.locize.com/blog/2016-08-18-the-freedom-of-choice/index.html">
+<meta property="og:site_name" content="locize - localization as a service">
+<meta property="og:description" content="![](idea.jpg &quot;locize flexibility&quot;)   When we started work on locize.com our localization as a service platform we basically had in mind to solve the translation process for developers using our i18n">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://blog.locize.com/blog/2016-08-18-the-freedom-of-choice/2016-08-18-the-freedom-of-choice/idea.jpg">
+<meta property="article:published_time" content="2016-08-17T22:00:00.000Z">
+<meta property="article:modified_time" content="2021-05-19T12:31:38.878Z">
+<meta property="article:author" content="inweso GmbH">
+<meta property="article:tag" content="locizify">
+<meta property="article:tag" content="locize">
+<meta property="article:tag" content="i18next">
+<meta property="article:tag" content="polyglot">
+<meta property="article:tag" content="formatjs">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.locize.com/blog/2016-08-18-the-freedom-of-choice/2016-08-18-the-freedom-of-choice/idea.jpg">
+<meta name="twitter:creator" content="@locize">
+    
+
+    
+
+    
+        <link rel="icon" href="/blog/favicon.ico" />
+    
+
+    
+<link rel="stylesheet" href="/blog/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/blog/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/blog/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+
+    
+<script src="/blog/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    
+    
+    
+    
+        
+<link rel="stylesheet" href="/blog/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        <script type="text/javascript">
+// (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+// (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+// m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+// })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+// ga('create', 'UA-78143856-1', 'auto');
+// ga('send', 'pageview');
+// ga('set', 'anonymizeIp', true);
+
+</script>
+    
+    
+
+
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/blog/atom.xml" title="locize - localization as a service" type="application/atom+xml">
+</head>
+
+  <body>
+      <div id="wrap">
+          <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <!--<a href="/blog/" class="logo"></a>-->
+                        <a href="https://www.locize.com" class="logo" target="_new"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/blog/">Home</a>
+                                </li>
+                            
+                            <li class="main-nav-list-item" >
+                                <a class="main-nav-list-link" href="https://docs.locize.com" target="_new">Docs</a>
+                                <a class="main-nav-list-link" href="https://www.locize.app/login" target="_new">Login</a>
+                            </li>
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/blog/',
+        CONTENT_URL: '/blog/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/blog/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+          <div class="container">
+              <div class="main-body container-inner">
+                  <div class="main-body-inner">
+                      <section id="main">
+                          <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/blog/categories/Post/">Post</a>
+    </h1>
+</div>
+                          <div class="main-body-content">
+                              <article id="post-2016-08-18-the-freedom-of-choice" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+          <header class="article-header">
+              
+    
+        <h1 class="article-title" itemprop="name">
+        The freedom of choice…i18next, polyglot or formatJS
+        </h1>
+    
+
+          </header>
+        
+        
+        <div class="article-subtitle">
+            <a href="/blog/2016-08-18-the-freedom-of-choice/" class="article-date">
+    <time datetime="2016-08-17T22:00:00.000Z" itemprop="datePublished">18/08/2016</time>
+</a>
+            
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/formatjs/" rel="tag">formatjs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/i18next/" rel="tag">i18next</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/locize/" rel="tag">locize</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/locizify/" rel="tag">locizify</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/polyglot/" rel="tag">polyglot</a></li></ul>
+
+        </div>
+        
+        
+
+        <div class="article-entry" itemprop="articleBody">
+            <div class="img-100">
+![](idea.jpg "locize flexibility")
+</div>
+
+<p>When we started work on locize.com our localization as a service platform we basically had in mind to solve the translation process for developers using our i18n framework <a target="_blank" rel="noopener" href="http://i18next.com/">i18next.com</a>.</p>
+<blockquote>
+<p>Translation Management Systems are a great help. But still there is a gap between development and translation process. Files need to be exported / imported / merged and all while new content get added to be translated. The chaos is inevitable. locize.com comes to the rescue. It’s like a translation service on steroid directly connected to your i18next instrumented webproject. (<a target="_blank" rel="noopener" href="http://i18next.com/docs/process/">i18next</a>)</p>
+</blockquote>
+<p>A few weeks after the successful beta launch and adding a lot of third party services to order translations directly out of your locize project, we started wondering if we could also bring the awesomeness to other frontend internationalization frameworks like airbnb’s <a target="_blank" rel="noopener" href="http://airbnb.io/polyglot.js/">polyglot</a> or yahoo’s <a target="_blank" rel="noopener" href="http://formatjs.io/">formatJS</a>?</p>
+<h3 id="polyglot-locize-com"><a href="#polyglot-locize-com" class="headerlink" title="polyglot + locize.com"></a>polyglot + locize.com</h3><p>Our first look at polyglot revealed that the implementation is rather similar to the i18next json format only the plurals are stored in a single key and separated by <code>||||</code>.</p>
+<p>We decided to do a short spike using a node.js express server loading the resources from locize.com using its API and return a demo page using polyglot to translate it.</p>
+<p><strong>Using request to load the translations:</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">load</span>(<span class="params">lng, callback</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> url = <span class="string">&#x27;https://api.locize.app/[YOUR_PROJECT_ID]/latest/&#123;&#123;lng&#125;&#125;/translation&#x27;</span>.replace(<span class="string">&#x27;&#123;&#123;lng&#125;&#125;&#x27;</span>, lng);</span><br><span class="line">  request(url, <span class="function"><span class="keyword">function</span>(<span class="params">err, res, body</span>) </span>&#123;</span><br><span class="line">    callback(err, lng, body);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>The JSON we load from the locize project looks like:</strong></p>
+<p><a target="_blank" rel="noopener" href="https://api.locize.app/897381a6-125c-40b8-9b28-2f80ae9a3612/latest/en/translation">https://api.locize.app/897381a6-125c-40b8-9b28-2f80ae9a3612/latest/en/translation</a></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;interpolate&quot;</span>: <span class="string">&quot;Hello, %&#123;name&#125;.&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;intro&quot;</span>: <span class="string">&quot;The locize.com platform is fully compatible with airbnb’s polyglot i18n module.&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;plural&quot;</span>: <span class="string">&quot;%&#123;smart_count&#125; car |||| %&#123;smart_count&#125; cars&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;something&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;nested&quot;</span>: <span class="string">&quot;Nested value something.nested&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;title&quot;</span>: <span class="string">&quot;Using polyglot with locize.com&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>We return a html file injecting the loaded json when requesting the root:</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> lng = req.query.lng || <span class="string">&#x27;en&#x27;</span>;</span><br><span class="line"></span><br><span class="line">  fs.readFile(__dirname + <span class="string">&#x27;/index.html&#x27;</span>, <span class="function">(<span class="params">err, data</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) <span class="built_in">console</span>.log(err);</span><br><span class="line">    data = data.toString().replace(<span class="string">&#x27;###locals###&#x27;</span>, <span class="built_in">JSON</span>.stringify(locals[lng])).replace(<span class="string">&#x27;###lng###&#x27;</span>, lng);</span><br><span class="line"></span><br><span class="line">    res.set(<span class="string">&#x27;content-type&#x27;</span>, <span class="string">&#x27;text/html&#x27;</span>);</span><br><span class="line">    res.send(data);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><strong>In the html we basically use polyglot as described on it’s website:</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">  <span class="comment">// initialize polyglot by settings phrases on server</span></span></span><br><span class="line"><span class="javascript">  <span class="keyword">var</span> polyglot = <span class="keyword">new</span> Polyglot(&#123; <span class="attr">phrases</span>: <span class="built_in">JSON</span>.parse(<span class="string">&#x27;###locals###&#x27;</span>), <span class="attr">locale</span>: <span class="string">&#x27;###lng###&#x27;</span> &#125;);</span></span><br><span class="line"><span class="javascript">  <span class="comment">// translate</span></span></span><br><span class="line"><span class="javascript">  <span class="built_in">document</span>.getElementById(<span class="string">&#x27;headline&#x27;</span>).innerHTML = polyglot.t(<span class="string">&#x27;title&#x27;</span>);</span></span><br><span class="line">  ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>You can checkout this example on github: <a target="_blank" rel="noopener" href="https://github.com/locize/locize-polyglot-example">https://github.com/locize/locize-polyglot-example</a>.</p>
+<p>While it is a very basic sample the main focus stays on proving just that you can profit from using locize.com using polyglot. Adapt the sample to your backend language or just use xhr directly to load the data inside your client. You directly benefit from the same benefits just i18next developers had until now using locize.com.</p>
+<h3 id="formatJS-locize-com"><a href="#formatJS-locize-com" class="headerlink" title="formatJS + locize.com"></a>formatJS + locize.com</h3><p>formatJS is well known for using the intl API to parse dates and numbers plus uses the ICU message format for translations. The format is rather different from what was used in i18next, but still it’s just keybased json.</p>
+<p>So we started from what we did with polyglot. For the backend there was no change needed, so just scroll up to the polyglot sample where we use request o load the translations.</p>
+<p><strong>The JSON we load from the locize project looks like:</strong></p>
+<p><a target="_blank" rel="noopener" href="https://api.locize.app/9ac4fb1f-be22-4028-bcbc-0da13010b35e/latest/en/translation">https://api.locize.app/9ac4fb1f-be22-4028-bcbc-0da13010b35e/latest/en/translation</a></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;interpolate&quot;</span>: <span class="string">&quot;Hello, &#123;name&#125;.&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;intro&quot;</span>: <span class="string">&quot;The locize.com platform is fully compatible with yahoo&#x27;s format.js i18n module.&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;plural&quot;</span>: <span class="string">&quot;You have &#123;numPhotos, plural, =0 &#123;no photos.&#125;=1 &#123;one photo.&#125;other &#123;# photos.&#125;&#125;&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;title&quot;</span>: <span class="string">&quot;Using format.js with locize.com&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>In the html we use the <a target="_blank" rel="noopener" href="https://github.com/yahoo/intl-messageformat">IntlMessageFormat</a> module and created a little helper function</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">  <span class="comment">// initialize</span></span></span><br><span class="line"><span class="javascript">  <span class="keyword">var</span> resources = <span class="built_in">JSON</span>.parse(<span class="string">&#x27;###locals###&#x27;</span>);</span></span><br><span class="line"><span class="javascript">  <span class="keyword">var</span> lng = <span class="string">&#x27;###lng###&#x27;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="comment">// translation helper</span></span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="keyword">function</span> <span class="title">t</span>(<span class="params">key, opts</span>) </span>&#123;</span></span><br><span class="line">    opts = opts || &#123;&#125;;</span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> m = <span class="keyword">new</span> IntlMessageFormat(resources[key], lng);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">return</span> m.format(opts);</span></span><br><span class="line">  &#125;</span><br><span class="line"><span class="javascript">  <span class="comment">// translate</span></span></span><br><span class="line"><span class="javascript">  <span class="built_in">document</span>.getElementById(<span class="string">&#x27;headline&#x27;</span>).innerHTML = t(<span class="string">&#x27;title&#x27;</span>);</span></span><br><span class="line">  ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>You can see the full example on github: <a target="_blank" rel="noopener" href="https://github.com/locize/locize-formatjs-example">https://github.com/locize/locize-formatjs-example</a>.</p>
+<p>The sample can easily be adapted to react-intl, ember-intl, handlebars-intl, dust-intl or any other framework using icu messageformat like eg. <a target="_blank" rel="noopener" href="https://github.com/messageformat/messageformat.js">https://github.com/messageformat/messageformat.js</a>.</p>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>While initially focused on <a target="_blank" rel="noopener" href="http://i18next.com/docs/jsons/">i18next json format</a> when building locize.com we found out that you can profit from the locize.com service using <a target="_blank" rel="noopener" href="http://airbnb.io/polyglot.js/">polyglot</a> or any libary using messageformat (<a target="_blank" rel="noopener" href="http://formatjs.io/">formatJS</a> and others) too.</p>
+<p>We love flexibility so we’re looking forward to our first customer creating a project using airbnb’s or yahoo’s i18n framework.</p>
+
+        </div>
+        <footer class="article-footer">
+          
+          
+
+
+
+    <a data-url="https://blog.locize.com/blog/2016-08-18-the-freedom-of-choice/" data-id="cknh6trfg000ci8xr1l2259gm" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+          
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+    </section>
+
+
+                          </div>
+                      </section>
+                      <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/locize" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="youtube" href="https://www.youtube.com/channel/UCPYQjBbbXojUcB8qjeIB3uA" target="_blank">
+                        <i class="icon fa fa-youtube"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/Locize-1672640746084189/" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/blog/2016-10-05-continuous-development-integration-and-localization-cd/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Continuous Development, Integration and Localization =&gt; Continuous Deployment
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/blog/2016-06-11-eat-our-own-dogfood/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">how we eat our own dogfood</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/2021-04-14-how-to-internationalize-react-i18next/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/2021-04-14-how-to-internationalize-react-i18next/title.jpg)" alt="How to properly internationalize a React application using i18next" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/2021-04-14-how-to-internationalize-react-i18next/" class="title">How to properly internationalize a React application using i18next</a></p>
+                            <p class="item-date"><time datetime="2021-04-13T22:00:00.000Z" itemprop="datePublished">14/04/2021</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/2020-12-02-new-locize/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/2020-12-02-new-locize/title.jpg)" alt="What&#39;s new in locize" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/2020-12-02-new-locize/" class="title">What&#39;s new in locize</a></p>
+                            <p class="item-date"><time datetime="2020-12-01T23:00:00.000Z" itemprop="datePublished">02/12/2020</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/2020-06-13-localistars/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/2020-06-13-localistars/title.jpg)" alt="Stay ahead of the game with localistars" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/2020-06-13-localistars/" class="title">Stay ahead of the game with localistars</a></p>
+                            <p class="item-date"><time datetime="2020-06-12T22:00:00.000Z" itemprop="datePublished">13/06/2020</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/2018-08-28-a-tale-of-the-last-10-years-in-web-development/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/2018-08-28-a-tale-of-the-last-10-years-in-web-development/title.png)" alt="A tale of the last 10 years in web development" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/2018-08-28-a-tale-of-the-last-10-years-in-web-development/" class="title">A tale of the last 10 years in web development</a></p>
+                            <p class="item-date"><time datetime="2018-08-27T22:00:00.000Z" itemprop="datePublished">28/08/2018</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/2018-04-30-locize-double-win-2018-for-translation-software/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/2018-04-30-locize-double-win-2018-for-translation-software/title.png)" alt="locize - Translation Software Distinguished by Platform for SaaS Reviews as a Great User Experience and Rising Star for 2018" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/2018-04-30-locize-double-win-2018-for-translation-software/" class="title">locize - Translation Software Distinguished by Platform for SaaS Reviews as a Great User Experience and Rising Star for 2018</a></p>
+                            <p class="item-date"><time datetime="2018-04-29T22:00:00.000Z" itemprop="datePublished">30/04/2018</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Post/">Post</a><span class="category-list-count">15</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/04/">April 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/award/" rel="tag">award</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/aws/" rel="tag">aws</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/backend/" rel="tag">backend</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/beginning/" rel="tag">beginning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-delivery/" rel="tag">continuous delivery</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-development/" rel="tag">continuous development</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-integration/" rel="tag">continuous integration</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-localization/" rel="tag">continuous localization</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-translation/" rel="tag">continuous translation</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/formatjs/" rel="tag">formatjs</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/i18next/" rel="tag">i18next</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/internationalization/" rel="tag">internationalization</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/localistars/" rel="tag">localistars</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/localization/" rel="tag">localization</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/locize/" rel="tag">locize</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/locizify/" rel="tag">locizify</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/order/" rel="tag">order</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/polyglot/" rel="tag">polyglot</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/serverless/" rel="tag">serverless</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/service/" rel="tag">service</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/technology/" rel="tag">technology</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/translation/" rel="tag">translation</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/web/" rel="tag">web</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/blog/tags/award/" style="font-size: 10px;">award</a> <a href="/blog/tags/aws/" style="font-size: 12px;">aws</a> <a href="/blog/tags/backend/" style="font-size: 12px;">backend</a> <a href="/blog/tags/beginning/" style="font-size: 10px;">beginning</a> <a href="/blog/tags/continuous-delivery/" style="font-size: 12px;">continuous delivery</a> <a href="/blog/tags/continuous-development/" style="font-size: 12px;">continuous development</a> <a href="/blog/tags/continuous-integration/" style="font-size: 12px;">continuous integration</a> <a href="/blog/tags/continuous-localization/" style="font-size: 14px;">continuous localization</a> <a href="/blog/tags/continuous-translation/" style="font-size: 12px;">continuous translation</a> <a href="/blog/tags/formatjs/" style="font-size: 14px;">formatjs</a> <a href="/blog/tags/i18next/" style="font-size: 16px;">i18next</a> <a href="/blog/tags/internationalization/" style="font-size: 18px;">internationalization</a> <a href="/blog/tags/localistars/" style="font-size: 10px;">localistars</a> <a href="/blog/tags/localization/" style="font-size: 18px;">localization</a> <a href="/blog/tags/locize/" style="font-size: 20px;">locize</a> <a href="/blog/tags/locizify/" style="font-size: 14px;">locizify</a> <a href="/blog/tags/order/" style="font-size: 10px;">order</a> <a href="/blog/tags/polyglot/" style="font-size: 12px;">polyglot</a> <a href="/blog/tags/serverless/" style="font-size: 10px;">serverless</a> <a href="/blog/tags/service/" style="font-size: 14px;">service</a> <a href="/blog/tags/technology/" style="font-size: 10px;">technology</a> <a href="/blog/tags/translation/" style="font-size: 14px;">translation</a> <a href="/blog/tags/web/" style="font-size: 10px;">web</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://www.i18next.com" target="_blank">i18next</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://locize.com/privacy.html" target="_blank">privacy policy</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://locize.com/terms.html" target="_blank">terms</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                  </div>
+              </div>
+          </div>
+          <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <div style="float: left;">
+                    <h1 class="logo-wrap">
+                        <a href="/blog/" class="logo"></a>
+                    </h1>
+                    <p>&copy; 2021 inweso GmbH</p>
+                    <!-- <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Original theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+          
+
+    
+        
+<script src="/blog/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/blog/js/main.js"></script>
+
+
+<script src="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+    function enableCookies() {
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-78143856-1', 'auto');
+        ga('send', 'pageview');
+        ga('set', 'anonymizeIp', true);
+    }
+
+    function disableCookies() {
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i];
+            var eqPos = cookie.indexOf("=");
+            var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+    }
+
+    window.cookieconsent.initialise({
+        palette: {
+            popup: {
+                background: "#2196f3",
+                text: "#ffffff"
+            },
+            button: {
+                background: "#1976d2",
+                text: "#ffffff"
+            }
+        },
+        theme: "edgeless",
+        type: "opt-in",
+        content: {
+            message: "This website uses cookies to ensure you get the best experience on our website.",
+            allow: "Accept",
+            dismiss: "Decline",
+            link: "learn",
+            href: "https://locize.com/privacy.html"
+        },
+        elements: {
+            deny: '<a style="font-weight: 100; color: #ffffffa8; font-size: smaller;" aria-label="deny cookies" role="button" tabindex="0" class="cc-btn cc-deny">Decline</a>'
+        },
+        onInitialise: function (status) {
+            var type = this.options.type;
+            var didConsent = this.hasConsented();
+            if (type == 'opt-in' && didConsent) {
+                // enable cookies
+                enableCookies();
+            }
+            if (type == 'opt-out' && !didConsent) {
+                // disable cookies
+                disableCookies();
+            }
+        },
+        onStatusChange: function(status, chosenBefore) {
+            var type = this.options.type;
+            var didConsent = this.hasConsented();
+            if (type == 'opt-in' && didConsent) {
+                // enable cookies
+                enableCookies();
+            }
+            if (type == 'opt-out' && !didConsent) {
+                // disable cookies
+                disableCookies();
+            }
+        },
+        onRevokeChoice: function() {
+            var type = this.options.type;
+            if (type == 'opt-in') {
+                // disable cookies
+                disableCookies();
+            }
+            if (type == 'opt-out') {
+                // enable cookies
+                enableCookies();
+            }
+        }
+    });
+</script>
+      </div>
+  </body>
+  </html>
+
