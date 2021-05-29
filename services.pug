@@ -31,7 +31,7 @@ block content
                 | 1) The translation memory consumes the published files of a project which will be cleared as regular download ($0.0001 per download).
 
             .integration-start
-              a.btn.btn-outline.btn-xl(href='https://docs.locize.com/translation-memory.html', target='_blank', style="background-color: #ccc") Learn more!
+              a.btn.btn-outline.btn-xl(href='https://docs.locize.com/whats-inside/translation-memory', target='_blank', style="background-color: #ccc") Learn more!
 
 
         .col-md-4(style="position: relative;")
@@ -43,6 +43,9 @@ block content
             .integration-features.no-overflow
               p History enables you to track the last changes done to your translations. It empowers you to prove anytime when a content fragment was changed.
 
+            .integration-start
+              a.btn.btn-outline.btn-xl(href='https://docs.locize.com/whats-inside/history', target='_blank', style="background-color: #ccc") Learn more!
+
         .col-md-4(style="position: relative;")
           .integration(style="height: 600px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
             .integration-name.text-center locize - review workflow
@@ -52,6 +55,9 @@ block content
             .integration-features.no-overflow
               p You can enable the review workflow for specific languages.
               p This way each time someone changes a translation, it will start a review workflow. The actual value will not be changed until someone will accept one of the translation proposals.
+            
+            .integration-start
+              a.btn.btn-outline.btn-xl(href='https://docs.locize.com/whats-inside/review-workflow', target='_blank', style="background-color: #ccc") Learn more!
 
       .row(style="margin-top: 30px;")
         .col-md-4(style="position: relative;")
@@ -79,7 +85,7 @@ block content
 
 
             .integration-start
-              a.btn.btn-outline.btn-xl(href='https://docs.locize.com/guides-tips-and-tricks/working-with-translators#use-the-crowdbased-service', target='_blank', style="background-color: #ccc") Learn more!
+              a.btn.btn-outline.btn-xl(href='https://docs.locize.com/guides-tips-and-tricks/working-with-translators#use-the-crowdbased-service-branched-projects', target='_blank', style="background-color: #ccc") Learn more!
 
         .col-md-4(style="position: relative;")
           .integration(style="height: 600px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
@@ -92,7 +98,23 @@ block content
               p Enable the slack integration and choose on of your slack channels to get notified when something noteworthy happens in your localization project.
 
             .integration-start
-              a.btn.btn-outline.btn-xl(href='https://docs.locize.com/notifications.html#using-slack', target='_blank', style="background-color: #ccc") Learn more!
+              a.btn.btn-outline.btn-xl(href='https://docs.locize.com/more/notifications#using-slack', target='_blank', style="background-color: #ccc") Learn more!
+
+        .col-md-4(style="position: relative;")
+          .integration(style="height: 600px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
+            .integration-name.text-center locize - auto machine translation
+            .text-center.text-muted Automate translation work (the smart way)
+            .text-center(style="font-size: 16px; font-weight: 600; margin-top: 30px;")
+              | free
+              sup 1)
+            .integration-features
+              p The machine translation feature enables every new content to get automatically translated into all other defined target languages (like Google Translate).
+
+              div(style="font-style: italic;")
+                | 1) Each automatically machine translated key counts as normal modification.
+
+            .integration-start
+              a.btn.btn-outline.btn-xl(href='https://docs.locize.com/whats-inside/auto-machine-translation', target='_blank', style="background-color: #ccc") Learn more!
 
 
   section.section-primary#translationservices
@@ -111,15 +133,21 @@ block content
           .integration(style="height: 600px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px; box-shadow: 5px 10px 20px 5px #144199;")
             .integration-name.text-center
               img(src="/img/services/localistars.svg", style="height: 45px; margin: -5px 25px;")
-            .text-center.text-muted Direct contact, no middleman – just collaborating localistars!
+            .text-center.text-muted
+              | Direct contact, no middleman – just collaborating 
+              a(href="https://www.localistars.com", target="_blank") localistars
+              | !
             .text-center(style="font-size: 16px; font-weight: 600; margin-top: 30px;")
               | Pricing on request
             .integration-features
               p localistars is the go-to marketplace for clients and translators to get translation jobs done.
-              p You're in direct contact with the translator – it's your project, you hold the reins. In contrast to other services we don't set the price and forward the contract to the cheapest translator to maximize our own profit. You choose the translator for your projects yourself, it's your contractor.
+              p
+                | You're in 
+                a(href="https://youtu.be/WobsZ_er0I4", target="_blank") direct contact
+                |  with the translator – it's your project, you hold the reins. In contrast to other services we don't set the price and forward the contract to the cheapest translator to maximize our own profit. You choose the translator for your projects yourself, it's your contractor.
 
             .integration-start
-              a.btn.btn-outline.btn-xl(href='https://www.localistars.com', target='_blank', style="background-color: #ccc") Learn more!
+              a.btn.btn-outline.btn-xl(href='https://docs.locize.com/guides-tips-and-tricks/working-with-translators#localistars-service', target='_blank', style="background-color: #ccc") Learn more!
 
         //- .col-md-4(style="position: relative;")
         //-   .integration(style="height: 600px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
@@ -171,7 +199,8 @@ block content
         .col-lg-12.text-center
           .section-heading
             h2 Translation agencies
-            p.text-muted Work in locize with our partners.
+            p.text-muted
+              a(href="https://docs.locize.com/guides-tips-and-tricks/working-with-translators", target='_blank', style="color: white;") Work in locize with our partners.
             hr
 
   section.section-gray(style="padding: 0;")
