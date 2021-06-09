@@ -3,6 +3,76 @@
 
 
     <url>
+        <loc>https://locize.com/blog/tags/continuous-translation/</loc>
+        <lastmod>2021-06-09T08:32:44.413Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/continuous-delivery/</loc>
+        <lastmod>2021-06-09T08:32:44.413Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/continuous-localization/</loc>
+        <lastmod>2021-06-09T08:32:44.413Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/continuous-integration/</loc>
+        <lastmod>2021-06-09T08:32:44.413Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/continuous-development/</loc>
+        <lastmod>2021-06-09T08:32:44.413Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/formatjs/</loc>
+        <lastmod>2021-06-09T08:32:44.413Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/i18next/</loc>
+        <lastmod>2021-06-09T08:32:44.413Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/internationalization/</loc>
+        <lastmod>2021-06-09T08:32:44.413Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/localization/</loc>
+        <lastmod>2021-06-09T08:32:44.413Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/locize/</loc>
+        <lastmod>2021-06-09T08:32:44.413Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://locize.com/blog/tags/technology/</loc>
         <lastmod>2021-06-09T08:20:43.272Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -31,77 +101,7 @@
     </url>
 
     <url>
-        <loc>https://locize.com/blog/tags/locize/</loc>
-        <lastmod>2021-06-09T08:18:38.089Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/continuous-translation/</loc>
-        <lastmod>2021-06-09T08:17:59.274Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/continuous-delivery/</loc>
-        <lastmod>2021-06-09T08:17:59.274Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/continuous-localization/</loc>
-        <lastmod>2021-06-09T08:17:59.274Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/continuous-integration/</loc>
-        <lastmod>2021-06-09T08:17:59.274Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/continuous-development/</loc>
-        <lastmod>2021-06-09T08:17:59.274Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/formatjs/</loc>
-        <lastmod>2021-06-09T08:17:59.274Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://locize.com/blog/tags/polyglot/</loc>
-        <lastmod>2021-06-09T08:17:59.274Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/i18next/</loc>
-        <lastmod>2021-06-09T08:17:59.274Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/internationalization/</loc>
-        <lastmod>2021-06-09T08:17:59.274Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/localization/</loc>
         <lastmod>2021-06-09T08:17:59.274Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
