@@ -4,35 +4,22 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Is your software ready for localization? | locize - localization as a service</title>
+    <title>locize - localization as a service</title>
+    
+        <meta http-equiv="refresh" content="0; URL=/blog/is-your-software-ready-for-localization/" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     
-        <meta name="keywords" content="locize,localization,internationalization,i18next,formatjs,continuous development,continuous integration,continuous localization,continuous delivery,continuous translation" />
-    
-    <meta name="description" content="So you want people from all around the world to use and understand your software...   ...but how to achieve that?  Which format should I use?Think about the workflow of exporting strings of the soft">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Is your software ready for localization?">
+    <meta name="description" content="Bridging the gap between translation and development.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="locize - localization as a service">
 <meta property="og:url" content="https://locize.com/blog/2018-02-23-is-your-software-ready-for-localization/index.html">
 <meta property="og:site_name" content="locize - localization as a service">
-<meta property="og:description" content="So you want people from all around the world to use and understand your software...   ...but how to achieve that?  Which format should I use?Think about the workflow of exporting strings of the soft">
+<meta property="og:description" content="Bridging the gap between translation and development.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://locize.com/blog/2018-02-23-is-your-software-ready-for-localization/2018-02-23-is-your-software-ready-for-localization/title.png">
-<meta property="article:published_time" content="2018-02-22T23:00:00.000Z">
-<meta property="article:modified_time" content="2021-05-19T15:14:26.693Z">
 <meta property="article:author" content="inweso GmbH">
-<meta property="article:tag" content="locize">
-<meta property="article:tag" content="localization">
-<meta property="article:tag" content="internationalization">
-<meta property="article:tag" content="i18next">
-<meta property="article:tag" content="formatjs">
-<meta property="article:tag" content="continuous development">
-<meta property="article:tag" content="continuous integration">
-<meta property="article:tag" content="continuous localization">
-<meta property="article:tag" content="continuous delivery">
-<meta property="article:tag" content="continuous translation">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://locize.com/blog/2018-02-23-is-your-software-ready-for-localization/2018-02-23-is-your-software-ready-for-localization/title.png">
 <meta name="twitter:creator" content="@locize">
     
 
@@ -172,182 +159,19 @@
                           <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/blog/categories/Post/">Post</a>
+    locize - localization as a service
     </h1>
 </div>
                           <div class="main-body-content">
-                              <article id="post-2018-02-23-is-your-software-ready-for-localization" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-          <header class="article-header">
-              
-    
-        <h1 class="article-title" itemprop="name">
-        Is your software ready for localization?
-        </h1>
-    
-
-          </header>
-        
-        
-        <div class="article-subtitle">
-            <a href="/blog/2018-02-23-is-your-software-ready-for-localization/" class="article-date">
-    <time datetime="2018-02-22T23:00:00.000Z" itemprop="datePublished">23/02/2018</time>
-</a>
-            
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/continuous-delivery/" rel="tag">continuous delivery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/continuous-development/" rel="tag">continuous development</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/continuous-integration/" rel="tag">continuous integration</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/continuous-localization/" rel="tag">continuous localization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/continuous-translation/" rel="tag">continuous translation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/formatjs/" rel="tag">formatjs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/i18next/" rel="tag">i18next</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/internationalization/" rel="tag">internationalization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/localization/" rel="tag">localization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/locize/" rel="tag">locize</a></li></ul>
-
-        </div>
-        
-        
-
-        <div class="article-entry" itemprop="articleBody">
-            <p><img src="title.png" title="locize © inweso GmbH"></p>
-<blockquote>
-<p>So you want people from all around the world to use and understand your software...</p>
-</blockquote>
-<blockquote>
-<p>...but how to achieve that?</p>
-</blockquote>
-<h2 id="Which-format-should-I-use"><a href="#Which-format-should-I-use" class="headerlink" title="Which format should I use?"></a>Which format should I use?</h2><p>Think about the workflow of exporting strings of the software, having them translated and then importing them back into your software. This will give you many ideas on how to structure your strings.</p>
-<p>Sometimes the used library already pretends a format.</p>
-<h4 id="For-web-projects-for-example-this-can-be"><a href="#For-web-projects-for-example-this-can-be" class="headerlink" title="For web projects for example this can be:"></a>For web projects for example this can be:</h4><ul>
-<li>JSON (i.e. used by <a target="_blank" rel="noopener" href="https://i18next.com/">i18next</a>)</li>
-<li>ICU Message syntax (i.e. used by <a target="_blank" rel="noopener" href="https://formatjs.io/">formatjs</a>)</li>
-<li>...</li>
-</ul>
-<h4 id="For-mobile-projects-for-example-this-can-be"><a href="#For-mobile-projects-for-example-this-can-be" class="headerlink" title="For mobile projects for example this can be:"></a>For mobile projects for example this can be:</h4><ul>
-<li>Localizable.strings (i.e. used by iOS)</li>
-<li>XML String Resource (i.e. used by Android)</li>
-<li>...</li>
-</ul>
-<h4 id="For-system-apps-for-example-this-can-be"><a href="#For-system-apps-for-example-this-can-be" class="headerlink" title="For system apps for example this can be:"></a>For system apps for example this can be:</h4><ul>
-<li>Java properties files (i.e. used by Java)</li>
-<li>ResX files (i.e. used by .Net)</li>
-<li>...</li>
-</ul>
-<h2 id="Do-you-hardcode-text-strings-in-the-source-code"><a href="#Do-you-hardcode-text-strings-in-the-source-code" class="headerlink" title="Do you hardcode text strings in the source code?"></a>Do you hardcode text strings in the source code?</h2><p>Resource files should store all text used in the software; do not leave text strings hardcoded!
-Just don&#39;t!</p>
-<h2 id="Can-the-order-of-variables-in-localized-strings-be-changed"><a href="#Can-the-order-of-variables-in-localized-strings-be-changed" class="headerlink" title="Can the order of variables in localized strings be changed?"></a>Can the order of variables in localized strings be changed?</h2><p>Implement a token system to ensure nouns, verbs, etc. can be placed in unique order by language.
-Different languages needs to know more information about the context. For example for pluralization or gender.
-The Italian language for example relies on gender. The words in the sentence change depending on whether you&#39;re talking about a man or a woman.
-Polish suppose you have a singular and then you have a different plural depending on whether the number of things ends with 2, 3 and 4 or some other digit.
-And Romanian need a different plural for any group of objects greater than 20.</p>
-<h2 id="Does-the-interface-allow-for-long-translations"><a href="#Does-the-interface-allow-for-long-translations" class="headerlink" title="Does the interface allow for long translations?"></a>Does the interface allow for long translations?</h2><p>What about long translations in areas with single line text? Are there areas with multi-line text in your software?
-Sentences that take five syllables in English actually take a whole two paragraph description in some other language.</p>
-<h2 id="Do-you-use-unique-string-IDs"><a href="#Do-you-use-unique-string-IDs" class="headerlink" title="Do you use unique string IDs?"></a>Do you use unique string IDs?</h2><p>Unique string IDs help keep development, translation and QA teams on the same page.
-Another reason for this is: if you have for example a text in English that is visible in 2 different places on your UI, but is potentially translated differently in other languages (because it fits better).</p>
-<h2 id="What-about-fonts-Who-selects-their-types-and-sizes-in-the-software"><a href="#What-about-fonts-Who-selects-their-types-and-sizes-in-the-software" class="headerlink" title="What about fonts? Who selects their types and sizes in the software?"></a>What about fonts? Who selects their types and sizes in the software?</h2><p>Both localization and development teams should select fonts as a cooperative effort.
-And how do you decide on the proportion of fonts?
-While fonts for North American and European languages should be &quot;Proportional&quot;, &quot;Monospace&quot; is the right type for Asian languages.
-Are the fonts compatible with special characters for all languages?
-Different languages, different needs: for special characters, word order, even numbers.</p>
-<h2 id="How-are-date-time-currency-and-numbers-displayed"><a href="#How-are-date-time-currency-and-numbers-displayed" class="headerlink" title="How are date, time, currency, and numbers displayed?"></a>How are date, time, currency, and numbers displayed?</h2><p>Allow date, time, currency, and numbers to be displayed with differing figures and number separators by language or even region.
-Make sure the date format is right because Americans do month/day/year Brit day/month/year and by the way in America the week starts on a Sunday and in Britain the week starts on Monday. Europe wants 24 hour clocks and America wants 12 hour clocks.
-Regarding numbers, here a little list:
-<img src="numbers.png" title="locize © inweso GmbH">
-<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Decimal_separator">source</a></p>
-<h2 id="What-encoding-do-you-use-for-your-text-assets"><a href="#What-encoding-do-you-use-for-your-text-assets" class="headerlink" title="What encoding do you use for your text assets?"></a>What encoding do you use for your text assets?</h2><p>Choose an encoding that supports all target languages.
-If you don&#39;t know, just choose UTF-8.
-If you want to know <a target="_blank" rel="noopener" href="http://codel10n.com/why-utf8-is-best-encoding-for-your-customers/">Why UTF-8 is the best encoding?</a> read this <a target="_blank" rel="noopener" href="http://codel10n.com/why-utf8-is-best-encoding-for-your-customers/">article</a>.
-By the way, to tell apart assets intended for a particular locale use ISO 693-1 &amp; 3166-1 language and country codes to mark assets by locale.</p>
-<h2 id="Do-the-art-assets-of-your-software-UI-have-text"><a href="#Do-the-art-assets-of-your-software-UI-have-text" class="headerlink" title="Do the art assets of your software UI have text?"></a>Do the art assets of your software UI have text?</h2><p>Be ready to swap art assets if they contain legible text.
-Sometimes even if there is no legible text you may want to adapt the art asset (i.e. an image) because of cultural reasons.
-There are some libraries that can help with this issue i.e. <a target="_blank" rel="noopener" href="https://github.com/i18next/i18nextify#fragment-replacement-for-links-and-images">Fragment replacement for links and images</a></p>
-<h2 id="Did-you-put-the-original-text-through-a-spelling-grammar-and-style-check"><a href="#Did-you-put-the-original-text-through-a-spelling-grammar-and-style-check" class="headerlink" title="Did you put the original text through a spelling, grammar, and style check?"></a>Did you put the original text through a spelling, grammar, and style check?</h2><p>Prevent back-and-forth rechecking that my stall the whole process.
-As an alternative you should be thinking of making some sort of <a target="_blank" rel="noopener" href="https://www.locize.com/blog/2016-10-05-continuous-development-integration-and-localization-cd/">Continuous Localization</a>.
-With <a target="_blank" rel="noopener" href="https://www.locize.com/blog/2016-10-05-continuous-development-integration-and-localization-cd/">Continuous Localization</a> you can take care of the translations from the first day and keep up with changes with ease.
-The process of translation and development are separated.</p>
-<h2 id="Do-you-use-a-tracking-system"><a href="#Do-you-use-a-tracking-system" class="headerlink" title="Do you use a tracking system?"></a>Do you use a tracking system?</h2><p>Tracking every change on localizable content can be important to ensure that no content will be left behind when distributing your software.
-For certain projects or industries it&#39;s important to know which translator has done what change for auditing reasons.
-Some translation management systems offer a dedicated <a href="https://locize.com/services.html">audit feature</a>. This <a target="_blank" rel="noopener" href="https://medium.com/@jamuhl/empower-your-localization-team-33e10ca9e333">empowers</a> you to prove anytime when a content fragment was changed.</p>
-<h2 id="What-file-formats-are-you-sending-for-translation-work"><a href="#What-file-formats-are-you-sending-for-translation-work" class="headerlink" title="What file formats are you sending for translation work?"></a>What file formats are you sending for translation work?</h2><p>JSON, XML (or a derivative format i.e. XLIFF) is preferred over plain text or Excel files.
-Even better are localization management systems that offers a completely integrated approach.</p>
-<h2 id="Where-are-the-localization-assets"><a href="#Where-are-the-localization-assets" class="headerlink" title="Where are the localization assets?"></a>Where are the localization assets?</h2><p>Store localization assets in an easy to access location, for swift access, import and export.
-With a proper <a target="_blank" rel="noopener" href="https://www.locize.com/blog/2016-10-05-continuous-development-integration-and-localization-cd/">Continuous Localization</a> solution translations can be updated without the need to release an update of your app.
-For example: translations deployed to a CDN and consumed from your application.</p>
-<h2 id="Do-you-intend-to-have-the-texts-translated-into-more-than-one-language"><a href="#Do-you-intend-to-have-the-texts-translated-into-more-than-one-language" class="headerlink" title="Do you intend to have the texts translated into more than one language?"></a>Do you intend to have the texts translated into more than one language?</h2><p>Process resource files into separate language ones so all translators can work in parallel.
-A good localization management solution can really help here. All team members can collaboratively work in parallel. In this way, you can get to your objective in a faster way.</p>
-<h2 id="How-do-you-track-which-language-is-fully-translated"><a href="#How-do-you-track-which-language-is-fully-translated" class="headerlink" title="How do you track which language is fully translated?"></a>How do you track which language is fully translated?</h2><p>To say it in one sentence: &quot;Start thinking about the localization process early!&quot;
-The biggest mistake one can do is looking on localization as it’s only based on instrumenting your code and extract texts into resource files so you can translate them later.
-You should keep full overview about what is translated and what not — even more if you order translations from the translation providers you also should keep track of your open orders.</p>
-
-        </div>
-        <footer class="article-footer">
-          
-          
+                              
 
 
+<h1>Page address was changed</h1>
+<p>The new page address is <a href="/blog/is-your-software-ready-for-localization/">https://locize.com/blog/is-your-software-ready-for-localization/</a></p>
 
-    <a data-url="https://locize.com/blog/2018-02-23-is-your-software-ready-for-localization/" data-id="cknh6trfl000li8xrhf82f7h9" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
+<script type="text/javascript">
+  document.location.href = '/blog/is-your-software-ready-for-localization/';
 </script>
-
-          
-        </footer>
-    </div>
-</article>
-
-    <section id="comments">
-    
-    </section>
-
 
                           </div>
                       </section>
@@ -384,29 +208,6 @@ You should keep full overview about what is translated and what not — even
         </ul>
     </div>
     
-        
-<nav id="article-nav">
-    
-        <a href="/blog/2018-04-30-locize-double-win-2018-for-translation-software/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            locize - Translation Software Distinguished by Platform for SaaS Reviews as a Great User Experience and Rising Star for 2018
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
-    
-    
-        <a href="/blog/2017-08-15-8-signs-you-should-improve-your-localization-process/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">8 signs you should improve your localization process</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
-    
-</nav>
-
-    
     <div class="widgets-container">
         
             
@@ -419,10 +220,10 @@ You should keep full overview about what is translated and what not — even
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/blog/2021-06-08-give-vue-i18n-more-superpowers/" class="thumbnail">
+                            <a href="/blog/give-vue-i18n-more-superpowers/" class="thumbnail">
     
     
-        <span style="background-image:url(/blog/2021-06-08-give-vue-i18n-more-superpowers/title.jpg)" alt="Give vue-i18n more superpowers❕" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/give-vue-i18n-more-superpowers/title.jpg)" alt="Give vue-i18n more superpowers❕" class="thumbnail-image"></span>
     
     
 </a>
@@ -431,7 +232,7 @@ You should keep full overview about what is translated and what not — even
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
-                            <p class="item-title"><a href="/blog/2021-06-08-give-vue-i18n-more-superpowers/" class="title">Give vue-i18n more superpowers❕</a></p>
+                            <p class="item-title"><a href="/blog/give-vue-i18n-more-superpowers/" class="title">Give vue-i18n more superpowers❕</a></p>
                             <p class="item-date"><time datetime="2021-06-07T22:00:00.000Z" itemprop="datePublished">08/06/2021</time></p>
                         </div>
                     </li>
@@ -439,10 +240,10 @@ You should keep full overview about what is translated and what not — even
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/blog/2021-04-14-how-to-internationalize-react-i18next/" class="thumbnail">
+                            <a href="/blog/how-to-internationalize-react-i18next/" class="thumbnail">
     
     
-        <span style="background-image:url(/blog/2021-04-14-how-to-internationalize-react-i18next/title.jpg)" alt="How to properly internationalize a React application using i18next" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/how-to-internationalize-react-i18next/title.jpg)" alt="How to properly internationalize a React application using i18next" class="thumbnail-image"></span>
     
     
 </a>
@@ -451,7 +252,7 @@ You should keep full overview about what is translated and what not — even
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
-                            <p class="item-title"><a href="/blog/2021-04-14-how-to-internationalize-react-i18next/" class="title">How to properly internationalize a React application using i18next</a></p>
+                            <p class="item-title"><a href="/blog/how-to-internationalize-react-i18next/" class="title">How to properly internationalize a React application using i18next</a></p>
                             <p class="item-date"><time datetime="2021-04-13T22:00:00.000Z" itemprop="datePublished">14/04/2021</time></p>
                         </div>
                     </li>
@@ -459,10 +260,10 @@ You should keep full overview about what is translated and what not — even
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/blog/2020-12-02-new-locize/" class="thumbnail">
+                            <a href="/blog/new-locize/" class="thumbnail">
     
     
-        <span style="background-image:url(/blog/2020-12-02-new-locize/title.jpg)" alt="What&#39;s new in locize" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/new-locize/title.jpg)" alt="What&#39;s new in locize" class="thumbnail-image"></span>
     
     
 </a>
@@ -471,7 +272,7 @@ You should keep full overview about what is translated and what not — even
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
-                            <p class="item-title"><a href="/blog/2020-12-02-new-locize/" class="title">What&#39;s new in locize</a></p>
+                            <p class="item-title"><a href="/blog/new-locize/" class="title">What&#39;s new in locize</a></p>
                             <p class="item-date"><time datetime="2020-12-01T23:00:00.000Z" itemprop="datePublished">02/12/2020</time></p>
                         </div>
                     </li>
@@ -479,10 +280,10 @@ You should keep full overview about what is translated and what not — even
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/blog/2020-06-13-localistars/" class="thumbnail">
+                            <a href="/blog/localistars/" class="thumbnail">
     
     
-        <span style="background-image:url(/blog/2020-06-13-localistars/title.jpg)" alt="Stay ahead of the game with localistars" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/localistars/title.jpg)" alt="Stay ahead of the game with localistars" class="thumbnail-image"></span>
     
     
 </a>
@@ -491,7 +292,7 @@ You should keep full overview about what is translated and what not — even
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
-                            <p class="item-title"><a href="/blog/2020-06-13-localistars/" class="title">Stay ahead of the game with localistars</a></p>
+                            <p class="item-title"><a href="/blog/localistars/" class="title">Stay ahead of the game with localistars</a></p>
                             <p class="item-date"><time datetime="2020-06-12T22:00:00.000Z" itemprop="datePublished">13/06/2020</time></p>
                         </div>
                     </li>
@@ -499,10 +300,10 @@ You should keep full overview about what is translated and what not — even
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/blog/2018-08-28-a-tale-of-the-last-10-years-in-web-development/" class="thumbnail">
+                            <a href="/blog/a-tale-of-the-last-10-years-in-web-development/" class="thumbnail">
     
     
-        <span style="background-image:url(/blog/2018-08-28-a-tale-of-the-last-10-years-in-web-development/title.png)" alt="A tale of the last 10 years in web development" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/a-tale-of-the-last-10-years-in-web-development/title.png)" alt="A tale of the last 10 years in web development" class="thumbnail-image"></span>
     
     
 </a>
@@ -511,7 +312,7 @@ You should keep full overview about what is translated and what not — even
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
-                            <p class="item-title"><a href="/blog/2018-08-28-a-tale-of-the-last-10-years-in-web-development/" class="title">A tale of the last 10 years in web development</a></p>
+                            <p class="item-title"><a href="/blog/a-tale-of-the-last-10-years-in-web-development/" class="title">A tale of the last 10 years in web development</a></p>
                             <p class="item-date"><time datetime="2018-08-27T22:00:00.000Z" itemprop="datePublished">28/08/2018</time></p>
                         </div>
                     </li>

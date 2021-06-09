@@ -1,0 +1,765 @@
+
+  <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Give vue-i18n more superpowers❕ | locize - localization as a service</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    
+        <meta name="keywords" content="locize,localization,internationalization,translation,vue,vue-i18n,i18n" />
+    
+    <meta name="description" content="It’s joyful to work with Vue.js. The design is elegant and the robust first-party additions which can be coupled with, make building browser apps a pleasure. The most famous i18n plugin for the progr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Give vue-i18n more superpowers❕">
+<meta property="og:url" content="https://locize.com/blog/give-vue-i18n-more-superpowers/index.html">
+<meta property="og:site_name" content="locize - localization as a service">
+<meta property="og:description" content="It’s joyful to work with Vue.js. The design is elegant and the robust first-party additions which can be coupled with, make building browser apps a pleasure. The most famous i18n plugin for the progr">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://locize.com/blog/give-vue-i18n-more-superpowers/give-vue-i18n-more-superpowers/title.jpg">
+<meta property="article:published_time" content="2021-06-07T22:00:00.000Z">
+<meta property="article:modified_time" content="2021-06-09T07:40:38.333Z">
+<meta property="article:author" content="inweso GmbH">
+<meta property="article:tag" content="locize">
+<meta property="article:tag" content="localization">
+<meta property="article:tag" content="internationalization">
+<meta property="article:tag" content="translation">
+<meta property="article:tag" content="vue">
+<meta property="article:tag" content="vue-i18n">
+<meta property="article:tag" content="i18n">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://locize.com/blog/give-vue-i18n-more-superpowers/give-vue-i18n-more-superpowers/title.jpg">
+<meta name="twitter:creator" content="@locize">
+    
+
+    
+
+    
+        <link rel="icon" href="/blog/favicon.ico" />
+    
+
+    
+<link rel="stylesheet" href="/blog/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/blog/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/blog/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+
+    
+<script src="/blog/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    
+    
+    
+    
+        
+<link rel="stylesheet" href="/blog/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        <script type="text/javascript">
+// (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+// (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+// m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+// })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+// ga('create', 'UA-78143856-1', 'auto');
+// ga('send', 'pageview');
+// ga('set', 'anonymizeIp', true);
+
+</script>
+    
+    
+
+
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/blog/atom.xml" title="locize - localization as a service" type="application/atom+xml">
+</head>
+
+  <body>
+      <div id="wrap">
+          <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <!--<a href="/blog/" class="logo"></a>-->
+                        <!-- <a href="https://www.locize.com" class="logo" target="_new"></a> -->
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/blog/">Home</a>
+                                </li>
+                            
+                            <li class="main-nav-list-item" >
+                                <a class="main-nav-list-link" href="https://docs.locize.com" target="_new">Docs</a>
+                                <a class="main-nav-list-link" href="https://www.locize.app/login" target="_new">Login</a>
+                            </li>
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/blog/',
+        CONTENT_URL: '/blog/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/blog/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+          <div class="container">
+              <div class="main-body container-inner">
+                  <div class="main-body-inner">
+                      <section id="main">
+                          <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/blog/categories/Post/">Post</a>
+    </h1>
+</div>
+                          <div class="main-body-content">
+                              <article id="post-give-vue-i18n-more-superpowers" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+          <header class="article-header">
+              
+    
+        <h1 class="article-title" itemprop="name">
+        Give vue-i18n more superpowers❕
+        </h1>
+    
+
+          </header>
+        
+        
+        <div class="article-subtitle">
+            <a href="/blog/give-vue-i18n-more-superpowers/" class="article-date">
+    <time datetime="2021-06-07T22:00:00.000Z" itemprop="datePublished">08/06/2021</time>
+</a>
+            
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/i18n/" rel="tag">i18n</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/internationalization/" rel="tag">internationalization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/localization/" rel="tag">localization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/locize/" rel="tag">locize</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/translation/" rel="tag">translation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/vue/" rel="tag">vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/vue-i18n/" rel="tag">vue-i18n</a></li></ul>
+
+        </div>
+        
+        
+
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="title.jpg" title="locize © inweso GmbH"></p>
+<p>It’s joyful to work with <a target="_blank" rel="noopener" href="https://vuejs.org/">Vue.js</a>. The design is elegant and the robust first-party additions which can be coupled with, make building browser apps a pleasure.</p>
+<p>The most famous i18n plugin for the progressive JavaScript framework <a target="_blank" rel="noopener" href="https://vuejs.org/">Vue.js</a> is probably <a target="_blank" rel="noopener" href="https://kazupon.github.io/vue-i18n/">Vue I18n</a>.</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/kazupon">Kazuya</a>, thank you for this great i18n plugin!</p>
+</blockquote>
+<p><img src="vue-i18n-stats.jpg" title="locize © inweso GmbH"></p>
+<h2 id="TOC"><a href="#TOC" class="headerlink" title="TOC"></a>TOC</h2><ul>
+<li><a href="#new-versions">New versions</a></li>
+<li><a href="#start">So how does a basic vue-i18n setup look like? Let&#39;s get into it...</a></li>
+<li><a href="#vue-i18n-better">Is it possible to make a vue-18n setup even better?</a><ul>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#getting-started">Getting started</a></li>
+<li><a href="#language-switcher">Language Switcher</a></li>
+<li><a href="#component-directive">Component interpolation and directive</a></li>
+<li><a href="#superpowers">Where are the additional superpowers?</a></li>
+<li><a href="#how-look">How does this look like?</a></li>
+<li><a href="#save-missing">save missing translations</a></li>
+<li><a href="#more">👀 but there&#39;s more...</a></li>
+<li><a href="#congratulations">🎉🥳 Congratulations 🎊🎁</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="New-versions"><a href="#New-versions" class="headerlink" title="New versions "></a>New versions <a name="new-versions"></a></h1><p>Beside templates, directives, data binding, event handling, etc... with v3 Vue.js is now introducing also <a target="_blank" rel="noopener" href="https://v3.vuejs.org/guide/composition-api-introduction.html">Composition API</a>, <a target="_blank" rel="noopener" href="https://v3.vuejs.org/guide/teleport.html">Teleport</a>, <a target="_blank" rel="noopener" href="https://v3.vuejs.org/guide/migration/fragments.html">Fragments</a>... and <a target="_blank" rel="noopener" href="https://v3.vuejs.org/guide/migration/suspense.html">Suspense</a>.
+The appropriate version to Vue.js v3 for Vue I18n is <a target="_blank" rel="noopener" href="https://blog.intlify.dev/posts/vue-i18n-9.html">v9</a>.</p>
+<h1 id="So-how-does-a-basic-vue-i18n-setup-look-like"><a href="#So-how-does-a-basic-vue-i18n-setup-look-like" class="headerlink" title="So how does a basic vue-i18n setup look like? "></a>So how does a basic vue-i18n setup look like? <a name="start"></a></h1><h2 id="Let-39-s-get-into-it"><a href="#Let-39-s-get-into-it" class="headerlink" title="Let&#39;s get into it..."></a>Let&#39;s get into it...</h2><h2 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites "></a>Prerequisites <a name="prerequisites"></a></h2><p>Make sure you have Node.js and npm installed. It&#39;s best, if you have some experience with simple HTML, JavaScript and basic Vue.js, before jumping to <a target="_blank" rel="noopener" href="https://kazupon.github.io/vue-i18n/">vue-i18n</a>.</p>
+<h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started "></a>Getting started <a name="getting-started"></a></h2><p>Take your own Vue.js project or create a new one, i.e. with <a target="_blank" rel="noopener" href="https://cli.vuejs.org/guide/creating-a-project.html#vue-create">the vue create cli command</a>.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npx @vue/cli create vue-starter-project</span><br><span class="line"><span class="comment"># select vue 3 preset</span></span><br></pre></td></tr></table></figure>
+
+<p>Let&#39;s install the vue-i18n dependency:</p>
+<p><code>npm install vue-i18n@9</code></p>
+<p>Let&#39;s prepare the <code>main.js</code> file:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; createI18n &#125; <span class="keyword">from</span> <span class="string">&#x27;vue-i18n&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> i18n = createI18n(&#123;</span><br><span class="line">  locale: <span class="string">&#x27;en&#x27;</span>, <span class="comment">// set locale</span></span><br><span class="line">  fallbackLocale: <span class="string">&#x27;en&#x27;</span>, <span class="comment">// set fallback locale</span></span><br><span class="line">  messages: &#123;</span><br><span class="line">    en: &#123;</span><br><span class="line">      message: &#123;</span><br><span class="line">        welcome: <span class="string">&#x27;Welcome to Your Vue.js App&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    de: &#123;</span><br><span class="line">      message: &#123;</span><br><span class="line">        welcome: <span class="string">&#x27;Willkommen zu Deiner Vue.js App&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// If you need to specify other options, you can set other options</span></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">createApp(App).use(i18n).mount(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Now let&#39;s create a first component <code>TranslationShowCase.vue</code>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;hello&quot;</span>&gt;</span><br><span class="line">    &lt;h1&gt;&#123;&#123; $t(<span class="string">&quot;welcome&quot;</span>) &#125;&#125;&lt;/h1&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">&#x27;TranslationShowCase&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>...and use that component in <code>App.vue</code>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;img alt=<span class="string">&quot;Vue logo&quot;</span> src=<span class="string">&quot;./assets/logo.png&quot;</span>&gt;</span><br><span class="line">  &lt;TranslationShowCase /&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">import</span> TranslationShowCase <span class="keyword">from</span> <span class="string">&#x27;./components/TranslationShowCase.vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">&#x27;App&#x27;</span>,</span><br><span class="line">  components: &#123;</span><br><span class="line">    TranslationShowCase</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">#app &#123;</span><br><span class="line">  font-family: Avenir, Helvetica, Arial, sans-serif;</span><br><span class="line">  -webkit-font-smoothing: antialiased;</span><br><span class="line">  -moz-osx-font-smoothing: grayscale;</span><br><span class="line">  text-align: center;</span><br><span class="line">  color: #2c3e50;</span><br><span class="line">  margin-top: 60px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>You should now see something like this:
+<img src="app_0.jpg" title="locize © inweso GmbH"></p>
+<h2 id="Language-Switcher"><a href="#Language-Switcher" class="headerlink" title="Language Switcher "></a>Language Switcher <a name="language-switcher"></a></h2><p>Now we will create a language switcher to make the content change between different languages.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;hello&quot;</span>&gt;</span><br><span class="line">    &lt;h1&gt;&#123;&#123; $t(<span class="string">&quot;welcome&quot;</span>) &#125;&#125;&lt;/h1&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;hr /&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;a v-<span class="keyword">if</span>=<span class="string">&quot;$i18n.locale !== &#x27;de&#x27;&quot;</span> v-on:click=<span class="string">&quot;changeLanguage(&#x27;de&#x27;)&quot;</span>&gt;DE&lt;/a&gt;</span><br><span class="line">      &lt;strong v-<span class="keyword">if</span>=<span class="string">&quot;$i18n.locale === &#x27;de&#x27;&quot;</span>&gt;DE&lt;/strong&gt;</span><br><span class="line">      &amp;nbsp;|&amp;nbsp;</span><br><span class="line">      &lt;a v-<span class="keyword">if</span>=<span class="string">&quot;$i18n.locale !== &#x27;en&#x27;&quot;</span> v-on:click=<span class="string">&quot;changeLanguage(&#x27;en&#x27;)&quot;</span>&gt;EN&lt;/a&gt;</span><br><span class="line">      &lt;strong v-<span class="keyword">if</span>=<span class="string">&quot;$i18n.locale === &#x27;en&#x27;&quot;</span>&gt;EN&lt;/strong&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">&#x27;TranslationShowCase&#x27;</span>,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    <span class="function"><span class="title">changeLanguage</span>(<span class="params">lang</span>)</span> &#123;</span><br><span class="line">      <span class="built_in">this</span>.$i18n.locale = lang</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="app_1.jpg" title="locize © inweso GmbH"></p>
+<p><strong>🥳 Awesome, you&#39;ve just created your first language switcher!</strong></p>
+<h2 id="Component-interpolation-and-directive"><a href="#Component-interpolation-and-directive" class="headerlink" title="Component interpolation and directive "></a>Component interpolation and directive <a name="component-directive"></a></h2><p>Now let&#39;s try <a target="_blank" rel="noopener" href="https://vue-i18n.intlify.dev/guide/advanced/component.html#basic-usage">component interpolation</a> and the <a target="_blank" rel="noopener" href="https://vue-i18n.intlify.dev/api/directive.html#translationdirective">translation directive</a>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;hello&quot;</span>&gt;</span><br><span class="line">    &lt;h1&gt;&#123;&#123; $t(<span class="string">&quot;welcome&quot;</span>) &#125;&#125;&lt;/h1&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;p&gt;</span><br><span class="line">    &lt;i18n-t keypath=<span class="string">&quot;descr&quot;</span> tag=<span class="string">&quot;label&quot;</span> <span class="keyword">for</span>=<span class="string">&quot;doc&quot;</span>&gt;</span><br><span class="line">      &lt;a href=<span class="string">&quot;https://cli.vuejs.org&quot;</span> target=<span class="string">&quot;_blank&quot;</span>&gt;&#123;&#123; $t(<span class="string">&#x27;doc&#x27;</span>) &#125;&#125;&lt;/a&gt;</span><br><span class="line">    &lt;/i18n-t&gt;</span><br><span class="line">  &lt;/p&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;span v-t=<span class="string">&quot;&#123;path:&#x27;end&#x27;&#125;&quot;</span> /&gt; &lt;!-- can also be written like: <span class="xml"><span class="tag">&lt;<span class="name">i</span> <span class="attr">v-t</span>=<span class="string">&quot;&#x27;end&#x27;&quot;</span> /&gt;</span></span> --&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;hr /&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;a v-<span class="keyword">if</span>=<span class="string">&quot;$i18n.locale !== &#x27;de&#x27;&quot;</span> v-on:click=<span class="string">&quot;changeLanguage(&#x27;de&#x27;)&quot;</span>&gt;DE&lt;/a&gt;</span><br><span class="line">      &lt;strong v-<span class="keyword">if</span>=<span class="string">&quot;$i18n.locale === &#x27;de&#x27;&quot;</span>&gt;DE&lt;/strong&gt;</span><br><span class="line">      &amp;nbsp;|&amp;nbsp;</span><br><span class="line">      &lt;a v-<span class="keyword">if</span>=<span class="string">&quot;$i18n.locale !== &#x27;en&#x27;&quot;</span> v-on:click=<span class="string">&quot;changeLanguage(&#x27;en&#x27;)&quot;</span>&gt;EN&lt;/a&gt;</span><br><span class="line">      &lt;strong v-<span class="keyword">if</span>=<span class="string">&quot;$i18n.locale === &#x27;en&#x27;&quot;</span>&gt;EN&lt;/strong&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">&#x27;TranslationShowCase&#x27;</span>,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    <span class="function"><span class="title">changeLanguage</span>(<span class="params">lang</span>)</span> &#123;</span><br><span class="line">      <span class="built_in">this</span>.$i18n.locale = lang</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>...and add the new keys to your translations:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; createI18n &#125; <span class="keyword">from</span> <span class="string">&#x27;vue-i18n&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> i18n = createI18n(&#123;</span><br><span class="line">  locale: <span class="string">&#x27;en&#x27;</span>, <span class="comment">// set locale</span></span><br><span class="line">  fallbackLocale: <span class="string">&#x27;en&#x27;</span>, <span class="comment">// set fallback locale</span></span><br><span class="line">  messages: &#123;</span><br><span class="line">    en: &#123;</span><br><span class="line">      message: &#123;</span><br><span class="line">        welcome: <span class="string">&#x27;Welcome to Your Vue.js App&#x27;</span>,</span><br><span class="line">        descr: <span class="string">&#x27;For a guide and recipes on how to configure / customize this project, check out the &#123;0&#125;.&#x27;</span>,</span><br><span class="line">        doc: <span class="string">&#x27;vue-cli documentation&#x27;</span>,</span><br><span class="line">        end: <span class="string">&#x27;have fun!&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    de: &#123;</span><br><span class="line">      message: &#123;</span><br><span class="line">        welcome: <span class="string">&#x27;Willkommen zu Deiner Vue.js App&#x27;</span>,</span><br><span class="line">        descr: <span class="string">&#x27;Eine Anleitung und Rezepte für das Konfigurieren / Anpassen dieses Projekts findest du in der &#123;0&#125;.&#x27;</span>,</span><br><span class="line">        doc: <span class="string">&#x27;vue-cli Dokumentation&#x27;</span>,</span><br><span class="line">        end: <span class="string">&#x27;habe Spass!&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// If you need to specify other options, you can set other options</span></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">createApp(App).use(i18n).mount(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>This should be the result:</p>
+<p><img src="app_2.jpg" title="locize © inweso GmbH"></p>
+<h2 id="Where-are-the-additional-superpowers"><a href="#Where-are-the-additional-superpowers" class="headerlink" title="Where are the additional superpowers? "></a>Where are the additional superpowers? <a name="superpowers"></a></h2><p>Let&#39;s meet <a target="_blank" rel="noopener" href="https://github.com/locize/locizer">locizer</a>...</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/locize/locizer">locizer</a> is a lightweight module to access data from your <a target="_blank" rel="noopener" href="https://www.locize.com/">locize</a> project and use that inside your application.</p>
+<blockquote>
+<p><a href="../2021-04-14-how-to-internationalize-react-i18next/#for-sure">What is locize?</a></p>
+</blockquote>
+<h3 id="How-does-this-look-like"><a href="#How-does-this-look-like" class="headerlink" title="How does this look like? "></a>How does this look like? <a name="how-look"></a></h3><p>First you need to signup at <a href="https://locize.com/register">locize</a> and <a target="_blank" rel="noopener" href="https://docs.locize.com/integration/getting-started/create-a-user-account">login</a>.
+Then <a target="_blank" rel="noopener" href="https://docs.locize.com/integration/getting-started/add-a-new-project">create a new project</a> in locize and add your translations. You can add your translations either by <a target="_blank" rel="noopener" href="https://docs.locize.com/more/general-questions/how-to-import-translations-from-a-file">importing the individual json files</a> or via <a target="_blank" rel="noopener" href="https://docs.locize.com/integration/api#update-remove-translations">API</a> or by using the <a target="_blank" rel="noopener" href="https://github.com/locize/locize-cli">CLI</a>.</p>
+<p>Having the translations in your code file works, but is not that suitable to work with, for translators.
+Using locize separates the translations from the code.</p>
+<p>Having imported all translations should look like this:
+<img src="locize_imported.jpg" title="locize © inweso GmbH"></p>
+<p>Done so, we&#39;re going to install <a target="_blank" rel="noopener" href="https://github.com/locize/locizer">locizer</a>.</p>
+<p><code>npm install locizer</code></p>
+<p>Let&#39;s create a dedicated <code>i18n.js</code> file:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createI18n &#125; <span class="keyword">from</span> <span class="string">&#x27;vue-i18n&#x27;</span></span><br><span class="line"><span class="keyword">import</span> locizer <span class="keyword">from</span> <span class="string">&#x27;locizer&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> namespace = <span class="string">&#x27;messages&#x27;</span> <span class="comment">// your namespace name added in locize</span></span><br><span class="line">locizer.init(&#123;</span><br><span class="line">  projectId: <span class="string">&#x27;your-locize-project-id&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> i18n = createI18n(&#123;</span><br><span class="line">  locale: locizer.lng, <span class="comment">// locizer.lng is the language detected in your browser.</span></span><br><span class="line">  fallbackLocale: <span class="string">&#x27;en&#x27;</span> <span class="comment">// set fallback locale</span></span><br><span class="line">  <span class="comment">// If you need to specify other options, you can set other options</span></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// called from within setup hook in App.vue</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> loadMessagesPromise = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">  locizer.loadAll(namespace, <span class="function">(<span class="params">err, messages</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) <span class="keyword">return</span> reject(err);</span><br><span class="line">    <span class="built_in">Object</span>.keys(messages).forEach(<span class="function">(<span class="params">l</span>) =&gt;</span> &#123;</span><br><span class="line">      i18n.global.setLocaleMessage(l, messages[l])</span><br><span class="line">    &#125;)</span><br><span class="line">    resolve(messages)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>The translations are now loaded asynchronously, that&#39;s why we export the <code>loadMessagesPromise</code> and use it in your <code>App.vue</code>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;img alt=<span class="string">&quot;Vue logo&quot;</span> src=<span class="string">&quot;./assets/logo.png&quot;</span>&gt;</span><br><span class="line">  &lt;TranslationShowCase /&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">import</span> &#123; loadMessagesPromise &#125; <span class="keyword">from</span> <span class="string">&#x27;./i18n&#x27;</span></span><br><span class="line"><span class="keyword">import</span> TranslationShowCase <span class="keyword">from</span> <span class="string">&#x27;./components/TranslationShowCase.vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">&#x27;App&#x27;</span>,</span><br><span class="line">  components: &#123;</span><br><span class="line">    TranslationShowCase</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// used in combination with Suspense.</span></span><br><span class="line">  <span class="comment">// useful when translations are not in-memory...</span></span><br><span class="line">  <span class="keyword">async</span> <span class="function"><span class="title">setup</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">await</span> loadMessagesPromise</span><br><span class="line">    <span class="keyword">return</span> &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">#app &#123;</span><br><span class="line">  font-family: Avenir, Helvetica, Arial, sans-serif;</span><br><span class="line">  -webkit-font-smoothing: antialiased;</span><br><span class="line">  -moz-osx-font-smoothing: grayscale;</span><br><span class="line">  text-align: center;</span><br><span class="line">  color: #2c3e50;</span><br><span class="line">  margin-top: 60px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Additionally, we make use of the new <a target="_blank" rel="noopener" href="https://v3.vuejs.org/guide/migration/suspense.html">Suspense</a> functionality of Vue.js.
+Let&#39;s create a new file: i.e. <code>Suspenser.vue</code>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;Suspense&gt;</span><br><span class="line">    &lt;template #<span class="keyword">default</span>&gt;</span><br><span class="line">      &lt;App /&gt;</span><br><span class="line">    &lt;/template&gt;</span><br><span class="line">    &lt;template #fallback&gt;</span><br><span class="line">      &lt;span&gt;Loading...&lt;/span&gt;</span><br><span class="line">    &lt;/template&gt;</span><br><span class="line">  &lt;/Suspense&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">&#x27;Suspenser&#x27;</span>,</span><br><span class="line">  components: &#123;</span><br><span class="line">    App</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>And use that in your <code>main.js</code> file:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; i18n &#125; <span class="keyword">from</span> <span class="string">&#x27;./i18n&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./Suspenser.vue&#x27;</span></span><br><span class="line"></span><br><span class="line">createApp(App).use(i18n).mount(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Now, as long your translations gets loaded you&#39;ll see the fallback template:
+<img src="app_3.jpg" title="locize © inweso GmbH"></p>
+<p>If your browser is configured with german language, you may now have seen the language automatically was set to german by default. This is because of the language detection feature of locizer. You can configure the language detection with other <a target="_blank" rel="noopener" href="https://github.com/locize/locizer#init-options">options</a>
+By default the language detection also is looking for the query parameter lng, so you can also type this url to test this: <a target="_blank" rel="noopener" href="http://localhost:8080/?lng=de">http://localhost:8080/?lng=de</a>
+<img src="app_2.jpg" title="locize © inweso GmbH"></p>
+<h3 id="save-missing-translations"><a href="#save-missing-translations" class="headerlink" title="save missing translations "></a>save missing translations <a name="save-missing"></a></h3><blockquote>
+<p>I wish newly added keys in the code, would automatically be saved to locize.</p>
+</blockquote>
+<p><strong>Your wish is my command!</strong></p>
+<p>Extend the <code>i18n.js</code> file with the locize api-key and the handleMissing function:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createI18n &#125; <span class="keyword">from</span> <span class="string">&#x27;vue-i18n&#x27;</span></span><br><span class="line"><span class="keyword">import</span> locizer <span class="keyword">from</span> <span class="string">&#x27;locizer&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> namespace = <span class="string">&#x27;messages&#x27;</span> <span class="comment">// your namespace name added in locize</span></span><br><span class="line"><span class="keyword">const</span> apiKey = <span class="string">&#x27;my-api-key&#x27;</span> <span class="comment">// used for handleMissing functionality, do not add your api-key in a production build</span></span><br><span class="line">locizer.init(&#123;</span><br><span class="line">  projectId: <span class="string">&#x27;your-locize-project-id&#x27;</span>,</span><br><span class="line">  apiKey</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> i18n = createI18n(&#123;</span><br><span class="line">  locale: locizer.lng, <span class="comment">// locizer.lng is the language detected in your browser.</span></span><br><span class="line">  fallbackLocale: <span class="string">&#x27;en&#x27;</span> <span class="comment">// set fallback locale</span></span><br><span class="line">  <span class="comment">// If you need to specify other options, you can set other options</span></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// called from within setup hook in App.vue</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> loadMessagesPromise = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">  locizer.loadAll(namespace, <span class="function">(<span class="params">err, messages</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) <span class="keyword">return</span> reject(err);</span><br><span class="line">    <span class="built_in">Object</span>.keys(messages).forEach(<span class="function">(<span class="params">l</span>) =&gt;</span> &#123;</span><br><span class="line">      i18n.global.setLocaleMessage(l, messages[l])</span><br><span class="line">    &#125;)</span><br><span class="line">    resolve(messages)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">handleMissing</span> (<span class="params">locale, key</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (!apiKey) <span class="keyword">return</span></span><br><span class="line">  <span class="keyword">if</span> (locale !== locizer.referenceLng) <span class="keyword">return</span></span><br><span class="line">  locizer.add(namespace, key, key)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>And use it in the component:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;img alt=<span class="string">&quot;Vue logo&quot;</span> src=<span class="string">&quot;./assets/logo.png&quot;</span>&gt;</span><br><span class="line">  &lt;TranslationShowCase /&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">import</span> &#123; useI18n &#125; <span class="keyword">from</span> <span class="string">&#x27;vue-i18n&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; loadMessagesPromise, handleMissing &#125; <span class="keyword">from</span> <span class="string">&#x27;./i18n&#x27;</span></span><br><span class="line"><span class="keyword">import</span> TranslationShowCase <span class="keyword">from</span> <span class="string">&#x27;./components/TranslationShowCase.vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">&#x27;App&#x27;</span>,</span><br><span class="line">  components: &#123;</span><br><span class="line">    TranslationShowCase</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// used in combination with Suspense.</span></span><br><span class="line">  <span class="comment">// useful when translations are not in-memory...</span></span><br><span class="line">  <span class="keyword">async</span> <span class="function"><span class="title">setup</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    useI18n().setMissingHandler(handleMissing)</span><br><span class="line">    <span class="keyword">await</span> loadMessagesPromise</span><br><span class="line">    <span class="keyword">return</span> &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">#app &#123;</span><br><span class="line">  font-family: Avenir, Helvetica, Arial, sans-serif;</span><br><span class="line">  -webkit-font-smoothing: antialiased;</span><br><span class="line">  -moz-osx-font-smoothing: grayscale;</span><br><span class="line">  text-align: center;</span><br><span class="line">  color: #2c3e50;</span><br><span class="line">  margin-top: 60px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>Now, if you add a new key in your templates, <code>&lt;h2&gt;&#123;&#123; $t("How are you?") &#125;&#125;&lt;/h2&gt;</code>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;hello&quot;</span>&gt;</span><br><span class="line">    &lt;h1&gt;&#123;&#123; $t(<span class="string">&quot;welcome&quot;</span>) &#125;&#125;&lt;/h1&gt;</span><br><span class="line">    &lt;h2&gt;&#123;&#123; $t(<span class="string">&quot;How are you?&quot;</span>) &#125;&#125;&lt;/h2&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;p&gt;</span><br><span class="line">    &lt;i18n-t keypath=<span class="string">&quot;descr&quot;</span> tag=<span class="string">&quot;label&quot;</span> <span class="keyword">for</span>=<span class="string">&quot;doc&quot;</span>&gt;</span><br><span class="line">      &lt;a href=<span class="string">&quot;https://cli.vuejs.org&quot;</span> target=<span class="string">&quot;_blank&quot;</span>&gt;&#123;&#123; $t(<span class="string">&#x27;doc&#x27;</span>) &#125;&#125;&lt;/a&gt;</span><br><span class="line">    &lt;/i18n-t&gt;</span><br><span class="line">  &lt;/p&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;span v-t=<span class="string">&quot;&#123;path:&#x27;end&#x27;&#125;&quot;</span> /&gt; &lt;!-- can also be written like: <span class="xml"><span class="tag">&lt;<span class="name">i</span> <span class="attr">v-t</span>=<span class="string">&quot;&#x27;end&#x27;&quot;</span> /&gt;</span></span> --&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;hr /&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;a v-<span class="keyword">if</span>=<span class="string">&quot;$i18n.locale !== &#x27;de&#x27;&quot;</span> v-on:click=<span class="string">&quot;changeLanguage(&#x27;de&#x27;)&quot;</span>&gt;DE&lt;/a&gt;</span><br><span class="line">      &lt;strong v-<span class="keyword">if</span>=<span class="string">&quot;$i18n.locale === &#x27;de&#x27;&quot;</span>&gt;DE&lt;/strong&gt;</span><br><span class="line">      &amp;nbsp;|&amp;nbsp;</span><br><span class="line">      &lt;a v-<span class="keyword">if</span>=<span class="string">&quot;$i18n.locale !== &#x27;en&#x27;&quot;</span> v-on:click=<span class="string">&quot;changeLanguage(&#x27;en&#x27;)&quot;</span>&gt;EN&lt;/a&gt;</span><br><span class="line">      &lt;strong v-<span class="keyword">if</span>=<span class="string">&quot;$i18n.locale === &#x27;en&#x27;&quot;</span>&gt;EN&lt;/strong&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">&#x27;TranslationShowCase&#x27;</span>,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    <span class="function"><span class="title">changeLanguage</span>(<span class="params">lang</span>)</span> &#123;</span><br><span class="line">      <span class="built_in">this</span>.$i18n.locale = lang</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>It gets automatically saved to locize:
+<img src="locize_missing.jpg" title="locize © inweso GmbH"></p>
+<p>Lastly, with the help of the <a target="_blank" rel="noopener" href="https://docs.locize.com/whats-inside/auto-machine-translation">auto-machinetranslation workflow</a>, new keys not only gets added to locize automatically, while developing the app, but are also automatically translated into the target languages using machine translation:
+<img src="locize_autotranslate.jpg" title="locize © inweso GmbH"></p>
+<p><img src="app_4.jpg" title="locize © inweso GmbH"></p>
+<h3 id="👀-but-there-39-s-more"><a href="#👀-but-there-39-s-more" class="headerlink" title="👀 but there&#39;s more... "></a>👀 but there&#39;s more... <a name="more"></a></h3><p><a target="_blank" rel="noopener" href="https://docs.locize.com/more/caching">Caching</a>:</p>
+<p><img src="../how-to-internationalize-react-i18next/caching.jpg" title="locize © inweso GmbH"></p>
+<p><a target="_blank" rel="noopener" href="https://docs.locize.com/more/versioning#merging-versions">Merging versions</a>:</p>
+<p><img src="../how-to-internationalize-react-i18next/overwrite_version.jpg" title="locize © inweso GmbH"></p>
+<p><em>🧑‍💻 The code can be found <a target="_blank" rel="noopener" href="https://github.com/locize/locizer/tree/master/example/vue">here</a>.</em></p>
+<h1 id="🎉🥳-Congratulations-🎊🎁"><a href="#🎉🥳-Congratulations-🎊🎁" class="headerlink" title="🎉🥳 Congratulations 🎊🎁 "></a>🎉🥳 Congratulations 🎊🎁 <a name="congratulations"></a></h1><p>I hope you’ve learned a few new things about <a target="_blank" rel="noopener" href="https://kazupon.github.io/vue-i18n/">Vue.js localization</a> and <a href="https://locize.com/">modern localization workflows</a>.</p>
+<p>So if you want to take your i18n topic to the next level, it&#39;s worth to try <a href="https://locize.com/">locize</a>.</p>
+<h1 id="👍"><a href="#👍" class="headerlink" title="👍"></a>👍</h1>
+        </div>
+        <footer class="article-footer">
+          
+          
+
+
+
+    <a data-url="https://locize.com/blog/give-vue-i18n-more-superpowers/" data-id="ckpp4ozdo0000k4xrec1vat50" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+          
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+    </section>
+
+
+                          </div>
+                      </section>
+                      <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/locize" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="youtube" href="https://www.youtube.com/channel/UCPYQjBbbXojUcB8qjeIB3uA" target="_blank">
+                        <i class="icon fa fa-youtube"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/Locize-1672640746084189/" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/blog/how-to-internationalize-react-i18next/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">How to properly internationalize a React application using i18next</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/give-vue-i18n-more-superpowers/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/give-vue-i18n-more-superpowers/title.jpg)" alt="Give vue-i18n more superpowers❕" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/give-vue-i18n-more-superpowers/" class="title">Give vue-i18n more superpowers❕</a></p>
+                            <p class="item-date"><time datetime="2021-06-07T22:00:00.000Z" itemprop="datePublished">08/06/2021</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/how-to-internationalize-react-i18next/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/how-to-internationalize-react-i18next/title.jpg)" alt="How to properly internationalize a React application using i18next" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/how-to-internationalize-react-i18next/" class="title">How to properly internationalize a React application using i18next</a></p>
+                            <p class="item-date"><time datetime="2021-04-13T22:00:00.000Z" itemprop="datePublished">14/04/2021</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/new-locize/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/new-locize/title.jpg)" alt="What&#39;s new in locize" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/new-locize/" class="title">What&#39;s new in locize</a></p>
+                            <p class="item-date"><time datetime="2020-12-01T23:00:00.000Z" itemprop="datePublished">02/12/2020</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/localistars/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/localistars/title.jpg)" alt="Stay ahead of the game with localistars" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/localistars/" class="title">Stay ahead of the game with localistars</a></p>
+                            <p class="item-date"><time datetime="2020-06-12T22:00:00.000Z" itemprop="datePublished">13/06/2020</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/a-tale-of-the-last-10-years-in-web-development/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/a-tale-of-the-last-10-years-in-web-development/title.png)" alt="A tale of the last 10 years in web development" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/a-tale-of-the-last-10-years-in-web-development/" class="title">A tale of the last 10 years in web development</a></p>
+                            <p class="item-date"><time datetime="2018-08-27T22:00:00.000Z" itemprop="datePublished">28/08/2018</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">categories</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Post/">Post</a><span class="category-list-count">16</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/04/">April 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/award/" rel="tag">award</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/aws/" rel="tag">aws</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/backend/" rel="tag">backend</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/beginning/" rel="tag">beginning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-delivery/" rel="tag">continuous delivery</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-development/" rel="tag">continuous development</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-integration/" rel="tag">continuous integration</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-localization/" rel="tag">continuous localization</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-translation/" rel="tag">continuous translation</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/formatjs/" rel="tag">formatjs</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/i18n/" rel="tag">i18n</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/i18next/" rel="tag">i18next</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/internationalization/" rel="tag">internationalization</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/localistars/" rel="tag">localistars</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/localization/" rel="tag">localization</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/locize/" rel="tag">locize</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/locizify/" rel="tag">locizify</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/order/" rel="tag">order</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/polyglot/" rel="tag">polyglot</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/serverless/" rel="tag">serverless</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/service/" rel="tag">service</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/technology/" rel="tag">technology</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/translation/" rel="tag">translation</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/vue/" rel="tag">vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/vue-i18n/" rel="tag">vue-i18n</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/web/" rel="tag">web</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/blog/tags/award/" style="font-size: 10px;">award</a> <a href="/blog/tags/aws/" style="font-size: 11.67px;">aws</a> <a href="/blog/tags/backend/" style="font-size: 11.67px;">backend</a> <a href="/blog/tags/beginning/" style="font-size: 10px;">beginning</a> <a href="/blog/tags/continuous-delivery/" style="font-size: 11.67px;">continuous delivery</a> <a href="/blog/tags/continuous-development/" style="font-size: 11.67px;">continuous development</a> <a href="/blog/tags/continuous-integration/" style="font-size: 11.67px;">continuous integration</a> <a href="/blog/tags/continuous-localization/" style="font-size: 13.33px;">continuous localization</a> <a href="/blog/tags/continuous-translation/" style="font-size: 11.67px;">continuous translation</a> <a href="/blog/tags/formatjs/" style="font-size: 13.33px;">formatjs</a> <a href="/blog/tags/i18n/" style="font-size: 10px;">i18n</a> <a href="/blog/tags/i18next/" style="font-size: 16.67px;">i18next</a> <a href="/blog/tags/internationalization/" style="font-size: 18.33px;">internationalization</a> <a href="/blog/tags/localistars/" style="font-size: 10px;">localistars</a> <a href="/blog/tags/localization/" style="font-size: 18.33px;">localization</a> <a href="/blog/tags/locize/" style="font-size: 20px;">locize</a> <a href="/blog/tags/locizify/" style="font-size: 13.33px;">locizify</a> <a href="/blog/tags/order/" style="font-size: 10px;">order</a> <a href="/blog/tags/polyglot/" style="font-size: 11.67px;">polyglot</a> <a href="/blog/tags/serverless/" style="font-size: 10px;">serverless</a> <a href="/blog/tags/service/" style="font-size: 13.33px;">service</a> <a href="/blog/tags/technology/" style="font-size: 10px;">technology</a> <a href="/blog/tags/translation/" style="font-size: 15px;">translation</a> <a href="/blog/tags/vue/" style="font-size: 10px;">vue</a> <a href="/blog/tags/vue-i18n/" style="font-size: 10px;">vue-i18n</a> <a href="/blog/tags/web/" style="font-size: 10px;">web</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://www.i18next.com" target="_blank">i18next</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://locize.com/privacy.html" target="_blank">privacy policy</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://locize.com/terms.html" target="_blank">terms</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                  </div>
+              </div>
+          </div>
+          <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <div style="float: left;">
+                    <h1 class="logo-wrap">
+                        <a href="/blog/" class="logo"></a>
+                    </h1>
+                    <p>&copy; 2021 inweso GmbH</p>
+                    <!-- <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Original theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+          
+
+    
+        
+<script src="/blog/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/blog/js/main.js"></script>
+
+
+<script src="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+    function enableCookies() {
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-78143856-1', 'auto');
+        ga('send', 'pageview');
+        ga('set', 'anonymizeIp', true);
+    }
+
+    function disableCookies() {
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i];
+            var eqPos = cookie.indexOf("=");
+            var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+    }
+
+    window.cookieconsent.initialise({
+        palette: {
+            popup: {
+                background: "#2196f3",
+                text: "#ffffff"
+            },
+            button: {
+                background: "#1976d2",
+                text: "#ffffff"
+            }
+        },
+        theme: "edgeless",
+        type: "opt-in",
+        content: {
+            message: "This website uses cookies to ensure you get the best experience on our website.",
+            allow: "Accept",
+            dismiss: "Decline",
+            link: "learn",
+            href: "https://locize.com/privacy.html"
+        },
+        elements: {
+            deny: '<a style="font-weight: 100; color: #ffffffa8; font-size: smaller;" aria-label="deny cookies" role="button" tabindex="0" class="cc-btn cc-deny">Decline</a>'
+        },
+        onInitialise: function (status) {
+            var type = this.options.type;
+            var didConsent = this.hasConsented();
+            if (type == 'opt-in' && didConsent) {
+                // enable cookies
+                enableCookies();
+            }
+            if (type == 'opt-out' && !didConsent) {
+                // disable cookies
+                disableCookies();
+            }
+        },
+        onStatusChange: function(status, chosenBefore) {
+            var type = this.options.type;
+            var didConsent = this.hasConsented();
+            if (type == 'opt-in' && didConsent) {
+                // enable cookies
+                enableCookies();
+            }
+            if (type == 'opt-out' && !didConsent) {
+                // disable cookies
+                disableCookies();
+            }
+        },
+        onRevokeChoice: function() {
+            var type = this.options.type;
+            if (type == 'opt-in') {
+                // disable cookies
+                disableCookies();
+            }
+            if (type == 'opt-out') {
+                // enable cookies
+                enableCookies();
+            }
+        }
+    });
+</script>
+      </div>
+  </body>
+  </html>
+

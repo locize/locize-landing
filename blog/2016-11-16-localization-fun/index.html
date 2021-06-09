@@ -4,26 +4,22 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Localization should be fun | locize - localization as a service</title>
+    <title>locize - localization as a service</title>
+    
+        <meta http-equiv="refresh" content="0; URL=/blog/localization-fun/" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     
-        <meta name="keywords" content="locize" />
-    
-    <meta name="description" content="Learn from our experience we made during using the locize service on our own new webapplication.  ![](thumb.png &quot;working hard&quot;)   In an early stage of drafting out our plan to completely rewrite our l">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Localization should be fun">
+    <meta name="description" content="Bridging the gap between translation and development.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="locize - localization as a service">
 <meta property="og:url" content="https://locize.com/blog/2016-11-16-localization-fun/index.html">
 <meta property="og:site_name" content="locize - localization as a service">
-<meta property="og:description" content="Learn from our experience we made during using the locize service on our own new webapplication.  ![](thumb.png &quot;working hard&quot;)   In an early stage of drafting out our plan to completely rewrite our l">
+<meta property="og:description" content="Bridging the gap between translation and development.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://locize.com/blog/2016-11-16-localization-fun/2016-11-16-localization-fun/thumb.png">
-<meta property="article:published_time" content="2016-11-15T23:00:00.000Z">
-<meta property="article:modified_time" content="2021-05-19T12:31:38.878Z">
 <meta property="article:author" content="inweso GmbH">
-<meta property="article:tag" content="locize">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://locize.com/blog/2016-11-16-localization-fun/2016-11-16-localization-fun/thumb.png">
 <meta name="twitter:creator" content="@locize">
     
 
@@ -163,173 +159,19 @@
                           <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/blog/categories/Post/">Post</a>
+    locize - localization as a service
     </h1>
 </div>
                           <div class="main-body-content">
-                              <article id="post-2016-11-16-localization-fun" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-          <header class="article-header">
-              
-    
-        <h1 class="article-title" itemprop="name">
-        Localization should be fun
-        </h1>
-    
-
-          </header>
-        
-        
-        <div class="article-subtitle">
-            <a href="/blog/2016-11-16-localization-fun/" class="article-date">
-    <time datetime="2016-11-15T23:00:00.000Z" itemprop="datePublished">16/11/2016</time>
-</a>
-            
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/locize/" rel="tag">locize</a></li></ul>
-
-        </div>
-        
-        
-
-        <div class="article-entry" itemprop="articleBody">
-            <p>Learn from our experience we made during using the locize service on our own new webapplication.</p>
-<div class="img-100">
-![](thumb.png "working hard")
-</div>
-
-<p>In an early stage of drafting out our plan to completely rewrite our locize webclient we decided to use our own service to manage the content on it. There was no plan on providing it in another language then english - but we strongly believed even not having the demand of translating we could profit of separating the content from the application logic. This way we could go full speed during development while working on final terminology later. As a plus we could change all the texts in production without having to deploy a new client.</p>
-<p>Another reason was - we wanted to get a better feeling on how the experience is - creating a new project using our service. Our goal was to get a workflow that is faster, less error prone and more fun for everyone being part of the localization process.</p>
-<h3 id="Our-past-workflow"><a href="#Our-past-workflow" class="headerlink" title="Our past workflow"></a>Our past workflow</h3><p>To have a comparison with the updated workflow we like to describe how things got done before using locize. <strong>If you like to direcly see how things worked with locize just skip this section</strong>.</p>
-<h5 id="Developers-path"><a href="#Developers-path" class="headerlink" title="Developers path"></a>Developers path</h5><ul>
-<li>Create a new component, page and get functionality to work</li>
-<li>Replace all texts with instrumented code (calls to translation function)</li>
-<li>Add all the new keys to the correct json file (manually resolving the nesting)</li>
-<li>Restart server to load and serve the new translations files</li>
-<li>See the json has an error -&gt; fix it -&gt; Restart again</li>
-<li>See that some keys are still missing -&gt; add -&gt; Restart again</li>
-</ul>
-<h5 id="Technical-editor-Translator-path"><a href="#Technical-editor-Translator-path" class="headerlink" title="Technical editor / Translator path"></a>Technical editor / Translator path</h5><ul>
-<li>Ask developer for latest resource files</li>
-<li>Getting them a few days later -&gt; start changing texts to match terminology</li>
-<li>Save the file and pass it back to development</li>
-<li>Ask for new texts - getting only a file having all texts -&gt; going crazy as having no idea which stuff is new...start to compare with last file</li>
-<li>Pass new texts to development</li>
-<li>...</li>
-</ul>
-<h5 id="Poor-guys-path"><a href="#Poor-guys-path" class="headerlink" title="Poor guys path"></a>Poor guys path</h5><ul>
-<li>tries to merge files coming from development and technical editor</li>
-<li>Goes crazy and starts searching for a new job ;)</li>
-</ul>
-<p>Doing agile / continuous localization could be hard...you can improve this by doing the steps in waterfall manner: development -&gt; technical editor -&gt; translations. But not only takes this a lot longer but also the problems come back as soon as development starts work on next version having semi-finished texts from the technical editor.</p>
-<p>Things need to get better - so lets have a look on how our experience was using locize:</p>
-<h2 id="Having-locize-in-the-flow-early"><a href="#Having-locize-in-the-flow-early" class="headerlink" title="Having locize in the flow early"></a>Having locize in the flow early</h2><p>Developing new components / pages we directly instrumented the code. In the early stage we still started with having the texts in code and instrument after being functional working. With getting more used to the new workflow we just removed that step and directly used to call the translation function.</p>
-<div class="img-80">
-![](1_instrument_code.png "instrumented code")
-</div>
-
-<p>Using webpacks hot-module-reload feature we just needed to save the file and the webapplication did it&#39;s reload magic:</p>
-<div class="img-80">
-![](2_trigger_savemissing.png "save missing was triggered")
-</div>
-
-<p>This triggered the save missing feature which was enabled during development. So all the untranslated texts were passed automatically to our locize project.</p>
-<p>Time to reload the new data on our locize project using the new filter &quot;was created by missing&quot; to only show newly submitted texts:</p>
-<div class="img-80">
-![](3_managecontent.png "edit content")
-</div>
-
-<p>Just fill the newly added keys with the content it should have - press save - and done. Reload the application and all the new texts are there:</p>
-<div class="img-80">
-![](4_done.png "content loaded from locize")
-</div>
-
-<p>From here the technical editor / translators could change texts as needed and verify those in the test environment completely independent of the development.</p>
-<ul>
-<li>Never ask for resource files again</li>
-<li>Never wait for the new texts / translations to be merged and deployed</li>
-<li>No need to beg your developers to change a text - not even in production</li>
-</ul>
-<p>What happened to the <strong>poor guy</strong>? He was not needed any longer and lost his job before having the chance to search for a new one - just kidding ;)</p>
-<hr>
-<p>Separating development and content editing made both sides work more efficient, with less errors and a lot faster. Developers, technical editor and translators could work hand in hand without disturbing each others work.</p>
-
-        </div>
-        <footer class="article-footer">
-          
-          
+                              
 
 
+<h1>Page address was changed</h1>
+<p>The new page address is <a href="/blog/localization-fun/">https://locize.com/blog/localization-fun/</a></p>
 
-    <a data-url="https://locize.com/blog/2016-11-16-localization-fun/" data-id="cknh6trfk000ii8xr8i70ebbn" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
+<script type="text/javascript">
+  document.location.href = '/blog/localization-fun/';
 </script>
-
-          
-        </footer>
-    </div>
-</article>
-
-    <section id="comments">
-    
-    </section>
-
 
                           </div>
                       </section>
@@ -366,29 +208,6 @@
         </ul>
     </div>
     
-        
-<nav id="article-nav">
-    
-        <a href="/blog/2017-02-21-locizify-v2/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            locizify v2 - improvements
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
-    
-    
-        <a href="/blog/2016-10-05-continuous-development-integration-and-localization-cd/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Continuous Development, Integration and Localization =&gt; Continuous Deployment</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
-    
-</nav>
-
-    
     <div class="widgets-container">
         
             
@@ -401,10 +220,10 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/blog/2021-06-08-give-vue-i18n-more-superpowers/" class="thumbnail">
+                            <a href="/blog/give-vue-i18n-more-superpowers/" class="thumbnail">
     
     
-        <span style="background-image:url(/blog/2021-06-08-give-vue-i18n-more-superpowers/title.jpg)" alt="Give vue-i18n more superpowers❕" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/give-vue-i18n-more-superpowers/title.jpg)" alt="Give vue-i18n more superpowers❕" class="thumbnail-image"></span>
     
     
 </a>
@@ -413,7 +232,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
-                            <p class="item-title"><a href="/blog/2021-06-08-give-vue-i18n-more-superpowers/" class="title">Give vue-i18n more superpowers❕</a></p>
+                            <p class="item-title"><a href="/blog/give-vue-i18n-more-superpowers/" class="title">Give vue-i18n more superpowers❕</a></p>
                             <p class="item-date"><time datetime="2021-06-07T22:00:00.000Z" itemprop="datePublished">08/06/2021</time></p>
                         </div>
                     </li>
@@ -421,10 +240,10 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/blog/2021-04-14-how-to-internationalize-react-i18next/" class="thumbnail">
+                            <a href="/blog/how-to-internationalize-react-i18next/" class="thumbnail">
     
     
-        <span style="background-image:url(/blog/2021-04-14-how-to-internationalize-react-i18next/title.jpg)" alt="How to properly internationalize a React application using i18next" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/how-to-internationalize-react-i18next/title.jpg)" alt="How to properly internationalize a React application using i18next" class="thumbnail-image"></span>
     
     
 </a>
@@ -433,7 +252,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
-                            <p class="item-title"><a href="/blog/2021-04-14-how-to-internationalize-react-i18next/" class="title">How to properly internationalize a React application using i18next</a></p>
+                            <p class="item-title"><a href="/blog/how-to-internationalize-react-i18next/" class="title">How to properly internationalize a React application using i18next</a></p>
                             <p class="item-date"><time datetime="2021-04-13T22:00:00.000Z" itemprop="datePublished">14/04/2021</time></p>
                         </div>
                     </li>
@@ -441,10 +260,10 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/blog/2020-12-02-new-locize/" class="thumbnail">
+                            <a href="/blog/new-locize/" class="thumbnail">
     
     
-        <span style="background-image:url(/blog/2020-12-02-new-locize/title.jpg)" alt="What&#39;s new in locize" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/new-locize/title.jpg)" alt="What&#39;s new in locize" class="thumbnail-image"></span>
     
     
 </a>
@@ -453,7 +272,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
-                            <p class="item-title"><a href="/blog/2020-12-02-new-locize/" class="title">What&#39;s new in locize</a></p>
+                            <p class="item-title"><a href="/blog/new-locize/" class="title">What&#39;s new in locize</a></p>
                             <p class="item-date"><time datetime="2020-12-01T23:00:00.000Z" itemprop="datePublished">02/12/2020</time></p>
                         </div>
                     </li>
@@ -461,10 +280,10 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/blog/2020-06-13-localistars/" class="thumbnail">
+                            <a href="/blog/localistars/" class="thumbnail">
     
     
-        <span style="background-image:url(/blog/2020-06-13-localistars/title.jpg)" alt="Stay ahead of the game with localistars" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/localistars/title.jpg)" alt="Stay ahead of the game with localistars" class="thumbnail-image"></span>
     
     
 </a>
@@ -473,7 +292,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
-                            <p class="item-title"><a href="/blog/2020-06-13-localistars/" class="title">Stay ahead of the game with localistars</a></p>
+                            <p class="item-title"><a href="/blog/localistars/" class="title">Stay ahead of the game with localistars</a></p>
                             <p class="item-date"><time datetime="2020-06-12T22:00:00.000Z" itemprop="datePublished">13/06/2020</time></p>
                         </div>
                     </li>
@@ -481,10 +300,10 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/blog/2018-08-28-a-tale-of-the-last-10-years-in-web-development/" class="thumbnail">
+                            <a href="/blog/a-tale-of-the-last-10-years-in-web-development/" class="thumbnail">
     
     
-        <span style="background-image:url(/blog/2018-08-28-a-tale-of-the-last-10-years-in-web-development/title.png)" alt="A tale of the last 10 years in web development" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/a-tale-of-the-last-10-years-in-web-development/title.png)" alt="A tale of the last 10 years in web development" class="thumbnail-image"></span>
     
     
 </a>
@@ -493,7 +312,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
-                            <p class="item-title"><a href="/blog/2018-08-28-a-tale-of-the-last-10-years-in-web-development/" class="title">A tale of the last 10 years in web development</a></p>
+                            <p class="item-title"><a href="/blog/a-tale-of-the-last-10-years-in-web-development/" class="title">A tale of the last 10 years in web development</a></p>
                             <p class="item-date"><time datetime="2018-08-27T22:00:00.000Z" itemprop="datePublished">28/08/2018</time></p>
                         </div>
                     </li>
