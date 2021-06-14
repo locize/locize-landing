@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     
-    <title>How to properly internationalize a React application using i18next | locize - localization as a service</title>
+    <title>React Localization - How to properly internationalize a React application using i18next | locize - localization as a service</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="canonical" href="https://locize.com/blog/how-to-internationalize-react-i18next/"/>
@@ -12,16 +12,16 @@
     
         <meta name="keywords" content="locize,localization,internationalization,i18next,translation,react,react-i18next" />
     
-    <meta name="description" content="Overcoming the language barrier for users who use your software is an important topic. English is no longer the universal language of the internet. As of March 2020, only 25.9% of internet users were">
+    <meta name="description" content="React Localization made easy with this step-by-step guide using i18next. This React JS example helps you with the simple usage of most popular i18n library.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="How to properly internationalize a React application using i18next">
+<meta property="og:title" content="React Localization - How to properly internationalize a React application using i18next">
 <meta property="og:url" content="https://locize.com/blog/how-to-internationalize-react-i18next/index.html">
 <meta property="og:site_name" content="locize - localization as a service">
-<meta property="og:description" content="Overcoming the language barrier for users who use your software is an important topic. English is no longer the universal language of the internet. As of March 2020, only 25.9% of internet users were">
+<meta property="og:description" content="React Localization made easy with this step-by-step guide using i18next. This React JS example helps you with the simple usage of most popular i18n library.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://locize.com/blog/how-to-internationalize-react-i18next/how-to-internationalize-react-i18next/title.jpg">
+<meta property="og:image" content="https://locize.com/blog/how-to-internationalize-react-i18next/how-to-internationalize-react-i18next/react-localization.jpg">
 <meta property="article:published_time" content="2021-04-13T22:00:00.000Z">
-<meta property="article:modified_time" content="2021-06-14T06:05:51.584Z">
+<meta property="article:modified_time" content="2021-06-14T08:06:19.881Z">
 <meta property="article:author" content="inweso GmbH">
 <meta property="article:tag" content="locize">
 <meta property="article:tag" content="localization">
@@ -31,7 +31,7 @@
 <meta property="article:tag" content="react">
 <meta property="article:tag" content="react-i18next">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://locize.com/blog/how-to-internationalize-react-i18next/how-to-internationalize-react-i18next/title.jpg">
+<meta name="twitter:image" content="https://locize.com/blog/how-to-internationalize-react-i18next/how-to-internationalize-react-i18next/react-localization.jpg">
 <meta name="twitter:creator" content="@locize">
     
 
@@ -112,9 +112,9 @@
     "@type": "WebPage",
     "@id": "https://locize.com/blog/how-to-internationalize-react-i18next/"
   },
-  "headline": "How to properly internationalize a React application using i18next",
-  "description": "Overcoming the language barrier for users who use your software is an important topic. English is no longer the universal language of the internet. As of March 2020, only 25.9% of internet users were",
-  "image": "https://locize.com/blog/how-to-internationalize-react-i18next/title.jpg",  
+  "headline": "React Localization - How to properly internationalize a React application using i18next",
+  "description": "React Localization made easy with this step-by-step guide using i18next. This React JS example helps you with the simple usage of most popular i18n library.",
+  "image": "https://locize.com/blog/how-to-internationalize-react-i18next/react-localization.jpg",  
   "author": {
     "@type": "Organization",
     "name": "locize"
@@ -128,7 +128,7 @@
     }
   },
   "datePublished": "2021-04-13T22:00:00.000Z",
-  "dateModified": "2021-06-14T06:05:51.584Z"
+  "dateModified": "2021-06-14T08:06:19.881Z"
 }
 </script>
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/blog/atom.xml" title="locize - localization as a service" type="application/atom+xml">
@@ -228,7 +228,7 @@
               
     
         <h1 class="article-title" itemprop="name">
-        How to properly internationalize a React application using i18next
+        React Localization - How to properly internationalize a React application using i18next
         </h1>
     
 
@@ -247,14 +247,14 @@
         
 
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="title.jpg" title="locize © inweso GmbH"></p>
+            <p><img src="react-localization.jpg" title="React Localization example"></p>
 <p>Overcoming the language barrier for users who use your software is an important topic.
 English is no longer the universal language of the internet.
 As of <a target="_blank" rel="noopener" href="https://www.internetworldstats.com/stats7.htm">March 2020</a>, only 25.9% of internet users were English speakers.
 The chances are high that your users will skip past your website if non-localized.
 Therefore, without a multilingual website you might missing out on a large share of potential users.</p>
 <p>In the JavaScript ecosystem, there are a lot of internationalization frameworks. <a target="_blank" rel="noopener" href="https://medium.com/@jamuhl/i18n-frameworks-the-unfair-showdown-8d436cd6f470">Here</a> you can find some details about some JavaScript internationalization frameworks.
-In this article, we will be using the <a target="_blank" rel="noopener" href="https://www.i18next.com/">i18next</a> framework to internationalize a <a target="_blank" rel="noopener" href="https://reactjs.org/">React.js</a> app.</p>
+In this article, we will be using the <a target="_blank" rel="noopener" href="https://www.i18next.com/">i18next</a> framework to internationalize a <a target="_blank" rel="noopener" href="https://reactjs.org/">React.js</a> app. This step-by-step guide is for you if you&#39;re looking for a way to create an internationalized React.js app (with or without Create React App). </p>
 <h2 id="TOC"><a href="#TOC" class="headerlink" title="TOC"></a>TOC</h2><ul>
 <li><a href="#why-i18next">So first of all: &quot;Why i18next?&quot;</a></li>
 <li><a href="#start">Let&#39;s get into it...</a><ul>
@@ -287,7 +287,7 @@ In this article, we will be using the <a target="_blank" rel="noopener" href="ht
 <p><em>There is a plenty of features and possibilities you&#39;ll get with i18next compared to other regular 18n frameworks.</em></p>
 <p><strong>➡️ rich</strong></p>
 <p><a target="_blank" rel="noopener" href="https://www.i18next.com/overview/comparison-to-others">Here you can find more information about why i18next is special.</a></p>
-<h1 id="Let-39-s-get-into-it"><a href="#Let-39-s-get-into-it" class="headerlink" title="Let&#39;s get into it... "></a>Let&#39;s get into it... <a name="start"></a></h1><h2 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites "></a>Prerequisites <a name="prerequisites"></a></h2><p>Make sure you have Node.js and npm installed. It&#39;s best, if you have some experience with simple HTML, JavaScript and basic React.js, before jumping to <a target="_blank" rel="noopener" href="https://react.i18next.com/">react-i18next</a>.</p>
+<h1 id="Let-39-s-get-into-it"><a href="#Let-39-s-get-into-it" class="headerlink" title="Let&#39;s get into it... "></a>Let&#39;s get into it... <a name="start"></a></h1><h2 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites "></a>Prerequisites <a name="prerequisites"></a></h2><p>Make sure you have Node.js and npm installed. It&#39;s best, if you have some experience with simple HTML, JavaScript and basic React.js, before jumping to <a target="_blank" rel="noopener" href="https://react.i18next.com/">react-i18next</a>. This react localization example is not intended to be a React beginner tutorial.</p>
 <h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started "></a>Getting started <a name="getting-started"></a></h2><p>Take your own React project or create a new one, i.e. with <a target="_blank" rel="noopener" href="https://create-react-app.dev/">create-react-app</a>.</p>
 <p><code>npx create-react-app my-app</code></p>
 <p><img src="app_0.jpg" title="locize © inweso GmbH"></p>
@@ -309,7 +309,7 @@ And we will create a language switcher to make the content change between differ
 <p>Now let&#39;s try to move some hard coded text out to the translations.</p>
 <p>We have used the <a target="_blank" rel="noopener" href="https://react.i18next.com/latest/trans-component">Trans component</a> for the first text and the <a target="_blank" rel="noopener" href="https://react.i18next.com/latest/usetranslation-hook">useTranslation hook</a> for the second text:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> logo <span class="keyword">from</span> <span class="string">&#x27;./logo.svg&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./App.css&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; useTranslation, Trans &#125; <span class="keyword">from</span> <span class="string">&#x27;react-i18next&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; t &#125; = useTranslation();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&quot;App&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">header</span> <span class="attr">className</span>=<span class="string">&quot;App-header&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&#123;logo&#125;</span> <span class="attr">className</span>=<span class="string">&quot;App-logo&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;logo&quot;</span> /&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml">          <span class="tag">&lt;<span class="name">Trans</span> <span class="attr">i18nKey</span>=<span class="string">&quot;description.part1&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">            Edit <span class="tag">&lt;<span class="name">code</span>&gt;</span>src/App.js<span class="tag">&lt;/<span class="name">code</span>&gt;</span> and save to reload.</span></span><br><span class="line"><span class="xml">          <span class="tag">&lt;/<span class="name">Trans</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">a</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">className</span>=<span class="string">&quot;App-link&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">href</span>=<span class="string">&quot;https://reactjs.org&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">          <span class="attr">rel</span>=<span class="string">&quot;noopener noreferrer&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">        &gt;</span></span></span><br><span class="line"><span class="xml">          &#123;t(&#x27;description.part2&#x27;)&#125;</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> App;</span><br></pre></td></tr></table></figure>
-
+<p>There is some more effort necessary if you wish to use High-Order-Components (HOC). Another option in this situation is to use <a target="_blank" rel="noopener" href="https://react.i18next.com/latest/withtranslation-hoc">withTranslation HOC</a>.</p>
 <p>The texts are now part of the translation resources:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> i18n <span class="keyword">from</span> <span class="string">&#x27;i18next&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; initReactI18next &#125; <span class="keyword">from</span> <span class="string">&#x27;react-i18next&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> LanguageDetector <span class="keyword">from</span> <span class="string">&#x27;i18next-browser-languagedetector&#x27;</span>;</span><br><span class="line"></span><br><span class="line">i18n</span><br><span class="line">  <span class="comment">// detect user language</span></span><br><span class="line">  <span class="comment">// learn more: https://github.com/i18next/i18next-browser-languageDetector</span></span><br><span class="line">  .use(LanguageDetector)</span><br><span class="line">  <span class="comment">// pass the i18n instance to react-i18next.</span></span><br><span class="line">  .use(initReactI18next)</span><br><span class="line">  <span class="comment">// init i18next</span></span><br><span class="line">  <span class="comment">// for all options read: https://www.i18next.com/overview/configuration-options</span></span><br><span class="line">  .init(&#123;</span><br><span class="line">    <span class="attr">debug</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">fallbackLng</span>: <span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">    <span class="attr">interpolation</span>: &#123;</span><br><span class="line">      <span class="attr">escapeValue</span>: <span class="literal">false</span>, <span class="comment">// not needed for react as it escapes by default</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">resources</span>: &#123;</span><br><span class="line">      <span class="attr">en</span>: &#123;</span><br><span class="line">        <span class="attr">translation</span>: &#123;</span><br><span class="line">          <span class="attr">description</span>: &#123;</span><br><span class="line">            <span class="attr">part1</span>: <span class="string">&#x27;Edit &lt;1&gt;src/App.js&lt;/1&gt; and save to reload.&#x27;</span>,</span><br><span class="line">            <span class="attr">part2</span>: <span class="string">&#x27;Learn React&#x27;</span></span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> i18n;</span><br></pre></td></tr></table></figure>
 
@@ -469,7 +469,7 @@ Lastly, <a target="_blank" rel="noopener" href="https://docs.locize.com/more/cac
 <p><img src="overwrite_version.jpg" title="locize © inweso GmbH"></p>
 <p><em>🧑‍💻 The complete code can be found <a target="_blank" rel="noopener" href="https://github.com/locize/react-i18next-example-app">here</a>.</em></p>
 <h1 id="🎉🥳-Congratulations-🎊🎁"><a href="#🎉🥳-Congratulations-🎊🎁" class="headerlink" title="🎉🥳 Congratulations 🎊🎁 "></a>🎉🥳 Congratulations 🎊🎁 <a name="congratulations"></a></h1><p>I hope you’ve learned a few new things about <a target="_blank" rel="noopener" href="https://www.i18next.com/">i18next</a>, <a target="_blank" rel="noopener" href="https://react.i18next.com/">React.js localization</a> and <a href="https://locize.com/">modern localization workflows</a>.</p>
-<p>So if you want to take your i18n topic to the next level, it&#39;s worth to try <a href="https://locize.com/">locize</a>.</p>
+<p>So if you want to take your i18n topic to the next level, it&#39;s worth to try the <a href="https://locize.com/">localization management platform - locize</a>.</p>
 <p>The founders of <a href="https://locize.com/">locize</a> are also the creators of <a target="_blank" rel="noopener" href="https://www.i18next.com/">i18next</a>. So with using <a href="https://locize.com/">locize</a> you directly support the future of <a target="_blank" rel="noopener" href="https://www.i18next.com/">i18next</a>.</p>
 <h1 id="👍"><a href="#👍" class="headerlink" title="👍"></a>👍</h1>
         </div>
@@ -662,7 +662,7 @@ Lastly, <a target="_blank" rel="noopener" href="https://docs.locize.com/more/cac
                             <a href="/blog/how-to-internationalize-react-i18next/" class="thumbnail">
     
     
-        <span style="background-image:url(/blog/how-to-internationalize-react-i18next/title.jpg)" alt="How to properly internationalize a React application using i18next" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/how-to-internationalize-react-i18next/react-localization.jpg)" alt="React Localization - How to properly internationalize a React application using i18next" class="thumbnail-image"></span>
     
     
 </a>
@@ -671,7 +671,7 @@ Lastly, <a target="_blank" rel="noopener" href="https://docs.locize.com/more/cac
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
-                            <p class="item-title"><a href="/blog/how-to-internationalize-react-i18next/" class="title">How to properly internationalize a React application using i18next</a></p>
+                            <p class="item-title"><a href="/blog/how-to-internationalize-react-i18next/" class="title">React Localization - How to properly internationalize a React application using i18next</a></p>
                             <p class="item-date"><time datetime="2021-04-13T22:00:00.000Z" itemprop="datePublished">14/04/2021</time></p>
                         </div>
                     </li>
