@@ -1,0 +1,806 @@
+
+  <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Unleash the full power of angular-i18next | locize - localization as a service</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="canonical" href="https://locize.com/blog/unleash-the-full-power-of-angular-i18next/"/>
+    
+    
+        <meta name="keywords" content="locize,localization,internationalization,i18next,translation,angular" />
+    
+    <meta name="description" content="Let&#39;s talk about internationalization (i18n) for Angular (not AngularJS, not Angular 2, just Angular 😉). When it comes to JavaScript localization. One of the most popular frameworks is i18next.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unleash the full power of angular-i18next">
+<meta property="og:url" content="https://locize.com/blog/unleash-the-full-power-of-angular-i18next/index.html">
+<meta property="og:site_name" content="locize - localization as a service">
+<meta property="og:description" content="Let&#39;s talk about internationalization (i18n) for Angular (not AngularJS, not Angular 2, just Angular 😉). When it comes to JavaScript localization. One of the most popular frameworks is i18next.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://locize.com/blog/unleash-the-full-power-of-angular-i18next/unleash-the-full-power-of-angular-i18next/title.jpg">
+<meta property="article:published_time" content="2021-06-13T22:00:00.000Z">
+<meta property="article:modified_time" content="2021-06-14T06:05:34.034Z">
+<meta property="article:author" content="inweso GmbH">
+<meta property="article:tag" content="locize">
+<meta property="article:tag" content="localization">
+<meta property="article:tag" content="internationalization">
+<meta property="article:tag" content="i18next">
+<meta property="article:tag" content="translation">
+<meta property="article:tag" content="angular">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://locize.com/blog/unleash-the-full-power-of-angular-i18next/unleash-the-full-power-of-angular-i18next/title.jpg">
+<meta name="twitter:creator" content="@locize">
+    
+
+    
+
+    
+        <link rel="icon" href="/blog/favicon.ico" />
+    
+
+    
+<link rel="stylesheet" href="/blog/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/blog/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/blog/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+
+    
+<script src="/blog/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    
+    
+    
+    
+        
+<link rel="stylesheet" href="/blog/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        <script type="text/javascript">
+// (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+// (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+// m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+// })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+// ga('create', 'UA-78143856-1', 'auto');
+// ga('send', 'pageview');
+// ga('set', 'anonymizeIp', true);
+
+</script>
+    
+    
+
+
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+    <script type="application/ld+json">
+{ "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "name" : "locize",
+  "url" : "https://locize.com",
+  "logo": "https://locize.com/img/locize_color.svg",
+  "sameAs" : [ "" ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "WebSite",
+  "name" : "locize",
+  "url": "https://locize.com/blog/",
+  "logo": "https://locize.com/blog/images/locize_color.svg"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://locize.com/blog/unleash-the-full-power-of-angular-i18next/"
+  },
+  "headline": "Unleash the full power of angular-i18next",
+  "description": "Let&amp;#39;s talk about internationalization (i18n) for Angular (not AngularJS, not Angular 2, just Angular 😉). When it comes to JavaScript localization. One of the most popular frameworks is i18next.",
+  "image": "https://locize.com/blog/unleash-the-full-power-of-angular-i18next/title.jpg",  
+  "author": {
+    "@type": "Organization",
+    "name": "locize"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "locize",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://locize.com/blog/images/locize_color.svg"
+    }
+  },
+  "datePublished": "2021-06-13T22:00:00.000Z",
+  "dateModified": "2021-06-14T06:05:34.034Z"
+}
+</script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/blog/atom.xml" title="locize - localization as a service" type="application/atom+xml">
+</head>
+
+  <body>
+      <div id="wrap">
+          <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <!--<a href="/blog/" class="logo"></a>-->
+                        <!-- <a href="https://www.locize.com" class="logo" target="_new"></a> -->
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/blog/">Home</a>
+                                </li>
+                            
+                            <li class="main-nav-list-item" >
+                                <a class="main-nav-list-link" href="https://docs.locize.com" target="_new">Docs</a>
+                                <a class="main-nav-list-link" href="https://www.locize.app/login" target="_new">Login</a>
+                            </li>
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/blog/',
+        CONTENT_URL: '/blog/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/blog/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+          <div class="container">
+              <div class="main-body container-inner">
+                  <div class="main-body-inner">
+                      <section id="main">
+                          <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/blog/categories/Post/">Post</a>
+    </h1>
+</div>
+                          <div class="main-body-content">
+                              <article id="post-unleash-the-full-power-of-angular-i18next" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+          <header class="article-header">
+              
+    
+        <h1 class="article-title" itemprop="name">
+        Unleash the full power of angular-i18next
+        </h1>
+    
+
+          </header>
+        
+        
+        <div class="article-subtitle">
+            <a href="/blog/unleash-the-full-power-of-angular-i18next/" class="article-date">
+    <time datetime="2021-06-13T22:00:00.000Z" itemprop="datePublished">14/06/2021</time>
+</a>
+            
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/angular/" rel="tag">angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/i18next/" rel="tag">i18next</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/internationalization/" rel="tag">internationalization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/localization/" rel="tag">localization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/locize/" rel="tag">locize</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/translation/" rel="tag">translation</a></li></ul>
+
+        </div>
+        
+        
+
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="title.jpg" title="locize © inweso GmbH"></p>
+<p>Let&#39;s talk about internationalization (i18n) for Angular (not AngularJS, not Angular 2, just Angular 😉).</p>
+<p>When it comes to JavaScript localization. One of the most popular frameworks is <a target="_blank" rel="noopener" href="https://www.i18next.com/">i18next</a>. One of the most famous Angular extension for i18next is <a target="_blank" rel="noopener" href="https://github.com/Romanchuk/angular-i18next/">angular-i18next</a>.
+It was created back in April 2017 by <a target="_blank" rel="noopener" href="https://github.com/Romanchuk">Sergey Romanchuk</a>.</p>
+<h2 id="TOC"><a href="#TOC" class="headerlink" title="TOC"></a>TOC</h2><ul>
+<li><a href="#why-i18next">So first of all: &quot;Why i18next?&quot;</a></li>
+<li><a href="#start">Let&#39;s get into it...</a><ul>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#getting-started">Getting started</a></li>
+<li><a href="#language-switcher">Language Switcher</a></li>
+<li><a href="#separate">Separate translations from code</a><ul>
+<li><a href="#how-look">How does this look like?</a></li>
+<li><a href="#save-missing">save missing translations</a></li>
+<li><a href="#more">👀 but there&#39;s more...</a></li>
+<li><a href="#congratulations">🎉🥳 Congratulations 🎊🎁</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="So-first-of-all-quot-Why-i18next-quot"><a href="#So-first-of-all-quot-Why-i18next-quot" class="headerlink" title="So first of all: &quot;Why i18next?&quot; "></a>So first of all: &quot;Why i18next?&quot; <a name="why-i18next"></a></h1><p><em>i18next was created in late 2011. It&#39;s older than most of the libraries you will use nowadays, including your main frontend technology (angular, react, vue, ...).</em></p>
+<p><strong>➡️ sustainable</strong></p>
+<p><em>Based on how long i18next already is available open source, there is no real i18n case that could not be solved with i18next.</em></p>
+<p><strong>➡️ mature</strong></p>
+<p><em>i18next can be used in any javascript (and a few non-javascript - .net, elm, iOS, android, ruby, ...) environment, with any UI framework, with any i18n format, ... <a target="_blank" rel="noopener" href="https://www.i18next.com/overview/supported-frameworks">the possibilities are endless</a>.</em></p>
+<p><strong>➡️ extensible</strong></p>
+<p><em>There is a plenty of features and possibilities you&#39;ll get with i18next compared to other regular 18n frameworks.</em></p>
+<p><strong>➡️ rich</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.i18next.com/overview/comparison-to-others">Here you can find more information about why i18next is special.</a></p>
+<h1 id="Let-39-s-get-into-it"><a href="#Let-39-s-get-into-it" class="headerlink" title="Let&#39;s get into it... "></a>Let&#39;s get into it... <a name="start"></a></h1><h2 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites "></a>Prerequisites <a name="prerequisites"></a></h2><p>Make sure you have Node.js and npm installed. It&#39;s best, if you have some experience with simple HTML, JavaScript and basic Angular, before jumping to <a target="_blank" rel="noopener" href="https://github.com/Romanchuk/angular-i18next/">angular-i18next</a>.</p>
+<h2 id="Getting-started"><a href="#Getting-started" class="headerlink" title="Getting started "></a>Getting started <a name="getting-started"></a></h2><p>Take your own Angular project or create a new one, i.e. with <a target="_blank" rel="noopener" href="https://angular.io/guide/setup-local#install-the-angular-cli">the Angular cli</a>.</p>
+<p><code>npx @angular/cli new my-app</code></p>
+<p><em>To simplify let&#39;s remove the &quot;generated&quot; content of the angular-cli:</em>
+<img src="app_0.jpg" title="locize © inweso GmbH"></p>
+<p>We are going to adapt the app to detect the language according to the user’s preference.
+And we will create a language switcher to make the content change between different languages.</p>
+<p>Let&#39;s install some i18next dependencies:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.i18next.com/">i18next</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Romanchuk/angular-i18next/">angular-i18next</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/i18next/i18next-browser-languageDetector">i18next-browser-languagedetector</a></li>
+</ul>
+<p><code>npm install i18next angular-i18next i18next-browser-languagedetector</code></p>
+<p>Let&#39;s modify our <code>app.module.ts</code> to integrate and initialize the i18next config:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; APP_INITIALIZER, NgModule, LOCALE_ID &#125; <span class="keyword">from</span> <span class="string">&#x27;@angular/core&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; BrowserModule &#125; <span class="keyword">from</span> <span class="string">&#x27;@angular/platform-browser&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; I18NEXT_SERVICE, I18NextModule, I18NextLoadResult, ITranslationService, defaultInterpolationFormat  &#125; <span class="keyword">from</span> <span class="string">&#x27;angular-i18next&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> LanguageDetector <span class="keyword">from</span> <span class="string">&#x27;i18next-browser-languagedetector&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; AppComponent &#125; <span class="keyword">from</span> <span class="string">&#x27;./app.component&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> i18nextOptions = &#123;</span><br><span class="line">  <span class="attr">debug</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">fallbackLng</span>: <span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">  <span class="attr">resources</span>: &#123;</span><br><span class="line">    <span class="attr">en</span>: &#123;</span><br><span class="line">        <span class="attr">translation</span>: &#123;</span><br><span class="line">            <span class="string">&quot;welcome&quot;</span>: <span class="string">&quot;Welcome to Your Angular App&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">de</span>: &#123;</span><br><span class="line">        <span class="attr">translation</span>: &#123;</span><br><span class="line">            <span class="string">&quot;welcome&quot;</span>: <span class="string">&quot;Willkommen zu Deiner Vue.js App&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">interpolation</span>: &#123;</span><br><span class="line">    <span class="attr">format</span>: I18NextModule.interpolationFormat(defaultInterpolationFormat)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">appInit</span>(<span class="params">i18next: ITranslationService</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> promise: <span class="built_in">Promise</span>&lt;I18NextLoadResult&gt; = i18next</span><br><span class="line">      .use(LocizeApi)</span><br><span class="line">      .use&lt;any&gt;(LanguageDetector)</span><br><span class="line">      .init(i18nextOptions);</span><br><span class="line">    <span class="keyword">return</span> promise;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">localeIdFactory</span>(<span class="params">i18next: ITranslationService</span>)  </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> i18next.language;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> I18N_PROVIDERS = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">provide</span>: APP_INITIALIZER,</span><br><span class="line">    <span class="attr">useFactory</span>: appInit,</span><br><span class="line">    <span class="attr">deps</span>: [I18NEXT_SERVICE],</span><br><span class="line">    <span class="attr">multi</span>: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">provide</span>: LOCALE_ID,</span><br><span class="line">    <span class="attr">deps</span>: [I18NEXT_SERVICE],</span><br><span class="line">    <span class="attr">useFactory</span>: localeIdFactory</span><br><span class="line">  &#125;,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">@NgModule(&#123;</span><br><span class="line">  <span class="attr">declarations</span>: [</span><br><span class="line">    AppComponent</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">imports</span>: [</span><br><span class="line">    BrowserModule,</span><br><span class="line">    I18NextModule.forRoot()</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">providers</span>: [</span><br><span class="line">    I18N_PROVIDERS</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">bootstrap</span>: [AppComponent]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">AppModule</span> </span>&#123; &#125;</span><br></pre></td></tr></table></figure>
+
+<p>Ok, now let&#39;s update the <code>app.component.html</code>:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Toolbar --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;toolbar&quot;</span> <span class="attr">role</span>=<span class="string">&quot;banner&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; &#x27;welcome&#x27; | i18next &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span> <span class="attr">role</span>=<span class="string">&quot;main&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- Highlight Card --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card highlight-card card-small&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; &#x27;welcome&#x27; | i18next &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>You should now see something like this:
+<img src="app_1.jpg" title="locize © inweso GmbH"></p>
+<p>Nice! So let&#39;s add an additional text, with an <a target="_blank" rel="noopener" href="https://www.i18next.com/translation-function/interpolation#unescape">interpolated unescaped</a> value:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Toolbar --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;toolbar&quot;</span> <span class="attr">role</span>=<span class="string">&quot;banner&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; &#x27;welcome&#x27; | i18next &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;content&quot;</span> <span class="attr">role</span>=<span class="string">&quot;main&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- Highlight Card --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;card highlight-card card-small&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; &#x27;welcome&#x27; | i18next &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; &#x27;descr&#x27; | i18next: &#123; url: &#x27;https://github.com/Romanchuk/angular-i18next&#x27; &#125; &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Do not forget to add the new key also to the resources:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> i18nextOptions = &#123;</span><br><span class="line">  <span class="attr">debug</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">fallbackLng</span>: <span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">  <span class="attr">resources</span>: &#123;</span><br><span class="line">    <span class="attr">en</span>: &#123;</span><br><span class="line">        <span class="attr">translation</span>: &#123;</span><br><span class="line">            <span class="string">&quot;welcome&quot;</span>: <span class="string">&quot;Welcome to Your Angular App&quot;</span>,</span><br><span class="line">            <span class="string">&quot;descr&quot;</span>: <span class="string">&quot;For a guide and recipes on how to configure / customize this project, check out &#123;&#123;-url&#125;&#125;.&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">de</span>: &#123;</span><br><span class="line">        <span class="attr">translation</span>: &#123;</span><br><span class="line">            <span class="string">&quot;welcome&quot;</span>: <span class="string">&quot;Willkommen zu Deiner Vue.js App&quot;</span>,</span><br><span class="line">            <span class="string">&quot;descr&quot;</span>: <span class="string">&quot;Eine Anleitung und Rezepte für das Konfigurieren / Anpassen dieses Projekts findest du in &#123;&#123;-url&#125;&#125;.&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">interpolation</span>: &#123;</span><br><span class="line">    <span class="attr">format</span>: I18NextModule.interpolationFormat(defaultInterpolationFormat)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Does it work? - Of course!
+<img src="app_2.jpg" title="locize © inweso GmbH"></p>
+<p>And thanks to the language-detector, you can also try to switch the language with the query parameter <code>?lng=de</code>:
+<img src="app_3.jpg" title="locize © inweso GmbH"></p>
+<h2 id="Language-Switcher"><a href="#Language-Switcher" class="headerlink" title="Language Switcher "></a>Language Switcher <a name="language-switcher"></a></h2><p>We like to offer the possibility to change the language via some sort of language switcher.</p>
+<p>So let&#39;s add a footer section in our <code>app.component.html</code> file:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Footer --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ng-template</span> <span class="attr">ngFor</span> <span class="attr">let-lang</span> [<span class="attr">ngForOf</span>]=<span class="string">&quot;languages&quot;</span> <span class="attr">let-i</span>=<span class="string">&quot;index&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> *<span class="attr">ngIf</span>=<span class="string">&quot;i !== 0&quot;</span>&gt;</span><span class="symbol">&amp;nbsp;</span>|<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> *<span class="attr">ngIf</span>=<span class="string">&quot;language !== lang&quot;</span> <span class="attr">href</span>=<span class="string">&quot;javascript:void(0)&quot;</span> <span class="attr">class</span>=<span class="string">&quot;link lang-item &#123;&#123;lang&#125;&#125;&quot;</span> (<span class="attr">click</span>)=<span class="string">&quot;changeLanguage(lang)&quot;</span>&gt;</span>&#123;&#123; lang.toUpperCase() &#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> *<span class="attr">ngIf</span>=<span class="string">&quot;language === lang&quot;</span> <span class="attr">class</span>=<span class="string">&quot;current lang-item &#123;&#123;lang&#125;&#125;&quot;</span>&gt;</span>&#123;&#123; lang.toUpperCase() &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ng-template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>And we need also to update the <code>app.components.ts</code> file:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Component, Inject &#125; <span class="keyword">from</span> <span class="string">&#x27;@angular/core&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; I18NEXT_SERVICE, ITranslationService &#125; <span class="keyword">from</span> <span class="string">&#x27;angular-i18next&#x27;</span>;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">  <span class="attr">selector</span>: <span class="string">&#x27;app-root&#x27;</span>,</span><br><span class="line">  <span class="attr">templateUrl</span>: <span class="string">&#x27;./app.component.html&#x27;</span>,</span><br><span class="line">  <span class="attr">styleUrls</span>: [<span class="string">&#x27;./app.component.less&#x27;</span>]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">AppComponent</span> </span>&#123;</span><br><span class="line">  <span class="attr">language</span>: string = <span class="string">&#x27;en&#x27;</span>;</span><br><span class="line">  languages: string[] = [<span class="string">&#x27;en&#x27;</span>, <span class="string">&#x27;de&#x27;</span>];</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="function">    @Inject(I18NEXT_SERVICE) private i18NextService: ITranslationService</span></span></span><br><span class="line"><span class="params"><span class="function">  </span>)</span></span><br><span class="line">  &#123;&#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">ngOnInit</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.i18NextService.events.initialized.subscribe(<span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (e) &#123;</span><br><span class="line">        <span class="built_in">this</span>.updateState(<span class="built_in">this</span>.i18NextService.language);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="title">changeLanguage</span>(<span class="params">lang: string</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (lang !== <span class="built_in">this</span>.i18NextService.language) &#123;</span><br><span class="line">      <span class="built_in">this</span>.i18NextService.changeLanguage(lang).then(<span class="function"><span class="params">x</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.updateState(lang);</span><br><span class="line">        <span class="built_in">document</span>.location.reload();</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  private <span class="function"><span class="title">updateState</span>(<span class="params">lang: string</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.language = lang;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="app_4.jpg" title="locize © inweso GmbH"></p>
+<p><strong>🥳 Awesome, you&#39;ve just created your first language switcher!</strong></p>
+<p>Thanks to <a target="_blank" rel="noopener" href="https://github.com/i18next/i18next-browser-languageDetector">i18next-browser-languagedetector</a> now it tries to detect the browser language and automatically use that language if you&#39;ve provided the translations for it. The manually selected language in the language switcher is persisted in the localStorage, next time you visit the page, that language is used as preferred language.</p>
+<h2 id="Separate-translations-from-code"><a href="#Separate-translations-from-code" class="headerlink" title="Separate translations from code "></a>Separate translations from code <a name="separate"></a></h2><p>Having the translations in our code works, but is not that suitable to work with, for translators.
+Let&#39;s separate the translations from the code and pleace them in dedicated json files.</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/locize/i18next-locize-backend">i18next-locize-backend</a> will help us to do so.</p>
+<blockquote>
+<p><a href="../how-to-internationalize-react-i18next/#for-sure">What is locize?</a></p>
+</blockquote>
+<h3 id="How-does-this-look-like"><a href="#How-does-this-look-like" class="headerlink" title="How does this look like? "></a>How does this look like? <a name="how-look"></a></h3><p>First you need to signup at <a href="https://locize.com/register">locize</a> and <a target="_blank" rel="noopener" href="https://docs.locize.com/integration/getting-started/create-a-user-account">login</a>.
+Then <a target="_blank" rel="noopener" href="https://docs.locize.com/integration/getting-started/add-a-new-project">create a new project</a> in locize and add your translations. You can add your translations either by <a target="_blank" rel="noopener" href="https://docs.locize.com/more/general-questions/how-to-import-translations-from-a-file">importing the individual json files</a> or via <a target="_blank" rel="noopener" href="https://docs.locize.com/integration/api#update-remove-translations">API</a> or by using the <a target="_blank" rel="noopener" href="https://github.com/locize/locize-cli">CLI</a>.</p>
+<p><code>npm install i18next-locize-backend</code></p>
+<p>Adapt the <code>app.modules.ts</code> file to use the i18next-locize-backend and make sure you copy the project-id from within your locize project:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; APP_INITIALIZER, NgModule, LOCALE_ID &#125; <span class="keyword">from</span> <span class="string">&#x27;@angular/core&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; BrowserModule &#125; <span class="keyword">from</span> <span class="string">&#x27;@angular/platform-browser&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; I18NEXT_SERVICE, I18NextModule, I18NextLoadResult, ITranslationService, defaultInterpolationFormat  &#125; <span class="keyword">from</span> <span class="string">&#x27;angular-i18next&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> LanguageDetector <span class="keyword">from</span> <span class="string">&#x27;i18next-browser-languagedetector&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> LocizeApi <span class="keyword">from</span> <span class="string">&#x27;i18next-locize-backend&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; AppComponent &#125; <span class="keyword">from</span> <span class="string">&#x27;./app.component&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> i18nextOptions = &#123;</span><br><span class="line">  <span class="attr">debug</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">fallbackLng</span>: <span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">  <span class="attr">backend</span>: &#123;</span><br><span class="line">    <span class="attr">projectId</span>: <span class="string">&#x27;your-locize-project-id&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">interpolation</span>: &#123;</span><br><span class="line">    <span class="attr">format</span>: I18NextModule.interpolationFormat(defaultInterpolationFormat)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">appInit</span>(<span class="params">i18next: ITranslationService</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> promise: <span class="built_in">Promise</span>&lt;I18NextLoadResult&gt; = i18next</span><br><span class="line">      .use(LocizeApi)</span><br><span class="line">      .use&lt;any&gt;(LanguageDetector)</span><br><span class="line">      .init(i18nextOptions);</span><br><span class="line">    <span class="keyword">return</span> promise;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">localeIdFactory</span>(<span class="params">i18next: ITranslationService</span>)  </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> i18next.language;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> I18N_PROVIDERS = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">provide</span>: APP_INITIALIZER,</span><br><span class="line">    <span class="attr">useFactory</span>: appInit,</span><br><span class="line">    <span class="attr">deps</span>: [I18NEXT_SERVICE],</span><br><span class="line">    <span class="attr">multi</span>: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">provide</span>: LOCALE_ID,</span><br><span class="line">    <span class="attr">deps</span>: [I18NEXT_SERVICE],</span><br><span class="line">    <span class="attr">useFactory</span>: localeIdFactory</span><br><span class="line">  &#125;,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">@NgModule(&#123;</span><br><span class="line">  <span class="attr">declarations</span>: [</span><br><span class="line">    AppComponent</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">imports</span>: [</span><br><span class="line">    BrowserModule,</span><br><span class="line">    I18NextModule.forRoot()</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">providers</span>: [</span><br><span class="line">    I18N_PROVIDERS</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">bootstrap</span>: [AppComponent]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">AppModule</span> </span>&#123; &#125;</span><br></pre></td></tr></table></figure>
+
+<p>The app looks still the same, but the translations are now completely separated fom the app and can be managed and released seperately.
+<img src="app_4.jpg" title="locize © inweso GmbH"></p>
+<h3 id="save-missing-translations"><a href="#save-missing-translations" class="headerlink" title="save missing translations "></a>save missing translations <a name="save-missing"></a></h3><p>Thanks to the use of the <a target="_blank" rel="noopener" href="https://www.i18next.com/overview/configuration-options#missing-keys">saveMissing functionality</a>, new keys gets added to locize automatically, while developing the app.</p>
+<p>Just pass <code>saveMissing: true</code> in the i18next options and make sure you copy the api-key from within your locize project:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> i18nextOptions = &#123;</span><br><span class="line">  <span class="attr">debug</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">saveMissing</span>: <span class="literal">true</span>, <span class="comment">// do not use the saveMissing functionality in production: https://docs.locize.com/guides-tips-and-tricks/going-production</span></span><br><span class="line">  <span class="attr">fallbackLng</span>: <span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">  <span class="attr">backend</span>: &#123;</span><br><span class="line">    <span class="attr">projectId</span>: <span class="string">&#x27;my-locize-project-id&#x27;</span>,</span><br><span class="line">    <span class="attr">apiKey</span>: <span class="string">&#x27;my-api-key&#x27;</span> <span class="comment">// used for handleMissing functionality, do not add your api-key in a production build</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">interpolation</span>: &#123;</span><br><span class="line">    <span class="attr">format</span>: I18NextModule.interpolationFormat(defaultInterpolationFormat)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Each time you&#39;ll use a new key, it will be sent to locize, i.e.:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&#123;&#123; <span class="string">&#x27;cool&#x27;</span> | i18next: &#123; <span class="attr">defaultValue</span>: <span class="string">&#x27;This is very cool!&#x27;</span> &#125; &#125;&#125;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<p>will result in locize like this:</p>
+<p><img src="missing_key.jpg" title="locize © inweso GmbH"></p>
+<h3 id="👀-but-there-39-s-more"><a href="#👀-but-there-39-s-more" class="headerlink" title="👀 but there&#39;s more... "></a>👀 but there&#39;s more... <a name="more"></a></h3><p>Thanks to the <a target="_blank" rel="noopener" href="https://github.com/locize/locize-lastused">locize-lastused</a> plugin, you&#39;ll be able to <a target="_blank" rel="noopener" href="https://docs.locize.com/guides-tips-and-tricks/unused-translations">find and filter in locize which keys are used or not used anymore</a>.</p>
+<p>With the help of the <a target="_blank" rel="noopener" href="https://github.com/locize/locize">locize</a> plugin, you&#39;ll be able to use your app within the locize <a target="_blank" rel="noopener" href="https://docs.locize.com/more/incontext-editor">InContext Editor</a>.</p>
+<p>Lastly, with the help of the <a target="_blank" rel="noopener" href="https://docs.locize.com/whats-inside/auto-machine-translation">auto-machinetranslation workflow</a>, new keys not only gets added to locize automatically, while developing the app, but are also automatically translated into the target languages using machine translation:
+<img src="locize_autotranslate.jpg" title="locize © inweso GmbH"></p>
+<p><code>npm install locize-lastused locize</code></p>
+<p>use them in <code>app.modules.ts</code>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; APP_INITIALIZER, NgModule, LOCALE_ID &#125; <span class="keyword">from</span> <span class="string">&#x27;@angular/core&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; BrowserModule &#125; <span class="keyword">from</span> <span class="string">&#x27;@angular/platform-browser&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; I18NEXT_SERVICE, I18NextModule, I18NextLoadResult, ITranslationService, defaultInterpolationFormat  &#125; <span class="keyword">from</span> <span class="string">&#x27;angular-i18next&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> LanguageDetector <span class="keyword">from</span> <span class="string">&#x27;i18next-browser-languagedetector&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> LocizeApi <span class="keyword">from</span> <span class="string">&#x27;i18next-locize-backend&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> LastUsed <span class="keyword">from</span> <span class="string">&#x27;locize-lastused&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; locizePlugin &#125; <span class="keyword">from</span> <span class="string">&#x27;locize&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; AppComponent &#125; <span class="keyword">from</span> <span class="string">&#x27;./app.component&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> locizeOptions = &#123;</span><br><span class="line">  <span class="attr">projectId</span>: <span class="string">&#x27;my-locize-project-id&#x27;</span>,</span><br><span class="line">  <span class="attr">apiKey</span>: <span class="string">&#x27;my-api-key&#x27;</span> <span class="comment">// used for handleMissing functionality, do not add your api-key in a production buildyour</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> i18nextOptions = &#123;</span><br><span class="line">  <span class="attr">debug</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">fallbackLng</span>: <span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">  <span class="attr">saveMissing</span>: <span class="literal">true</span>, <span class="comment">// do not use the saveMissing functionality in production: https://docs.locize.com/guides-tips-and-tricks/going-production</span></span><br><span class="line">  <span class="attr">backend</span>: locizeOptions,</span><br><span class="line">  <span class="attr">locizeLastUsed</span>: locizeOptions,</span><br><span class="line">  <span class="attr">interpolation</span>: &#123;</span><br><span class="line">    <span class="attr">format</span>: I18NextModule.interpolationFormat(defaultInterpolationFormat)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">appInit</span>(<span class="params">i18next: ITranslationService</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> promise: <span class="built_in">Promise</span>&lt;I18NextLoadResult&gt; = i18next</span><br><span class="line">      <span class="comment">// locize-lastused</span></span><br><span class="line">      <span class="comment">// sets a timestamp of last access on every translation segment on locize</span></span><br><span class="line">      <span class="comment">// -&gt; safely remove the ones not being touched for weeks/months</span></span><br><span class="line">      <span class="comment">// https://github.com/locize/locize-lastused</span></span><br><span class="line">      <span class="comment">// do not use the lastused functionality in production: https://docs.locize.com/guides-tips-and-tricks/going-production</span></span><br><span class="line">      .use(LastUsed)</span><br><span class="line">      <span class="comment">// locize-editor</span></span><br><span class="line">      <span class="comment">// InContext Editor of locize</span></span><br><span class="line">      .use(locizePlugin)</span><br><span class="line">      <span class="comment">// i18next-locize-backend</span></span><br><span class="line">      <span class="comment">// loads translations from your project, saves new keys to it (saveMissing: true)</span></span><br><span class="line">      <span class="comment">// https://github.com/locize/i18next-locize-backend</span></span><br><span class="line">      .use(LocizeApi)</span><br><span class="line">      .use&lt;any&gt;(LanguageDetector)</span><br><span class="line">      .init(i18nextOptions);</span><br><span class="line">    <span class="keyword">return</span> promise;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">localeIdFactory</span>(<span class="params">i18next: ITranslationService</span>)  </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> i18next.language;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> I18N_PROVIDERS = [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">provide</span>: APP_INITIALIZER,</span><br><span class="line">    <span class="attr">useFactory</span>: appInit,</span><br><span class="line">    <span class="attr">deps</span>: [I18NEXT_SERVICE],</span><br><span class="line">    <span class="attr">multi</span>: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">provide</span>: LOCALE_ID,</span><br><span class="line">    <span class="attr">deps</span>: [I18NEXT_SERVICE],</span><br><span class="line">    <span class="attr">useFactory</span>: localeIdFactory</span><br><span class="line">  &#125;,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">@NgModule(&#123;</span><br><span class="line">  <span class="attr">declarations</span>: [</span><br><span class="line">    AppComponent</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">imports</span>: [</span><br><span class="line">    BrowserModule,</span><br><span class="line">    I18NextModule.forRoot()</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">providers</span>: [</span><br><span class="line">    I18N_PROVIDERS</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">bootstrap</span>: [AppComponent]</span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">AppModule</span> </span>&#123; &#125;</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://docs.locize.com/whats-inside/auto-machine-translation">Automatic machine translation</a>:</p>
+<p><img src="locize_autotranslate.jpg" title="locize © inweso GmbH"></p>
+<p><a href="(https://docs.locize.com/guides-tips-and-tricks/unused-translations)">Last used translations filter</a>:</p>
+<p><img src="../how-to-internationalize-react-i18next/last_used.jpg" title="locize © inweso GmbH"></p>
+<p><a target="_blank" rel="noopener" href="https://docs.locize.com/more/incontext-editor">InContext Editor</a>:</p>
+<p><img src="in_context.jpg" title="locize © inweso GmbH"></p>
+<p><a target="_blank" rel="noopener" href="https://docs.locize.com/more/caching">Caching</a>:</p>
+<p><img src="../how-to-internationalize-react-i18next/caching.jpg" title="locize © inweso GmbH"></p>
+<p><a target="_blank" rel="noopener" href="https://docs.locize.com/more/versioning#merging-versions">Merging versions</a>:</p>
+<p><img src="../how-to-internationalize-react-i18next/overwrite_version.jpg" title="locize © inweso GmbH"></p>
+<p><em>🧑‍💻 The complete code can be found <a target="_blank" rel="noopener" href="https://github.com/locize/locize-angular-example">here</a>.</em></p>
+<h1 id="🎉🥳-Congratulations-🎊🎁"><a href="#🎉🥳-Congratulations-🎊🎁" class="headerlink" title="🎉🥳 Congratulations 🎊🎁 "></a>🎉🥳 Congratulations 🎊🎁 <a name="congratulations"></a></h1><p>I hope you’ve learned a few new things about <a target="_blank" rel="noopener" href="https://www.i18next.com/">i18next</a>, <a target="_blank" rel="noopener" href="https://github.com/Romanchuk/angular-i18next/">angular-i18next</a> and <a href="https://locize.com/">modern localization workflows</a>.</p>
+<p>So if you want to take your i18n topic to the next level, it&#39;s worth to try <a href="https://locize.com/">locize</a>.</p>
+<p>The founders of <a href="https://locize.com/">locize</a> are also the creators of <a target="_blank" rel="noopener" href="https://www.i18next.com/">i18next</a>. So with using <a href="https://locize.com/">locize</a> you directly support the future of <a target="_blank" rel="noopener" href="https://www.i18next.com/">i18next</a>.</p>
+<h1 id="👍"><a href="#👍" class="headerlink" title="👍"></a>👍</h1>
+        </div>
+        <footer class="article-footer">
+          
+          
+
+
+
+    <a data-url="https://locize.com/blog/unleash-the-full-power-of-angular-i18next/" data-id="ckpw7iq3q00007zxr5wd5hrxb" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+          
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+    </section>
+
+
+                          </div>
+                      </section>
+                      <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/locize" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="youtube" href="https://www.youtube.com/channel/UCPYQjBbbXojUcB8qjeIB3uA" target="_blank">
+                        <i class="icon fa fa-youtube"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/Locize-1672640746084189/" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/blog/give-vue-i18n-more-superpowers/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Give vue-i18n more superpowers❕</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/unleash-the-full-power-of-angular-i18next/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/unleash-the-full-power-of-angular-i18next/title.jpg)" alt="Unleash the full power of angular-i18next" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/unleash-the-full-power-of-angular-i18next/" class="title">Unleash the full power of angular-i18next</a></p>
+                            <p class="item-date"><time datetime="2021-06-13T22:00:00.000Z" itemprop="datePublished">14/06/2021</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/give-vue-i18n-more-superpowers/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/give-vue-i18n-more-superpowers/title.jpg)" alt="Give vue-i18n more superpowers❕" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/give-vue-i18n-more-superpowers/" class="title">Give vue-i18n more superpowers❕</a></p>
+                            <p class="item-date"><time datetime="2021-06-07T22:00:00.000Z" itemprop="datePublished">08/06/2021</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/how-to-internationalize-react-i18next/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/how-to-internationalize-react-i18next/title.jpg)" alt="How to properly internationalize a React application using i18next" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/how-to-internationalize-react-i18next/" class="title">How to properly internationalize a React application using i18next</a></p>
+                            <p class="item-date"><time datetime="2021-04-13T22:00:00.000Z" itemprop="datePublished">14/04/2021</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/new-locize/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/new-locize/title.jpg)" alt="What&#39;s new in locize" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/new-locize/" class="title">What&#39;s new in locize</a></p>
+                            <p class="item-date"><time datetime="2020-12-01T23:00:00.000Z" itemprop="datePublished">02/12/2020</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/localistars/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/localistars/title.jpg)" alt="Stay ahead of the game with localistars" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/localistars/" class="title">Stay ahead of the game with localistars</a></p>
+                            <p class="item-date"><time datetime="2020-06-12T22:00:00.000Z" itemprop="datePublished">13/06/2020</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/04/">April 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/angular/" rel="tag">angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/award/" rel="tag">award</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/aws/" rel="tag">aws</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/backend/" rel="tag">backend</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/beginning/" rel="tag">beginning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-delivery/" rel="tag">continuous delivery</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-development/" rel="tag">continuous development</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-integration/" rel="tag">continuous integration</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-localization/" rel="tag">continuous localization</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-translation/" rel="tag">continuous translation</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/formatjs/" rel="tag">formatjs</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/i18n/" rel="tag">i18n</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/i18next/" rel="tag">i18next</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/internationalization/" rel="tag">internationalization</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/localistars/" rel="tag">localistars</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/localization/" rel="tag">localization</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/locize/" rel="tag">locize</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/locizify/" rel="tag">locizify</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/order/" rel="tag">order</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/polyglot/" rel="tag">polyglot</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/react/" rel="tag">react</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/react-i18next/" rel="tag">react-i18next</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/serverless/" rel="tag">serverless</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/service/" rel="tag">service</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/technology/" rel="tag">technology</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/translation/" rel="tag">translation</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/vue/" rel="tag">vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/vue-i18n/" rel="tag">vue-i18n</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/web/" rel="tag">web</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/blog/tags/angular/" style="font-size: 10px;">angular</a> <a href="/blog/tags/award/" style="font-size: 10px;">award</a> <a href="/blog/tags/aws/" style="font-size: 11.67px;">aws</a> <a href="/blog/tags/backend/" style="font-size: 11.67px;">backend</a> <a href="/blog/tags/beginning/" style="font-size: 10px;">beginning</a> <a href="/blog/tags/continuous-delivery/" style="font-size: 11.67px;">continuous delivery</a> <a href="/blog/tags/continuous-development/" style="font-size: 11.67px;">continuous development</a> <a href="/blog/tags/continuous-integration/" style="font-size: 11.67px;">continuous integration</a> <a href="/blog/tags/continuous-localization/" style="font-size: 13.33px;">continuous localization</a> <a href="/blog/tags/continuous-translation/" style="font-size: 11.67px;">continuous translation</a> <a href="/blog/tags/formatjs/" style="font-size: 13.33px;">formatjs</a> <a href="/blog/tags/i18n/" style="font-size: 10px;">i18n</a> <a href="/blog/tags/i18next/" style="font-size: 16.67px;">i18next</a> <a href="/blog/tags/internationalization/" style="font-size: 18.33px;">internationalization</a> <a href="/blog/tags/localistars/" style="font-size: 10px;">localistars</a> <a href="/blog/tags/localization/" style="font-size: 18.33px;">localization</a> <a href="/blog/tags/locize/" style="font-size: 20px;">locize</a> <a href="/blog/tags/locizify/" style="font-size: 13.33px;">locizify</a> <a href="/blog/tags/order/" style="font-size: 10px;">order</a> <a href="/blog/tags/polyglot/" style="font-size: 11.67px;">polyglot</a> <a href="/blog/tags/react/" style="font-size: 10px;">react</a> <a href="/blog/tags/react-i18next/" style="font-size: 10px;">react-i18next</a> <a href="/blog/tags/serverless/" style="font-size: 10px;">serverless</a> <a href="/blog/tags/service/" style="font-size: 13.33px;">service</a> <a href="/blog/tags/technology/" style="font-size: 10px;">technology</a> <a href="/blog/tags/translation/" style="font-size: 15px;">translation</a> <a href="/blog/tags/vue/" style="font-size: 10px;">vue</a> <a href="/blog/tags/vue-i18n/" style="font-size: 10px;">vue-i18n</a> <a href="/blog/tags/web/" style="font-size: 10px;">web</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://www.i18next.com" target="_blank">i18next</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://locize.com/privacy.html" target="_blank">privacy policy</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://locize.com/terms.html" target="_blank">terms</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                  </div>
+              </div>
+          </div>
+          <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <div style="float: left;">
+                    <h1 class="logo-wrap">
+                        <a href="/blog/" class="logo"></a>
+                    </h1>
+                    <p>&copy; 2021 inweso GmbH</p>
+                    <!-- <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Original theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+          
+
+    
+        
+<script src="/blog/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/blog/js/main.js"></script>
+
+
+<script src="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+    function enableCookies() {
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-78143856-1', 'auto');
+        ga('send', 'pageview');
+        ga('set', 'anonymizeIp', true);
+    }
+
+    function disableCookies() {
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i];
+            var eqPos = cookie.indexOf("=");
+            var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+    }
+
+    window.cookieconsent.initialise({
+        palette: {
+            popup: {
+                background: "#2196f3",
+                text: "#ffffff"
+            },
+            button: {
+                background: "#1976d2",
+                text: "#ffffff"
+            }
+        },
+        theme: "edgeless",
+        type: "opt-in",
+        content: {
+            message: "This website uses cookies to ensure you get the best experience on our website.",
+            allow: "Accept",
+            dismiss: "Decline",
+            link: "learn",
+            href: "https://locize.com/privacy.html"
+        },
+        elements: {
+            deny: '<a style="font-weight: 100; color: #ffffffa8; font-size: smaller;" aria-label="deny cookies" role="button" tabindex="0" class="cc-btn cc-deny">Decline</a>'
+        },
+        onInitialise: function (status) {
+            var type = this.options.type;
+            var didConsent = this.hasConsented();
+            if (type == 'opt-in' && didConsent) {
+                // enable cookies
+                enableCookies();
+            }
+            if (type == 'opt-out' && !didConsent) {
+                // disable cookies
+                disableCookies();
+            }
+        },
+        onStatusChange: function(status, chosenBefore) {
+            var type = this.options.type;
+            var didConsent = this.hasConsented();
+            if (type == 'opt-in' && didConsent) {
+                // enable cookies
+                enableCookies();
+            }
+            if (type == 'opt-out' && !didConsent) {
+                // disable cookies
+                disableCookies();
+            }
+        },
+        onRevokeChoice: function() {
+            var type = this.options.type;
+            if (type == 'opt-in') {
+                // disable cookies
+                disableCookies();
+            }
+            if (type == 'opt-out') {
+                // enable cookies
+                enableCookies();
+            }
+        }
+    });
+</script>
+      </div>
+  </body>
+  </html>
+
