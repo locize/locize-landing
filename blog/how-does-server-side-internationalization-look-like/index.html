@@ -1,0 +1,826 @@
+
+  <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>How does server side internationalization (i18n) look like? | locize - localization as a service</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="canonical" href="https://locize.com/blog/how-does-server-side-internationalization-look-like/"/>
+    
+    
+        <meta name="keywords" content="backend,internationalization,i18next,translation,i18n,react,server,cli,mail,next,serverside" />
+    
+    <meta name="description" content="How does server side internationalization (i18n) look like? CLI, webserver, mail generation, server side rendered sites, Next.js, etc...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How does server side internationalization (i18n) look like?">
+<meta property="og:url" content="https://locize.com/blog/how-does-server-side-internationalization-look-like/index.html">
+<meta property="og:site_name" content="locize - localization as a service">
+<meta property="og:description" content="How does server side internationalization (i18n) look like? CLI, webserver, mail generation, server side rendered sites, Next.js, etc...">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://locize.com/blog/how-does-server-side-internationalization-look-like/how-does-server-side-internationalization-look-like/server_side_backend.jpg">
+<meta property="article:published_time" content="2021-06-28T06:23:00.000Z">
+<meta property="article:modified_time" content="2021-06-28T06:23:03.894Z">
+<meta property="article:author" content="inweso GmbH">
+<meta property="article:tag" content="backend">
+<meta property="article:tag" content="internationalization">
+<meta property="article:tag" content="i18next">
+<meta property="article:tag" content="translation">
+<meta property="article:tag" content="i18n">
+<meta property="article:tag" content="react">
+<meta property="article:tag" content="server">
+<meta property="article:tag" content="cli">
+<meta property="article:tag" content="mail">
+<meta property="article:tag" content="next">
+<meta property="article:tag" content="serverside">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://locize.com/blog/how-does-server-side-internationalization-look-like/how-does-server-side-internationalization-look-like/server_side_backend.jpg">
+<meta name="twitter:creator" content="@locize">
+    
+
+    
+
+    
+        <link rel="icon" href="/blog/favicon.ico" />
+    
+
+    
+<link rel="stylesheet" href="/blog/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/blog/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/blog/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+
+    
+<script src="/blog/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    
+    
+    
+    
+        
+<link rel="stylesheet" href="/blog/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        <script type="text/javascript">
+// (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+// (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+// m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+// })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+// ga('create', 'UA-78143856-1', 'auto');
+// ga('send', 'pageview');
+// ga('set', 'anonymizeIp', true);
+
+</script>
+    
+    
+
+
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+    <script type="application/ld+json">
+{ "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "locize",
+  "url": "https://locize.com",
+  "logo": "https://locize.com/img/locize_color.svg",
+  "sameAs": [""]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "name": "locize",
+  "url": "https://locize.com/blog/",
+  "logo": "https://locize.com/blog/images/locize_color.svg"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://locize.com/blog/how-does-server-side-internationalization-look-like/"
+  },
+  "headline": "How does server side internationalization (i18n) look like?",
+  "description": "How does server side internationalization (i18n) look like? CLI, webserver, mail generation, server side rendered sites, Next.js, etc...",
+  "image": "https://locize.com/blog/how-does-server-side-internationalization-look-like/server_side_backend.jpg",  
+  "author": {
+    "@type": "Organization",
+    "name": "locize"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "locize",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://locize.com/blog/images/locize_color.svg"
+    }
+  },
+  "datePublished": "2021-06-28T06:23:00.000Z",
+  "dateModified": "2021-06-28T06:23:03.894Z"
+}
+</script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/blog/atom.xml" title="locize - localization as a service" type="application/atom+xml">
+</head>
+
+  <body>
+      <div id="wrap">
+          <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <!--<a href="/blog/" class="logo"></a>-->
+                        <!-- <a href="https://www.locize.com" class="logo" target="_new"></a> -->
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/blog/">Home</a>
+                                </li>
+                            
+                            <li class="main-nav-list-item" >
+                                <a class="main-nav-list-link" href="https://docs.locize.com" target="_new">Docs</a>
+                                <a class="main-nav-list-link" href="https://www.locize.app/login" target="_new">Login</a>
+                            </li>
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/blog/',
+        CONTENT_URL: '/blog/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/blog/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+          <div class="container">
+              <div class="main-body container-inner">
+                  <div class="main-body-inner">
+                      <section id="main">
+                          <!-- <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/blog/categories/Post/">Post</a>
+    </h1>
+</div> -->
+                          <div class="main-body-content">
+                              <article id="post-how-does-server-side-internationalization-look-like" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+          <header class="article-header">
+              
+    
+        <h1 class="article-title" itemprop="name">
+        How does server side internationalization (i18n) look like?
+        </h1>
+    
+
+          </header>
+        
+        
+        <div class="article-subtitle">
+            <a href="/blog/how-does-server-side-internationalization-look-like/" class="article-date">
+    <time datetime="2021-06-28T06:23:00.000Z" itemprop="datePublished">28/06/2021</time>
+</a>
+            
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/backend/" rel="tag">backend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/cli/" rel="tag">cli</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/i18n/" rel="tag">i18n</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/i18next/" rel="tag">i18next</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/internationalization/" rel="tag">internationalization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/mail/" rel="tag">mail</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/next/" rel="tag">next</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/react/" rel="tag">react</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/server/" rel="tag">server</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/serverside/" rel="tag">serverside</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/translation/" rel="tag">translation</a></li></ul>
+
+        </div>
+        
+        
+
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="server_side_backend.jpg" title="Server Side Internationalization"></p>
+<p>You may already know how to properly internationalize a client side application, like described in this <a href="/how-to-internationalize-react-i18next/">React based tutorial</a>, this <a href="/unleash-the-full-power-of-angular-i18next/">Angular based tutorial</a> or this <a href="/give-vue-i18n-more-superpowers/">Vue based tutorial</a>.</p>
+<p>In this blog post we will shed light on the server side.</p>
+<blockquote>
+<p>Why do I need to handle i18n in my application&#39;s backend?</p>
+</blockquote>
+<p>Think of all user faced content not directly rendered in your browser...</p>
+<ul>
+<li>For example you&#39;re building a <a href="#cli">command line interface (CLI)</a>?</li>
+<li>You&#39;re <a href="#email">sending some emails</a>?</li>
+<li>Or you&#39;re using <a href="#ssr">server side rendering (SSR)</a>?</li>
+<li>etc.</li>
+</ul>
+<h1 id="Let-39-s-check-that-out"><a href="#Let-39-s-check-that-out" class="headerlink" title="Let&#39;s check that out..."></a>Let&#39;s check that out...</h1><p>We will show some examples that uses <a target="_blank" rel="noopener" href="https://www.i18next.com/">i18next</a> as i18n framework. If you&#39;re curious to know why we suggest i18next, have a look at <a href="https://locize.com/i18next.html">this page</a>.</p>
+<h1 id="Command-line-interface-CLI"><a href="#Command-line-interface-CLI" class="headerlink" title="Command line interface (CLI) "></a>Command line interface (CLI) <a name="cli"></a></h1><p>Let&#39;s start with something simple: a verry small CLI app. For this example let&#39;s use <a target="_blank" rel="noopener" href="https://github.com/tj/commander.js">commander</a>, originally created by <a target="_blank" rel="noopener" href="https://twitter.com/tjholowaychuk">TJ Holowaychuk</a>.
+We are defining a <code>sayhi</code> command with optional language and name parameters that should respond with a salutation in the appropriate language.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env node</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> program = <span class="built_in">require</span>(<span class="string">&#x27;commander&#x27;</span>)</span><br><span class="line"></span><br><span class="line">program</span><br><span class="line">  .command(<span class="string">&#x27;sayhi&#x27;</span>)</span><br><span class="line">  .alias(<span class="string">&#x27;s&#x27;</span>)</span><br><span class="line">  .option(<span class="string">&#x27;-l, --language &lt;lng&gt;&#x27;</span>, <span class="string">&#x27;by default the system language is used&#x27;</span>)</span><br><span class="line">  .option(<span class="string">&#x27;-n, --name &lt;name&gt;&#x27;</span>, <span class="string">&#x27;your name&#x27;</span>)</span><br><span class="line">  .action(<span class="function">(<span class="params">options</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// options.language =&gt; optional language</span></span><br><span class="line">    <span class="comment">// options.name =&gt; optional name</span></span><br><span class="line">    <span class="comment">// <span class="doctag">TODO:</span> log the salutation to the console...</span></span><br><span class="line">  &#125;)</span><br><span class="line">  .on(<span class="string">&#x27;--help&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;  Examples:&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log()</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;    $ mycli sayhi&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;    $ mycli sayhi --language de&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;    $ mycli sayhi --language de --name John&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log()</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">program.parse(process.argv)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (!process.argv.slice(<span class="number">2</span>).length) &#123;</span><br><span class="line">  program.outputHelp()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Ok, now let&#39;s create a new <code>i18n.js</code> file and setup i18next accordingly:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> i18next = <span class="built_in">require</span>(<span class="string">&#x27;i18next&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// if no language parameter is passed, let&#x27;s try to use the node.js system&#x27;s locale</span></span><br><span class="line"><span class="keyword">const</span> systemLocale = <span class="built_in">Intl</span>.DateTimeFormat().resolvedOptions().locale</span><br><span class="line"></span><br><span class="line">i18next</span><br><span class="line">  .init(&#123;</span><br><span class="line">    <span class="attr">fallbackLng</span>: <span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">    <span class="attr">resources</span>: &#123;</span><br><span class="line">      <span class="attr">en</span>: &#123;</span><br><span class="line">        <span class="attr">translation</span>: <span class="built_in">require</span>(<span class="string">&#x27;./locales/en/translation.json&#x27;</span>)</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">de</span>: &#123;</span><br><span class="line">        <span class="attr">translation</span>: <span class="built_in">require</span>(<span class="string">&#x27;./locales/de/translation.json&#x27;</span>)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">lng</span>) =&gt;</span> i18next.getFixedT(lng || systemLocale)</span><br></pre></td></tr></table></figure>
+
+<p>And also our translation resources:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// locales/en/translations.json</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;salutation&quot;</span>: <span class="string">&quot;Hello World!&quot;</span>,</span><br><span class="line">  <span class="string">&quot;salutationWithName&quot;</span>: <span class="string">&quot;Hello &#123;&#123;name&#125;&#125;!&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// locales/de/translations.json</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;salutation&quot;</span>: <span class="string">&quot;Hallo Welt!&quot;</span>,</span><br><span class="line">  <span class="string">&quot;salutationWithName&quot;</span>: <span class="string">&quot;Hallo &#123;&#123;name&#125;&#125;!&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Now we can use the <code>i18n.js</code> export like that:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env node</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> program = <span class="built_in">require</span>(<span class="string">&#x27;commander&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> i18n = <span class="built_in">require</span>(<span class="string">&#x27;../i18n.js&#x27;</span>)</span><br><span class="line"></span><br><span class="line">program</span><br><span class="line">  .command(<span class="string">&#x27;sayhi&#x27;</span>)</span><br><span class="line">  .alias(<span class="string">&#x27;s&#x27;</span>)</span><br><span class="line">  .option(<span class="string">&#x27;-l, --language &lt;lng&gt;&#x27;</span>, <span class="string">&#x27;by default the system language is used&#x27;</span>)</span><br><span class="line">  .option(<span class="string">&#x27;-n, --name &lt;name&gt;&#x27;</span>, <span class="string">&#x27;your name&#x27;</span>)</span><br><span class="line">  .action(<span class="function">(<span class="params">options</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> t = i18n(options.language)</span><br><span class="line">    <span class="keyword">if</span> (options.name) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(t(<span class="string">&#x27;salutationWithName&#x27;</span>, &#123; <span class="attr">name</span>: options.name &#125;))</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(t(<span class="string">&#x27;salutation&#x27;</span>))</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  .on(<span class="string">&#x27;--help&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;  Examples:&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log()</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;    $ mycli sayhi&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;    $ mycli sayhi --language de&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;    $ mycli sayhi --language de --name John&#x27;</span>)</span><br><span class="line">    <span class="built_in">console</span>.log()</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">program.parse(process.argv)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (!process.argv.slice(<span class="number">2</span>).length) &#123;</span><br><span class="line">  program.outputHelp()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Ok, what&#39;s the result?</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># if we execute the cli command without any parameters...</span></span><br><span class="line">mycli sayhi</span><br><span class="line"><span class="comment"># result: Hello World!</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># if we execute the cli command with a language parameter...</span></span><br><span class="line">mycli sayhi --language de</span><br><span class="line"><span class="comment"># result: Hallo Welt!</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># if we execute the cli command with a language parameter and a name parameter...</span></span><br><span class="line">mycli sayhi --language de --name John</span><br><span class="line"><span class="comment"># result: Hallo John!</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Easy, isn&#39;t it?</strong></p>
+<p>If you don&#39;t bundle your CLI app in a single executable, for example by using <a target="_blank" rel="noopener" href="https://github.com/vercel/pkg">pkg</a>, you can also i.e. use the <a target="_blank" rel="noopener" href="https://github.com/i18next/i18next-fs-backend">i18next-fs-backend</a> to dynamically load your translations, for example like this:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> i18next = <span class="built_in">require</span>(<span class="string">&#x27;i18next&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> Backend = <span class="built_in">require</span>(<span class="string">&#x27;i18next-fs-backend&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> &#123; join &#125; = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> &#123; readdirSync, lstatSync &#125; = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// if no language parameter is passed, let&#x27;s try to use the node.js system&#x27;s locale</span></span><br><span class="line"><span class="keyword">const</span> systemLocale = <span class="built_in">Intl</span>.DateTimeFormat().resolvedOptions().locale</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> localesFolder = join(__dirname, <span class="string">&#x27;./locales&#x27;</span>)</span><br><span class="line"></span><br><span class="line">i18next</span><br><span class="line">  .use(Backend)</span><br><span class="line">  .init(&#123;</span><br><span class="line">    <span class="attr">initImmediate</span>: <span class="literal">false</span>, <span class="comment">// setting initImediate to false, will load the resources synchronously</span></span><br><span class="line">    <span class="attr">fallbackLng</span>: <span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">    <span class="attr">preload</span>: readdirSync(localesFolder).filter(<span class="function">(<span class="params">fileName</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> joinedPath = join(localesFolder, fileName)</span><br><span class="line">      <span class="keyword">return</span> lstatSync(joinedPath).isDirectory()</span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="attr">backend</span>: &#123;</span><br><span class="line">      <span class="attr">loadPath</span>: join(localesFolder, <span class="string">&#x27;&#123;&#123;lng&#125;&#125;/&#123;&#123;ns&#125;&#125;.json&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function">(<span class="params">lng</span>) =&gt;</span> i18next.getFixedT(lng || systemLocale)</span><br></pre></td></tr></table></figure>
+
+<p><em>🧑‍💻 A code example can be found <a target="_blank" rel="noopener" href="https://github.com/i18next/i18next-cli-app-example">here</a>.</em></p>
+<h2 id="A-possible-next-step"><a href="#A-possible-next-step" class="headerlink" title="A possible next step..."></a>A possible next step...</h2><p>A possible next step could be to professionalize the translation management.
+This means the translations would be &quot;managed&quot; (add new languages, new translations etc...) in a translation management system (TMS), like <a target="_blank" rel="noopener" href="https://www.locize.com/">locize</a> and synchronized with your code. To see how this could look like, check out <a target="_blank" rel="noopener" href="https://github.com/locize/react-tutorial#step-1---keep-existing-code-setup-but-synchronize-with-locize"><strong>Step 1</strong> in this tutorial</a>.</p>
+<h1 id="Generate-Emails"><a href="#Generate-Emails" class="headerlink" title="Generate Emails "></a>Generate Emails <a name="email"></a></h1><p>Another typical server side use case that requires internationalization is the generation of emails.</p>
+<p>To achieve this goal, you usually need to transform some raw data to html content (or text) to be shown in the user&#39;s preferred language.</p>
+<p>In this example we will use <a target="_blank" rel="noopener" href="https://pugjs.org/">pug</a> (formerly known as &quot;Jade&quot;, and also originally created by <a target="_blank" rel="noopener" href="https://twitter.com/tjholowaychuk">TJ Holowaychuk</a>) to define some templates that should be filled with the data needed in the email, and <a target="_blank" rel="noopener" href="https://mjml.io/">mjml</a> to actually design the email content.</p>
+<p>Let&#39;s create a new <code>mail.js</code> file, which we can use, to accomplish this.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pug <span class="keyword">from</span> <span class="string">&#x27;pug&#x27;</span></span><br><span class="line"><span class="keyword">import</span> mjml2html <span class="keyword">from</span> <span class="string">&#x27;mjml&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> (data) =&gt; &#123;</span><br><span class="line">  <span class="comment">// first let&#x27;s compile and render the mail template that will include the data needed to show in the mail content</span></span><br><span class="line">  <span class="keyword">const</span> mjml = pug.renderFile(<span class="string">&#x27;./mailTemplate.pug&#x27;</span>, data)</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// then transform the mjml syntax to normal html</span></span><br><span class="line">  <span class="keyword">const</span> &#123; html, errors &#125; = mjml2html(mjml)</span><br><span class="line">  <span class="keyword">if</span> (errors &amp;&amp; errors.length &gt; <span class="number">0</span>) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(errors[<span class="number">0</span>].message)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// and return the html, if there where no errors</span></span><br><span class="line">  <span class="keyword">return</span> html</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The <code>mailTemplate.pug</code> could look like this:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">mjml</span><br><span class="line">  mj-body(background-color=&#x27;#F4F4F4&#x27; color=&#x27;#55575d&#x27; font-family=&#x27;Arial, sans-serif&#x27;)</span><br><span class="line">    mj-section(background-color=&#x27;#024b3f&#x27; background-repeat=&#x27;repeat&#x27; padding=&#x27;20px 0&#x27; text-align=&#x27;center&#x27; vertical-align=&#x27;top&#x27;)</span><br><span class="line">      mj-column</span><br><span class="line">        mj-image(align=&#x27;center&#x27; padding=&#x27;10px 25px&#x27; src=&#x27;https://raw.githubusercontent.com/i18next/i18next/master/assets/i18next-ecosystem.jpg&#x27;)</span><br><span class="line">    mj-section(background-color=&#x27;#ffffff&#x27; background-repeat=&#x27;repeat&#x27; padding=&#x27;20px 0&#x27; text-align=&#x27;center&#x27; vertical-align=&#x27;top&#x27;)</span><br><span class="line">      mj-column</span><br><span class="line">    mj-section(background-color=&#x27;#ffffff&#x27; background-repeat=&#x27;repeat&#x27; background-size=&#x27;auto&#x27; padding=&#x27;20px 0px 20px 0px&#x27; text-align=&#x27;center&#x27; vertical-align=&#x27;top&#x27;)</span><br><span class="line">      mj-column</span><br><span class="line">        mj-text(align=&#x27;center&#x27; color=&#x27;#55575d&#x27; font-family=&#x27;Arial, sans-serif&#x27; font-size=&#x27;20px&#x27; line-height=&#x27;28px&#x27; padding=&#x27;0px 25px 0px 25px&#x27;)</span><br><span class="line">          span=t(&#x27;greeting&#x27;, &#123; name: name || &#x27;there&#x27; &#125;)</span><br><span class="line">          br</span><br><span class="line">          br</span><br><span class="line">        mj-text(align=&#x27;center&#x27; color=&#x27;#55575d&#x27; font-family=&#x27;Arial, sans-serif&#x27; font-size=&#x27;16px&#x27; line-height=&#x27;28px&#x27; padding=&#x27;0px 25px 0px 25px&#x27;)</span><br><span class="line">          =t(&#x27;text&#x27;)</span><br><span class="line">    mj-section(background-color=&#x27;#024b3f&#x27; background-repeat=&#x27;repeat&#x27; padding=&#x27;20px 0&#x27; text-align=&#x27;center&#x27; vertical-align=&#x27;top&#x27;)</span><br><span class="line">      mj-column</span><br><span class="line">        mj-text(align=&#x27;center&#x27; color=&#x27;#ffffff&#x27; font-family=&#x27;Arial, sans-serif&#x27; font-size=&#x27;13px&#x27; line-height=&#x27;22px&#x27; padding=&#x27;10px 25px&#x27;)</span><br><span class="line">          =t(&#x27;ending&#x27;)&amp;nbsp;</span><br><span class="line">          a(style=&#x27;color:#ffffff&#x27; href=&#x27;https://www.i18next.com&#x27;)</span><br><span class="line">            b www.i18next.com</span><br></pre></td></tr></table></figure>
+
+<p>Now let&#39;s define some translations...</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// locales/en/translations.json</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;greeting&quot;</span>: <span class="string">&quot;Hi &#123;&#123;name&#125;&#125;!&quot;</span>,</span><br><span class="line">  <span class="string">&quot;text&quot;</span>: <span class="string">&quot;You were invited to try i18next.&quot;</span>,</span><br><span class="line">  <span class="string">&quot;ending&quot;</span>: <span class="string">&quot;Internationalized with&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// locales/de/translations.json</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;greeting&quot;</span>: <span class="string">&quot;Hallo &#123;&#123;name&#125;&#125;!&quot;</span>,</span><br><span class="line">  <span class="string">&quot;text&quot;</span>: <span class="string">&quot;Du bist eingeladen worden i18next auszuprobieren.&quot;</span>,</span><br><span class="line">  <span class="string">&quot;ending&quot;</span>: <span class="string">&quot;Internationalisiert mit&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>...and use them in an <code>i18n.js</code> file:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; dirname, join &#125; <span class="keyword">from</span> <span class="string">&#x27;path&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; readdirSync, lstatSync &#125; <span class="keyword">from</span> <span class="string">&#x27;fs&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; fileURLToPath &#125; <span class="keyword">from</span> <span class="string">&#x27;url&#x27;</span></span><br><span class="line"><span class="keyword">import</span> i18next <span class="keyword">from</span> <span class="string">&#x27;i18next&#x27;</span></span><br><span class="line"><span class="keyword">import</span> Backend <span class="keyword">from</span> <span class="string">&#x27;i18next-fs-backend&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> __dirname = dirname(fileURLToPath(<span class="keyword">import</span>.meta.url))</span><br><span class="line"><span class="keyword">const</span> localesFolder = join(__dirname, <span class="string">&#x27;./locales&#x27;</span>)</span><br><span class="line"></span><br><span class="line">i18next</span><br><span class="line">  .use(Backend) <span class="comment">// you can also use any other i18next backend, like i18next-http-backend or i18next-locize-backend</span></span><br><span class="line">  .init(&#123;</span><br><span class="line">    <span class="comment">// debug: true,</span></span><br><span class="line">    <span class="attr">initImmediate</span>: <span class="literal">false</span>, <span class="comment">// setting initImediate to false, will load the resources synchronously</span></span><br><span class="line">    <span class="attr">fallbackLng</span>: <span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">    <span class="attr">preload</span>: readdirSync(localesFolder).filter(<span class="function">(<span class="params">fileName</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> joinedPath = join(localesFolder, fileName)</span><br><span class="line">      <span class="keyword">return</span> lstatSync(joinedPath).isDirectory()</span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="attr">backend</span>: &#123;</span><br><span class="line">      <span class="attr">loadPath</span>: join(localesFolder, <span class="string">&#x27;&#123;&#123;lng&#125;&#125;/&#123;&#123;ns&#125;&#125;.json&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> i18next</span><br></pre></td></tr></table></figure>
+
+<p>So finally, all the above can be used like that:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> mail <span class="keyword">from</span> <span class="string">&#x27;./mail.js&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> i18next <span class="keyword">from</span> <span class="string">&#x27;./i18n.js&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> html = mail(&#123;</span><br><span class="line">  <span class="attr">t</span>: i18next.t,</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;John&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// that html now can be sent via some mail provider...</span></span><br></pre></td></tr></table></figure>
+
+<p>This is how the resulting html could look like:</p>
+<p><img src="mail_preview.jpg"></p>
+<p><em>🧑‍💻 A code example can be found <a target="_blank" rel="noopener" href="https://github.com/i18next/i18next-fs-backend/blob/master/example/fastify/app.js#L14-L19">here</a>.</em></p>
+<h1 id="Server-Side-Rendering-SSR"><a href="#Server-Side-Rendering-SSR" class="headerlink" title="Server Side Rendering (SSR) "></a>Server Side Rendering (SSR) <a name="ssr"></a></h1><p>We will try 2 different SSR examples, a classic one using <a href="#pug">Fastify with pug</a> and a more trendy one using <a href="#nextjs">Next.js</a>.</p>
+<h2 id="Fastify-with-Pug-example"><a href="#Fastify-with-Pug-example" class="headerlink" title="Fastify with Pug example "></a>Fastify with Pug example <a name="pug"></a></h2><p>For this example we will use my favorite http framework <a target="_blank" rel="noopener" href="https://www.fastify.io/">Fastify</a> (created by <a target="_blank" rel="noopener" href="https://twitter.com/matteocollina">Matteo Collina</a> and <a target="_blank" rel="noopener" href="https://twitter.com/delvedor">Tomas Della Vedova</a>), but any other framework will also work.</p>
+<p>This time we will use a different i18next module, <a target="_blank" rel="noopener" href="https://github.com/i18next/i18next-http-middleware">i18next-http-middleware</a>.
+It can be used for all Node.js web frameworks, like <a target="_blank" rel="noopener" href="https://expressjs.com/">express</a> or <a target="_blank" rel="noopener" href="https://www.fastify.io/">Fastify</a>, but also for Deno web frameworks, like <a target="_blank" rel="noopener" href="https://github.com/zhmushan/abc">abc</a> or <a target="_blank" rel="noopener" href="https://github.com/keroxp/servest">ServestJS</a>.</p>
+<p>As already said, here we will use <a target="_blank" rel="noopener" href="https://www.fastify.io/">Fastify</a>, my favorite 😉.</p>
+<p>Let&#39;s again start with the <code>i18n.js</code> file:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; dirname, join &#125; <span class="keyword">from</span> <span class="string">&#x27;path&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; readdirSync, lstatSync &#125; <span class="keyword">from</span> <span class="string">&#x27;fs&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; fileURLToPath &#125; <span class="keyword">from</span> <span class="string">&#x27;url&#x27;</span></span><br><span class="line"><span class="keyword">import</span> i18next <span class="keyword">from</span> <span class="string">&#x27;i18next&#x27;</span></span><br><span class="line"><span class="keyword">import</span> Backend <span class="keyword">from</span> <span class="string">&#x27;i18next-fs-backend&#x27;</span></span><br><span class="line"><span class="keyword">import</span> i18nextMiddleware <span class="keyword">from</span> <span class="string">&#x27;i18next-http-middleware&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> __dirname = dirname(fileURLToPath(<span class="keyword">import</span>.meta.url))</span><br><span class="line"><span class="keyword">const</span> localesFolder = join(__dirname, <span class="string">&#x27;../locales&#x27;</span>)</span><br><span class="line"></span><br><span class="line">i18next</span><br><span class="line">  .use(i18nextMiddleware.LanguageDetector) <span class="comment">// the language detector, will automatically detect the users language, by some criteria... like the query parameter ?lng=en or http header, etc...</span></span><br><span class="line">  .use(Backend) <span class="comment">// you can also use any other i18next backend, like i18next-http-backend or i18next-locize-backend</span></span><br><span class="line">  .init(&#123;</span><br><span class="line">    <span class="attr">initImmediate</span>: <span class="literal">false</span>, <span class="comment">// setting initImediate to false, will load the resources synchronously</span></span><br><span class="line">    <span class="attr">fallbackLng</span>: <span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">    <span class="attr">preload</span>: readdirSync(localesFolder).filter(<span class="function">(<span class="params">fileName</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> joinedPath = join(localesFolder, fileName)</span><br><span class="line">      <span class="keyword">return</span> lstatSync(joinedPath).isDirectory()</span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="attr">backend</span>: &#123;</span><br><span class="line">      <span class="attr">loadPath</span>: join(localesFolder, <span class="string">&#x27;&#123;&#123;lng&#125;&#125;/&#123;&#123;ns&#125;&#125;.json&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> &#123; i18next, <span class="attr">i18nextPlugin</span>: i18nextMiddleware.plugin &#125;</span><br></pre></td></tr></table></figure>
+
+<p>And our translation resources...</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// locales/en/translations.json</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;home&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;title&quot;</span>: <span class="string">&quot;Hello World!&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;server&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;started&quot;</span>: <span class="string">&quot;Server is listening on port &#123;&#123;port&#125;&#125;.&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// locales/de/translations.json</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;home&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;title&quot;</span>: <span class="string">&quot;Hallo Welt!&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;server&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;started&quot;</span>: <span class="string">&quot;Der server lauscht auf dem Port &#123;&#123;port&#125;&#125;.&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// locales/it/translations.json</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;home&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;title&quot;</span>: <span class="string">&quot;Ciao Mondo!&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;server&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;started&quot;</span>: <span class="string">&quot;Il server sta aspettando sul port &#123;&#123;port&#125;&#125;.&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>A simple pug template:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">html</span><br><span class="line">  head</span><br><span class="line">    title i18next - fastify with pug</span><br><span class="line">  body</span><br><span class="line">    h1=t(&#x27;home.title&#x27;)</span><br><span class="line">    div</span><br><span class="line">      a(href=&quot;/?lng=en&quot;) english</span><br><span class="line">      | &amp;nbsp; | &amp;nbsp;</span><br><span class="line">      a(href=&quot;/?lng=it&quot;) italiano</span><br><span class="line">      | &amp;nbsp; | &amp;nbsp;</span><br><span class="line">      a(href=&quot;/?lng=de&quot;) deutsch</span><br></pre></td></tr></table></figure>
+
+<p>Our &quot;main&quot; file <code>app.js</code>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> fastify <span class="keyword">from</span> <span class="string">&#x27;fastify&#x27;</span></span><br><span class="line"><span class="keyword">import</span> pov <span class="keyword">from</span> <span class="string">&#x27;point-of-view&#x27;</span></span><br><span class="line"><span class="keyword">import</span> pug <span class="keyword">from</span> <span class="string">&#x27;pug&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; i18next, i18nextPlugin &#125; <span class="keyword">from</span> <span class="string">&#x27;./lib/i18n.js&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> port = process.env.PORT || <span class="number">8080</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = fastify()</span><br><span class="line">app.register(pov, &#123; <span class="attr">engine</span>: &#123; pug &#125; &#125;)</span><br><span class="line">app.register(i18nextPlugin, &#123; i18next &#125;)</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">&#x27;/raw&#x27;</span>, <span class="function">(<span class="params">request, reply</span>) =&gt;</span> &#123;</span><br><span class="line">  reply.send(request.t(<span class="string">&#x27;home.title&#x27;</span>))</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function">(<span class="params">request, reply</span>) =&gt;</span> &#123;</span><br><span class="line">  reply.view(<span class="string">&#x27;/views/index.pug&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(port, <span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (err) <span class="keyword">return</span> <span class="built_in">console</span>.error(err)</span><br><span class="line">  <span class="comment">// if you like you can also internationalize your log statements ;-)</span></span><br><span class="line">  <span class="built_in">console</span>.log(i18next.t(<span class="string">&#x27;server.started&#x27;</span>, &#123; port &#125;))</span><br><span class="line">  <span class="built_in">console</span>.log(i18next.t(<span class="string">&#x27;server.started&#x27;</span>, &#123; port, <span class="attr">lng</span>: <span class="string">&#x27;de&#x27;</span> &#125;))</span><br><span class="line">  <span class="built_in">console</span>.log(i18next.t(<span class="string">&#x27;server.started&#x27;</span>, &#123; port, <span class="attr">lng</span>: <span class="string">&#x27;it&#x27;</span> &#125;))</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>Now start the app and check what language you&#39;re seeing...
+<img src="pug_fastify.jpg"></p>
+<p>If you check the console output you&#39;ll also see something like this:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">node app.js</span><br><span class="line"><span class="comment"># Server is listening on port 8080.</span></span><br><span class="line"><span class="comment"># Der server lauscht auf dem Port 8080.</span></span><br><span class="line"><span class="comment"># Il server sta aspettando sul port 8080.</span></span><br></pre></td></tr></table></figure>
+
+<p><em>Yes, if you like, you can also internationalize your log statements 😁</em></p>
+<p><em>🧑‍💻 A code example can be found <a target="_blank" rel="noopener" href="https://github.com/i18next/i18next-fs-backend/tree/master/example/fastify">here</a>.</em></p>
+<h3 id="A-possible-next-step-1"><a href="#A-possible-next-step-1" class="headerlink" title="A possible next step..."></a>A possible next step...</h3><p>Do you wish to manage your translations in a translation management system (TMS), like <a target="_blank" rel="noopener" href="https://www.locize.com/">locize</a>?</p>
+<p>Just use <a target="_blank" rel="noopener" href="https://github.com/locize/locize-cli">this cli</a> to synchronize the translations with your code. To see how this could look like check out <a target="_blank" rel="noopener" href="https://github.com/locize/react-tutorial#step-1---keep-existing-code-setup-but-synchronize-with-locize"><strong>Step 1</strong> in this tutorial</a>.</p>
+<p>Alternatively, use <a target="_blank" rel="noopener" href="https://github.com/locize/i18next-locize-backend">i18next-locize-backend</a> instead of the <a target="_blank" rel="noopener" href="https://github.com/i18next/i18next-fs-backend">i18next-fs-backend</a>.
+If you&#39;re running your code in a serverless environment, make sure you <a target="_blank" rel="noopener" href="https://github.com/locize/i18next-locize-backend#important-advice-for-serverless-environments---aws-lambda-google-cloud-functions-azure-functions-etc">read this advice first</a>!</p>
+<p><strong>btw: Did you know, you can easily adapt your Fastify app to be used in <a target="_blank" rel="noopener" href="https://aws.amazon.com/lambda/">AWS Lambda</a> AND locally.</strong></p>
+<p>This can be achieved with the help of <a target="_blank" rel="noopener" href="https://github.com/fastify/aws-lambda-fastify">aws-lambda-fastify</a>.
+Just create a new <code>lambda.js</code> that imports your modified <code>app.js</code> file:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// lambda.js</span></span><br><span class="line"><span class="keyword">import</span> awsLambdaFastify <span class="keyword">from</span> <span class="string">&#x27;aws-lambda-fastify&#x27;</span></span><br><span class="line"><span class="keyword">import</span> app <span class="keyword">from</span> <span class="string">&#x27;./app.js&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> handler = awsLambdaFastify(app)</span><br></pre></td></tr></table></figure>
+
+<p>make sure your Fastify app is exported... (<code>export default app</code>)
+And only start to listen on a port, if not executed in AWS Lambda (<code>import.meta.url === &#39;file://$&#123;process.argv[1]&#125;&#39;</code> or <code>require.main === module</code> for CommonJS)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.js</span></span><br><span class="line"><span class="keyword">import</span> fastify <span class="keyword">from</span> <span class="string">&#x27;fastify&#x27;</span></span><br><span class="line"><span class="keyword">import</span> pov <span class="keyword">from</span> <span class="string">&#x27;point-of-view&#x27;</span></span><br><span class="line"><span class="keyword">import</span> pug <span class="keyword">from</span> <span class="string">&#x27;pug&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; i18next, i18nextPlugin &#125; <span class="keyword">from</span> <span class="string">&#x27;./lib/i18n.js&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> port = process.env.PORT || <span class="number">8080</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = fastify()</span><br><span class="line">app.register(pov, &#123; <span class="attr">engine</span>: &#123; pug &#125; &#125;)</span><br><span class="line">app.register(i18nextPlugin, &#123; i18next &#125;)</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">&#x27;/raw&#x27;</span>, <span class="function">(<span class="params">request, reply</span>) =&gt;</span> &#123;</span><br><span class="line">  reply.send(request.t(<span class="string">&#x27;home.title&#x27;</span>))</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function">(<span class="params">request, reply</span>) =&gt;</span> &#123;</span><br><span class="line">  reply.view(<span class="string">&#x27;/views/index.pug&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">import</span>.meta.url === <span class="string">`file://<span class="subst">$&#123;process.argv[<span class="number">1</span>]&#125;</span>`</span>) &#123;</span><br><span class="line">  <span class="comment">// called directly (node app.js)</span></span><br><span class="line">  app.listen(port, <span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (err) <span class="keyword">return</span> <span class="built_in">console</span>.error(err)</span><br><span class="line">    <span class="built_in">console</span>.log(i18next.t(<span class="string">&#x27;server.started&#x27;</span>, &#123; port &#125;))</span><br><span class="line">    <span class="built_in">console</span>.log(i18next.t(<span class="string">&#x27;server.started&#x27;</span>, &#123; port, <span class="attr">lng</span>: <span class="string">&#x27;de&#x27;</span> &#125;))</span><br><span class="line">    <span class="built_in">console</span>.log(i18next.t(<span class="string">&#x27;server.started&#x27;</span>, &#123; port, <span class="attr">lng</span>: <span class="string">&#x27;it&#x27;</span> &#125;))</span><br><span class="line">  &#125;)</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="comment">// imported as a module, i.e. when executed in AWS Lambda</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> app</span><br></pre></td></tr></table></figure>
+
+<p><strong>😎 Cool, right?</strong></p>
+<h2 id="Next-js-example"><a href="#Next-js-example" class="headerlink" title="Next.js example "></a>Next.js example <a name="nextjs"></a></h2><p>Now it&#39;s time for <a target="_blank" rel="noopener" href="https://nextjs.org/">Next.js</a>...</p>
+<p>When it comes to internationalization of Next.js apps one of the most popular choices is <a target="_blank" rel="noopener" href="https://github.com/isaachinman/next-i18next">next-i18next</a>. It is based on <a target="_blank" rel="noopener" href="https://react.i18next.com/">react-i18next</a> and users of <a target="_blank" rel="noopener" href="https://github.com/isaachinman/next-i18next">next-i18next</a> by default simply need to include their translation content as JSON files and don&#39;t have to worry about much else.</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/isaachinman/next-i18next/tree/master/examples/simple">Here</a> you&#39;ll find a simple example.</p>
+<p>You just need a <code>next-i18next.config.js</code> file that provides the configuration for <code>next-i18next</code> and wrapping your app with the <code>appWithTranslation</code> function, which allows to use the <code>t</code> (translate) function in your components via hooks.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// _app.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; appWithTranslation &#125; <span class="keyword">from</span> <span class="string">&#x27;next-i18next&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> MyApp = <span class="function">(<span class="params">&#123; Component, pageProps &#125;</span>) =&gt;</span> <span class="xml"><span class="tag">&lt;<span class="name">Component</span> &#123;<span class="attr">...pageProps</span>&#125; /&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> appWithTranslation(MyApp)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// index.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; useTranslation &#125; <span class="keyword">from</span> <span class="string">&#x27;next-i18next&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; serverSideTranslations &#125; <span class="keyword">from</span> <span class="string">&#x27;next-i18next/serverSideTranslations&#x27;</span></span><br><span class="line"><span class="comment">// This is an async function that you need to include on your page-level components, via either getStaticProps or getServerSideProps (depending on your use case)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Homepage = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; t &#125; = useTranslation(<span class="string">&#x27;common&#x27;</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">main</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml">          &#123;t(&#x27;description&#x27;)&#125;</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">main</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> getStaticProps = <span class="keyword">async</span> (&#123; locale &#125;) =&gt; (&#123;</span><br><span class="line">  <span class="attr">props</span>: &#123;</span><br><span class="line">    ...await serverSideTranslations(locale, [<span class="string">&#x27;common&#x27;</span>]),</span><br><span class="line">    <span class="comment">// Will be passed to the page component as props</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Homepage</span><br></pre></td></tr></table></figure>
+
+<p>By default, <code>next-i18next</code> expects your translations to be organised as such:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">└── public</span><br><span class="line">    └── locales</span><br><span class="line">        ├── en</span><br><span class="line">        |   └── common.json</span><br><span class="line">        └── de</span><br><span class="line">            └── common.json</span><br></pre></td></tr></table></figure>
+
+<p>A demo of how such an app looks like when it is deployed, can be found <a target="_blank" rel="noopener" href="https://next-i18next.com/">here</a>.</p>
+<p><a target="_blank" rel="noopener" href="https://next-i18next.com/"><img src="next-i18next_demo.jpg"></a></p>
+<p><strong>This looks really simple, right?</strong></p>
+<h2 id="Manage-the-translations-outside-of-the-code"><a href="#Manage-the-translations-outside-of-the-code" class="headerlink" title="Manage the translations outside of the code"></a>Manage the translations outside of the code</h2><p>To best manage the translations there are 2 different approaches:</p>
+<h3 id="POSSIBILITY-1-live-translation-download"><a href="#POSSIBILITY-1-live-translation-download" class="headerlink" title="POSSIBILITY 1: live translation download"></a>POSSIBILITY 1: live translation download</h3><p>When using <a target="_blank" rel="noopener" href="https://www.locize.com/">locize</a>, you can configure your next-i18next project to load the translations from the <a target="_blank" rel="noopener" href="https://docs.locize.com/whats-inside/cdn-content-delivery-network">CDN</a> (on server and client side).</p>
+<p>Such a configuration could look like this:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// next-i18next.config.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="attr">i18n</span>: &#123;</span><br><span class="line">    <span class="attr">defaultLocale</span>: <span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">    <span class="attr">locales</span>: [<span class="string">&#x27;en&#x27;</span>, <span class="string">&#x27;de&#x27;</span>],</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">backend</span>: &#123;</span><br><span class="line">    <span class="attr">projectId</span>: <span class="string">&#x27;d3b405cf-2532-46ae-adb8-99e88d876733&#x27;</span>,</span><br><span class="line">    <span class="comment">// apiKey: &#x27;myApiKey&#x27;, // to not add the api-key in production, used for saveMissing feature</span></span><br><span class="line">    <span class="attr">referenceLng</span>: <span class="string">&#x27;en&#x27;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">use</span>: [</span><br><span class="line">    <span class="built_in">require</span>(<span class="string">&#x27;i18next-locize-backend/cjs&#x27;</span>)</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">ns</span>: [<span class="string">&#x27;common&#x27;</span>, <span class="string">&#x27;footer&#x27;</span>, <span class="string">&#x27;second-page&#x27;</span>], <span class="comment">// the namespaces needs to be listed here, to make sure they got preloaded</span></span><br><span class="line">  <span class="attr">serializeConfig</span>: <span class="literal">false</span>, <span class="comment">// because of the custom use i18next plugin</span></span><br><span class="line">  <span class="comment">// debug: true,</span></span><br><span class="line">  <span class="comment">// saveMissing: true, // to not saveMissing to true for production</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://github.com/locize/next-i18next-locize#possibility-1-config-for-locize-live-download-usage">Here</a> you&#39;ll find more information and an example on how this looks like.</p>
+<p>There is also the possibility to cache the translations locally thanks to <a target="_blank" rel="noopener" href="https://github.com/i18next/i18next-chained-backend">i18next-chained-backend</a>. <a target="_blank" rel="noopener" href="https://github.com/locize/next-i18next-locize#optional-server-side-caching-to-filesystem">Here</a> you can find more information about this option.</p>
+<p><em>If you&#39;re deploying your Next.js app in a serverless environment, consider to use the second possibility...</em>
+<em>More information about the reason for this can be found <a target="_blank" rel="noopener" href="https://github.com/locize/i18next-locize-backend#important-advice-for-serverless-environments---aws-lambda-google-cloud-functions-azure-functions-etc">here</a>.</em></p>
+<h3 id="POSSIBILITY-2-bundle-translations-and-keep-in-sync"><a href="#POSSIBILITY-2-bundle-translations-and-keep-in-sync" class="headerlink" title="POSSIBILITY 2: bundle translations and keep in sync"></a>POSSIBILITY 2: bundle translations and keep in sync</h3><p><strong>If you&#39;re not sure, choose this way.</strong></p>
+<p>This option will not change the configuration of your &quot;normal&quot; next-i18next project:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// next-i18next.config.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  <span class="attr">i18n</span>: &#123;</span><br><span class="line">    <span class="attr">defaultLocale</span>: <span class="string">&#x27;en&#x27;</span>,</span><br><span class="line">    <span class="attr">locales</span>: [<span class="string">&#x27;en&#x27;</span>, <span class="string">&#x27;de&#x27;</span>],</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Just download or sync your local translations before &quot;deploying&quot; your app.</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/locize/next-i18next-locize#possibility-2-bundle-translations-with-app">Here</a> you&#39;ll find more information and an example on how this looks like.</p>
+<p>You can, for example, run an <a target="_blank" rel="noopener" href="https://github.com/locize/next-i18next-locize/blob/main/package.json#L6">npm script script</a> (or similar), which will use the <a target="_blank" rel="noopener" href="https://github.com/locize/locize-cli">cli</a> to download the translations from locize into the appropriate folder next-i18next is looking in to (i.e. <code>./public/locales</code>). This way the translations are bundled in your app and you will not generate any CDN downloads during runtime.</p>
+<p>i.e. <code>locize download --project-id=d3b405cf-2532-46ae-adb8-99e88d876733 --ver=latest --clean=true --path=./public/locales</code></p>
+<h1 id="🎉🥳-Conclusion-🎊🎁"><a href="#🎉🥳-Conclusion-🎊🎁" class="headerlink" title="🎉🥳 Conclusion 🎊🎁"></a>🎉🥳 Conclusion 🎊🎁</h1><p>As you see i18n is also important on server side.</p>
+<p>I hope you’ve learned a few new things about server side internationalization and modern localization workflows.</p>
+<p>So if you want to take your i18n topic to the next level, it&#39;s worth to try <a target="_blank" rel="noopener" href="https://www.i18next.com/">i18next</a> and also <a target="_blank" rel="noopener" href="https://www.locize.com/">locize</a>.</p>
+<p>👍</p>
+
+        </div>
+        <footer class="article-footer">
+          
+          
+
+
+
+    <a data-url="https://locize.com/blog/how-does-server-side-internationalization-look-like/" data-id="ckqdy3eeo0000vvxr84g7edb4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+          
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+    </section>
+
+
+                          </div>
+                      </section>
+                      <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/locize" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="youtube" href="https://www.youtube.com/channel/UCPYQjBbbXojUcB8qjeIB3uA" target="_blank">
+                        <i class="icon fa fa-youtube"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/Locize-1672640746084189/" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/blog/what-is-software-localization/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">What is Software Localization (l10n)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/how-does-server-side-internationalization-look-like/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/how-does-server-side-internationalization-look-like/server_side_backend.jpg)" alt="How does server side internationalization (i18n) look like?" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/how-does-server-side-internationalization-look-like/" class="title">How does server side internationalization (i18n) look like?</a></p>
+                            <p class="item-date"><time datetime="2021-06-28T06:23:00.000Z" itemprop="datePublished">28/06/2021</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/what-is-software-localization/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/what-is-software-localization/software-localization.jpg)" alt="What is Software Localization (l10n)" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/what-is-software-localization/" class="title">What is Software Localization (l10n)</a></p>
+                            <p class="item-date"><time datetime="2021-06-23T14:58:23.000Z" itemprop="datePublished">23/06/2021</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/unleash-the-full-power-of-angular-i18next/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/unleash-the-full-power-of-angular-i18next/title.jpg)" alt="Unleash the full power of angular-i18next" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/unleash-the-full-power-of-angular-i18next/" class="title">Unleash the full power of angular-i18next</a></p>
+                            <p class="item-date"><time datetime="2021-06-13T22:00:00.000Z" itemprop="datePublished">14/06/2021</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/give-vue-i18n-more-superpowers/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/give-vue-i18n-more-superpowers/title.jpg)" alt="Give vue-i18n more superpowers❕" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/give-vue-i18n-more-superpowers/" class="title">Give vue-i18n more superpowers❕</a></p>
+                            <p class="item-date"><time datetime="2021-06-07T22:00:00.000Z" itemprop="datePublished">08/06/2021</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/how-to-internationalize-react-i18next/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/how-to-internationalize-react-i18next/react-localization.jpg)" alt="React Localization - How to properly internationalize a React application using i18next" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/how-to-internationalize-react-i18next/" class="title">React Localization - How to properly internationalize a React application using i18next</a></p>
+                            <p class="item-date"><time datetime="2021-04-13T22:00:00.000Z" itemprop="datePublished">14/04/2021</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/04/">April 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/angular/" rel="tag">angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/award/" rel="tag">award</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/aws/" rel="tag">aws</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/backend/" rel="tag">backend</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/beginning/" rel="tag">beginning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/cli/" rel="tag">cli</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-delivery/" rel="tag">continuous delivery</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-development/" rel="tag">continuous development</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-integration/" rel="tag">continuous integration</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-localization/" rel="tag">continuous localization</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-translation/" rel="tag">continuous translation</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/formatjs/" rel="tag">formatjs</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/i18n/" rel="tag">i18n</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/i18next/" rel="tag">i18next</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/internationalization/" rel="tag">internationalization</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/localistars/" rel="tag">localistars</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/localization/" rel="tag">localization</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/localization-definition/" rel="tag">localization definition</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/localization-process/" rel="tag">localization process</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/locize/" rel="tag">locize</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/locizify/" rel="tag">locizify</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/mail/" rel="tag">mail</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/next/" rel="tag">next</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/order/" rel="tag">order</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/polyglot/" rel="tag">polyglot</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/react/" rel="tag">react</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/react-i18next/" rel="tag">react-i18next</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/server/" rel="tag">server</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/serverless/" rel="tag">serverless</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/serverside/" rel="tag">serverside</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/service/" rel="tag">service</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/software-localization/" rel="tag">software localization</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/technology/" rel="tag">technology</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/translation/" rel="tag">translation</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/vue/" rel="tag">vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/vue-i18n/" rel="tag">vue-i18n</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/web/" rel="tag">web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/what-is-software-localization/" rel="tag">what is software-localization</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/blog/tags/angular/" style="font-size: 10px;">angular</a> <a href="/blog/tags/award/" style="font-size: 10px;">award</a> <a href="/blog/tags/aws/" style="font-size: 11.43px;">aws</a> <a href="/blog/tags/backend/" style="font-size: 12.86px;">backend</a> <a href="/blog/tags/beginning/" style="font-size: 10px;">beginning</a> <a href="/blog/tags/cli/" style="font-size: 10px;">cli</a> <a href="/blog/tags/continuous-delivery/" style="font-size: 11.43px;">continuous delivery</a> <a href="/blog/tags/continuous-development/" style="font-size: 11.43px;">continuous development</a> <a href="/blog/tags/continuous-integration/" style="font-size: 11.43px;">continuous integration</a> <a href="/blog/tags/continuous-localization/" style="font-size: 12.86px;">continuous localization</a> <a href="/blog/tags/continuous-translation/" style="font-size: 11.43px;">continuous translation</a> <a href="/blog/tags/formatjs/" style="font-size: 12.86px;">formatjs</a> <a href="/blog/tags/i18n/" style="font-size: 11.43px;">i18n</a> <a href="/blog/tags/i18next/" style="font-size: 15.71px;">i18next</a> <a href="/blog/tags/internationalization/" style="font-size: 18.57px;">internationalization</a> <a href="/blog/tags/localistars/" style="font-size: 10px;">localistars</a> <a href="/blog/tags/localization/" style="font-size: 17.14px;">localization</a> <a href="/blog/tags/localization-definition/" style="font-size: 10px;">localization definition</a> <a href="/blog/tags/localization-process/" style="font-size: 10px;">localization process</a> <a href="/blog/tags/locize/" style="font-size: 20px;">locize</a> <a href="/blog/tags/locizify/" style="font-size: 12.86px;">locizify</a> <a href="/blog/tags/mail/" style="font-size: 10px;">mail</a> <a href="/blog/tags/next/" style="font-size: 10px;">next</a> <a href="/blog/tags/order/" style="font-size: 10px;">order</a> <a href="/blog/tags/polyglot/" style="font-size: 11.43px;">polyglot</a> <a href="/blog/tags/react/" style="font-size: 11.43px;">react</a> <a href="/blog/tags/react-i18next/" style="font-size: 10px;">react-i18next</a> <a href="/blog/tags/server/" style="font-size: 10px;">server</a> <a href="/blog/tags/serverless/" style="font-size: 10px;">serverless</a> <a href="/blog/tags/serverside/" style="font-size: 10px;">serverside</a> <a href="/blog/tags/service/" style="font-size: 12.86px;">service</a> <a href="/blog/tags/software-localization/" style="font-size: 10px;">software localization</a> <a href="/blog/tags/technology/" style="font-size: 10px;">technology</a> <a href="/blog/tags/translation/" style="font-size: 14.29px;">translation</a> <a href="/blog/tags/vue/" style="font-size: 10px;">vue</a> <a href="/blog/tags/vue-i18n/" style="font-size: 10px;">vue-i18n</a> <a href="/blog/tags/web/" style="font-size: 10px;">web</a> <a href="/blog/tags/what-is-software-localization/" style="font-size: 10px;">what is software-localization</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://www.i18next.com" target="_blank">i18next</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://locize.com/privacy.html" target="_blank">privacy policy</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://locize.com/terms.html" target="_blank">terms</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                  </div>
+              </div>
+          </div>
+          <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <div style="float: left;">
+                    <h1 class="logo-wrap">
+                        <a href="/blog/" class="logo"></a>
+                    </h1>
+                    <p>&copy; 2021 inweso GmbH</p>
+                    <!-- <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Original theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+          
+
+    
+        
+<script src="/blog/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/blog/js/main.js"></script>
+
+
+<script src="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+    function enableCookies() {
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-78143856-1', 'auto');
+        ga('send', 'pageview');
+        ga('set', 'anonymizeIp', true);
+    }
+
+    function disableCookies() {
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i];
+            var eqPos = cookie.indexOf("=");
+            var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+    }
+
+    window.cookieconsent.initialise({
+        palette: {
+            popup: {
+                background: "#2196f3",
+                text: "#ffffff"
+            },
+            button: {
+                background: "#1976d2",
+                text: "#ffffff"
+            }
+        },
+        theme: "edgeless",
+        type: "opt-in",
+        content: {
+            message: "This website uses cookies to ensure you get the best experience on our website.",
+            allow: "Accept",
+            dismiss: "Decline",
+            link: "learn",
+            href: "https://locize.com/privacy.html"
+        },
+        elements: {
+            deny: '<a style="font-weight: 100; color: #ffffffa8; font-size: smaller;" aria-label="deny cookies" role="button" tabindex="0" class="cc-btn cc-deny">Decline</a>'
+        },
+        onInitialise: function (status) {
+            var type = this.options.type;
+            var didConsent = this.hasConsented();
+            if (type == 'opt-in' && didConsent) {
+                // enable cookies
+                enableCookies();
+            }
+            if (type == 'opt-out' && !didConsent) {
+                // disable cookies
+                disableCookies();
+            }
+        },
+        onStatusChange: function(status, chosenBefore) {
+            var type = this.options.type;
+            var didConsent = this.hasConsented();
+            if (type == 'opt-in' && didConsent) {
+                // enable cookies
+                enableCookies();
+            }
+            if (type == 'opt-out' && !didConsent) {
+                // disable cookies
+                disableCookies();
+            }
+        },
+        onRevokeChoice: function() {
+            var type = this.options.type;
+            if (type == 'opt-in') {
+                // disable cookies
+                disableCookies();
+            }
+            if (type == 'opt-out') {
+                // enable cookies
+                enableCookies();
+            }
+        }
+    });
+</script>
+      </div>
+  </body>
+  </html>
+
