@@ -21,7 +21,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://locize.com/blog/how-locize-leverages-serverless/how-locize-leverages-serverless/title.png">
 <meta property="article:published_time" content="2017-06-21T22:00:00.000Z">
-<meta property="article:modified_time" content="2021-06-09T08:11:53.340Z">
+<meta property="article:modified_time" content="2021-07-07T08:33:59.750Z">
 <meta property="article:author" content="inweso GmbH">
 <meta property="article:tag" content="serverless">
 <meta property="article:tag" content="backend">
@@ -125,7 +125,7 @@
     }
   },
   "datePublished": "2017-06-21T22:00:00.000Z",
-  "dateModified": "2021-06-09T08:11:53.340Z"
+  "dateModified": "2021-07-07T08:33:59.750Z"
 }
 </script>
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/blog/atom.xml" title="locize - localization as a service" type="application/atom+xml">
@@ -246,12 +246,12 @@
         <div class="article-entry" itemprop="articleBody">
             <p><img src="title.png" title="locize © inweso GmbH"></p>
 <p><em><a target="_blank" rel="noopener" href="https://www.slideshare.net/adrai/locize-tech-talk">slides</a></em></p>
-<h2 id="Why-we-choose-serverless"><a href="#Why-we-choose-serverless" class="headerlink" title="Why we choose serverless?"></a>Why we choose serverless?</h2><p><img src="why.png" title="locize © inweso GmbH"></p>
+<h2 id="Why-we-choose-serverless"><a href="#Why-we-choose-serverless" class="headerlink" title="Why we choose serverless?"></a>Why we choose serverless?</h2><p><img src="why.png" alt="why" title="locize © inweso GmbH"></p>
 <p>When we started with <a target="_blank" rel="noopener" href="http://www.locize.com/">locize</a> we did not know how fast it would scale… serverless means we didn’t need to make that choice. The serverless architecture scales with our business model.</p>
 <p>The next argument is, we hate maintaining and operating infrastructure. We believe in NoOps. Here serverless saves not only computing power but human resources too.</p>
 <p>Finally you may ask: Why not a PaaS solution? =&gt; We are working with PaaS solutions since early 2011 and we always had the dream to have a platform where you really pay only when something is used (i.e. call of a function, query of a table, etc…) so you can fully concentrate to the business code.
 And last but not least: serverless is really cool!</p>
-<h2 id="Why-we-choose-AWS"><a href="#Why-we-choose-AWS" class="headerlink" title="Why we choose AWS?"></a>Why we choose AWS?</h2><p><img src="why_aws.png" title="locize © inweso GmbH"></p>
+<h2 id="Why-we-choose-AWS"><a href="#Why-we-choose-AWS" class="headerlink" title="Why we choose AWS?"></a>Why we choose AWS?</h2><p><img src="why_aws.png" alt="why aws" title="locize © inweso GmbH"></p>
 <p>We think AWS is the only production-ready FaaS provider (and more) that works out of the box and scales like you expected. It’s designed with an API-first approach, so everything can be automated.
 We think AWS has in mind a possible future where you can also run functions directly on the edge (directly on hardware).
 Additionally AWS has not only lambda but completes the serverless offering with:</p>
@@ -263,32 +263,32 @@ Additionally AWS has not only lambda but completes the serverless offering with:
 <li>Simple Email Service (SES)</li>
 <li>and a lot more...</li>
 </ul>
-<h2 id="The-basic-setup"><a href="#The-basic-setup" class="headerlink" title="The basic setup"></a>The basic setup</h2><p><img src="setup.png" title="locize © inweso GmbH"></p>
+<h2 id="The-basic-setup"><a href="#The-basic-setup" class="headerlink" title="The basic setup"></a>The basic setup</h2><p><img src="setup.png" alt="setup" title="locize © inweso GmbH"></p>
 <p>When Developers/Translation Editors/Managers, etc… goes to <a target="_blank" rel="noopener" href="http://www.locize.app/">www.locize.app</a>, the locize-app-client (which is hosted on S3 and exposed by CloudFront) is served. The client then accesses our lambda backend through the API-Gateway also exposed by CloudFront. Our main working storage (DynamoDB) is then accessed by our lambda functions.
 Each time someone publishes (or auto-publishes) a translation resource a lambda function will save that resource to S3. When published, the endusers of your product can access them via CDN edge locations offered and exposed by CloudFront too.</p>
-<h2 id="Full-Stack-JavaScript"><a href="#Full-Stack-JavaScript" class="headerlink" title="Full-Stack JavaScript"></a>Full-Stack JavaScript</h2><p><img src="full_js.png" title="locize © inweso GmbH"></p>
+<h2 id="Full-Stack-JavaScript"><a href="#Full-Stack-JavaScript" class="headerlink" title="Full-Stack JavaScript"></a>Full-Stack JavaScript</h2><p><img src="full_js.png" alt="full js" title="locize © inweso GmbH"></p>
 <p>locize is a single language solution! Everything is JavaScript!
 The complete application backend, the api, the cli and other tools runs on <a target="_blank" rel="noopener" href="https://nodejs.org/">node.js</a>… and the locize-app-client is a modern SPA based on <a target="_blank" rel="noopener" href="https://facebook.github.io/react/">React</a> and <a target="_blank" rel="noopener" href="http://redux.js.org/">Redux</a>.</p>
-<h2 id="Lambda-functions"><a href="#Lambda-functions" class="headerlink" title="Lambda functions"></a>Lambda functions</h2><p><img src="types.png" title="locize © inweso GmbH"></p>
+<h2 id="Lambda-functions"><a href="#Lambda-functions" class="headerlink" title="Lambda functions"></a>Lambda functions</h2><p><img src="types.png" alt="types" title="locize © inweso GmbH"></p>
 <p>locize uses 3 different base lambda types.
 These are not real „AWS-defined“ lambda types but we&#39;ve defined these types ourself.</p>
-<h3 id="Express"><a href="#Express" class="headerlink" title="Express"></a>Express</h3><p><img src="express.png" title="locize © inweso GmbH"></p>
+<h3 id="Express"><a href="#Express" class="headerlink" title="Express"></a>Express</h3><p><img src="express.png" alt="express" title="locize © inweso GmbH"></p>
 <p>The first type is the express type.
 It defines RESTful APIs using the normal <a target="_blank" rel="noopener" href="http://expressjs.com/">express</a> framework.
 You see the app.js file looks like a normal <a target="_blank" rel="noopener" href="http://expressjs.com/">express</a>  based project.
 But at the end of the file you see that if this file is executed directly (like <code>node app.js</code>) it will start to listen on port 3000 and can be used to test locally.
 But if required by another file it exports the configured <a target="_blank" rel="noopener" href="http://expressjs.com/">express</a> app.
 For this scenario there is an additional file (lambda.js) that uses the help of the npm module „aws-serverless-express“ to proxy and map the lambda function calls to http requests and responses. </p>
-<h3 id="Async"><a href="#Async" class="headerlink" title="Async"></a>Async</h3><p><img src="async.png" title="locize © inweso GmbH"></p>
+<h3 id="Async"><a href="#Async" class="headerlink" title="Async"></a>Async</h3><p><img src="async.png" alt="async" title="locize © inweso GmbH"></p>
 <p>The second type is the async type.
 This lambda function is triggered by other lambda functions to compute non blocking tasks. i.e. calculation of current words in project, or publishing translation resources to S3, etc…
 The key element here is that a lambda function is able to call another lambda function by simply using the official aws-sdk npm module.
 With the help of AWS policies you can define exactly which function can be invoked.</p>
-<h3 id="S3-event"><a href="#S3-event" class="headerlink" title="S3 event"></a>S3 event</h3><p><img src="s3.png" title="locize © inweso GmbH"></p>
+<h3 id="S3-event"><a href="#S3-event" class="headerlink" title="S3 event"></a>S3 event</h3><p><img src="s3.png" alt="s3" title="locize © inweso GmbH"></p>
 <p>The last type is the S3 event type.
 This lambda function is i.e. triggered by a new CloudFront log file that was saved to s3 (this feature can be enabled on CloudFront).
 We use this to i.e. calculate the amount of downloads or to generate statistics.</p>
-<h2 id="Our-tooling"><a href="#Our-tooling" class="headerlink" title="Our tooling"></a>Our tooling</h2><p><img src="claudia.png" title="locize © inweso GmbH"></p>
+<h2 id="Our-tooling"><a href="#Our-tooling" class="headerlink" title="Our tooling"></a>Our tooling</h2><p><img src="claudia.png" alt="claudia js" title="locize © inweso GmbH"></p>
 <p>Because we have a pure JavaScript landscape we’ve chosen <a target="_blank" rel="noopener" href="https://claudiajs.com/">claudia.js</a>
 It automatically installs and configures a lot on AWS. From API-Gateway to Lambda versioning.
 <a target="_blank" rel="noopener" href="https://claudiajs.com/">Claudia.js</a> does not abstract away AWS services. It’s really transparent and easy to understand.
@@ -484,7 +484,7 @@ That’s why our advice is: if you want to build simple services and run them wi
                             <a href="/blog/unleash-the-full-power-of-angular-i18next/" class="thumbnail">
     
     
-        <span style="background-image:url(/blog/unleash-the-full-power-of-angular-i18next/title.jpg)" alt="Unleash the full power of angular-i18next" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/unleash-the-full-power-of-angular-i18next/title.jpg)" alt="Angular Localization - Unleash the full power of i18next" class="thumbnail-image"></span>
     
     
 </a>
@@ -493,7 +493,7 @@ That’s why our advice is: if you want to build simple services and run them wi
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
-                            <p class="item-title"><a href="/blog/unleash-the-full-power-of-angular-i18next/" class="title">Unleash the full power of angular-i18next</a></p>
+                            <p class="item-title"><a href="/blog/unleash-the-full-power-of-angular-i18next/" class="title">Angular Localization - Unleash the full power of i18next</a></p>
                             <p class="item-date"><time datetime="2021-06-13T22:00:00.000Z" itemprop="datePublished">14/06/2021</time></p>
                         </div>
                     </li>
@@ -524,7 +524,7 @@ That’s why our advice is: if you want to build simple services and run them wi
                             <a href="/blog/how-to-internationalize-react-i18next/" class="thumbnail">
     
     
-        <span style="background-image:url(/blog/how-to-internationalize-react-i18next/react-localization.jpg)" alt="React Localization - How to properly internationalize a React application using i18next" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/how-to-internationalize-react-i18next/react-localization.jpg)" alt="React Localization - Internationalize with i18next" class="thumbnail-image"></span>
     
     
 </a>
@@ -533,7 +533,7 @@ That’s why our advice is: if you want to build simple services and run them wi
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
-                            <p class="item-title"><a href="/blog/how-to-internationalize-react-i18next/" class="title">React Localization - How to properly internationalize a React application using i18next</a></p>
+                            <p class="item-title"><a href="/blog/how-to-internationalize-react-i18next/" class="title">React Localization - Internationalize with i18next</a></p>
                             <p class="item-date"><time datetime="2021-04-13T22:00:00.000Z" itemprop="datePublished">14/04/2021</time></p>
                         </div>
                     </li>

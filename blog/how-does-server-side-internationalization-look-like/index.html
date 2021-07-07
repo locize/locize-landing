@@ -21,7 +21,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://locize.com/blog/how-does-server-side-internationalization-look-like/how-does-server-side-internationalization-look-like/server_side_backend.jpg">
 <meta property="article:published_time" content="2021-06-28T06:23:00.000Z">
-<meta property="article:modified_time" content="2021-06-28T06:23:03.894Z">
+<meta property="article:modified_time" content="2021-07-07T08:33:59.749Z">
 <meta property="article:author" content="inweso GmbH">
 <meta property="article:tag" content="backend">
 <meta property="article:tag" content="internationalization">
@@ -132,7 +132,7 @@
     }
   },
   "datePublished": "2021-06-28T06:23:00.000Z",
-  "dateModified": "2021-06-28T06:23:03.894Z"
+  "dateModified": "2021-07-07T08:33:59.749Z"
 }
 </script>
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/blog/atom.xml" title="locize - localization as a service" type="application/atom+xml">
@@ -251,7 +251,7 @@
         
 
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="server_side_backend.jpg" title="Server Side Internationalization"></p>
+            <p><img src="server_side_backend.jpg" alt="server side internationalization next" title="Server Side Internationalization"></p>
 <p>You may already know how to properly internationalize a client side application, like described in this <a href="/how-to-internationalize-react-i18next/">React based tutorial</a>, this <a href="/unleash-the-full-power-of-angular-i18next/">Angular based tutorial</a> or this <a href="/give-vue-i18n-more-superpowers/">Vue based tutorial</a>.</p>
 <p>In this blog post we will shed light on the server side.</p>
 <blockquote>
@@ -307,7 +307,7 @@ This means the translations would be &quot;managed&quot; (add new languages, new
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> mail <span class="keyword">from</span> <span class="string">&#x27;./mail.js&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> i18next <span class="keyword">from</span> <span class="string">&#x27;./i18n.js&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> html = mail(&#123;</span><br><span class="line">  <span class="attr">t</span>: i18next.t,</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;John&#x27;</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// that html now can be sent via some mail provider...</span></span><br></pre></td></tr></table></figure>
 
 <p>This is how the resulting html could look like:</p>
-<p><img src="mail_preview.jpg"></p>
+<p><img src="mail_preview.jpg" alt="mail preview"></p>
 <p><em>🧑‍💻 A code example can be found <a target="_blank" rel="noopener" href="https://github.com/i18next/i18next-fs-backend/blob/master/example/fastify/app.js#L14-L19">here</a>.</em></p>
 <h1 id="Server-Side-Rendering-SSR"><a href="#Server-Side-Rendering-SSR" class="headerlink" title="Server Side Rendering (SSR) "></a>Server Side Rendering (SSR) <a name="ssr"></a></h1><p>We will try 2 different SSR examples, a classic one using <a href="#pug">Fastify with pug</a> and a more trendy one using <a href="#nextjs">Next.js</a>.</p>
 <h2 id="Fastify-with-Pug-example"><a href="#Fastify-with-Pug-example" class="headerlink" title="Fastify with Pug example "></a>Fastify with Pug example <a name="pug"></a></h2><p>For this example we will use my favorite http framework <a target="_blank" rel="noopener" href="https://www.fastify.io/">Fastify</a> (created by <a target="_blank" rel="noopener" href="https://twitter.com/matteocollina">Matteo Collina</a> and <a target="_blank" rel="noopener" href="https://twitter.com/delvedor">Tomas Della Vedova</a>), but any other framework will also work.</p>
@@ -327,7 +327,7 @@ It can be used for all Node.js web frameworks, like <a target="_blank" rel="noop
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> fastify <span class="keyword">from</span> <span class="string">&#x27;fastify&#x27;</span></span><br><span class="line"><span class="keyword">import</span> pov <span class="keyword">from</span> <span class="string">&#x27;point-of-view&#x27;</span></span><br><span class="line"><span class="keyword">import</span> pug <span class="keyword">from</span> <span class="string">&#x27;pug&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; i18next, i18nextPlugin &#125; <span class="keyword">from</span> <span class="string">&#x27;./lib/i18n.js&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> port = process.env.PORT || <span class="number">8080</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = fastify()</span><br><span class="line">app.register(pov, &#123; <span class="attr">engine</span>: &#123; pug &#125; &#125;)</span><br><span class="line">app.register(i18nextPlugin, &#123; i18next &#125;)</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">&#x27;/raw&#x27;</span>, <span class="function">(<span class="params">request, reply</span>) =&gt;</span> &#123;</span><br><span class="line">  reply.send(request.t(<span class="string">&#x27;home.title&#x27;</span>))</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">&#x27;/&#x27;</span>, <span class="function">(<span class="params">request, reply</span>) =&gt;</span> &#123;</span><br><span class="line">  reply.view(<span class="string">&#x27;/views/index.pug&#x27;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.listen(port, <span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (err) <span class="keyword">return</span> <span class="built_in">console</span>.error(err)</span><br><span class="line">  <span class="comment">// if you like you can also internationalize your log statements ;-)</span></span><br><span class="line">  <span class="built_in">console</span>.log(i18next.t(<span class="string">&#x27;server.started&#x27;</span>, &#123; port &#125;))</span><br><span class="line">  <span class="built_in">console</span>.log(i18next.t(<span class="string">&#x27;server.started&#x27;</span>, &#123; port, <span class="attr">lng</span>: <span class="string">&#x27;de&#x27;</span> &#125;))</span><br><span class="line">  <span class="built_in">console</span>.log(i18next.t(<span class="string">&#x27;server.started&#x27;</span>, &#123; port, <span class="attr">lng</span>: <span class="string">&#x27;it&#x27;</span> &#125;))</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <p>Now start the app and check what language you&#39;re seeing...
-<img src="pug_fastify.jpg"></p>
+<img src="pug_fastify.jpg" alt="pug fastify"></p>
 <p>If you check the console output you&#39;ll also see something like this:</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">node app.js</span><br><span class="line"><span class="comment"># Server is listening on port 8080.</span></span><br><span class="line"><span class="comment"># Der server lauscht auf dem Port 8080.</span></span><br><span class="line"><span class="comment"># Il server sta aspettando sul port 8080.</span></span><br></pre></td></tr></table></figure>
 
@@ -359,7 +359,7 @@ And only start to listen on a port, if not executed in AWS Lambda (<code>import.
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">└── public</span><br><span class="line">    └── locales</span><br><span class="line">        ├── en</span><br><span class="line">        |   └── common.json</span><br><span class="line">        └── de</span><br><span class="line">            └── common.json</span><br></pre></td></tr></table></figure>
 
 <p>A demo of how such an app looks like when it is deployed, can be found <a target="_blank" rel="noopener" href="https://next-i18next.com/">here</a>.</p>
-<p><a target="_blank" rel="noopener" href="https://next-i18next.com/"><img src="next-i18next_demo.jpg"></a></p>
+<p><a target="_blank" rel="noopener" href="https://next-i18next.com/"><img src="next-i18next_demo.jpg" alt="next i18next demo"></a></p>
 <p><strong>This looks really simple, right?</strong></p>
 <h2 id="Manage-the-translations-outside-of-the-code"><a href="#Manage-the-translations-outside-of-the-code" class="headerlink" title="Manage the translations outside of the code"></a>Manage the translations outside of the code</h2><p>To best manage the translations there are 2 different approaches:</p>
 <h3 id="POSSIBILITY-1-live-translation-download"><a href="#POSSIBILITY-1-live-translation-download" class="headerlink" title="POSSIBILITY 1: live translation download"></a>POSSIBILITY 1: live translation download</h3><p>When using <a target="_blank" rel="noopener" href="https://www.locize.com/">locize</a>, you can configure your next-i18next project to load the translations from the <a target="_blank" rel="noopener" href="https://docs.locize.com/whats-inside/cdn-content-delivery-network">CDN</a> (on server and client side).</p>
@@ -563,7 +563,7 @@ And only start to listen on a port, if not executed in AWS Lambda (<code>import.
                             <a href="/blog/unleash-the-full-power-of-angular-i18next/" class="thumbnail">
     
     
-        <span style="background-image:url(/blog/unleash-the-full-power-of-angular-i18next/title.jpg)" alt="Unleash the full power of angular-i18next" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/unleash-the-full-power-of-angular-i18next/title.jpg)" alt="Angular Localization - Unleash the full power of i18next" class="thumbnail-image"></span>
     
     
 </a>
@@ -572,7 +572,7 @@ And only start to listen on a port, if not executed in AWS Lambda (<code>import.
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
-                            <p class="item-title"><a href="/blog/unleash-the-full-power-of-angular-i18next/" class="title">Unleash the full power of angular-i18next</a></p>
+                            <p class="item-title"><a href="/blog/unleash-the-full-power-of-angular-i18next/" class="title">Angular Localization - Unleash the full power of i18next</a></p>
                             <p class="item-date"><time datetime="2021-06-13T22:00:00.000Z" itemprop="datePublished">14/06/2021</time></p>
                         </div>
                     </li>
@@ -603,7 +603,7 @@ And only start to listen on a port, if not executed in AWS Lambda (<code>import.
                             <a href="/blog/how-to-internationalize-react-i18next/" class="thumbnail">
     
     
-        <span style="background-image:url(/blog/how-to-internationalize-react-i18next/react-localization.jpg)" alt="React Localization - How to properly internationalize a React application using i18next" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/how-to-internationalize-react-i18next/react-localization.jpg)" alt="React Localization - Internationalize with i18next" class="thumbnail-image"></span>
     
     
 </a>
@@ -612,7 +612,7 @@ And only start to listen on a port, if not executed in AWS Lambda (<code>import.
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
-                            <p class="item-title"><a href="/blog/how-to-internationalize-react-i18next/" class="title">React Localization - How to properly internationalize a React application using i18next</a></p>
+                            <p class="item-title"><a href="/blog/how-to-internationalize-react-i18next/" class="title">React Localization - Internationalize with i18next</a></p>
                             <p class="item-date"><time datetime="2021-04-13T22:00:00.000Z" itemprop="datePublished">14/04/2021</time></p>
                         </div>
                     </li>
