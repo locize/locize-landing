@@ -1,0 +1,781 @@
+
+  <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Website Localization Fundamentals &amp; Examples </title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="canonical" href="https://locize.com/blog/website-localization/"/>
+    
+    
+        <meta name="keywords" content="best practices,website localization techniques,website-localization-definition" />
+    
+    <meta name="description" content="This article gives you an idea about website localization, this is the process of adapting an existing website to the language and culture of a target market. It is part of internationalization and l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Website Localization Fundamentals &amp; Examples">
+<meta property="og:url" content="https://locize.com/blog/website-localization/index.html">
+<meta property="og:site_name" content="locize - localization as a service">
+<meta property="og:description" content="This article gives you an idea about website localization, this is the process of adapting an existing website to the language and culture of a target market. It is part of internationalization and l">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://locize.com/blog/website-localization/website-localization/website-localization.webp">
+<meta property="article:published_time" content="2021-07-12T08:21:36.000Z">
+<meta property="article:modified_time" content="2021-07-12T10:18:30.292Z">
+<meta property="article:author" content="inweso GmbH">
+<meta property="article:tag" content="best practices">
+<meta property="article:tag" content="website localization techniques">
+<meta property="article:tag" content="website-localization-definition">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://locize.com/blog/website-localization/website-localization/website-localization.webp">
+<meta name="twitter:creator" content="@locize">
+    
+
+    
+
+    
+        <link rel="icon" href="/blog/favicon.ico" />
+    
+
+    
+<link rel="stylesheet" href="/blog/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/blog/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/blog/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+
+    
+<script src="/blog/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    
+    
+    
+    
+        
+<link rel="stylesheet" href="/blog/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        <script type="text/javascript">
+// (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+// (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+// m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+// })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+// ga('create', 'UA-78143856-1', 'auto');
+// ga('send', 'pageview');
+// ga('set', 'anonymizeIp', true);
+
+</script>
+    
+    
+
+
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+    <script type="application/ld+json">
+{ "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "locize",
+  "url": "https://locize.com",
+  "logo": "https://locize.com/img/locize_color.svg",
+  "sameAs": [""]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "name": "locize",
+  "url": "https://locize.com/blog/",
+  "logo": "https://locize.com/blog/images/locize_color.svg"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://locize.com/blog/website-localization/"
+  },
+  "headline": "Website Localization Fundamentals &amp; Examples",
+  "description": "This article gives you an idea about website localization, this is the process of adapting an existing website to the language and culture of a target market. It is part of internationalization and l",
+  "image": "https://locize.com/blog/website-localization/website-localization.webp",  
+  "author": {
+    "@type": "Organization",
+    "name": "locize"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "locize",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://locize.com/blog/images/locize_color.svg"
+    }
+  },
+  "datePublished": "2021-07-12T08:21:36.000Z",
+  "dateModified": "2021-07-12T10:18:30.292Z"
+}
+</script>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/blog/atom.xml" title="locize - localization as a service" type="application/atom+xml">
+</head>
+
+  <body>
+      <div id="wrap">
+          <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <!--<a href="/blog/" class="logo"></a>-->
+                        <!-- <a href="https://www.locize.com" class="logo" target="_new"></a> -->
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/blog/">Home</a>
+                                </li>
+                            
+                            <li class="main-nav-list-item" >
+                                <a class="main-nav-list-link" href="https://docs.locize.com" target="_new">Docs</a>
+                                <a class="main-nav-list-link" href="https://www.locize.app/login" target="_new">Login</a>
+                            </li>
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/blog/',
+        CONTENT_URL: '/blog/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/blog/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+          <div class="container">
+              <div class="main-body container-inner">
+                  <div class="main-body-inner">
+                      <section id="main">
+                          <!-- <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/blog/categories/Post/">Post</a>
+    </h1>
+</div> -->
+                          <div class="main-body-content">
+                              <article id="post-website-localization" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+          <header class="article-header">
+              
+    
+        <h1 class="article-title" itemprop="name">
+        Website Localization Fundamentals &amp; Examples
+        </h1>
+    
+
+          </header>
+        
+        
+        <div class="article-subtitle">
+            <a href="/blog/website-localization/" class="article-date">
+    <time datetime="2021-07-12T08:21:36.000Z" itemprop="datePublished">12/07/2021</time>
+</a>
+            
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/best-practices/" rel="tag">best practices</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/website-localization-techniques/" rel="tag">website localization techniques</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/website-localization-definition/" rel="tag">website-localization-definition</a></li></ul>
+
+        </div>
+        
+        
+
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="website-localization.webp" alt="Website Localization Fundamentals &amp; Examples" title="Website Localization Fundamentals &amp; Examples"></p>
+<p>This article gives you an idea about <b>website localization</b>, this is the process of <b>adapting an existing website to the language and culture of a target market</b>. It is part of internationalization and localization and entails much more than just simple text translation; it must take into account all language and cultural variables. If you are selling a decent product in your home market, it is possible that you are also doing so in other countries. If you wish to sell in Spain, for example, your information must be translated into an adapted message in their original language. This article is specific for websites, if you need more general information, check out our blogpost about <a target="_blank" rel="noopener" href="http://localhost:4000/blog/what-is-software-localization/">software localization</a>. Otherwise, keep reading because the information in this post will save you time during your intended endeavor.</p>
+<h2 id="Table-of-contents"><a href="#Table-of-contents" class="headerlink" title="Table of contents"></a>Table of contents</h2><ul>
+<li><a href="#good-outcome">Why a good outcome is important?</a></li>
+<li><a href="#half-done">Prepare the localization of your website</a></li>
+<li><a href="#techniques">Techniques</a></li>
+<li><a href="#examples">Examples</a></li>
+<li><a href="#quality">Quality ensurance</a></li>
+<li><a href="#platform">Choose the right platform</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+<p>You understand what website localization is? Now, let&#39;s find out why it&#39;s important:</p>
+<h2 id="Why-a-good-outcome-is-important"><a href="#Why-a-good-outcome-is-important" class="headerlink" title="Why a good outcome is important "></a>Why a good outcome is important <a name="good-outcome"></a></h2><p>A good website localization may help multinational businesses establish significant brand awareness outside of their home country. <b>People on the internet clearly desire to buy from websites in their own language</b>, as evidenced by several <a target="_blank" rel="noopener" href="https://insights.csa-research.com/reportaction/305013126/Marketing">studies</a>. Many firms utilize landingpages for a specific area to provide basic corporate information. This is not the strategy to take since the target audience may perceive a lack of enthusiasm for their location and requirements. Local customers anticipate a website that is identical to the one in your primary market.</p>
+<p><img src="establish.webp" alt="Create considerable brand awareness" title="Create considerable brand awareness"></p>
+<p>The localization of a <b>website can increase the revenue</b> of your company. It appears to be an administrative concern in most circumstances, but it is an investment in yourself and your organization.</p>
+<h2 id="Prepare-the-localization-of-your-website"><a href="#Prepare-the-localization-of-your-website" class="headerlink" title="Prepare the localization of your website "></a>Prepare the localization of your website <a name="half-done"></a></h2><p>Look for a good preparation of your localization strategy, because it will end up in more than just translate some sentence. This process should be part of your overall business strategy, because there are many non-technical-aspects to consider when going into new markets:</p>
+<h3 id="A-step-by-step-checklist-for-the-business-questions"><a href="#A-step-by-step-checklist-for-the-business-questions" class="headerlink" title="A step-by-step checklist for the business questions"></a>A step-by-step checklist for the business questions</h3><p>  ➡️ Examine the market - is there a possible audience?</p>
+<p>  ➡️ Determine the local compliance needs</p>
+<p>  ➡️ Determine the best technology for localization</p>
+<p>  ➡️ Determine how we will market in the new place</p>
+<p>  ➡️ Decide who is part of the team (lead project manager, marketing expert, developer, etc.)</p>
+<p>  ➡️ Construct a list of quality assurance criteria</p>
+<p>If you come up with a strong plan and take into account all of the above checkpoints. Then it&#39;s time to go more into the webpage&#39;s details.</p>
+<h3 id="Here-a-list-of-techniques-to-use"><a href="#Here-a-list-of-techniques-to-use" class="headerlink" title="Here a list of techniques to use "></a>Here a list of techniques to use <a name="techniques"></a></h3><p>Keep the following techniques in mind for a successfull implementation:</p>
+<ul>
+<li>Place the language selector correctly</li>
+<li>Change the formatting design - a sentence in some languages can be substantially longer</li>
+<li>The curreny should be according to customer need</li>
+<li>Think about the update of graphic and videos</li>
+<li>Ensure a proper information achitecture</li>
+<li>Make it easy to update content</li>
+<li>Think about SEO-Localization - SEO should be done parallel to development (industry standard)</li>
+<li>Allow website integrations</li>
+<li>Verify the translations and results</li>
+</ul>
+<h3 id="Elements-to-consider-on-website"><a href="#Elements-to-consider-on-website" class="headerlink" title="Elements to consider on website"></a>Elements to consider on website</h3><p>This list gives you an overview about what you need to keep an eye on when internationalize your website:</p>
+<ul>
+<li>the text</li>
+<li>the date and time formats</li>
+<li>the unit of measurement</li>
+<li>the holiday seasons</li>
+<li>the local currency</li>
+<li>the methods consumer can pay </li>
+<li>the way an address is written</li>
+<li>the local letters, symbols, grammar, etc.</li>
+<li>the plurals</li>
+<li>the phone numbers</li>
+<li>the privacy policy</li>
+<li>the images</li>
+<li>the videos</li>
+</ul>
+<p>All information must be given in a genuine manner to other locals so that they feel it is tailored to them. Also, the website&#39;s navigation may vary as visitors from different regions engage differently with your website. Gender-specific words can also be another possibility, which we do not discuss in detail here, but take that in mind. Understanding the language is frequently insufficient, because people will not buy from a webpage in English if it is not their first language. The material must reflect all of their familiar conditions, not just the language. </p>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples "></a>Examples <a name="examples"></a></h2><p>There are well-known examples all across the world of <b>companies that have effectively implemented multilingual websites</b> as part of their overall business strategy. <a target="_blank" rel="noopener" href="https://www.tesla.com/">www.tesla.com</a> was one of the most well-known examples we checked out. They offer a large number of regions from which to choose. They also adjust things like privacy policies and graphics to meet the needs of different locations. They do an excellent job of localizing their website, but it isn&#39;t perfect, and there are certain areas where they could improve. </p>
+<p>The following improvements are some general areas that, in the author&#39;s view, may be improved by not deeply analyzing their situation. </p>
+<h5 id="First-finding"><a href="#First-finding" class="headerlink" title="First finding"></a>First finding</h5><p>In the author&#39;s opinion, the language selector is difficult to discover and therefore not well situated for a good website-experience. It&#39;s great that the website displays it based on IP address in advance.</p>
+<h5 id="Second-finding"><a href="#Second-finding" class="headerlink" title="Second finding"></a>Second finding</h5><p>In the author&#39;s opinion, although switching languages is possible, the user does not receive sufficient tailored info for his intended location. The available Tesla Store Locations are hidden in a bottom menu and are difficult to find. It may help to direct the user&#39;s attention to these Locations, allowing the consumer to feel more home.</p>
+<h5 id="Third-finding"><a href="#Third-finding" class="headerlink" title="Third finding"></a>Third finding</h5><p>In the author&#39;s opinion, some product description information is tailored to a larger geographic area, such as Europe. It isn&#39;t particular to different areas of Europe; they used the same data across many countries. However, this may be wanted from them, because the efforts would be excessive in comparison to the results they would get. &quot;The product speaks for itself&quot;.</p>
+<p>The author is unable to conduct a thorough analysis of the technical localization aspects as part of this article. If they&#39;re interested, our team would be delighted to assist them :-)</p>
+<h3 id="Locize-examples"><a href="#Locize-examples" class="headerlink" title="Locize examples"></a>Locize examples</h3><p>We, at locize <a href="https://locize.com/">localization management platform</a>, <b>have assisted many customers in achieving their goals with website-localization</b>. The following examples can assist you in escaping your strategy:</p>
+<h4 id="1-globalfinreg-com"><a href="#1-globalfinreg-com" class="headerlink" title="1) globalfinreg.com"></a>1) <a target="_blank" rel="noopener" href="https://globalfinreg.com/">globalfinreg.com</a></h4><p>Globalfinreg has been able to efficiently localize their two websites thanks to <a href="https://locize.com/">locize</a>. They said locize is for them:</p>
+<p>An easy-to-use interface for managing translations. It is possible to regulate exactly what each translator sees, and they enjoy doing so. The UI also allows you to easily check which translations are needed and divide your application into separate namespaces.</p>
+<p><a target="_blank" rel="noopener" href="https://globalfinreg.com/" title="globalfinreg"><img src="finreg.png" alt="globalfinreg" title="globalfinreg"></a></p>
+<h4 id="2-www-redcross-ch"><a href="#2-www-redcross-ch" class="headerlink" title="2) www.redcross.ch"></a>2) <a target="_blank" rel="noopener" href="https://support.redcross.ch/">www.redcross.ch</a></h4><p>The headless websites of the Swiss Red Cross could be translated into multiple languages in a short period thanks to the helpful support and features of locize!</p>
+<p><a target="_blank" rel="noopener" href="https://support.redcross.ch" title="swiss red cross"><img src="redcross.svg" alt="swiss red cross" title="redcross"></a></p>
+<h2 id="Quality-ensurance"><a href="#Quality-ensurance" class="headerlink" title="Quality ensurance "></a>Quality ensurance <a name="quality"></a></h2><p>The quality check is essential for the team to get a measurement of where the project is standing in order to provide the correct website-experience. As a result of this, improving any project milestones or refining website content will be beneficial. This should also contain a check to see if the translators did a good job. In some circumstances, contemporary technology such as machine translation will automate the procedure. As a result, human monitoring can assure not only the quality of the language on the website, but also its functionality and site experience.</p>
+<p>We have the following two areas of testing for localization in the web:</p>
+<h3 id="Language-Testing"><a href="#Language-Testing" class="headerlink" title="Language Testing"></a>Language Testing</h3><p>Is the language properly tested, and are all of the words correct and understood? This list may be of assistance:</p>
+<ul>
+<li>Wrong use of language</li>
+<li>Spelling mistakes</li>
+<li>Restricted words in a culture</li>
+<li>Non readable sentence</li>
+<li>Language Errors</li>
+</ul>
+<h3 id="Localization-Testing"><a href="#Localization-Testing" class="headerlink" title="Localization Testing"></a>Localization Testing</h3><p>Testing the localization ensures that your various language site versions work properly. Distribute your testers by newly targeted markets. Check the operation of all web forms and checkout functionality. Also if there is any broken design to fix. A short list you can find below:</p>
+<ul>
+<li>Check for non-translated strings </li>
+<li>Long website loading times </li>
+<li>Wrong date and time format discovered </li>
+<li>Check for broken strings </li>
+<li>Check hardware compatibility </li>
+<li>Ensure Hyperlinks operate </li>
+<li>Form and Checkout features must be tested</li>
+</ul>
+<h2 id="Choose-the-right-platform"><a href="#Choose-the-right-platform" class="headerlink" title="Choose the right platform "></a>Choose the right platform <a name="platform"></a></h2><p>A multilingual website is typically a large undertaking, and using a well-established localization management solution will assist you in completing it more quickly. When choosing a platform, make sure it was created specifically for your needs. You will be able to provide greater user-experience and add appropriate tools as a result of this.</p>
+<p>With locize, a modern and economical <a href="https://locize.com/">localization management platform</a>, you can bridge the gap between translation and development. It makes your site, app, game, or whatever project you&#39;re working on more global, dynamic, and engaging, particularly when you use the continuous localization features.</p>
+<p>While we hope you enjoy our services, we will not lock you into a contract. We believe in the added value of our services, so you can export your translations and utilize them with <a target="_blank" rel="noopener" href="https://www.i18next.com/">i18next</a>. If you are a developer, this could be a possibility for you, or you can look at our step-by-step guide for <a href="https://locize.com/javascript-localization.html">JavaScript localization</a></p>
+<p><img src="locize-project.png" alt="locize" title="locize"></p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion "></a>Conclusion <a name="conclusion"></a></h2><p>Consumers have a clear requirement for a website that is tailored to customized and localized content. As a result, the localization of a website is the tech-part for any company looking to expand into new areas or market segment. As we have built it up for you, it must comprise a good business strategy, which is the starting point for a solid technological implementation. </p>
+<p>As you can see from our real-world examples, the most well-known organizations in any industry have used website localization. As a result, <b>you should address it as soon as possible</b> in <b>your company&#39;s internationalization process</b>. It is significant due to the commitment your organization would make to potential clients in the newly targeted area. This target audience will thank you by purchasing your goods or service. In this market, your company&#39;s brand awareness will grow as well, a situation that is critical to successful business in the internet.</p>
+<p>The &quot;how to locize your website&quot; is <b>easy to answer, select the right platform for your needs</b> and plan all steps needed for the language localization in advance. Our team has considerable experience to assist you with your project or development needs, thanks to many <a href="https://locize.com/customers.html">customers</a> that we assisted with the localization of their website. The <a href="https://locize.com/">localization management platform</a> can assist you in remaining organized and adaptable during your continuous-localization. We&#39;ve also supplied the <b>most valuable pricing</b> of our services because of our many years of expertise with these consumers, and we don&#39;t require you to sign long-term contracts.</p>
+<p>➡️ <a target="_blank" rel="noopener" href="https://docs.locize.com/">Watch our introduction video</a></p>
+<p>➡️ <a target="_blank" rel="noopener" href="https://www.locize.app/register">Create a new user account for free</a></p>
+<p>➡️ <a target="_blank" rel="noopener" href="https://docs.locize.com/integration/getting-started/add-a-new-project">Check out how to add a new project</a></p>
+
+        </div>
+        <footer class="article-footer">
+          
+          
+
+
+
+    <a data-url="https://locize.com/blog/website-localization/" data-id="ckr0h3cz50000wnxr4uqo1rk1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+          
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+    </section>
+
+
+                          </div>
+                      </section>
+                      <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/locize" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="youtube" href="https://www.youtube.com/channel/UCPYQjBbbXojUcB8qjeIB3uA" target="_blank">
+                        <i class="icon fa fa-youtube"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/Locize-1672640746084189/" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/blog/how-does-server-side-internationalization-look-like/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">How does server side internationalization (i18n) look like?</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/website-localization/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/website-localization/website-localization.webp)" alt="Website Localization Fundamentals &amp; Examples" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/website-localization/" class="title">Website Localization Fundamentals &amp; Examples</a></p>
+                            <p class="item-date"><time datetime="2021-07-12T08:21:36.000Z" itemprop="datePublished">12/07/2021</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/how-does-server-side-internationalization-look-like/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/how-does-server-side-internationalization-look-like/server_side_backend.jpg)" alt="How does server side internationalization (i18n) look like?" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/how-does-server-side-internationalization-look-like/" class="title">How does server side internationalization (i18n) look like?</a></p>
+                            <p class="item-date"><time datetime="2021-06-28T06:23:00.000Z" itemprop="datePublished">28/06/2021</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/what-is-software-localization/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/what-is-software-localization/software-localization.jpg)" alt="What is Software Localization (l10n)" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/what-is-software-localization/" class="title">What is Software Localization (l10n)</a></p>
+                            <p class="item-date"><time datetime="2021-06-23T14:58:23.000Z" itemprop="datePublished">23/06/2021</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/unleash-the-full-power-of-angular-i18next/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/unleash-the-full-power-of-angular-i18next/title.jpg)" alt="Angular Localization - Unleash the full power of i18next" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/unleash-the-full-power-of-angular-i18next/" class="title">Angular Localization - Unleash the full power of i18next</a></p>
+                            <p class="item-date"><time datetime="2021-06-13T22:00:00.000Z" itemprop="datePublished">14/06/2021</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/give-vue-i18n-more-superpowers/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/give-vue-i18n-more-superpowers/title.jpg)" alt="Give vue-i18n more superpowers❕" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Post/">Post</a></p>
+                            <p class="item-title"><a href="/blog/give-vue-i18n-more-superpowers/" class="title">Give vue-i18n more superpowers❕</a></p>
+                            <p class="item-date"><time datetime="2021-06-07T22:00:00.000Z" itemprop="datePublished">08/06/2021</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/07/">July 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/04/">April 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/11/">November 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">tags</h3>
+        <div class="widget">
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/angular/" rel="tag">angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/award/" rel="tag">award</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/aws/" rel="tag">aws</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/backend/" rel="tag">backend</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/beginning/" rel="tag">beginning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/best-practices/" rel="tag">best practices</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/cli/" rel="tag">cli</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-delivery/" rel="tag">continuous delivery</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-development/" rel="tag">continuous development</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-integration/" rel="tag">continuous integration</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-localization/" rel="tag">continuous localization</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/continuous-translation/" rel="tag">continuous translation</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/formatjs/" rel="tag">formatjs</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/i18n/" rel="tag">i18n</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/i18next/" rel="tag">i18next</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/internationalization/" rel="tag">internationalization</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/localistars/" rel="tag">localistars</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/localization/" rel="tag">localization</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/localization-definition/" rel="tag">localization definition</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/localization-process/" rel="tag">localization process</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/locize/" rel="tag">locize</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/locizify/" rel="tag">locizify</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/mail/" rel="tag">mail</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/next/" rel="tag">next</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/order/" rel="tag">order</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/polyglot/" rel="tag">polyglot</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/react/" rel="tag">react</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/react-i18next/" rel="tag">react-i18next</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/server/" rel="tag">server</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/serverless/" rel="tag">serverless</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/serverside/" rel="tag">serverside</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/service/" rel="tag">service</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/software-localization/" rel="tag">software localization</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/technology/" rel="tag">technology</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/translation/" rel="tag">translation</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/vue/" rel="tag">vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/vue-i18n/" rel="tag">vue-i18n</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/web/" rel="tag">web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/website-localization-techniques/" rel="tag">website localization techniques</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/website-localization-definition/" rel="tag">website-localization-definition</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/what-is-software-localization/" rel="tag">what is software-localization</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/blog/tags/angular/" style="font-size: 10px;">angular</a> <a href="/blog/tags/award/" style="font-size: 10px;">award</a> <a href="/blog/tags/aws/" style="font-size: 11.43px;">aws</a> <a href="/blog/tags/backend/" style="font-size: 12.86px;">backend</a> <a href="/blog/tags/beginning/" style="font-size: 10px;">beginning</a> <a href="/blog/tags/best-practices/" style="font-size: 10px;">best practices</a> <a href="/blog/tags/cli/" style="font-size: 10px;">cli</a> <a href="/blog/tags/continuous-delivery/" style="font-size: 11.43px;">continuous delivery</a> <a href="/blog/tags/continuous-development/" style="font-size: 11.43px;">continuous development</a> <a href="/blog/tags/continuous-integration/" style="font-size: 11.43px;">continuous integration</a> <a href="/blog/tags/continuous-localization/" style="font-size: 12.86px;">continuous localization</a> <a href="/blog/tags/continuous-translation/" style="font-size: 11.43px;">continuous translation</a> <a href="/blog/tags/formatjs/" style="font-size: 12.86px;">formatjs</a> <a href="/blog/tags/i18n/" style="font-size: 11.43px;">i18n</a> <a href="/blog/tags/i18next/" style="font-size: 15.71px;">i18next</a> <a href="/blog/tags/internationalization/" style="font-size: 18.57px;">internationalization</a> <a href="/blog/tags/localistars/" style="font-size: 10px;">localistars</a> <a href="/blog/tags/localization/" style="font-size: 17.14px;">localization</a> <a href="/blog/tags/localization-definition/" style="font-size: 10px;">localization definition</a> <a href="/blog/tags/localization-process/" style="font-size: 10px;">localization process</a> <a href="/blog/tags/locize/" style="font-size: 20px;">locize</a> <a href="/blog/tags/locizify/" style="font-size: 12.86px;">locizify</a> <a href="/blog/tags/mail/" style="font-size: 10px;">mail</a> <a href="/blog/tags/next/" style="font-size: 10px;">next</a> <a href="/blog/tags/order/" style="font-size: 10px;">order</a> <a href="/blog/tags/polyglot/" style="font-size: 11.43px;">polyglot</a> <a href="/blog/tags/react/" style="font-size: 11.43px;">react</a> <a href="/blog/tags/react-i18next/" style="font-size: 10px;">react-i18next</a> <a href="/blog/tags/server/" style="font-size: 10px;">server</a> <a href="/blog/tags/serverless/" style="font-size: 10px;">serverless</a> <a href="/blog/tags/serverside/" style="font-size: 10px;">serverside</a> <a href="/blog/tags/service/" style="font-size: 12.86px;">service</a> <a href="/blog/tags/software-localization/" style="font-size: 10px;">software localization</a> <a href="/blog/tags/technology/" style="font-size: 10px;">technology</a> <a href="/blog/tags/translation/" style="font-size: 14.29px;">translation</a> <a href="/blog/tags/vue/" style="font-size: 10px;">vue</a> <a href="/blog/tags/vue-i18n/" style="font-size: 10px;">vue-i18n</a> <a href="/blog/tags/web/" style="font-size: 10px;">web</a> <a href="/blog/tags/website-localization-techniques/" style="font-size: 10px;">website localization techniques</a> <a href="/blog/tags/website-localization-definition/" style="font-size: 10px;">website-localization-definition</a> <a href="/blog/tags/what-is-software-localization/" style="font-size: 10px;">what is software-localization</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://www.i18next.com" target="_blank">i18next</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://locize.com/privacy.html" target="_blank">privacy policy</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://locize.com/terms.html" target="_blank">terms</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                  </div>
+              </div>
+          </div>
+          <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <div style="float: left;">
+                    <h1 class="logo-wrap">
+                        <a href="/blog/" class="logo"></a>
+                    </h1>
+                    <p>&copy; 2021 inweso GmbH</p>
+                    <!-- <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Original theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+          
+
+    
+        
+<script src="/blog/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/blog/js/main.js"></script>
+
+
+<script src="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+    function enableCookies() {
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-78143856-1', 'auto');
+        ga('send', 'pageview');
+        ga('set', 'anonymizeIp', true);
+    }
+
+    function disableCookies() {
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i];
+            var eqPos = cookie.indexOf("=");
+            var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+    }
+
+    window.cookieconsent.initialise({
+        palette: {
+            popup: {
+                background: "#2196f3",
+                text: "#ffffff"
+            },
+            button: {
+                background: "#1976d2",
+                text: "#ffffff"
+            }
+        },
+        theme: "edgeless",
+        type: "opt-in",
+        content: {
+            message: "This website uses cookies to ensure you get the best experience on our website.",
+            allow: "Accept",
+            dismiss: "Decline",
+            link: "learn",
+            href: "https://locize.com/privacy.html"
+        },
+        elements: {
+            deny: '<a style="font-weight: 100; color: #ffffffa8; font-size: smaller;" aria-label="deny cookies" role="button" tabindex="0" class="cc-btn cc-deny">Decline</a>'
+        },
+        onInitialise: function (status) {
+            var type = this.options.type;
+            var didConsent = this.hasConsented();
+            if (type == 'opt-in' && didConsent) {
+                // enable cookies
+                enableCookies();
+            }
+            if (type == 'opt-out' && !didConsent) {
+                // disable cookies
+                disableCookies();
+            }
+        },
+        onStatusChange: function(status, chosenBefore) {
+            var type = this.options.type;
+            var didConsent = this.hasConsented();
+            if (type == 'opt-in' && didConsent) {
+                // enable cookies
+                enableCookies();
+            }
+            if (type == 'opt-out' && !didConsent) {
+                // disable cookies
+                disableCookies();
+            }
+        },
+        onRevokeChoice: function() {
+            var type = this.options.type;
+            if (type == 'opt-in') {
+                // disable cookies
+                disableCookies();
+            }
+            if (type == 'opt-out') {
+                // enable cookies
+                enableCookies();
+            }
+        }
+    });
+</script>
+      </div>
+  </body>
+  </html>
+

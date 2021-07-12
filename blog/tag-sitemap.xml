@@ -3,6 +3,27 @@
 
 
     <url>
+        <loc>https://locize.com/blog/tags/website-localization-definition/</loc>
+        <lastmod>2021-07-12T10:18:30.292Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/website-localization-techniques/</loc>
+        <lastmod>2021-07-12T10:18:30.292Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/best-practices/</loc>
+        <lastmod>2021-07-12T10:18:30.292Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://locize.com/blog/tags/angular/</loc>
         <lastmod>2021-07-07T08:33:59.755Z</lastmod>
         <changefreq>weekly</changefreq>
