@@ -1,14 +1,45 @@
 extends pug/layout.pug
 
 block head
-  title Locize: Additional services provided
+  title Locize: More localization translation service options
   link(rel="canonical", href="/services.html")
   
 
 block headDescription
-  meta(name='description', content='Explore partners or extra services of locize. You may enhance your locize experience..')
+  meta(name='description', content='Find the best service for your project by looking through the partners and localization translation service providers of locize.')
 
 block content
+  section.section-white#introduction
+      .container
+        .row
+        .col-md-6
+          .section-heading
+            h1
+              | Localization translation service
+              br
+              | options for your project
+            p Find the best service for your project by looking through further functions, the translation partners and localization translation service providers of locize. We can help you find the best solution for your project on this page, whether you need to order translations directly or are looking for an automatic machine translation.
+           
+            br
+            br
+            h3 Go straight to your preferred section
+            ul.nav 
+              li.nav-item
+                a.nav-link(href='#services') Use locize with advanced options
+              li.nav-item
+                a.nav-link(href='#translationservices') Directly order translations from partners
+              li.nav-item
+                a.nav-link(href='#translationsagency') Use locize with one of our partner agencies
+              li.nav-item
+                a.nav-link(href='#more') More informations about the options
+              li.nav-item
+                a.nav-link(href='#contact') Get in contact with the team
+              
+              
+        .col-md-6
+          img.img-responsive(src='img/localization-translation-service.webp', alt='localization translation service')     
+      
+              
 
   section.section-secondary#services
     .container
@@ -484,6 +515,28 @@ block content
 
             .integration-start
               a.btn.btn-outline.btn-xl(href='https://www.tomedes.com/', target='_blank', style="background-color: #ccc") Learn more!
+
+
+  section.section-white.faq#more()
+    .container
+      .row
+        .col-lg-12
+          .section-heading
+            h2 More information
+            p When choosing a <b>localization translation service</b>, there are two major options: one that focuses on a professional and long-term approach, and the other that focuses on a rapid translation.
+
+            h3 Option 1: Use locize <a href="#translationsagency" title="agencies">with</a> or <a href="#services" title="services">without</a> translation agencies
+            h4 What makes it such a good <a href="/" title="localization platform">localization platform</a> for you?
+            p There are numerous ways to use locize for your localization-translation-service, such as managing all of your translations during a specific project such as a website, app, or video game. Planing and managing your localization project with continue translating while your project's development team adds new features. Allow in-house translators to manage translation without interfering with the development process. You may either request a translation from a third party using the locize interface, or utilize our localistars to connect directly with the translators themselves in a fair and open manner. Check out this guide to know more about <a href="https://docs.locize.com/guides-tips-and-tricks/working-with-translators" title="how to integrate with localistars">how to integrate with localistars</a>. Overall, locize is a very versatile solution for your company's or software's localization needs.
+
+            h3 Option 2: Choose a <a href="#translationservices" title="translation partner or marketplace">translation partner or marketplace</a> - the single-use solution
+            p You may use a professional and online translation service starting at $0.066. This can include translation needs in terms of <a href="/blog/website-localization/" title="website localization">website localization</a>, sophisticated papers, product brochures, as well as for financial, legal, and technological topics. Another option for similar needs is to use a marketplace with a large network of translators, where the marketplace selects the most cost-effective provider for you and where you can work directly with the translator.
+
+            h3 Read more about software localization
+            p Perhaps you wish to translate a software product? To think about the setup of a software-localization-process has many advantages. In the blog post on <a href="/blog/what-is-software-localization/" title="software localization">software localization</a>, you can learn why it is crucial for the user experience and how it may help you increase your sales.
+
+            
+
 
 
   section#contact.contact.bg-tertiary(i18next-options='{"ns": "common"}')
