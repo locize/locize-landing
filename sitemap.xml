@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://locize.com/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
       <image:image>
@@ -108,7 +108,7 @@
   </url>
   <url>
     <loc>https://locize.com/services.html</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
       <image:image>
@@ -178,7 +178,7 @@
   </url>
   <url>
     <loc>https://locize.com/javascript-localization.html</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
       <image:image>
@@ -208,9 +208,13 @@
   </url>
   <url>
     <loc>https://locize.com/i18next.html</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+      <image:image>
+        <image:loc>https://locize.com/img/i18next_how_it_works.png</image:loc>
+        <image:title>How does i18next work?</image:title>
+      </image:image>
       <image:image>
         <image:loc>https://locize.com/img/i18next-ecosystem.jpg</image:loc>
         <image:title>i18next ecosystem</image:title>
@@ -222,19 +226,19 @@
   </url>
   <url>
     <loc>https://locize.com/blog/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/guides-tips-and-tricks/working-with-translators/localistars</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/how-to-internationalize-react-i18next/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
       <image:image>
@@ -304,7 +308,7 @@
   </url>
   <url>
     <loc>https://locize.com/blog/how-does-server-side-internationalization-look-like/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
       <image:image>
@@ -326,7 +330,7 @@
   </url>
   <url>
     <loc>https://locize.com/how-it-works.html</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
       <image:image>
@@ -364,7 +368,7 @@
   </url>
   <url>
     <loc>https://locize.com/privacy.html</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
       <image:image>
@@ -374,7 +378,7 @@
   </url>
   <url>
     <loc>https://locize.com/customers.html</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
       <image:image>
@@ -572,7 +576,7 @@
   </url>
   <url>
     <loc>https://locize.com/blog/unleash-the-full-power-of-angular-i18next/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
       <image:image>
@@ -590,7 +594,7 @@
   </url>
   <url>
     <loc>https://locize.com/terms.html</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
       <image:image>
@@ -600,7 +604,7 @@
   </url>
   <url>
     <loc>https://locize.com/blog/give-vue-i18n-more-superpowers/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
       <image:image>
@@ -614,25 +618,25 @@
   </url>
   <url>
     <loc>https://docs.locize.com/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/integration/instrumenting-your-code</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/integration/api</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://locize.com/pricing.html</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
       <image:image>
@@ -642,7 +646,7 @@
   </url>
   <url>
     <loc>https://locize.com/for-your-team.html</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
       <image:image>
@@ -676,607 +680,607 @@
   </url>
   <url>
     <loc>https://locize.com/blog/tags/order/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/whats-inside/translation-memory</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/archives/2016/02/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/archives/2017/06/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/website-localization-techniques/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/more/caching</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/whats-inside/history</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/more/general-questions/do-i-have-to-use-the-locize-cdn-or-can-i-host-bundle-the-translations-directly</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/integration/supported-formats</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/locizify/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/localistars/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/beginning/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/guides-tips-and-tricks/migrating-from</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/localization-process/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/guides-tips-and-tricks/keeping-track-of-new-translations</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/archives/2016/11/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/whats-inside/review-workflow</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/archives/2016/10/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/different-views</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/more/2-factor-authentication-with-yubikey</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/archives/2017/02/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/locize-double-win-2018-for-translation-software/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/website-localization/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/polyglot/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/serverside/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/localization-definition/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/guides-tips-and-tricks/how-to-search</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/a-tale-of-the-last-10-years-in-web-development/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/issues</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/more/versioning</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/localization/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/locize/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/more/incontext-editor</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/categories/Post/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/archives/2020/06/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/integration/getting-started</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/more/general-questions/how-is-locize-different-from-the-alternatives</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/aws/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/serverless/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/more/namespaces</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/is-your-software-ready-for-localization/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/react/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/service/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/continuous-development/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/mail/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/what-is-software-localization/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/translation/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/integration/getting-started/add-a-new-project</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/integration/cli</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/i18next/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/backend/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/i18n/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/archives/2020/12/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/more/convince-your-boss-letter</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/archives/2021/04/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/continuous-delivery/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/server/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/guides-tips-and-tricks/working-with-translators</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/website-localization-definition/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/continuous-translation/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/more/backend-fallback</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/more/latency-optimization-tips-for-optimal-performance</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/continuous-integration/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/guides-tips-and-tricks/unused-translations</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/award/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/integration/webhook</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/using-locize-as-translator</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/guides-tips-and-tricks/going-production</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/internationalization/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/react-i18next/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/archives/2021/06/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/archives/2018/02/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/vue-i18n/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/whats-inside/auto-machine-translation</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/best-practices/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/archives/2021/07/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/guides-tips-and-tricks/migrating-an-i18next-project</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/localistars/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/more/general-questions/how-to-import-translations-from-a-file</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/archives/2018/04/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/continuous-localization/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/whats-inside</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/archives/2016/08/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/page/2/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/more/notifications</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/angular/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/whats-inside/cdn-content-delivery-network</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/archives/2016/06/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/new-locize/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/8-signs-you-should-improve-your-localization-process/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/next/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/software-localization/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/technology/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/archives/2018/08/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/cli/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/vue/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/archives/2016/04/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/archives/2017/08/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/what-is-software-localization/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/more/general-questions</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com//how-it-works.html</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
       <image:image>
@@ -1298,19 +1302,19 @@
   </url>
   <url>
     <loc>https://locize.com/blog/tags/formatjs/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://locize.com/blog/tags/web/</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://docs.locize.com/integration/getting-started/create-a-user-account</loc>
-    <lastmod>2021-07-12</lastmod>
+    <lastmod>2021-12-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
