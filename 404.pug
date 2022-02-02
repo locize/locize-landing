@@ -1,0 +1,27 @@
+extends pug/layout.pug
+
+block head
+  title locize - (404) Page not found
+
+block content
+
+  section.section-tertiary
+    .container
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h2 Page not found
+            hr
+
+  section.section-gray(style="padding: 0;")
+    .container
+      .row
+        .col-md-8.col-md-offset-2(style="position: relative;")
+          .header-content
+            .header-content-inner
+              .legal(style="background-color: #fff; padding: 20px; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
+                h3 The page you are looking for is not available or doesn't belong to this website!
+                
+                a.btn.btn-outline.btn-xl.page-scroll(href='/', style="color: #144199;") Back to home
+
+
