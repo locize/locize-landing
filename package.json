@@ -15,7 +15,8 @@
     "gulp-pug": "^4.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^3.0.2",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "locizify-ssg": "1.0.0"
   },
   "repository": {
     "type": "git",
@@ -27,7 +28,8 @@
   },
   "scripts": {
     "start": "gulp dev",
-    "build": "gulp build",
-    "sitemap": "npx sitemap-generator-cli https://locize.com"
+    "build": "gulp build && npm run ssg",
+    "sitemap": "npx sitemap-generator-cli https://locize.com",
+    "ssg": "locizify-ssg -i index.html -o {{lng}}.html -l de,it -s '{\"fallbackLng\":\"en\",\"backend\":{\"projectId\":\"3d0aa5aa-4660-4154-b6d9-907dbef10bb2\",\"version\":\"production\"},\"namespace\":\"landingpage\"}'"
   }
 }

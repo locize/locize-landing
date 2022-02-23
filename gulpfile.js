@@ -12,7 +12,7 @@ var pkg = require("./package.json");
 var banner = [
   "/*!\n",
   " * <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n",
-  " * Copyright 2017 -" + new Date().getFullYear(),
+  " * Copyright 2016-" + new Date().getFullYear(),
   " <%= pkg.author %>\n",
   " * All rights reserved\n",
   " */\n",
