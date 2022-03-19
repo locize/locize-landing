@@ -381,27 +381,62 @@ block content
     };
 
   script(type="application/ld+json").
-          {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://locize.com/javascript-localization.html"
-        },
-        "headline": "JavaScript localization: A step-by-step introductory guide",
-        "image": "https://locize.com/img/localization/javascript-localization.png",  
-        "author": {
-          "@type": "Person",
-          "name": "Sandro Huber"
-        },  
-        "publisher": {
-          "@type": "Organization",
-          "name": "inweso GmbH",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://locize.com/img/locize_white.svg"
-          }
-        },
-        "datePublished": "2021-05-14",
-        "dateModified": "2021-05-19"
-      }
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://locize.com/javascript-localization.html"
+      },
+      "headline": "JavaScript localization: A step-by-step introductory guide",
+      "image": "https://locize.com/img/localization/javascript-localization.png",  
+      "author": {
+        "@type": "Person",
+        "name": "Sandro Huber"
+      },  
+      "publisher": {
+        "@type": "Organization",
+        "name": "inweso GmbH",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://locize.com/img/locize_white.svg"
+        }
+      },
+      "datePublished": "2021-05-14",
+      "dateModified": "2021-05-19"
+    }
+
+  script(type="application/ld+json").
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is JavaScript localization?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Read the introduction to this page about internationalization (also known as i18n) of JavaScript software (client or server side). Localization (also known as l10n) is more about the content. The translator, developer or project manager prepares texts, graphics, sounds etc. so you can target a specific language or region."
+        }
+      },{
+        "@type": "Question",
+        "name": "How to make my JavaScript app multilingual (open source)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use an i18n framework (like i18next) of your choice and instrument your code respectively. Navigate to the detailed checklist to know how to make a JavaScript application multilingual."
+        }
+      },{
+        "@type": "Question",
+        "name": "What is i18n (internationalization)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Software products are primarily prepared for your main-market and -language. During the internationalization of a software product new market targets will be added. Adjusting your software to handle this new markets with languages, locales and regions is called i18n process. Learn more about internationalization and what is used for in our complete guide with the title 'what is i18n'."
+        }
+      },{
+        "@type": "Question",
+        "name": "How can I have multiple languages on my website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Decide which JavaScript framework to use. Then install the i18next npm-package and next add the 'i18next.init' code to your application. Follow the JavaScript example to take your first steps with i18next. Or just read our article about website localization."
+        }
+      }]
+    }
