@@ -945,6 +945,7 @@ footer .footer-copyright {
   max-height: 40px !important;
   min-height: 40px !important;
   margin-bottom: 0 !important;
+  width: auto;
 }
 @media (max-width: 768px) {
   .slide img {

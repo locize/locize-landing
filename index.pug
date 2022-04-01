@@ -626,12 +626,28 @@ html(lang='en')
 
     script(src='lib/jquery/jquery.min.js')
     script(src='lib/bootstrap/js/bootstrap.min.js')
-    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')
     script(src='js/main.min.js')
-    script(src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
+    script(src='https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
 
     script(type="text/javascript").
+      $.fn.randomize = function(selector){
+        var $elems = selector ? $(this).find(selector) : $(this).children(),
+            $parents = $elems.parent();
+
+        $parents.each(function(){
+            $(this).children(selector).sort(function(){
+                return Math.round(Math.random()) - 0.5;
+            }).detach().appendTo(this);
+        });
+
+        return this;
+      };
+
       $(document).ready(function() {
+        // randomize the slides and then call slick
+        $('#customers-slider').randomize('.slide');
+
         $('#customers-slider').slick({
           lazyLoad: 'ondemand',
           slidesToShow: 12,
