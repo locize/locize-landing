@@ -36,6 +36,7 @@ html(lang='en')
     link(rel='stylesheet', href='lib/simple-line-icons/css/simple-line-icons.css')
     link(rel='stylesheet', href='lib/device-mockups/device-mockups.min.css')
     link(href='css/main.min.css', rel='stylesheet')
+    link(rel="stylesheet", href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
 
     //if lt IE 9
       script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
@@ -153,27 +154,35 @@ html(lang='en')
                       img.img-responsive(src='img/screenshots/iphone6/localization-management-platform.jpg', alt='localization management platform', loading='lazy')
                     // .button
 
-    section#customers.customers(translated="")
-      .container
+    section#customers.customers.customers-logos(translated="")
+      .container(style="min-width: 100%;")
         .row
-          .col-lg-12.flex-space
-            a(href='http://www.bethesda.net/' target='_blank')
-              img.grayscale(src='img/customers/bethesda-net-black.svg', style='height: 25px;opacity: 0.4;' alt='customer logo bethesda.net', loading='lazy')
+          section.col-lg-12#customers-slider.slider(data-arrows="true", style="padding: 0;")
+            each image in customerLogos
+              .slide
+                img.grayscale(data-lazy='img/customers/' + image, alt=image.split('.')[0])
 
-            a(href='https://abb.com/' target='_blank')
-              img(style='max-height: 40px;', src='img/customers/abb.png', alt='customer logo abb', loading='lazy')
+    //- section#customers.customers(translated="")
+    //-   .container
+    //-     .row
+    //-       .col-lg-12.flex-space
+    //-         a(href='http://www.bethesda.net/' target='_blank')
+    //-           img.grayscale(src='img/customers/bethesda.svg', style='height: 25px;opacity: 0.4;' alt='customer logo bethesda.net', loading='lazy')
 
-            //- a(href='http://www.wuxus.com/' target='_blank')
-            //-   img.grayscale(src='img/customers/wuxus.png', alt='customer logo wuxus', loading='lazy')
+    //-         a(href='https://abb.com/' target='_blank')
+    //-           img(style='max-height: 40px;', src='img/customers/abb.png', alt='customer logo abb', loading='lazy')
 
-            //- a(href='https://www.shoprepublic.de/' target='_blank')
-            //-   img.grayscale(style='max-height: 45px', src='img/customers/shoprepublic.png', alt='customer logo shoprepublic', loading='lazy')
+    //-         //- a(href='http://www.wuxus.com/' target='_blank')
+    //-         //-   img.grayscale(src='img/customers/wuxus.png', alt='customer logo wuxus', loading='lazy')
 
-            a(href='https://www.fubo.tv' target='_blank')
-              img.grayscale(style='max-height: 40px', src='img/customers/fubotv.png', alt='customer logo fubo', loading='lazy')
+    //-         //- a(href='https://www.shoprepublic.de/' target='_blank')
+    //-         //-   img.grayscale(style='max-height: 45px', src='img/customers/shoprepublic.png', alt='customer logo shoprepublic', loading='lazy')
 
-            a(href='https://lynk.global/' target='_blank')
-              img.grayscale(style='max-height: 40px', src='img/customers/lynk.png', alt='customer logo lynk', loading='lazy')
+    //-         a(href='https://www.fubo.tv' target='_blank')
+    //-           img.grayscale(style='max-height: 40px', src='img/customers/fubotv.png', alt='customer logo fubo', loading='lazy')
+
+    //-         a(href='https://lynk.global/' target='_blank')
+    //-           img.grayscale(style='max-height: 40px', src='img/customers/lynk.png', alt='customer logo lynk', loading='lazy')
 
 
     section.section-tertiary#video(style="display: none;", translated="")
@@ -619,6 +628,35 @@ html(lang='en')
     script(src='lib/bootstrap/js/bootstrap.min.js')
     script(src='//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js')
     script(src='js/main.min.js')
+    script(src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
+
+    script(type="text/javascript").
+      $(document).ready(function() {
+        $('#customers-slider').slick({
+          lazyLoad: 'ondemand',
+          slidesToShow: 12,
+          slidesToScroll: 2,
+          autoplay: true,
+          autoplaySpeed: 1500,
+          arrows: false,
+          dots: false,
+          infinite: true,
+          variableWidth: true,
+          pauseOnHover: false,
+          responsive: [{
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 8
+            }
+          }, {
+            breakpoint: 520,
+            settings: {
+              slidesToShow: 6
+            }
+          }]
+        });
+      });
+
 
     //- script(src='https://www.unpkg.com/stick-to-me@1.0.2/src/stick-to-me.js')
     //- script(type="text/javascript").

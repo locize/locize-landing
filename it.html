@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="lib/simple-line-icons/css/simple-line-icons.css">
     <link rel="stylesheet" href="lib/device-mockups/device-mockups.min.css">
     <link href="css/main.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <!--if lt IE 9
     script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
     script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
@@ -170,10 +171,83 @@
 </div>
 </div>
 </header>
-    <section class="customers" id="customers" translated="">
-      <div class="container">
+    <section class="customers customers-logos" id="customers" translated="">
+      <div class="container" style="min-width: 100%;">
         <div class="row">
-          <div class="col-lg-12 flex-space"><a href="http://www.bethesda.net/" target="_blank"><img class="grayscale" src="img/customers/bethesda-net-black.svg" style="height: 25px;opacity: 0.4;" alt="customer logo bethesda.net" loading="lazy"></a><a href="https://abb.com/" target="_blank"><img style="max-height: 40px;" src="img/customers/abb.png" alt="customer logo abb" loading="lazy"></a><a href="https://www.fubo.tv" target="_blank"><img class="grayscale" style="max-height: 40px" src="img/customers/fubotv.png" alt="customer logo fubo" loading="lazy"></a><a href="https://lynk.global/" target="_blank"><img class="grayscale" style="max-height: 40px" src="img/customers/lynk.png" alt="customer logo lynk" loading="lazy"></a></div>
+          <section class="col-lg-12 slider" id="customers-slider" data-arrows="true" style="padding: 0;">
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/abb.png" alt="abb"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/airtm.png" alt="airtm"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/alchemist.png" alt="alchemist"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/appointedd.png" alt="appointedd"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/atroo.png" alt="atroo"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/barntools.png" alt="barntools"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/beelance.png" alt="beelance"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/bethesda.svg" alt="bethesda"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/bookingfactory.png" alt="bookingfactory"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/carina.svg" alt="carina"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/catena.png" alt="catena"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/chax.png" alt="chax"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/chilldev.png" alt="chilldev"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/cirplus.png" alt="cirplus"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/classnet.png" alt="classnet"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/clevy.svg" alt="clevy"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/coherent.png" alt="coherent"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/creadi.svg" alt="creadi"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/czapp.jpg" alt="czapp"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/czarnikow.jpg" alt="czarnikow"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/dig-it-ally.png" alt="dig-it-ally"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/edzo.png" alt="edzo"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/elephantlearning.png" alt="elephantlearning"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/etranslate.png" alt="etranslate"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/fideli.jpg" alt="fideli"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/finreg.png" alt="finreg"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/frontdesk24.png" alt="frontdesk24"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/fubotv.png" alt="fubotv"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/gamerefinery.png" alt="gamerefinery"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/geoimpact.png" alt="geoimpact"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/hypertrend.png" alt="hypertrend"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/iw_tech.svg" alt="iw_tech"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/juicar.svg" alt="juicar"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/ke-chain.png" alt="ke-chain"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/logiscool.png" alt="logiscool"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/ludwig.png" alt="ludwig"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/lynk.png" alt="lynk"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/maul.png" alt="maul"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/mergevr.png" alt="mergevr"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/nakipower.png" alt="nakipower"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/nfctron.png" alt="nfctron"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/packlink.svg" alt="packlink"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/panelista.png" alt="panelista"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/phaver.png" alt="phaver"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/photogram.png" alt="photogram"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/pigknows.png" alt="pigknows"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/pilotene.svg" alt="pilotene"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/pitchler.svg" alt="pitchler"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/pool.png" alt="pool"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/quotepro.png" alt="quotepro"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/rduce.png" alt="rduce"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/realadvisor.png" alt="realadvisor"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/rebill.png" alt="rebill"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/redcross.svg" alt="redcross"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/retraced.png" alt="retraced"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/richland.jpeg" alt="richland"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/shiftcrypto.png" alt="shiftcrypto"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/shoprepublic.png" alt="shoprepublic"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/skodel.png" alt="skodel"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/span.png" alt="span"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/spiff3d.svg" alt="spiff3d"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/spt.png" alt="spt"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/syarah.png" alt="syarah"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/tegoly.svg" alt="tegoly"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/vgpro.png" alt="vgpro"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/wavy.png" alt="wavy"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/willskill.svg" alt="willskill"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/withlocals.png" alt="withlocals"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/worldshopping.png" alt="worldshopping"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/wusoma.png" alt="wusoma"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/wuxus.png" alt="wuxus"></div>
+            <div class="slide"><img class="grayscale" data-lazy="img/customers/wuxus.svg" alt="wuxus"></div>
+          </section>
         </div>
       </div>
     </section>
@@ -871,6 +945,36 @@
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="js/main.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#customers-slider').slick({
+          lazyLoad: 'ondemand',
+          slidesToShow: 12,
+          slidesToScroll: 2,
+          autoplay: true,
+          autoplaySpeed: 1500,
+          arrows: false,
+          dots: false,
+          infinite: true,
+          variableWidth: true,
+          pauseOnHover: false,
+          responsive: [{
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 8
+            }
+          }, {
+            breakpoint: 520,
+            settings: {
+              slidesToShow: 6
+            }
+          }]
+        });
+      });
+      
+      
+    </script>
     <script type="text/javascript">
       $(document).ready(function() {
         //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG

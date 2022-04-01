@@ -1,15 +1,19 @@
-var gulp = require("gulp");
-var less = require("gulp-less");
-var pug = require("gulp-pug");
-var browserSync = require("browser-sync").create();
-var header = require("gulp-header");
-var cleanCSS = require("gulp-clean-css");
-var rename = require("gulp-rename");
-var uglify = require("gulp-uglify");
-var pkg = require("./package.json");
+const gulp = require("gulp");
+const less = require("gulp-less");
+const pug = require("gulp-pug");
+const browserSync = require("browser-sync").create();
+const header = require("gulp-header");
+const cleanCSS = require("gulp-clean-css");
+const rename = require("gulp-rename");
+const uglify = require("gulp-uglify");
+const pkg = require("./package.json");
+const { readdirSync } = require("fs");
+const { join } = require("path");
+
+const customerLogos = readdirSync(join(__dirname, 'img/customers'))
 
 // Set the banner content
-var banner = [
+const banner = [
   "/*!\n",
   " * <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n",
   " * Copyright 2016-" + new Date().getFullYear(),
@@ -38,7 +42,10 @@ gulp.task("pug", function buildHTML() {
     .src(["*.pug"])
     .pipe(
       pug({
-        pretty: true
+        pretty: true,
+        locals: {
+          customerLogos
+        }
       })
     )
     .pipe(gulp.dest("./"))
