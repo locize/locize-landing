@@ -2,7 +2,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Locize is a pay-per-use localization management platform that uses translation software to enable continuous localization.">
+    <meta name="description" content="Locize ist eine Pay-per-Use-Lokalisierungsmanagementplattform, die Übersetzungssoftware verwendet, um eine kontinuierliche Lokalisierung zu ermöglichen.">
     <meta name="author" content="inweso GmbH">
     <meta name="copyright" content="inweso GmbH">
     <meta name="keywords" content="localization,internationalization,localize,translate,locize,l10n,i18n,javascript,nodejs,localization as a service,saas translation,saas localization,laas,continuous localization,DevOps,process,free,website localization,service,software,web app,web,mobile,desktop,game,translation management,online,automate,process of localization,localization process,translation service,localization service,translation software,landing page,javascript localize,localization tool,localizing a website,localization solution,cloud localization,cloud translation,serverless,cloud,cdn,react,react.js,reactjs,next,next.js,nextjs,angular,vue,vue-js,jquery,nodejs,i18next,json,api,react-native,localization api,translation api,localistars,app localization services,localization management platform,localization platform,professional translation and localization services,website translation management,app localization service,online translation management,i18next translation management,i18next translation,manage translations,manage translation files">
@@ -21,7 +21,7 @@
     <meta name="twitter:description" content="locize - Bridging the gap between translation and development. With locize we remove the pain in the translation process. No more delays in shipping your software because of missing translations. Translator could keep up with changes from day one. The continuous localization process keeps up with your demanding business. Stop waiting - start localizing.">
     <meta name="twitter:creator" content="@locize">
     <meta name="slack-app-id" content="A71NM84Q6">
-    <title>localization &amp; translation management platform | locize</title>
+    <title>Lokalisierungs- und Übersetzungsmanagement-Plattform | locize</title>
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
@@ -39,6 +39,11 @@
     <!-- LOCIZIFY-->
     <script src="https://unpkg.com/locizify@5"></script>
     <script>
+      window.locizifySSG = function () {
+        document.title = locizify.i18next.t('title');
+        document.querySelector('meta[name="description"]').setAttribute("content", locizify.i18next.t('description'));
+      }
+      locizify.i18next.on('initialized', window.locizifySSG);
       locizify.init({ lng: 'de',
         //- saveMissing: true,
         fallbackLng: 'en',

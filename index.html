@@ -41,6 +41,11 @@
     <!-- LOCIZIFY-->
     <script src="https://unpkg.com/locizify@5"></script>
     <script>
+      window.locizifySSG = function () {
+        document.title = locizify.i18next.t('title');
+        document.querySelector('meta[name="description"]').setAttribute("content", locizify.i18next.t('description'));
+      }
+      locizify.i18next.on('initialized', window.locizifySSG);
       locizify.init({
         //- saveMissing: true,
         fallbackLng: 'en',
