@@ -322,7 +322,7 @@
           var e = document.createElement("script");
           e.type = "text/javascript";
           e.async = true;
-          e.src = "https://www.googletagmanager.com/gtag/js?id=UA-78143856-1";
+          e.src = "https://www.googletagmanager.com/gtag/js?id=G-X50E21BGKG";
           var a = document.getElementsByTagName("script")[0];
           a.parentNode.insertBefore(e, a);
           window.dataLayer = window.dataLayer || [];
@@ -330,6 +330,7 @@
             dataLayer.push(arguments);
           }
           gtag('js', new Date());
+          gtag('config', 'G-X50E21BGKG', { 'anonymize_ip': true });
           gtag('config', 'UA-78143856-1', { 'anonymize_ip': true });
       
           if (typeof window.enableCookiesHook === 'function') window.enableCookiesHook();
