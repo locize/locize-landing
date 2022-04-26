@@ -165,7 +165,7 @@ html(lang='en')
           section.col-lg-12#customers-slider.slider(data-arrows="true", style="padding: 0;")
             each image in customerLogos
               .slide
-                img.grayscale(data-lazy='img/customers/' + image, alt=image.split('.')[0])
+                img.grayscale(data-lazy='img/customers/' + image, alt=image.split('.').slice(0,-1).join('.'))
 
     //- section#customers.customers(translated="")
     //-   .container
