@@ -666,6 +666,13 @@ section.testimonials .testimonial .testimonial-content {
 section.testimonials .testimonial .testimonial-content p {
   color: #333;
 }
+section.testimonials .testimonial .testimonial-content .story-title {
+  color: #333;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
 section.testimonials .testimonial .author {
   margin-top: auto;
   color: #222;

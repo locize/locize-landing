@@ -24,24 +24,11 @@ block content
           .col-lg-4.col-md-4.col-sm-12
             .testimonial(style="height: 580px;")
               div(style='margin: -30px -20px 0;')
-                img(style='width: 100%; max-height: initial; margin-bottom: 0;', src='img/stories/hypertrend.gif' alt="hypertrend" loading="lazy")
-              .text-center(style='background-color: #ddd; margin: 0px -20px 10px; padding: 10px;')
-                a.btn.btn-outline.btn-sm(href='http://www.hypertrends.com/2017/11/localization-using-locize/' target="_blank") Read the full story
-              .testimonial-content
-                p.strong Localization as a Service using locize
-                p So you manage Localizations in Word? Excel? JSON? XML? Notepad? Believe it or not, we’ve tried it all.
-              .author
-                hr
-                | Anup Marwadi, Hypertrends.com
-
-          .col-lg-4.col-md-4.col-sm-12
-            .testimonial(style="height: 580px;")
-              div(style='margin: -30px -20px 0;')
                 img(style='width: 100%; max-height: initial; margin-bottom: 0;', src='img/stories/avocode.gif' alt="avocode" loading="lazy")
               .text-center(style='background-color: #ddd; margin: 0px -20px 10px; padding: 10px;')
                 a.btn.btn-outline.btn-sm(href='https://blog.avocode.com/how-we-translated-the-avocode-website-written-in-next-js-with-the-i18next-package-2-2-9239ddd730f0' target="_blank") Read the full story
               .testimonial-content
-                p.strong How we translated the Avocode website written in Next.js with the i18next package
+                h3.story-title How we translated the Avocode website written in Next.js with the i18next package
                 p How to translate a website that is always changing?
               .author
                 hr
@@ -54,12 +41,24 @@ block content
               .text-center(style='background-color: #ddd; margin: 0px -20px 10px; padding: 10px;')
                 a.btn.btn-outline.btn-sm(href='https://itnext.io/reactintl-namespaces-2ba85d59133f' target="_blank") Read the full story
               .testimonial-content
-                p.strong ReactIntl + Namespaces + locize
+                h3.story-title ReactIntl + Namespaces + locize
                 p How ReactIntl in combination with lociize helps you with internationalization and localisation related tasks in your project.
               .author
                 hr
                 | Maciej Warszawski
 
+          .col-lg-4.col-md-4.col-sm-12
+            .testimonial(style="height: 580px;")
+              div(style='margin: -30px -20px 0;')
+                img(style='width: 100%; max-height: initial; margin-bottom: 0;', src='img/stories/hypertrend.gif' alt="hypertrend" loading="lazy")
+              .text-center(style='background-color: #ddd; margin: 0px -20px 10px; padding: 10px;')
+                a.btn.btn-outline.btn-sm(href='http://www.hypertrends.com/2017/11/localization-using-locize/' target="_blank") Read the full story
+              .testimonial-content
+                h3.story-title Localization as a Service using locize
+                p So you manage Localizations in Word? Excel? JSON? XML? Notepad? Believe it or not, we’ve tried it all.
+              .author
+                hr
+                | Anup Marwadi, Hypertrends.com
 
   section#testimonials.testimonials.section-gray
     .container
@@ -75,8 +74,9 @@ block content
           .col-lg-6.col-md-4.col-sm-12
             .testimonial.testimonial-fullwidth(style="height: 620px;")
               .testimonial-title
-                img.grayscale(style='max-height: 70px;' src='img/customers/finreg.png' alt="finreg" loading="lazy")
+                img.grayscale(style='max-height: 60px;' src='img/customers/finreg.png' alt="finreg" loading="lazy")
               .testimonial-content
+                h3(style="display: none;") locize is a fantastic product for various reasons
                 p(style="font-size: 16px;") We’ve been using locize for about 6 months for 2 different sites. locize is a fantastic product for various reasons:
                 ul(style="font-size: 15px;")
                   li Easy interface to administer translations. One can control exactly what each translator can see and they love using it. The interface also makes it easy to see what translations are missing as well as split up your application into different namespaces.
@@ -92,10 +92,11 @@ block content
 
 
           .col-lg-6.col-md-4.col-sm-12
-            .testimonial.testimonial-fullwidth.testimonial-fullwidth(style="height: 620px;")
+            .testimonial.testimonial-fullwidth(style="height: 620px;")
               .testimonial-title
-                img.grayscale(style='max-height: 70px;' src='img/customers/logiscool.png' alt="logiscool" loading="lazy")
+                img.grayscale(style='max-height: 60px;' src='img/customers/logiscool.png' alt="logiscool" loading="lazy")
               .testimonial-content
+                h3(style="display: none;") Using i18next as our international framework enables us to use the same technology around our whole software stack, regardless the actual backend or framework we use. locize is the icing on the cake – it made translation management unspeakably easier.
                 p(style="font-size: 16px;") At Logiscool, we teach kids programming in more than ten countries. While the universal language of programming is English, managing our website translations for a growing number of languages quickly became a challenge.
                 p(style="font-size: 16px;") Using i18next as our international framework enables us to use the same technology around our whole software stack, regardless the actual backend or framework we use. locize is the icing on the cake – it made translation management unspeakably easier.
                 p(style="font-size: 16px;") We love the editor support for in-text HTML tags and there’s finally someone who’s prepared to handle plurals by the book. locize also helps us staying in touch with our growing number of translators at a daily basis, while the locize API enables us to safely integrate with our build systems. Thank you!
@@ -111,6 +112,7 @@ block content
               .testimonial-title
                 img.grayscale(style='max-height: 40px;', src='img/customers/ke-chain.png' alt="ke chain" loading="lazy")
               .testimonial-content
+                h3(style="display: none;") We integrated locize within a day using the React i18n packages available. It was a frictionless experience integrating it and a frictionless experience adding the translations. It is ideal for a team that want to stay agile without imposing a forced translation flow.
                 p(style="font-size: 16px;") We use locize to translate our product KE-chain. KE-chain is a cloud-based software product used for digital registrations in the construction and infra industry and now available in multiple languages.
                 p(style="font-size: 16px;") We integrated locize within a day using the React i18n packages available. It was a frictionless experience integrating it and a frictionless experience adding the translations. It is ideal for a team that want to stay agile without imposing a forced translation flow.
                 p(style="font-size: 16px;") The cost structure suited our use better than alternative solutions. We like using the translation hints by services such as Google, to help us to get 'something' quick which may be altered later by a native speaker.
@@ -125,6 +127,7 @@ block content
               .testimonial-title
                 img.grayscale(style='max-height: 50px;', src='img/customers/worldshopping.png' alt="worldshopping" loading="lazy")
               .testimonial-content
+                h3(style="display: none;") locize is a really outstanding service due to the following points...
                 p It's a really outstanding service due to the following points.
                 ul(style="font-size: 18px;")
                   li The fact that management of several languages can be corrected quickly through the operation of cross border commerce sites
