@@ -595,6 +595,21 @@ section.features .feature-item p {
     margin: 0;
   }
 }
+.values-box {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.values-box .value {
+  padding: 15px;
+  margin: 10px;
+  background-color: #2295f2;
+  border-radius: 10px;
+}
+.values-box .value h3 {
+  font-size: 19px;
+}
 section.customers {
   padding: 5rem 0;
   background-color: #eeeeee;
