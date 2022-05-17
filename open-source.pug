@@ -1,0 +1,146 @@
+extends pug/layout.pug
+
+block headDescription
+  meta(name='description', content='locize - The Translation Management for Open Source projects')
+
+block head
+  title locize - The Translation Management for Open Source projects
+
+block content
+
+  section.section-gray(style="padding-bottom: 0;")
+    .container
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h2 locize for Open Source
+            p.text-muted
+              strong We support the open source community.
+              br
+              | If you're building awesome non-profit projects that could use the power of locize, we're happy to help.
+              br
+              | Make your content multilingual to reach a global audience.
+
+  section.section-white
+    .container
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h2 We love the open-source philosophy and are eager to support community projects.
+            
+
+      .row
+        .col-md-6
+          img(src="/img/dev.png" style="width: 80%;" alt="Open Source Developer" loading="lazy")
+        .col-md-6
+          p
+            | Are you an open-source developer?
+            br
+            | Would you like to use locize for your open-source project?
+            br
+            | Let's make a deal, and we'll tailor a suitable plan for you!
+
+          p
+            strong Tell us about your project...
+            ul
+              li Is the project licensed under an approved license from an open-source initiative?
+              li Is your project's source code publicly available for download?
+              li Have you any commercial products related to the open-source project?
+              li Are the project lead?
+              li How long have you been working on your open-source project?
+              li Do you have an active community of collaborators?
+
+          a.btn.btn-outline.btn-xl(style='background: #2196f3;' href='mailto:support@locize.com') Contact us!
+
+  section.section-primary
+    .container
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h2 We love open source
+            h3
+              | locize is the 
+              a(href="https://www.i18next.com/misc/the-history-of-i18next", target="_blank", style="color: white;") official sponsor
+              |  of i18next.
+              p.text-muted(style="display: inline;") With using locize you directly support the future of i18next.
+            hr
+
+      .row
+        .col-lg-12
+          h3 The creators of i18next are also the founders of locize
+
+          p The i18next community provided us with great feedback. Out of that response and our own experiences we learnt providing instrumentation for doing proper internationalization just is not enough.
+
+          p Helping developers to get their applications translated is great - but there is more to it.
+
+          ul.light-font
+            li How do you integrate any translation services / agency?
+
+            li How do you keep track of new or removed content?
+
+            li How you handle proper versioning?
+
+            li How you deploy translation changes without deploying your complete application?
+
+            li and a lot more...
+            
+          h3 locize to the rescue
+
+          p Having created the foundation with 
+            a(href="https://www.i18next.com/", target="_blank", style="color: white;") i18next
+            |  it was a long journey to 
+            b localization as a service
+            | .
+
+          ul.light-font
+            li
+              a(href="https://docs.locize.com/integration/instrumenting-your-code", target="_blank", style="color: white;") Easy to integrate
+
+            li
+              a(href="/how-it-works.html#continouslocalization", target="_blank", style="color: white;") Continuous deployment? Continuous localization with a CDN!
+
+            li Manage the translation files with ease
+
+            li
+              a(href="https://docs.locize.com/guides-tips-and-tricks/working-with-translators/localistars", target="_blank", style="color: white;") Order professional translations
+
+            li Analytics & Statistics
+
+            li
+              a(href="https://docs.locize.com/whats-inside/cdn-content-delivery-network", target="_blank", style="color: white;") Profit from our content delivery network
+
+            li
+              a(href="https://docs.locize.com/more/versioning", target="_blank", style="color: white;") Versioning of your translations
+            
+            li
+              a(href="https://docs.locize.com/whats-inside/auto-machine-translation", style="color: white;") Automatic and On-Demand Machine Translation
+
+            li
+              a(href="https://docs.locize.com/more/general-questions/how-is-locize-different-from-the-alternatives#service-lock-in", target="_blank", style="color: white;") Riskfree: Take your data with you
+
+            li
+              a(href="/pricing.html", style="color: white;") Transparent and fair pricing
+
+            li and a lot more...
+
+          br
+
+        h2(style="font-size: 30px; margin-top: 10px;")
+          b locize
+          |  is the perfect translation management tool for your 
+          b i18next
+          |  project.
+          h3(style="text-align: center;")
+            | ➡️ 
+            a(href="https://www.i18next.com", target="_blank", style="color: white;") i18next
+            |  + 
+            a(href="/", style="color: white;") locize
+            |  = 
+            a(href="/how-it-works.html#continouslocalization", style="color: white;") true continuous localization
+
+
+  section#contact.contact.bg-tertiary(i18next-options='{"ns": "common"}')
+    .container
+      h2 Need some assistance?
+      p Get any questions you may have about our pricing or platform answered by one of our team members.
+      a.btn.btn-outline.btn-xl.page-scroll(href='mailto:support@locize.com') Contact us!
