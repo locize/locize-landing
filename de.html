@@ -11,11 +11,12 @@
     <link rel="alternate" href="https://locize.com/?lng=en" hreflang="en">
     <link rel="alternate" href="https://locize.com/" hreflang="x-default">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="locize - continuous localization as a service">
+    <meta property="og:title" content="Lokalisierungs- und Übersetzungsmanagement-Plattform | locize">
     <meta property="og:url" content="https://locize.com">
-    <meta property="og:site_name" content="locize - continuous localization as a service">
-    <meta property="og:description" content="locize - Bridging the gap between translation and development. With locize we remove the pain in the translation process. No more delays in shipping your software because of missing translations. Translator could keep up with changes from day one. The continuous localization process keeps up with your demanding business. Stop waiting - start localizing.">
-    <meta property="og:locale" content="en">
+    <meta property="og:site_name" content="Lokalisierungs- und Übersetzungsmanagement-Plattform | locize">
+    <meta property="og:description" content="Locize ist eine Pay-per-Use-Lokalisierungsmanagementplattform, die Übersetzungssoftware verwendet, um eine kontinuierliche Lokalisierung zu ermöglichen.">
+    <meta property="og:locale" content="de">
+    <meta property="og:image" content="img/locize_color.svg">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="locize - continuous localization as a service">
     <meta name="twitter:description" content="locize - Bridging the gap between translation and development. With locize we remove the pain in the translation process. No more delays in shipping your software because of missing translations. Translator could keep up with changes from day one. The continuous localization process keeps up with your demanding business. Stop waiting - start localizing.">
@@ -42,6 +43,10 @@
       window.locizifySSG = function () {
         document.title = locizify.i18next.t('title');
         document.querySelector('meta[name="description"]').setAttribute("content", locizify.i18next.t('description'));
+        document.querySelector('meta[property="og:title"]').setAttribute("content", locizify.i18next.t('title'));
+        document.querySelector('meta[property="og:site_name"]').setAttribute("content", locizify.i18next.t('title'));
+        document.querySelector('meta[property="og:description"]').setAttribute("content", locizify.i18next.t('description'));
+        document.querySelector('meta[property="og:locale"]').setAttribute("content", locizify.i18next.resolvedLanguage);
       }
       locizify.i18next.on('initialized', window.locizifySSG);
       locizify.init({ lng: 'de',
