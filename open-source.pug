@@ -2,9 +2,14 @@ extends pug/layout.pug
 
 block headDescription
   meta(name='description', content='locize - The Translation Management for Open Source projects')
+  meta(property='og:title', content='locize - The Translation Management for Open Source projects')
+  meta(property='og:description', content='locize - The Translation Management for Open Source projects')
+  meta(name='twitter:title', content='locize - The Translation Management for Open Source projects')
+  meta(name='twitter:description', content='locize - The Translation Management for Open Source projects')
 
 block head
   title locize - The Translation Management for Open Source projects
+  link(rel="canonical", href="/open-source.html")
 
 block content
 
