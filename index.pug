@@ -241,7 +241,7 @@ html(lang='en')
                     .device-wrapper
                       .device(data-device="MacbookPro", data-orientation="portrait", data-color="black", style="z-index: 0;")
                         .screen
-                          img.img-responsive(src='img/screenshots/screen/integrate_s.jpg', alt='locize integration', loading='lazy')
+                          img.img-responsive.modalify(src='img/screenshots/screen/integrate_s.jpg', full='img/screenshots/screen/integrate.png', alt='locize integration', loading='lazy')
                         .button
                     h3 Time saving over 60%
                     p
@@ -255,7 +255,7 @@ html(lang='en')
                     .device-wrapper
                       .device(data-device="MacbookPro", data-orientation="portrait", data-color="black", style="z-index: 0;")
                         .screen
-                          img.img-responsive(src='img/screenshots/screen/dashboard_s.jpg', alt='locize statistics', loading='lazy')
+                          img.img-responsive.modalify(src='img/screenshots/screen/dashboard_s.jpg', full='img/screenshots/screen/dashboard.png', alt='locize statistics', loading='lazy')
                     h3 Continuous Localization Lifecycle
                     p
                       | locize enables you to separate your development and translation process. Keep translating while your development team adds new features to your project.
@@ -269,7 +269,7 @@ html(lang='en')
                     .device-wrapper
                       .device(data-device="MacbookPro", data-orientation="portrait", data-color="black", style="z-index: 0;")
                         .screen
-                          img.img-responsive(src='img/screenshots/screen/incontext_editor_s.jpg', alt='locize in-context editor', loading='lazy')
+                          img.img-responsive.modalify(src='img/screenshots/screen/incontext_editor_s.jpg', full='img/screenshots/screen/incontext_editor.png', alt='locize in-context editor', loading='lazy')
                     h3 Context Matters &mdash; InContext Editing
                     p
                       | Doing proper translations needs more information by providing the context. The best context is always the place where the content is used – your website!
@@ -282,7 +282,7 @@ html(lang='en')
                     .device-wrapper
                       .device(data-device="MacbookPro", data-orientation="portrait", data-color="black", style="z-index: 0;")
                         .screen
-                          img.img-responsive(src='img/screenshots/screen/editor_s.jpg', alt='locize translation editor', loading='lazy')
+                          img.img-responsive.modalify(src='img/screenshots/screen/editor_s.jpg', full='img/screenshots/screen/editor.png', alt='locize translation editor', loading='lazy')
                     h3 Translation Management
                     p
                       | You can translate your content using our powerful editor.
@@ -305,7 +305,7 @@ html(lang='en')
                     .device-wrapper
                       .device(data-device="MacbookPro", data-orientation="portrait", data-color="black", style="z-index: 0;")
                         .screen
-                          img.img-responsive(src='img/screenshots/screen/translationmemory_s.jpg', alt='locize translation memory', loading='lazy')
+                          img.img-responsive.modalify(src='img/screenshots/screen/translationmemory_s.jpg', full='img/screenshots/screen/translationmemory.png', alt='locize translation memory', loading='lazy')
                     h3 The smart translation memory
                     p
                       | With our translation memory you never have to translate the same text again. Simply reuse your exiting translatins over and over again.
@@ -317,7 +317,7 @@ html(lang='en')
                     .device-wrapper
                       .device(data-device="MacbookPro", data-orientation="portrait", data-color="black", style="z-index: 0;")
                         .screen
-                          img.img-responsive(src='img/screenshots/screen/history_s.jpg', alt='locize history', loading='lazy')
+                          img.img-responsive.modalify(src='img/screenshots/screen/history_s.jpg', alt='locize history', full='img/screenshots/screen/history.png', loading='lazy')
                     h3 History
                     p
                       | Keep track over all changes done to your project's translations. The last translation changes are audited per key.
@@ -644,6 +644,13 @@ html(lang='en')
             .embed-responsive.embed-responsive-16by9
               iframe.embed-responsive-item(width='1280', height='720', src='', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
 
+    #modalify-modal.modalify-modal
+      //- span.modalify-close &times;
+      .modal-header
+        button.close.modalify-close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      img.modal-content#img-in-modal(loading='lazy')
+      #caption-in-modal
 
     //- #stickLayer.stick_popup(style='display:none;')
     //-   .stick_close(onclick='$.stick_close()') X
@@ -713,6 +720,36 @@ html(lang='en')
             }
           }]
         });
+      });
+
+    script(type="text/javascript").
+      $(document).ready(function () {
+        var modal = document.getElementById("modalify-modal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var imgs = document.getElementsByClassName("modalify");
+        var modalImg = document.getElementById("img-in-modal");
+        var captionText = document.getElementById("caption-in-modal");
+
+        for (var i = 0; i < imgs.length; i++) {
+          var img = imgs[i];
+          img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.getAttribute('full');
+            if (this.alt) captionText.innerHTML = this.alt;
+          }
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("modalify-close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+        };
+        modal.onclick = function() { 
+          modal.style.display = "none";
+        };
       });
 
 
