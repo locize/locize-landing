@@ -27,29 +27,21 @@ block content
     .container
       .row
         .col-md-4(style="position: relative;")
-          .integration(style="height: 620px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
-            .integration-name.text-center locize - translation memory
+          .integration(style="height: 310px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
+            .integration-name.text-center(style="margin-bottom: 0px;") locize - translation memory
             .text-center.text-muted The smart translation memory.
-            .text-center(style="font-size: 16px; font-weight: 600; margin-top: 30px;")
-              | free
-              sup 1)
-            .integration-features
-              p The smart translation memory provides you with suggestions of already translated segments and helps you to save time and keeping your translations consistent.
 
-              div(style="font-style: italic;")
-                | 1) The translation memory consumes the published files of a project which will be cleared as regular download ($0.0001 per download).
+            .integration-features.no-overflow(style="margin-top: 10px;")
+              p The smart translation memory provides you with suggestions of already translated segments and helps you to save time and keeping your translations consistent.
 
             .integration-start
               a.btn.btn-outline.btn-xl(href='https://docs.locize.com/whats-inside/translation-memory', target='_blank', style="background-color: #ccc") Learn more!
 
-
-        .col-md-4(style="position: relative;")
-          .integration(style="height: 620px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
-            .integration-name.text-center locize - history
+          .integration(style="margin-top:30px; height: 280px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
+            .integration-name.text-center(style="margin-bottom: 0px;") locize - history
             .text-center.text-muted Track all changes to your translations.
-            .text-center(style="font-size: 16px; font-weight: 600; margin-top: 30px;")
-              | free
-            .integration-features.no-overflow
+
+            .integration-features.no-overflow(style="margin-top: 10px;")
               p History enables you to track the last changes done to your translations. It empowers you to prove anytime when a content fragment was changed.
 
             .integration-start
@@ -65,10 +57,15 @@ block content
               p You can enable the review workflow for specific languages.
               p This way each time someone changes a translation, it will start a review workflow. The actual value will not be changed until someone will accept one of the translation proposals.
             
+              div(style="font-style: italic;")
+                | There are also other ways to keep track of new translations.
+                | Check out  
+                a(href="https://docs.locize.com/guides-tips-and-tricks/keeping-track-of-new-translations", target='_blank') this page
+                |  to learn more about them.
+            
             .integration-start
               a.btn.btn-outline.btn-xl(href='https://docs.locize.com/whats-inside/review-workflow', target='_blank', style="background-color: #ccc") Learn more!
 
-      .row(style="margin-top: 30px;")
         .col-md-4(style="position: relative;")
           .integration(style="height: 620px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
             .integration-name.text-center locize - auto machine translation
@@ -91,12 +88,13 @@ block content
                 | ).
               br
 
-              div(style="font-style: italic; font-size: 11px;")
+              div(style="font-style: italic; font-size: 10px;")
                 | 1) Each automatically machine translated key counts as normal modification.
 
             .integration-start
               a.btn.btn-outline.btn-xl(href='https://docs.locize.com/whats-inside/auto-machine-translation', target='_blank', style="background-color: #ccc") Learn more!
 
+      .row(style="margin-top: 30px;")
         .col-md-4(style="position: relative;")
           .integration(style="height: 620px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
             .integration-name.text-center locize - Figma plugin
@@ -111,9 +109,27 @@ block content
                 a(href="https://www.figma.com/community/plugin/1049710666643539175/locize", target='_blank') locize Figma plugin
                 |  allows you to send text content to your locize project, directly from within Figma and to fetch translations from locize to test your designs. Bridging the gap between translation and product design with our Figma integration creates an efficient workflow from end-to-end.
 
-
             .integration-start
               a.btn.btn-outline.btn-xl(href='https://docs.locize.com/more/figma-plugin', target='_blank', style="background-color: #ccc") Learn more!
+
+        .col-md-4(style="position: relative;")
+          .integration(style="height: 620px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
+            .integration-name.text-center locize - Multi-Tenant
+            .text-center.text-muted Per-customer translations or customer specific “overrides".
+            .text-center(style="font-size: 16px; font-weight: 600; margin-top: 30px;")
+              | free
+            .integration-features
+              p Are you offering a customized software for your customers, and you like to anticipate translations that could be overriden by you on a per-customer basis or directly by your customer?
+
+              div(style="font-style: italic;")
+                | With locize you can create tenant projects based on your main project.
+                br
+                | All translations are anticipated for the tentant project and can be overriden, if necessary.
+                br
+                | But the anticipated translations are not just copied, so in case you need to correct a translation in your main project, it will be automatically populated to your tenants, if not ovverriden.
+
+            .integration-start
+              a.btn.btn-outline.btn-xl(href='https://docs.locize.com', target='_blank', style="background-color: #ccc") Learn more!
 
         .col-md-4(style="position: relative;")
           .integration(style="height: 620px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
