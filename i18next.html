@@ -100,7 +100,10 @@
               <h3>Richness</h3>
               <p class="light-font">There is a plenty of features and possibilities you'll get with i18next compared to other regular i18n frameworks.</p><br>
               <p><a href="https://www.i18next.com/overview/comparison-to-others" target="_blank">Here you can find more information about why i18next is special.</a></p><br>
-              <p><b>New to i18next?</b><br>Then have a look at <a href="https://youtu.be/SA_9i4TtxLQ" target="_blank">this i18next crash course video</a>.</p>
+              <h3 style="font-weight: 500">New to i18next?</h3><a class="btn btn-outline btn-xl watch-yt-video-btn" href="https://youtu.be/SA_9i4TtxLQ" target="_blank" style="background-color: #15419a!important">Then have a look at this i18next crash course video.</a>
+              <div class="embed-responsive embed-responsive-16by9 yt-video" style="display: none;">
+                <iframe class="embed-responsive-item" width="100%" height="250" src="https://www.youtube-nocookie.com/embed/SA_9i4TtxLQ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+              </div>
             </div>
           </div>
         </div>
@@ -230,6 +233,17 @@ i18next
           <p>Get any questions you may have about our pricing or platform answered by one of our team members.</p><a class="btn btn-outline btn-xl page-scroll" href="mailto:support@locize.com">Contact us!</a>
         </div>
       </section>
+      <script>
+        window.enableCookiesHook = function () {
+          $('.yt-video').show();
+          $('.watch-yt-video-btn').hide();
+        };
+        window.disableCookiesHook = function () {
+          $('.yt-video').hide();
+          $('.watch-yt-video-btn').show();
+        };
+        
+      </script>
       <script type="application/ld+json">
         {
           "@context": "https://schema.org",

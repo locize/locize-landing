@@ -140,12 +140,15 @@ block content
     .container
       .row
         .col-lg-12.text-center
-          .section-heading
+          .section-heading(style="margin-bottom: 20px;")
             h2 Choose your framework
-            p.head
+            p.head(style="margin-bottom: 20px;")
               | For famous JavaScript frameworks locize is very easy to integrate through the 
               <a href="https://www.i18next.com/" title="javascript-localization-library">JavaScript localization library</a> i18next.
 
+            a.btn.btn-outline.btn-xl.watch-yt-video-btn(href='https://youtu.be/SA_9i4TtxLQ', target='_blank', style="background-color: #15419a!important") Watch: i18next Crash Course
+            .embed-responsive.embed-responsive-16by9.yt-video(style="display: none;")
+              iframe.embed-responsive-item(width='100%', height='250', src='https://www.youtube-nocookie.com/embed/SA_9i4TtxLQ?rel=0&controls=0&showinfo=0', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
             hr
       .row
         .col-md-12
@@ -226,7 +229,7 @@ block content
                   | .
 
               .col-md-6
-                img.img-responsive(src='img/localization/supported-frameworks.png', alt='supported frameworks', style='max-width: 250px', loading='lazy')
+                img.img-responsive(src='img/localization/supported-frameworks.png', alt='supported frameworks', style='max-height: 250px', loading='lazy')
                 br
                 br
                 p.text-left
