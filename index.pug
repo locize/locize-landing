@@ -270,7 +270,8 @@ html(lang='en')
                       .device(data-device="MacbookPro", data-orientation="portrait", data-color="black", style="z-index: 0;")
                         .screen
                           img.img-responsive.modalify(src='img/screenshots/screen/incontext_editor_s.jpg', full='img/screenshots/screen/incontext_editor.png', alt='locize in-context editor', loading='lazy')
-                    h3 Context Matters &mdash; InContext Editing
+                    h3
+                      a(href='https://docs.locize.com/whats-inside/context', style='color: white;') Context Matters &mdash; InContext Editing
                     p
                       | Doing proper translations needs more information by providing the context. The best context is always the place where the content is used – your website!
                     p
@@ -310,7 +311,8 @@ html(lang='en')
                       .device(data-device="MacbookPro", data-orientation="portrait", data-color="black", style="z-index: 0;")
                         .screen
                           img.img-responsive.modalify(src='img/screenshots/screen/translationmemory_s.jpg', full='img/screenshots/screen/translationmemory.png', alt='locize translation memory', loading='lazy')
-                    h3 The smart translation memory
+                    h3
+                      a(href='https://docs.locize.com/whats-inside/translation-memory', style='color: white;') The smart translation memory
                     p
                       | With our translation memory you never have to translate the same text again. Simply reuse your exiting translatins over and over again.
                     p
@@ -322,11 +324,39 @@ html(lang='en')
                       .device(data-device="MacbookPro", data-orientation="portrait", data-color="black", style="z-index: 0;")
                         .screen
                           img.img-responsive.modalify(src='img/screenshots/screen/history_s.jpg', alt='locize history', full='img/screenshots/screen/history.png', loading='lazy')
-                    h3 History
+                    h3
+                      a(href='https://docs.locize.com/whats-inside/history', style='color: white;') History
                     p
                       | Keep track over all changes done to your project's translations. The last translation changes are audited per key.
                     p
                       | Need to provide those information - who did when change which segment? We get you covered.
+
+              .row
+                .col-md-6
+                  .feature-item
+                    .device-wrapper
+                      .device(data-device="MacbookPro", data-orientation="portrait", data-color="black", style="z-index: 0;")
+                        .screen
+                          img.img-responsive.modalify(src='img/screenshots/screen/review_s.jpg', full='img/screenshots/screen/review.png', alt='locize review workflow', loading='lazy')
+                    h3
+                      a(href='https://docs.locize.com/whats-inside/review-workflow', style='color: white;') Review workflow
+                    p
+                      | You can enable the review workflow for specific languages.
+                    p
+                      | This way each time someone changes a translation, it will start a review workflow. The actual value will not be changed until someone will accept one of the translation proposals.
+
+                .col-md-6
+                  .feature-item
+                    .device-wrapper
+                      .device(data-device="MacbookPro", data-orientation="portrait", data-color="black", style="z-index: 0;")
+                        .screen
+                          img.img-responsive.modalify(src='img/screenshots/screen/multitenant_s.jpg', alt='locize multitenant', full='img/screenshots/screen/multitenant.png', loading='lazy')
+                    h3
+                      a(href='https://docs.locize.com/more/multi-tenant', style='color: white;') Multi-Tenant
+                    p
+                      | You can create tenant projects based on your main project. All translations are anticipated for the tenant project and can be overridden, if necessary.
+                    p
+                      | But the anticipated translations are not just copied, so in case you need to correct a translation in your main project, it will be automatically populated to your tenants, if not overridden.
 
 
     section.integration
@@ -558,7 +588,10 @@ html(lang='en')
               a(href='/how-it-works.html#integrationforeveryone')
                 img(style='max-width: 100%;', src='img/website_builder.png', alt='website_builder', loading='lazy')
               h3 Website builders
-              p We have built a custom script for Website Builders where flexible translation options are available. This can be used with Wordpress, Shopify and other Website Builders.
+              p
+                | We have built a 
+                a(href='https://github.com/locize/locizify', target='_blank') custom script
+                |  for Website Builders where flexible translation options are available. This can be used with Wordpress, Shopify and other Website Builders.
 
             .col-md-4.text-center
               a(href='/how-it-works.html#integrationforeveryone')
