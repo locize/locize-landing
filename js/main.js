@@ -14,6 +14,9 @@ if (typeof locizify !== 'undefined') {
       var aEle = document.createElement('A')
       aEle.setAttribute('href', '/?lng=' + l);
       aEle.innerHTML = lng.nativeName;
+      if (locizify.i18next.resolvedLanguage === l) {
+        aEle.style.fontWeight = 'bold';
+      }
       optEle.appendChild(aEle);
       if (optionsEle) optionsEle.appendChild(optEle);
     });
@@ -27,7 +30,7 @@ if (typeof locizify !== 'undefined') {
       if (!selected && availableLngs.indexOf(l) > -1) selected = l;
     });
 
-    if (selectedEle) selectedEle.innerHTML= selected || 'en';
+    if (selectedEle) selectedEle.innerHTML= selected || 'en';
   }
 
   locizify.i18next.on('languageChanged', function(lng) {
