@@ -1406,6 +1406,56 @@ block content
                   }
                 }
 
+          .col-lg-3.col-md-4.col-sm-12
+            .testimonial.testimonial-fullwidth
+              .testimonial-title
+                img.grayscale(style='max-height: 50px; max-width: 100%;', src='img/customers/airtime.png' alt="Airtime" loading="lazy")
+              .testimonial-content
+                p(style="font-size: 17px;") At Airtime we like to move fast and release features quickly.
+                p(style="font-size: 17px;") Integrating with locize was super fast and it proved to be the perfect solution for our internationalization needs.
+                p(style="font-size: 17px;") The ability to decouple our translation process from code changes enables us to remain agile and keep our processes fast and simple.
+              .author
+                hr
+                | Marton Csikos, CTO
+                br
+                a(href='https://airtimeux.com' target='_blank') Airtime
+              script(type="application/ld+json").
+                {
+                  "@context": "http://schema.org/",
+                  "@type": "Review",
+                  "itemReviewed": {
+                    "@id": "https://locize.com/#software"
+                  },
+                  "author": {
+                    "@type": "Organization",
+                    "name": "Airtime",
+                    "url": "https://www.airtimeux.com",
+                    "image": "https://locize.com/img/customers/airtime.png",
+                    "member": {
+                      "@type": "Person",
+                      "name": "Marton Csikos"
+                    }
+                  },
+                  "description": "At Airtime we like to move fast and release features quickly. Integrating with Locize was super fast and it proved to be the perfect solution for our internationalization needs. The ability to decouple our translation process from code changes enables us to remain agile and keep our processes fast and simple.",
+                  "positiveNotes": {
+                    "@type": "ItemList",
+                    "itemListElement": [
+                      {
+                        "@type": "ListItem",
+                        "name": "At Airtime we like to move fast and release features quickly."
+                      },
+                      {
+                        "@type": "ListItem",
+                        "name": "Integrating with locize was super fast and it proved to be the perfect solution for our internationalization needs."
+                      },
+                      {
+                        "@type": "ListItem",
+                        "name": "The machine translation functionality works really well and saves us a lot of time."
+                      }
+                    ]
+                  }
+                }
+
   section#contact.contact.bg-tertiary(i18next-options='{"ns": "common"}')
     .container
       h2 Need some help getting started?
