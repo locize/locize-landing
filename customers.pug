@@ -1456,6 +1456,51 @@ block content
                   }
                 }
 
+          .col-lg-3.col-md-4.col-sm-12
+            .testimonial.testimonial-fullwidth
+              .testimonial-title
+                img.grayscale(style='max-height: 50px; max-width: 100%;', src='img/customers/biteful.png' alt="Biteful" loading="lazy")
+              .testimonial-content
+                p(style="font-size: 20px;") Locize is our go-to solution for handling translations.
+                p(style="font-size: 20px;") We've been able to efficiently manage and deploy translations across multiple platforms and languages - even prototypes can be set up with multilingual support due to low timecost.
+              .author
+                hr
+                | Erik Kaljumäe, CTO
+                br
+                a(href='https://biteful.app' target='_blank') Biteful
+              script(type="application/ld+json").
+                {
+                  "@context": "http://schema.org/",
+                  "@type": "Review",
+                  "itemReviewed": {
+                    "@id": "https://locize.com/#software"
+                  },
+                  "author": {
+                    "@type": "Organization",
+                    "name": "Biteful",
+                    "url": "https://biteful.app/",
+                    "image": "https://locize.com/img/customers/biteful.png",
+                    "member": {
+                      "@type": "Person",
+                      "name": "Erik Kaljumäe"
+                    }
+                  },
+                  "description": "Locize is our go-to solution for handling translations. We've been able to efficiently manage and deploy translations across multiple platforms and languages - even prototypes can be set up with multilingual support due to low timecost.",
+                  "positiveNotes": {
+                    "@type": "ItemList",
+                    "itemListElement": [
+                      {
+                        "@type": "ListItem",
+                        "name": "Locize is our go-to solution for handling translations."
+                      },
+                      {
+                        "@type": "ListItem",
+                        "name": "We've been able to efficiently manage and deploy translations across multiple platforms and languages - even prototypes can be set up with multilingual support due to low timecost."
+                      }
+                    ]
+                  }
+                }
+
   section#contact.contact.bg-tertiary(i18next-options='{"ns": "common"}')
     .container
       h2 Need some help getting started?
