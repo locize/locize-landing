@@ -1542,6 +1542,62 @@ block content
                   }
                 }
 
+        .row
+          .col-lg-6.col-md-4.col-sm-12
+            .testimonial.testimonial-fullwidth
+              .testimonial-title
+                img.grayscale(style='max-height: 50px; max-width: 100%;', src='img/customers/zkb.png' alt="ZKB" loading="lazy")
+              .testimonial-content
+                p(style="font-size: 20px;") With the introduction of locize, we had an overview of the status of translations or which text content still needed to be translated from the very beginning.
+                p(style="font-size: 20px;") Thanks to the very flexible API, the current texts are integrated in every build (for technical reasons, ZKB cannot use an external CDN).
+                p(style="font-size: 20px;") The handling is self-explanatory for translators.
+                p(style="font-size: 20px;") Locize also has excellent support and very reasonable conditions.
+              .author
+                hr
+                | Severin Dietschi, Product Owner
+                br
+                a(href='https://www.zkb.ch' target='_blank') ZKB (Zürcher Kantonalbank)
+              script(type="application/ld+json").
+                {
+                  "@context": "http://schema.org/",
+                  "@type": "Review",
+                  "itemReviewed": {
+                    "@id": "https://locize.com/#software"
+                  },
+                  "author": {
+                    "@type": "Organization",
+                    "name": "ZKB",
+                    "url": "https://www.zkb.ch",
+                    "image": "https://locize.com/img/customers/zkb.png",
+                    "member": {
+                      "@type": "Person",
+                      "name": "Severin Dietschi"
+                    }
+                  },
+                  "description": "With the introduction of locize, we had an overview of the status of translations or which text content still needed to be translated from the very beginning. Thanks to the very flexible API, the current texts are integrated in every build (for technical reasons, ZKB cannot use an external CDN). The handling is self-explanatory for translators. Locize also has excellent support and very reasonable conditions.",
+                  "positiveNotes": {
+                    "@type": "ItemList",
+                    "itemListElement": [
+                      {
+                        "@type": "ListItem",
+                        "name": "With the introduction of locize, we had an overview of the status of translations or which text content still needed to be translated from the very beginning."
+                      },
+                      {
+                        "@type": "ListItem",
+                        "name": "Thanks to the very flexible API, the current texts are integrated in every build (for technical reasons, ZKB cannot use an external CDN)."
+                      },
+                      {
+                        "@type": "ListItem",
+                        "name": "The handling is self-explanatory for translators."
+                      },
+                      {
+                        "@type": "ListItem",
+                        "name": "Locize also has excellent support and very reasonable conditions."
+                      }
+                    ]
+                  }
+                }
+
   section#contact.contact.bg-tertiary(i18next-options='{"ns": "common"}')
     .container
       h2 Need some help getting started?
