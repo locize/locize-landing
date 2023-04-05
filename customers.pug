@@ -1598,6 +1598,56 @@ block content
                   }
                 }
 
+          .col-lg-3.col-md-4.col-sm-12
+            .testimonial.testimonial-fullwidth
+              .testimonial-title
+                img.grayscale(style='max-height: 50px; max-width: 100%;', src='img/customers/wonderbox.png' alt="Wonderbox" loading="lazy")
+              .testimonial-content
+                p(style="font-size: 17px; margin-bottom: 3px;") Locize is helping us everyday in our jobs.
+                p(style="font-size: 17px; margin-bottom: 3px;") Translations used to be a chore, and always complicated. Any small change was a pain and required many steps from business stakeholders to product then developers.
+                p(style="font-size: 17px; margin-bottom: 3px;") With locize, we can now push new translations in realtime, providing a boost in both translation accuracy and productivity. Everyone is happy.
+              .author
+                hr
+                | Christophe Fischer, Head of Product
+                br
+                a(href='https://www.wonderbox.fr' target='_blank') Wonderbox
+              script(type="application/ld+json").
+                {
+                  "@context": "http://schema.org/",
+                  "@type": "Review",
+                  "itemReviewed": {
+                    "@id": "https://locize.com/#software"
+                  },
+                  "author": {
+                    "@type": "Organization",
+                    "name": "Wonderbox",
+                    "url": "https://www.wonderbox.fr",
+                    "image": "https://locize.com/img/customers/wonderbox.png",
+                    "member": {
+                      "@type": "Person",
+                      "name": "Christophe Fischer"
+                    }
+                  },
+                  "description": "Locize is helping us everyday in our jobs. Translations used to be a chore, and always complicated. Any small change was a pain and required many steps from business stakeholders to product then developers. With locize, we can now push new translations in realtime, providing a boost in both translation accuracy and productivity. Everyone is happy.",
+                  "positiveNotes": {
+                    "@type": "ItemList",
+                    "itemListElement": [
+                      {
+                        "@type": "ListItem",
+                        "name": "Locize is helping us everyday in our jobs."
+                      },
+                      {
+                        "@type": "ListItem",
+                        "name": "Translations used to be a chore, and always complicated. Any small change was a pain and required many steps from business stakeholders to product then developers."
+                      },
+                      {
+                        "@type": "ListItem",
+                        "name": "With locize, we can now push new translations in realtime, providing a boost in both translation accuracy and productivity. Everyone is happy."
+                      }
+                    ]
+                  }
+                }
+
   section#contact.contact.bg-tertiary(i18next-options='{"ns": "common"}')
     .container
       h2 Need some help getting started?
