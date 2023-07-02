@@ -116,6 +116,7 @@
             </div>
             <div class="col-sm-5">
               <div class="device-wrapper">
+                <h3 id="typed-element" style="margin-top: -60px; height: 130px; padding-top: 20px; padding-bottom: 20px">&nbsp;</h3>
                 <div class="device" data-device="iPhoneXnoNotch" data-orientation="portrait" data-color="black">
                   <div class="screen"><img class="img-responsive" src="img/screenshots/iphone6/localization-management-platform.jpg" alt="localization management platform" loading="lazy"></div>
                   <!-- .button-->
@@ -852,6 +853,27 @@
                   enableCookies();
               }
           }
+      });
+      
+    </script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      locizify.i18next.on('initialized', function () {
+        var typed = new Typed('#typed-element', {
+          strings: [
+            locizify.i18next.t('Speed up your development cycles.'),
+            locizify.i18next.t('Decouple software releases from the translation work.'),
+            locizify.i18next.t('Enable the agility also in your localization process.'),
+            locizify.i18next.t('Find all translations in one central place.'),
+            locizify.i18next.t('Keep always the overview of your progress.'),
+            locizify.i18next.t('Let developers and translators work well together in harmony.'),
+            locizify.i18next.t('Trust the makers of i18next and enjoy the support from a single source.')
+          ],
+          typeSpeed: 50,
+          shuffle: true,
+          loop: true,
+          showCursor: false
+        });
       });
       
     </script>
