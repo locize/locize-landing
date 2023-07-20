@@ -1749,6 +1749,51 @@ block content
                   }
                 }
 
+          .col-lg-3.col-md-4.col-sm-12
+            .testimonial.testimonial-fullwidth
+              .testimonial-title
+                img.grayscale(style='max-height: 50px; max-width: 100%;', src='img/customers/kleberli.png' alt="kleberli" loading="lazy")
+              .testimonial-content
+                p(style="font-size: 18px;") locize has been a very valuable tool for us, as we are in a constant process of expanding our business to new countries.
+                p(style="font-size: 18px;") The ease of importing and exporting languages files in different formats, as well as the intuitive web-based client make Locize a great choice for any company aiming for internationalization.
+              .author
+                hr
+                | Anders Fagereng, CTO
+                br
+                a(href='https://kleberli.de' target='_blank') kleberli
+              script(type="application/ld+json").
+                {
+                  "@context": "http://schema.org/",
+                  "@type": "Review",
+                  "itemReviewed": {
+                    "@id": "https://locize.com/#software"
+                  },
+                  "author": {
+                    "@type": "Organization",
+                    "name": "kleberli",
+                    "url": "https://kleberli.de",
+                    "image": "https://locize.com/img/customers/kleberli.png",
+                    "member": {
+                      "@type": "Person",
+                      "name": "Anders Fagereng"
+                    }
+                  },
+                  "description": "locize has been a very valuable tool for us, as we are in a constant process of expanding our business to new countries. The ease of importing and exporting languages files in different formats, as well as the intuitive web-based client make Locize a great choice for any company aiming for internationalization.",
+                  "positiveNotes": {
+                    "@type": "ItemList",
+                    "itemListElement": [
+                      {
+                        "@type": "ListItem",
+                        "name": "locize has been a very valuable tool for us, as we are in a constant process of expanding our business to new countries."
+                      },
+                      {
+                        "@type": "ListItem",
+                        "name": "The ease of importing and exporting languages files in different formats, as well as the intuitive web-based client make Locize a great choice for any company aiming for internationalization."
+                      }
+                    ]
+                  }
+                }
+
   section#contact.contact.bg-tertiary(i18next-options='{"ns": "common"}')
     .container
       h2 Need some help getting started?
