@@ -4,6 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style id="antiClickjack">
+      body {
+        display:none !important;
+      }
+    </style>
+    <script type="text/javascript">
+      if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+      } else {
+        top.location = self.location;
+      }
+      
+    </script>
     <meta name="description" content="Project managers, tech leads, translators, and developers should read this. Use locize to your advantage in every team job.">
     <meta property="og:title" content="Leverage the power of locize for every team role | locize">
     <meta property="og:description" content="Project managers, tech leads, translators, and developers should read this. Use locize to your advantage in every team job.">

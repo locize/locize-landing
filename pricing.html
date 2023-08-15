@@ -4,6 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style id="antiClickjack">
+      body {
+        display:none !important;
+      }
+    </style>
+    <script type="text/javascript">
+      if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+      } else {
+        top.location = self.location;
+      }
+      
+    </script>
     <meta name="description" content="Pricing of locize - There are no fixed price plans; all of your costs are flexible and depending on your actual consumption.">
     <meta property="og:title" content="Locize Pricing - No plans - no paywalls - no catch">
     <meta property="og:description" content="Pricing of locize - There are no fixed price plans; all of your costs are flexible and depending on your actual consumption.">

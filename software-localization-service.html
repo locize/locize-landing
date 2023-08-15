@@ -4,6 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style id="antiClickjack">
+      body {
+        display:none !important;
+      }
+    </style>
+    <script type="text/javascript">
+      if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+      } else {
+        top.location = self.location;
+      }
+      
+    </script>
     <meta name="description" content="Learn how the locize software-localization-service may assist you in professionally managing the translations of your software.">
     <meta property="og:title" content="Software Localization Service | locize">
     <meta property="og:description" content="Learn how the locize software-localization-service may assist you in professionally managing the translations of your software.">

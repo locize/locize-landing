@@ -4,6 +4,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style id="antiClickjack">
+      body {
+        display:none !important;
+      }
+    </style>
+    <script type="text/javascript">
+      if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+      } else {
+        top.location = self.location;
+      }
+      
+    </script>
     <meta name="description" content="Terms of service of Locize">
     <meta property="og:title" content="Terms of service | locize">
     <meta property="og:description" content="Terms of service of Locize">

@@ -9,6 +9,19 @@ html(lang='en')
     meta(name='copyright', content='inweso GmbH')
     meta(name='keywords', content='localization,internationalization,localize,translate,locize,l10n,i18n,javascript,nodejs,localization as a service,saas translation,saas localization,laas,continuous localization,DevOps,process,free,website localization,service,software,web app,web,mobile,desktop,game,translation management,online,automate,process of localization,localization process,translation service,localization service,translation software,landing page,javascript localize,localization tool,localizing a website,localization solution,cloud localization,cloud translation,serverless,cloud,cdn,react,react.js,reactjs,next,next.js,nextjs,angular,vue,vue-js,jquery,nodejs,i18next,json,api,react-native,localization api,translation api,app localization services,localization management platform,localization platform,professional translation and localization services,website translation management,app localization service,online translation management,i18next translation management,i18next translation,manage translations,manage translation files')
 
+    //-- client side X-Frame-Options alternative
+    style#antiClickjack.
+      body {
+        display:none !important;
+      }
+    script(type="text/javascript").
+      if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+      } else {
+        top.location = self.location;
+      }
+
     link(rel="alternate" href="https://locize.com/de.html" hreflang="de")
     link(rel="alternate" href="https://locize.com/it.html" hreflang="it")
     link(rel="alternate" href="https://locize.com/?lng=en" hreflang="en")
