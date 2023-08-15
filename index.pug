@@ -43,7 +43,11 @@ html(lang='en')
     title(i18next-key="title") localization & translation management platform | locize
 
     link(href='lib/bootstrap/css/bootstrap.min.css', rel='stylesheet')
-    link(rel='stylesheet', href='lib/font-awesome/css/font-awesome.min.css')
+    //- link(rel='stylesheet', href='lib/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='lib/fontawesome/css/fontawesome.min.css')
+    link(rel='stylesheet', href='lib/fontawesome/css/brands.min.css')
+    link(rel='stylesheet', href='lib/fontawesome/css/solid.min.css')
+    link(rel='stylesheet', href='lib/fontawesome/css/regular.min.css')
     link(rel='stylesheet', href='lib/simple-line-icons/css/simple-line-icons.css')
     link(rel='stylesheet', href='lib/device-mockups/device-mockups.min.css')
     link(href='css/main.min.css', rel='stylesheet')
@@ -93,7 +97,7 @@ html(lang='en')
         .navbar-header
           button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
             span.sr-only Toggle navigation
-            i.fa.fa-bars
+            i.fa-solid.fa-bars
           a.navbar-brand.page-scroll(href='/#page-top')
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
@@ -137,7 +141,7 @@ html(lang='en')
 
             li
               a(href='https://www.locize.app/login', target='_blank') Login
-                i.fa.fa-lock(aria-hidden='true', style="margin-left: 5px;")
+                i.fa-solid.fa-lock(aria-hidden='true', style="margin-left: 5px;")
 
             li.dropdown(translated="")
               a.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false')
@@ -690,14 +694,14 @@ html(lang='en')
               li
                 ul.list-inline.list-social
                   li.social-twitter
-                    a(href='https://twitter.com/locize', target='_blank')
-                      i.fa.fa-twitter
+                    a(href='https://x.com/locize', target='_blank')
+                      i.fa-brands.fa-x-twitter
                   li.social-facebook
-                    a(href='https://www.facebook.com/Locize-1672640746084189/', target='_blank')
-                      i.fa.fa-facebook
+                    a(href='https://www.facebook.com/locize', target='_blank')
+                      i.fa-brands.fa-facebook
                   li.social-youtube
                     a(href='https://www.youtube.com/channel/UCPYQjBbbXojUcB8qjeIB3uA', target='_blank')
-                      i.fa.fa-youtube
+                      i.fa-brands.fa-youtube
               li
                 a(href='/privacy.html') Privacy
               li
