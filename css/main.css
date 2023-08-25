@@ -814,7 +814,7 @@ section.testimonials .testimonial {
   font-weight: 300;
   max-width: 350px;
   background-color: white;
-  padding: 30px 20px;
+  padding: 15px;
   margin: 10px auto;
   overflow-x: scroll;
 }
@@ -1036,7 +1036,7 @@ footer .footer-copyright {
   background-color: #15419a !important;
 }
 .integration-features {
-  margin: 40px 20px 80px 40px;
+  margin: 40px 20px 40px 20px;
   overflow-x: scroll;
 }
 .integration-features ul {
@@ -1049,7 +1049,7 @@ footer .footer-copyright {
   margin: 15px 0;
 }
 .integration-features.no-overflow {
-  margin: 40px 20px 0 40px;
+  margin: 40px 20px 0 20px;
   overflow-x: none;
 }
 /***** Modal *****/

@@ -1,20 +1,20 @@
 extends pug/layout.pug
 
 block head
-  title Locize: Additional services provided
+  title locize: Additional services provided
   link(rel="canonical", href="/services.html")
   
 
 block headDescription
   meta(name='description', content='Explore partners or extra services of locize. You may enhance your locize experience...')
-  meta(property='og:title', content='Locize: Additional services provided')
+  meta(property='og:title', content='locize: Additional services provided')
   meta(property='og:description', content='Explore partners or extra services of locize. You may enhance your locize experience...')
-  meta(name='twitter:title', content='Locize: Additional services provided')
+  meta(name='twitter:title', content='locize: Additional services provided')
   meta(name='twitter:description', content='Explore partners or extra services of locize. You may enhance your locize experience...')
 
 block content
 
-  section.section-secondary#services
+  section.section-secondary#services(style="padding: 100px 0 50px 0;")
     .container
       .row
         .col-lg-12.text-center
@@ -161,7 +161,7 @@ block content
             .integration-start
               a.btn.btn-outline.btn-xl(href='https://youtu.be/ds-yEEYP1Ks', target='_blank', style="background-color: #ccc") Learn more!
 
-  section.section-primary#translationservices
+  section.section-primary#translationservices(style="padding: 100px 0 50px 0;")
     .container
       .row
         .col-lg-12.text-center
@@ -209,28 +209,42 @@ block content
         //-       a.btn.btn-outline.btn-xl(href='https://www.matecat.com', target='_blank', style="background-color: #ccc") Learn more!
 
 
-        .col-md-6(style="position: relative;")
+        .col-md-4(style="position: relative;")
           .integration(style="height: 600px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
             .integration-name.text-center
-              img(src="/img/services/textmaster.png" alt="textmaster", loading='lazy')
+              img(src="/img/services/supertext.png", style="height: 50px; margin-bottom: -17px;" alt="Supertext", loading='lazy')
+            .text-center.text-muted Top-class localization solutions. Swiss made since 2005.
+            .text-center(style="font-size: 16px; font-weight: 600; margin-top: 20px;")
+              | $0.16 - $0.24 per word
+            .integration-features(style="margin-top: 20px;")
+              p(style="font-size: 17px;") Supertext is on a mission to free the world from bad copy. Their team of over 3,000 handpicked professional translators and copywriters have helped countless app developers and SaaS companies reach new markets without compromising the brand voice.
+              p(style="font-size: 16px;") From translating web content to making your entire product fit for new cultural subtleties. Supertext’s local teams of dedicated project managers in Zurich, Berlin and Los Angeles are by your side every step of the way.
+
+            .integration-start
+              a.btn.btn-outline.btn-xl(href='https://www.supertext.ch', target='_blank', style="background-color: #ccc") Learn more!
+
+        .col-md-4(style="position: relative;")
+          .integration(style="height: 600px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
+            .integration-name.text-center
+              img(src="/img/services/textmaster.png" style="height: 50px; margin-bottom: -17px;" alt="textmaster", loading='lazy')
             .text-center.text-muted Your Professional SaaS Translation Service
-            .text-center(style="font-size: 16px; font-weight: 600; margin-top: 30px;")
+            .text-center(style="font-size: 16px; font-weight: 600; margin-top: 20px;")
               | $0.066 - $0.132 per word
-            .integration-features
+            .integration-features(style="margin-top: 20px;")
               p TextMaster’s translation services are ideal for a variety of projects: simple web content, high volume product catalogs or complex documents...
               p Offers general translation services as well as more specialized translation, including financial, technical, and legal.
 
             .integration-start
               a.btn.btn-outline.btn-xl(href='https://www.textmaster.com', target='_blank', style="background-color: #ccc") Learn more!
 
-        .col-md-6(style="position: relative;")
+        .col-md-4(style="position: relative;")
           .integration(style="height: 600px; background-color: #fff; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
             .integration-name.text-center
-              img(src="/img/services/blend.png", style="height: 50px; margin-bottom: -17px;" alt="onehour translation", loading='lazy')
+              img(src="/img/services/blend.png", style="height: 50px; margin-bottom: -17px;" alt="Blend", loading='lazy')
             .text-center.text-muted End-to-end, multi-market localization solutions
-            .text-center(style="font-size: 16px; font-weight: 600; margin-top: 30px;")
-              |  $0.079 - $0.139 per word
-            .integration-features
+            .text-center(style="font-size: 16px; font-weight: 600; margin-top: 20px;")
+              | $0.079 - $0.139 per word
+            .integration-features(style="margin-top: 20px;")
               p(style="font-size: 16px;") BLEND helps companies localize their business based on a unique understanding of local context, culture, subtlety, and consumer behavior. Our global community of 25,000+ translators, voice-over professionals, and language specialists provide end-to-end localization solutions for companies of all sizes and in all industries. Additionally, customers can  utilize BLEND Express (formerly One Hour Translation), our self-service translation platform, for personal and business projects.
 
             .integration-start
