@@ -1840,6 +1840,56 @@ block content
                   }
                 }
 
+          .col-lg-3.col-md-4.col-sm-12
+            .testimonial.testimonial-fullwidth
+              .testimonial-title
+                img.grayscale(style='max-height: 50px; max-width: 100%;', src='img/customers/powerapi.png' alt="PowerAPI" loading="lazy")
+              .testimonial-content
+                p(style="font-size: 18px;") We no longer have to translate manually, and that means a lot when you're building a global platform!
+                p(style="font-size: 18px;") Locize helps us save time on translations so we can focus on our core.
+                p(style="font-size: 18px;") We chose Locize because their pricing is competitive and you can add another language on the go.
+              .author
+                hr
+                | Maxence Lovato, Chief Product Officer
+                br
+                a(href='https://www.powerapi.com' target='_blank') PowerAPI
+              script(type="application/ld+json").
+                {
+                  "@context": "http://schema.org/",
+                  "@type": "Review",
+                  "itemReviewed": {
+                    "@id": "https://locize.com/#software"
+                  },
+                  "author": {
+                    "@type": "Organization",
+                    "name": "PowerAPI",
+                    "url": "https://www.powerapi.com",
+                    "image": "https://locize.com/img/customers/powerapi.png",
+                    "member": {
+                      "@type": "Person",
+                      "name": "Maxence Lovato"
+                    }
+                  },
+                  "description": "We no longer have to translate manually, and that means a lot when you're building a global platform! Locize helps us save time on translations so we can focus on our core. We chose Locize because their pricing is competitive and you can add another language on the go.",
+                  "positiveNotes": {
+                    "@type": "ItemList",
+                    "itemListElement": [
+                      {
+                        "@type": "ListItem",
+                        "name": "We no longer have to translate manually, and that means a lot when you're building a global platform!"
+                      },
+                      {
+                        "@type": "ListItem",
+                        "name": "Locize helps us save time on translations so we can focus on our core."
+                      },
+                      {
+                        "@type": "ListItem",
+                        "name": "We chose Locize because their pricing is competitive and you can add another language on the go."
+                      }
+                    ]
+                  }
+                }
+
   section#contact.contact.bg-tertiary(i18next-options='{"ns": "common"}')
     .container
       h2 Need some help getting started?
