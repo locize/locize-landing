@@ -256,6 +256,12 @@ ol {
     max-width: 1170px;
   }
 }
+@media (min-width: 1300px) {
+  .container {
+    width: auto;
+    max-width: 1270px;
+  }
+}
 .navbar {
   z-index: 999;
 }

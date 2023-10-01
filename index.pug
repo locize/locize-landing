@@ -414,7 +414,7 @@ html(lang='en')
       .container
         .row
           .col-lg-12.text-center
-            .section-heading
+            .section-heading(style="margin-bottom: 50px")
               h2 Customer Testimonials
               p.text-muted
                 a(href="/customers.html") Hear
@@ -463,6 +463,71 @@ html(lang='en')
                       | Davide Mora, Digital Product Owner & Project Leader
                       br
                       a(href='https://abb.com' target='_blank') ABB
+
+        .row#usps(style="margin-top: 50px;")
+          .col-lg-12.text-center
+            .section-heading(style="margin-bottom: 50px;")
+              h3(style="font-size: 40px;") Why did our customers chose locize?
+              p.text-muted
+                | Discover the 9 most important reasons why our customers chose locize.
+              hr
+        .row
+          .col-lg-4
+            .feature-item(style="margin-bottom: 30px;")
+              i.fas.fa-clock(style='color: #f76d57; font-size: 48px;')
+              h4 Efficiency and Time Savings
+              p(style='font-size: 18px; margin-bottom: 0;') Save time and streamline your translation and localization processes.
+              p.collapsible(style='font-size: 12px;') This was given the highest priority because many customers specifically highlighted how locize helped them save time and streamline their translation and localization processes. Efficiency is often a primary concern for businesses.
+          .col-lg-4
+            .feature-item(style="margin-bottom: 30px;")
+              i.fas.fa-user(style='color: #f76d57; font-size: 48px;')
+              h4 User-Friendly Interface
+              p(style='font-size: 18px; margin-bottom: 0;') Accessible and practical interface for users of all technical backgrounds.
+              p.collapsible(style='font-size: 12px;') The ease of use of locize's interface was ranked next because it directly impacts how accessible and practical the platform is for users, regardless of their technical background.
+          .col-lg-4
+            .feature-item(style="margin-bottom: 30px;")
+              i.fas.fa-dollar-sign(style='color: #f76d57; font-size: 48px;')
+              h4 Cost-Effective Translation Management
+              p(style='font-size: 18px; margin-bottom: 0;') Save money and efficiently manage translations to get value for your investment.
+              p.collapsible(style='font-size: 12px;') Effective translation management is a core function of locize, and customers frequently mentioned it as a key benefit. The value provided by the locize justifies the cost.
+        .row
+          .col-lg-4
+            .feature-item(style="margin-bottom: 30px;")
+              i.fas.fa-puzzle-piece(style='color: #f76d57; font-size: 48px;')
+              h4 Integration and Compatibility
+              p(style='font-size: 18px; margin-bottom: 0;') Seamlessly integrate with popular frameworks and libraries.
+              p.collapsible(style='font-size: 12px;') The ability to seamlessly integrate with popular frameworks and libraries is highly valued by developers and businesses, making it an important aspect. The excellent relationship with i18next is particularly important.
+          .col-lg-4
+            .feature-item(style="margin-bottom: 30px;")
+              i.fas.fa-globe(style='color: #f76d57; font-size: 48px;')
+              h4 Localization Across Platforms
+              p(style='font-size: 18px; margin-bottom: 0;') Extend the usefulness with versatile localization across various platforms.
+              p.collapsible(style='font-size: 12px;') This was prioritized because locize's versatility across various platforms extends its usefulness to a wider range of projects and industries.
+          .col-lg-4
+            .feature-item(style="margin-bottom: 30px;")
+              i.fas.fa-language(style='color: #f76d57; font-size: 48px;')
+              h4 High Quality Translations
+              p(style='font-size: 18px; margin-bottom: 0;') Trust in high-quality translations by professional translators.
+              p.collapsible(style='font-size: 12px;') Machine translation was noted as a valuable feature. For customers requiring high-quality human translations, it ranked slightly lower because it's not their primary focus.
+        .row
+          .col-lg-4
+            .feature-item(style="margin-bottom: 30px;")
+              i.fas.fa-sync(style='color: #f76d57; font-size: 48px;')
+              h4 Real-time Updates
+              p(style='font-size: 18px; margin-bottom: 0;') Stay current with real-time content updates.
+              p.collapsible(style='font-size: 12px;') Real-time updates were seen as a valuable feature, particularly for content that needs to remain current.
+          .col-lg-4
+            .feature-item(style="margin-bottom: 30px;")
+              i.fas.fa-hands-helping(style='color: #f76d57; font-size: 48px;')
+              h4 Responsive Support
+              p(style='font-size: 18px; margin-bottom: 0;') Enjoy responsive support for your needs.
+              p.collapsible(style='font-size: 12px;') Good customer support is always appreciated and is often taken for granted as an expected service, but locize is exceptionally responsive.
+          .col-lg-4
+            .feature-item(style="margin-bottom: 30px;")
+              i.fas.fa-cogs(style='color: #f76d57; font-size: 48px;')
+              h4 Scalability
+              p(style='font-size: 18px; margin-bottom: 0;') Scale your localization as your business grows.
+              p.collapsible(style='font-size: 12px;') Scalability is important and it's assumed that any software tool should be able to scale with business needs. Locize is not only technically scalable, but thanks to the pricing model it also scales with your business model.
 
         .row
           .col-lg-12.text-center
@@ -973,6 +1038,38 @@ html(lang='en')
           shuffle: true,
           loop: true,
           showCursor: false
+        });
+      });
+    
+    script.
+      // Add JavaScript to make paragraphs collapsible
+      document.addEventListener('DOMContentLoaded', function() {
+        const collapsibleParagraphs = document.querySelectorAll('p.collapsible');
+        
+        collapsibleParagraphs.forEach(function(paragraph) {
+          const button = document.createElement('button');
+          //- button.textContent = 'Additional Information';
+          button.className = 'additional-info-button'; // Add a class for styling
+          button.style['font-size'] = '10px';
+          
+          const toggleIcon = document.createElement('i');
+          toggleIcon.className = 'fas fa-plus'; // Add a FontAwesome icon for toggle effect
+          toggleIcon.style['font-size'] = '8px';
+          
+          button.appendChild(toggleIcon);
+          
+          paragraph.parentNode.insertBefore(button, paragraph);
+          paragraph.style.display = 'none';
+          
+          button.addEventListener('click', function() {
+            if (paragraph.style.display === 'none') {
+              paragraph.style.display = 'block';
+              toggleIcon.className = 'fas fa-minus'; // Change icon when expanded
+            } else {
+              paragraph.style.display = 'none';
+              toggleIcon.className = 'fas fa-plus'; // Change icon when collapsed
+            }
+          });
         });
       });
 
