@@ -17,7 +17,7 @@ html(lang='en')
     script(type="text/javascript").
       if (self === top) {
         var antiClickjack = document.getElementById("antiClickjack");
-        antiClickjack.parentNode.removeChild(antiClickjack);
+        if (antiClickjack && antiClickjack.parentNode) antiClickjack.parentNode.removeChild(antiClickjack);
       } else {
         top.location = self.location;
       }
@@ -1047,6 +1047,9 @@ html(lang='en')
         const collapsibleParagraphs = document.querySelectorAll('p.collapsible');
         
         collapsibleParagraphs.forEach(function(paragraph) {
+          if (paragraph.parentNode.querySelector('.additional-info-button')) {
+            paragraph.parentNode.removeChild(paragraph.parentNode.querySelector('.additional-info-button'))
+          }
           const button = document.createElement('button');
           //- button.textContent = 'Additional Information';
           button.className = 'additional-info-button'; // Add a class for styling
