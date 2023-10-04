@@ -10,7 +10,7 @@ const pkg = require("./package.json");
 const { readdirSync } = require("fs");
 const { join } = require("path");
 
-const customerLogos = readdirSync(join(__dirname, 'img/customers')).filter((f) => f !== '.DS_Store');
+const customerLogos = readdirSync(join(__dirname, 'img/customers')).filter((f) => f !== '.DS_Store' && !f.endsWith('.svg'));
 
 // Set the banner content
 const banner = [
