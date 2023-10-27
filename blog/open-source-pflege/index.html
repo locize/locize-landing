@@ -1,0 +1,844 @@
+<!DOCTYPE html><html lang="de"><head>
+    <meta charset="utf-8">
+    
+    <title>Die Freude, der Stolz und die Last der Pflege von Open Source </title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="canonical" href="https://locize.com/blog/open-source-pflege/">
+    
+    
+        <meta name="keywords" content="i18next,localization,l10n,internationalization,i18n,translation,open-source,github">
+    
+    <meta name="description" content="Die Freude und die Belastung bei der Pflege eines Open-Source-Projekts sind mit dem Zustrom von Problemen und Pull-Requests, der ständigen Verbesserung, dem Umgang mit anspruchsvollen Nutzern und der">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Die Freude, der Stolz und die Last der Pflege von Open Source">
+<meta property="og:url" content="https://locize.com/blog/open-source-pflege/index.html">
+<meta property="og:site_name" content="locize - localization as a service">
+<meta property="og:description" content="Die Freude und die Belastung bei der Pflege eines Open-Source-Projekts sind mit dem Zustrom von Problemen und Pull-Requests, der ständigen Verbesserung, dem Umgang mit anspruchsvollen Nutzern und der">
+<meta property="og:locale" content="de_DE">
+<meta property="og:image" content="https://locize.com/blog/maintaining-open-source/opensource-title.jpg">
+<meta property="article:published_time" content="2023-01-31T23:00:00.000Z">
+<meta property="article:modified_time" content="2023-01-31T17:05:03.555Z">
+<meta property="article:author" content="inweso GmbH">
+<meta property="article:tag" content="i18next">
+<meta property="article:tag" content="localization">
+<meta property="article:tag" content="l10n">
+<meta property="article:tag" content="internationalization">
+<meta property="article:tag" content="i18n">
+<meta property="article:tag" content="translation">
+<meta property="article:tag" content="open-source">
+<meta property="article:tag" content="github">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://locize.com/blog/maintaining-open-source/opensource-title.jpg">
+<meta name="twitter:creator" content="@locize">
+<meta property="fb:app_id" content="locize">
+    
+
+    
+
+    
+                        <link rel="alternative" hreflang="en" href="/blog/maintaining-open-source/">
+                    
+
+    
+        <link rel="icon" href="/blog/favicon.ico">
+    
+
+    <!-- 
+<link rel="stylesheet" href="/blog/libs/font-awesome/css/font-awesome.min.css">
+ -->
+    
+<link rel="stylesheet" href="/blog/libs/fontawesome/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/blog/libs/fontawesome/css/brands.min.css">
+
+    
+<link rel="stylesheet" href="/blog/libs/fontawesome/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/blog/libs/fontawesome/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/blog/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/blog/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+
+    
+<script src="/blog/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    
+    
+    
+    
+        
+<link rel="stylesheet" href="/blog/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        <script type="text/javascript">
+// (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+// (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+// m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+// })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+// ga('create', 'G-X50E21BGKG', 'auto');
+// ga('send', 'pageview');
+// ga('set', 'anonymizeIp', true);
+
+</script>
+    
+    
+
+
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+
+    <script type="application/ld+json">
+{ "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "locize",
+  "url": "https://locize.com",
+  "logo": "https://locize.com/img/locize_color.svg",
+  "sameAs": [""]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "name": "locize",
+  "url": "https://locize.com/blog/",
+  "logo": "https://locize.com/blog/images/locize_color.svg"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://locize.com/blog/open-source-pflege/"
+  },
+  "headline": "Die Freude, der Stolz und die Last der Pflege von Open Source",
+  "description": "Die Freude und die Belastung bei der Pflege eines Open-Source-Projekts sind mit dem Zustrom von Problemen und Pull-Requests, der ständigen Verbesserung, dem Umgang mit anspruchsvollen Nutzern und der",
+  "image": "https://locize.com/blog/maintaining-open-source/opensource-title.jpg",  
+  "author": {
+    "@type": "Organization",
+    "name": "locize",
+    "url": "https://locize.com"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "locize",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://locize.com/blog/images/locize_color.svg"
+    }
+  },
+  "datePublished": "2023-01-31T23:00:00.000Z",
+  "dateModified": "2023-01-31T17:05:03.555Z"
+}
+</script>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/blog/atom.xml" title="locize - localization as a service" type="application/atom+xml">
+</head>
+
+  <body>
+      <div id="wrap">
+          <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <!--<a href="/blog/" class="logo"></a>-->
+                        <!-- <a href="https://www.locize.com" class="logo" target="_new"></a> -->
+                        <a href="/" class="logo" style="float: left; margin: 0 15px 0 0;"></a>
+                    </h1>
+                    
+                        <h3 class="subtitle-wrap">
+                            <p class="subtitle">The continuous localization management platform that powers up your development and translation.</p>
+                        </h3>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa-solid fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/blog/">Home</a>
+                                </li>
+                            
+                            <li class="main-nav-list-item">
+                                <a class="main-nav-list-link" href="https://docs.locize.com" target="_new">Docs</a>
+                                <a class="main-nav-list-link" href="https://www.locize.app/login" target="_new">Login</a>
+                            </li>
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa-solid fa-circle-xmark"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    function htmlDecode(input){
+        var e = document.createElement('textarea');
+        e.innerHTML = input;
+        // handle case of empty input
+        return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+    }
+    var allAlternates = JSON.parse(htmlDecode(`[{&#34;title&#34;:&#34;Angular Lokalisierung - Entfesseln Sie die volle Leistung von i18next&#34;,&#34;label&#34;:&#34;angular-i18next&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;angular-i18next-de/&#34;,&#34;text&#34;:&#34;Reden wir über die Internationalisierung (i18n) für Angular (nicht AngularJS, nicht Angular 2, nur Angular 😉). Wenn es um die JavaScript-Lokalisierun&#34;},{&#34;title&#34;:&#34;Angular Localization - Unleash the full power of i18next&#34;,&#34;label&#34;:&#34;angular-i18next&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;angular-i18next/&#34;,&#34;text&#34;:&#34;Let&amp;#39;s talk about internationalization (i18n) for Angular (not AngularJS, not Angular 2, just Angular 😉). When it comes to JavaScript localization&#34;},{&#34;title&#34;:&#34;Beste Internationalisierung für Gatsby (ein i18next-basierter Leitfaden)&#34;,&#34;label&#34;:&#34;gatsby-i18n&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;gatsby-i18n-de/&#34;,&#34;text&#34;:&#34;Sie kennen Gatsby, richtig? - Wenn nicht, hören Sie auf, diesen Artikel zu lesen und machen Sie etwas anderes. Ja, Gatsby ist ein Open-Source-Framewor&#34;},{&#34;title&#34;:&#34;Best internationalization for Gatsby (an i18next based guide)&#34;,&#34;label&#34;:&#34;gatsby-i18n&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;gatsby-i18n/&#34;,&#34;text&#34;:&#34;You know Gatsby, right? - If not, stop reading this article and make something else. Yes, Gatsby an open-source framework that combines functionality &#34;},{&#34;title&#34;:&#34;Globalisierung vs. Lokalisierung – Was ist der Unterschied?&#34;,&#34;label&#34;:&#34;globalization-vs-localization&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;globalisierung-vs-lokalisierung/&#34;,&#34;text&#34;:&#34;Wissen Sie, was mit Globalisierung versus Lokalisierung gemeint ist? Von aussen könnten diese beiden Begriffe wie völlige Gegensätze erscheinen. Das i&#34;},{&#34;title&#34;:&#34;Globalization vs. Localization - What is the difference&#34;,&#34;label&#34;:&#34;globalization-vs-localization&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;globalization-vs-localization/&#34;,&#34;text&#34;:&#34;Do you know what is meant by globalization versus localization? From the outside, these two terms could appear like complete opposites of each other. &#34;},{&#34;title&#34;:&#34;Smart help for tech leaders and engineering managers&#34;,&#34;label&#34;:&#34;help-tech-leads&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;help-tech-leads/&#34;,&#34;text&#34;:&#34;Tech leaders and engineering managers have probably one of the most schizophrenic and ambitious role. If you are in such a position, you may know why.&#34;},{&#34;title&#34;:&#34;The hidden localization costs&#34;,&#34;label&#34;:&#34;hidden-localization-costs&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;hidden-localization-costs/&#34;,&#34;text&#34;:&#34;Big companies that reach hundreds of countries can spend millions on translation costs alone and still not reach all their audience. There are reveali&#34;},{&#34;title&#34;:&#34;Smarte Hilfe für Technische Teamleiter und Engineering-Manager&#34;,&#34;label&#34;:&#34;help-tech-leads&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;hilfe-tech-leiter/&#34;,&#34;text&#34;:&#34;Technische Teamleiter und Engineering-Manager haben wahrscheinlich eine der schizophrenesten und ansprochsvollsten Rollen. Wenn Sie in einer solchen P&#34;},{&#34;title&#34;:&#34;How does server side internationalization (i18n) look like?&#34;,&#34;label&#34;:&#34;how-does-server-side-internationalization-look-like&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;how-does-server-side-internationalization-look-like/&#34;,&#34;text&#34;:&#34;You may already know how to properly internationalize a client side application, like described in this React based tutorial, this Angular based tutor&#34;},{&#34;title&#34;:&#34;I18N im Multiversum der Formate&#34;,&#34;label&#34;:&#34;i18n-formats-javascript&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;i18n-formate-javascript/&#34;,&#34;text&#34;:&#34;Jede Nacht... träume ich denselben Traum. Und dann... beginnt der Alptraum. Ich tue, was ich tun muss ... um i18n zu schützen. Mit diesem Blogbeitrag &#34;},{&#34;title&#34;:&#34;I18N in the Multiverse of Formats&#34;,&#34;label&#34;:&#34;i18n-formats-javascript&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;i18n-formats-javascript/&#34;,&#34;text&#34;:&#34;Every night... I dream the same dream. And then... the nightmare begins. I do what I have to do... to protect i18n. With this blog post I open a doorw&#34;},{&#34;title&#34;:&#34;Fastest way to unleash the full power of i18next (in 3 steps)&#34;,&#34;label&#34;:&#34;i18next-migrate&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;i18next-migrate/&#34;,&#34;text&#34;:&#34;Internationalization (i18n) and localization (l10n) are crucial for businesses that want to expand globally and reach a wider audience. To do this, yo&#34;},{&#34;title&#34;:&#34;Vue-Lokalisierung – Internationalisieren Sie mit i18next&#34;,&#34;label&#34;:&#34;i18next-vue&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;i18next-vue-de/&#34;,&#34;text&#34;:&#34;Da Vue.js ein zugängliches, leistungsfähiges und vielseitiges Framework zum Erstellen von Web-Benutzeroberflächen ist, benötigt es auch eine erstklass&#34;},{&#34;title&#34;:&#34;Der schnellste Weg, um die volle Leistung von i18next zu entfesseln (in 3 Schritten)&#34;,&#34;label&#34;:&#34;i18next-migrate&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;i18next-migrieren/&#34;,&#34;text&#34;:&#34;Internationalisierung (i18n) und Lokalisierung (l10n) sind für Unternehmen, die global expandieren und ein grösseres Publikum erreichen möchten, von e&#34;},{&#34;title&#34;:&#34;Vue Localization - Internationalize with i18next&#34;,&#34;label&#34;:&#34;i18next-vue&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;i18next-vue/&#34;,&#34;text&#34;:&#34;Since Vue.js is an approachable, performant and versatile framework for building web user interfaces, it also needs a best-in-class internationalizati&#34;},{&#34;title&#34;:&#34;Is your software ready for localization?&#34;,&#34;label&#34;:&#34;is-your-software-ready-for-localization&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;is-your-software-ready-for-localization/&#34;,&#34;text&#34;:&#34;So you want people from all around the world to use and understand your software... ...but how to achieve that? Which format should I use?Think about &#34;},{&#34;title&#34;:&#34;Ist Ihre Software bereit für die Lokalisierung?&#34;,&#34;label&#34;:&#34;is-your-software-ready-for-localization&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;ist-ihre-software-bereit-fur-die-lokalisierung/&#34;,&#34;text&#34;:&#34;Sie möchten also, dass Menschen auf der ganzen Welt Ihre Software verwenden und verstehen... ...aber wie erreicht man das? Welches Format soll ich ver&#34;},{&#34;title&#34;:&#34;Der progressive Leitfaden zur jQuery-Internationalisierung (i18n) mit i18next&#34;,&#34;label&#34;:&#34;jquery-i18next&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;jquery-i18next-de/&#34;,&#34;text&#34;:&#34;Jeder Web-Entwickler ist vielleicht schon einmal auf das mehrjährige Methusalem jQuery gestossen. Erstellt im Januar 2006 bei BarCamp NYC von John Res&#34;},{&#34;title&#34;:&#34;The progressive guide to jQuery internationalization (i18n) using i18next&#34;,&#34;label&#34;:&#34;jquery-i18next&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;jquery-i18next/&#34;,&#34;text&#34;:&#34;Every web developer may have met the perennial Methuselah jQuery. Created back in January 2006 at BarCamp NYC by John Resig and currently maintained b&#34;},{&#34;title&#34;:&#34;Localization concept - a guide to adaption | locize&#34;,&#34;label&#34;:&#34;localization&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;localization/&#34;,&#34;text&#34;:&#34;If you are asking yourself, what is localization, then this blog is here to help you. We take a closer look at what this means and how it can help you&#34;},{&#34;title&#34;:&#34;Lokalisierungskonzept - ein Leitfaden für die Adaption | locize&#34;,&#34;label&#34;:&#34;localization&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;lokalisierung/&#34;,&#34;text&#34;:&#34;Wenn Sie sich fragen, Was ist Lokalisierung, dann ist dieser Blogartikel für Sie da. Wir werfen einen genaueren Blick darauf, was das bedeutet und wie&#34;},{&#34;title&#34;:&#34;The joy, the pride and the burden of maintaining open source&#34;,&#34;label&#34;:&#34;maintaining-open-source&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;maintaining-open-source/&#34;,&#34;text&#34;:&#34;As a maintainer of i18next, an open-source localization library, I can attest that there is nothing quite like the feeling of joy and pride that comes&#34;},{&#34;title&#34;:&#34;Static HTML Export with i18n compatibility in Next.js&#34;,&#34;label&#34;:&#34;next-i18n-static&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;next-i18n-static/&#34;,&#34;text&#34;:&#34;You know Next.js, right? - If not, stop reading this article and make something else. If you&amp;#39;re using Next.js 13 with app directory, have a look a&#34;},{&#34;title&#34;:&#34;Allseitig optimierte Next.js-Übersetzungen (ein next-i18next Leitfaden)&#34;,&#34;label&#34;:&#34;next-i18next&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;next-i18next-de/&#34;,&#34;text&#34;:&#34;Das Schreiben von Next.js-Code verwischt die Grenzen zwischen Client- und Serverseite. Der Code wird einmal geschrieben und dann je nach Bedarf als SS&#34;},{&#34;title&#34;:&#34;Statischer HTML-Export mit i18n-Kompatibilität in Next.js&#34;,&#34;label&#34;:&#34;next-i18n-static&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;next-i18n-statisch/&#34;,&#34;text&#34;:&#34;Sie kennen Next.js, richtig? - Wenn nicht, hören Sie auf, diesen Artikel zu lesen und machen Sie etwas anderes. Wenn Next.js 13 mit app directory verw&#34;},{&#34;title&#34;:&#34;Die Freude, der Stolz und die Last der Pflege von Open Source&#34;,&#34;label&#34;:&#34;maintaining-open-source&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;open-source-pflege/&#34;,&#34;text&#34;:&#34;Als Betreuer von i18next, einer Open-Source-Lokalisierungsbibliothek, kann ich bestätigen, dass es nichts Schöneres gibt als das Gefühl der Freude und&#34;},{&#34;title&#34;:&#34;All side optimized Next.js translations (a next-i18next guide)&#34;,&#34;label&#34;:&#34;next-i18next&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;next-i18next/&#34;,&#34;text&#34;:&#34;Writing Next.js code blurs the lines between client side and server side. The code is written once and depending on your needs it is then executed as &#34;},{&#34;title&#34;:&#34;Beste React Lokalisierung – Internationalisieren Sie mit i18next (ein vollständiger Leitfaden für react-i18next)&#34;,&#34;label&#34;:&#34;react-i18next&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;react-i18next-de/&#34;,&#34;text&#34;:&#34;Die Überwindung der Sprachbarriere für Anwender Ihrer Software ist ein wichtiges Thema. Englisch ist nicht mehr die universelle Sprache des Internets.&#34;},{&#34;title&#34;:&#34;How to internationalize a Remix application (Part 1)&#34;,&#34;label&#34;:&#34;remix-i18n&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;remix-i18n/&#34;,&#34;text&#34;:&#34;Let&amp;#39;s talk about internationalization (i18n) for Remix... When it comes to JavaScript localization, one of the most popular frameworks is i18next &#34;},{&#34;title&#34;:&#34;So internationalisieren Sie eine Remix-Anwendung (Teil 2)&#34;,&#34;label&#34;:&#34;remix-i18next&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;remix-i18next-de/&#34;,&#34;text&#34;:&#34;Im vorherigen Blogbeitrag haben wir auf einfache Weise gelernt, wie wir unsere Remix-App lokalisierungsfertig instrumentieren können, indem wir remix-&#34;},{&#34;title&#34;:&#34;So internationalisieren Sie eine Remix-Anwendung (Teil 1)&#34;,&#34;label&#34;:&#34;remix-i18n&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;remix-i18n-de/&#34;,&#34;text&#34;:&#34;Reden wir über Internationalisierung (i18n) für Remix... Wenn es um JavaScript-Lokalisierung geht, ist eines der beliebtesten Frameworks i18next und e&#34;},{&#34;title&#34;:&#34;Best React Localization - Internationalize with i18next (a complete guide to react-i18next)&#34;,&#34;label&#34;:&#34;react-i18next&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;react-i18next/&#34;,&#34;text&#34;:&#34;Overcoming the language barrier for users who use your software is an important topic. English is no longer the universal language of the internet. As&#34;},{&#34;title&#34;:&#34;Beam your Svelte internationalization up to a new level❕ (a svelte-i18n guide)&#34;,&#34;label&#34;:&#34;svelte-i18n&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;svelte-i18n/&#34;,&#34;text&#34;:&#34;It’s joyful to work with Svelte. The design is elegant and the robust first-party additions which can be coupled with, make building browser apps a pl&#34;},{&#34;title&#34;:&#34;Beamen Sie Ihre Svelte-Internationalisierung auf ein neues Level❕ (ein svelte-i18n Leitfaden)&#34;,&#34;label&#34;:&#34;svelte-i18n&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;svelte-i18n-de/&#34;,&#34;text&#34;:&#34;Es macht Spass, mit Svelte zusammenzuarbeiten. Das Design ist elegant und die robusten First-Party-Ergänzungen, mit denen gekoppelt werden kann, mache&#34;},{&#34;title&#34;:&#34;How to internationalize a Remix application (Part 2)&#34;,&#34;label&#34;:&#34;remix-i18next&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;remix-i18next/&#34;,&#34;text&#34;:&#34;In the previous blog post we learned on a simple way how we can instrumented our Remix app to be ready for localization by using remix-i18next. In thi&#34;},{&#34;title&#34;:&#34;Was ist i18n und was ist sein Zweck (2024) | locize&#34;,&#34;label&#34;:&#34;what-is-i18n&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;was-ist-i18n/&#34;,&#34;text&#34;:&#34;Heute werden Sie in ein Thema eingeführt, das jedes wachsende Unternehmen kennen sollte. Erfahren Sie mehr über den beliebten Big Mac von McDonald&amp;#39&#34;},{&#34;title&#34;:&#34;Die versteckten Lokalisierungskosten&#34;,&#34;label&#34;:&#34;hidden-localization-costs&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;versteckte-lokalisierungskosten/&#34;,&#34;text&#34;:&#34;Grosse Unternehmen, welche Hunderte von Ländern erreichen, können Millionen allein für Übersetzungskosten ausgeben und trotzdem nicht ihr gesamtes Pub&#34;},{&#34;title&#34;:&#34;Dies sind die Best Practices für die Internationalisierung von Webseiten&#34;,&#34;label&#34;:&#34;website-internationalization-best-practices&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;website-internationalisierung-empfohlene-vorgehensweisen/&#34;,&#34;text&#34;:&#34;Wenn es um die Internationalisierung Ihrer Website geht, soll Ihnen dieser Artikel dabei helfen, Ihre Best Practices zu ermitteln. Dies kann das Ergeb&#34;},{&#34;title&#34;:&#34;These are the website internationalization best practices&#34;,&#34;label&#34;:&#34;website-internationalization-best-practices&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;website-internationalization-best-practices/&#34;,&#34;text&#34;:&#34;When it comes to internationalizing your website, this article should assist you in determining your best practices. This could be as a result of a st&#34;},{&#34;title&#34;:&#34;What is website localization with examples (update)&#34;,&#34;label&#34;:&#34;website-localization&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;website-localization/&#34;,&#34;text&#34;:&#34;This is the most comprehensive guide about website localization, the process of adapting an existing website to the language and culture of a target m&#34;},{&#34;title&#34;:&#34;Was ist Website-Lokalisierung mit Beispielen (Aktualisierung)&#34;,&#34;label&#34;:&#34;website-localization&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;website-lokalisierung/&#34;,&#34;text&#34;:&#34;Dies ist der umfassendste Leitfaden zur Website-Lokalisierung, dem Prozess der Anpassung einer bestehenden Website an die Sprache und Kultur eines Zie&#34;},{&#34;title&#34;:&#34;What is i18n and what is its purpose (2024) | locize&#34;,&#34;label&#34;:&#34;what-is-i18n&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;what-is-i18n/&#34;,&#34;text&#34;:&#34;Today you&amp;#39;re going to be introduced to a topic every growing business should be aware of. Find out more about the popular Big Mac from McDonald&amp;#3&#34;},{&#34;title&#34;:&#34;Wie sieht die serverseitige Internationalisierung (i18n) aus?&#34;,&#34;label&#34;:&#34;how-does-server-side-internationalization-look-like&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;wie-sieht-die-serverseitige-internationalisierung-aus/&#34;,&#34;text&#34;:&#34;Möglicherweise wissen Sie bereits, wie Sie eine clientseitige Anwendung ordnungsgemäss internationalisieren, wie in diesem React-basierten Tutorial, d&#34;},{&#34;title&#34;:&#34;Supercharge Your TypeScript App: Mastering i18next for Type-Safe Translations&#34;,&#34;label&#34;:&#34;i18next-typescript&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;i18next-typescript/&#34;,&#34;text&#34;:&#34;As our world becomes increasingly interconnected, the development of web applications that cater to a global audience takes precedence among developer&#34;},{&#34;title&#34;:&#34;TypeScript-App aufwerten: Beherrschen von i18next für typsichere Übersetzungen&#34;,&#34;label&#34;:&#34;i18next-typescript&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;i18next-typescript-de/&#34;,&#34;text&#34;:&#34;Mit der zunehmenden Vernetzung unserer Welt gewinnt die Entwicklung von Webanwendungen für ein globales Publikum unter Entwicklern an Bedeutung. Wenn &#34;},{&#34;title&#34;:&#34;Uniting Swiss Excellence: Locize and Supertext Join Forces for Seamless Software Localization&#34;,&#34;label&#34;:&#34;supertext-partnership&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;supertext-partnership/&#34;,&#34;text&#34;:&#34;In a landmark collaboration that epitomizes Swiss innovation, Locize and Supertext have come together to revolutionize the realm of software localizat&#34;},{&#34;title&#34;:&#34;Vereinigung von Schweizer Exzellenz: Locize und Supertext bündeln ihre Kräfte für nahtlose Softwarelokalisierung&#34;,&#34;label&#34;:&#34;supertext-partnership&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;supertext-partnerschaft/&#34;,&#34;text&#34;:&#34;In einer bahnbrechenden Zusammenarbeit, die für Schweizer Innovation steht, haben sich Locize und Supertext zusammengeschlossen, um den Bereich der So&#34;},{&#34;title&#34;:&#34;Breaking Down Language Barriers: A Look into the Future of Translation and Localization&#34;,&#34;label&#34;:&#34;future-of-translation&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;future-of-translation/&#34;,&#34;text&#34;:&#34;As technology continues to advance, the field of translation and localization is also seeing significant changes. In the coming years, we can expect t&#34;},{&#34;title&#34;:&#34;Sprachbarrieren überwinden: Ein Blick in die Zukunft der Übersetzung und Lokalisierung&#34;,&#34;label&#34;:&#34;future-of-translation&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;zukunft-ubersetzung/&#34;,&#34;text&#34;:&#34;Mit fortschreitender Technologie erfährt auch der Bereich Übersetzung und Lokalisierung erhebliche Veränderungen. In den kommenden Jahren können wir e&#34;},{&#34;title&#34;:&#34;Say Hello to CAT (Computer-Assisted Translation): The Personal Translator in Your Pocket&#34;,&#34;label&#34;:&#34;cat&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;cat/&#34;,&#34;text&#34;:&#34;Welcome to the world of CATs, or Computer-Assisted Translation Software! These handy little programs are like having a personal translator in your poc&#34;},{&#34;title&#34;:&#34;Sag Hallo zu CAT (Computerunterstützten Übersetzung): Der persönliche Übersetzer in deiner Tasche&#34;,&#34;label&#34;:&#34;cat&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;cat-de/&#34;,&#34;text&#34;:&#34;Willkommen in der Welt der CATs, oder Computerunterstützten Übersetzungssoftware! Diese praktischen kleinen Programme sind wie ein persönlicher Überse&#34;},{&#34;title&#34;:&#34;Häufige Missverständnisse über i18n: Entlarvung der Mythen&#34;,&#34;label&#34;:&#34;i18n-misconceptions&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;i18n-missverstandnisse/&#34;,&#34;text&#34;:&#34;i18n oder Internationalisierung ist ein kritischer Aspekt der Softwareentwicklung, der es Anwendungen ermöglicht, sich an verschiedene Sprachen und ku&#34;},{&#34;title&#34;:&#34;Common Misconceptions About i18n: Debunking the Myths&#34;,&#34;label&#34;:&#34;i18n-misconceptions&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;i18n-misconceptions/&#34;,&#34;text&#34;:&#34;i18n, or internationalization, is a critical aspect of software development that allows applications to adapt to different languages and cultural norm&#34;}]`));
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/blog/',
+        CONTENT_URL: '/blog/content.json',
+        transformItem: (item) => {
+            if (item.raw && item.raw.indexOf('\nlabel: ') > 0) {
+                var part = item.raw.substring(item.raw.indexOf('\nlabel: ') + 8);
+                var label = part.substring(0, part.indexOf('\n')).trim();
+                const foundAlternate = allAlternates.find((p) => p.label === label && p.lang === window.document.documentElement.lang);
+                if (foundAlternate) return foundAlternate;
+            }
+        }
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/blog/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+          <div class="container">
+              <div class="main-body container-inner">
+                  <div class="main-body-inner">
+                      <section id="main">
+                          <!-- <div class="main-body-header">
+    <h1 class="header">
+    
+    uncategorized
+    </h1>
+</div> -->
+                          <div class="main-body-content">
+                              <article id="post-open-source-pflege" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+          <header class="article-header">
+              
+
+
+    
+        <h1 class="article-title" itemprop="name">
+            
+                Die Freude, der Stolz und die Last der Pflege von Open Source
+            
+            
+                
+                    
+                    
+                    <div class="article-entry-lng" style="float: right; font-size: small;">
+                        <a href="/blog/maintaining-open-source/"><i class="fa-solid fa-language" aria-hidden="true"></i> en</a>
+                    </div>
+                    
+                
+            
+        </h1>
+    
+
+          </header>
+        
+        
+        <div class="article-subtitle">
+            <a href="/blog/open-source-pflege/" class="article-date">
+    <time datetime="2023-01-31T23:00:00.000Z" itemprop="datePublished">01/02/2023</time>
+</a>
+            
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/github/" rel="tag">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/i18n/" rel="tag">i18n</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/i18next/" rel="tag">i18next</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/internationalization/" rel="tag">internationalization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/l10n/" rel="tag">l10n</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/localization/" rel="tag">localization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/open-source/" rel="tag">open-source</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/translation/" rel="tag">translation</a></li></ul>
+
+        </div>
+        
+        
+
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="../maintaining-open-source/opensource-title.jpg" loading="lazy" width="1800" height="844"></p>
+<p>Als <a target="_blank" rel="noopener" href="https://github.com/i18next/i18next/graphs/contributors">Betreuer</a> von <a target="_blank" rel="noopener" href="https://www.i18next.com/">i18next</a>, einer Open-Source-Lokalisierungsbibliothek, kann ich bestätigen, dass es nichts Schöneres gibt als das Gefühl der Freude und des Stolzes, das sich einstellt, wenn man zur Open-Source-Gemeinschaft beiträgt. Es ist ein unvergleichliches Gefühl zu sehen, wie andere Ihre Arbeit nutzen und schätzen. Aber mit grosser Macht kommt grosse Verantwortung, und die Pflege eines Open-Source-Projekts kann manchmal eine schwere Last sein.</p>
+<p>Lassen Sie mich Ihnen ein Bild malen: Es ist ein sonniger Sonntagnachmittag, und Sie sind bereit, sich zu entspannen und das Wochenende zu geniessen. Doch dann fängt Ihr Telefon an zu summen. Es ist eine Benachrichtigung von <a target="_blank" rel="noopener" href="https://github.com/">GitHub</a>, die Sie auf ein neues Problem oder eine neue Anfrage aufmerksam macht. Sie versuchen, es zu ignorieren, aber das nagende <strong>Verantwortungsgefühl</strong> setzt ein. Sie können nicht anders als sich zu fragen: "Was ist, wenn dies ein kritischer Fehler ist, der so schnell wie möglich behoben werden muss?" Und so klappen Sie widerwillig Ihren Laptop auf, bereit, das Problem in Angriff zu nehmen. Das, meine Freunde, ist die Freude und die Last der Pflege von Open Source.</p>
+<p><img src="../maintaining-open-source/sunday-interruption.jpg" loading="lazy" width="1856" height="1007"></p>
+<p>Aber es ist nicht nur der ständige <strong>Fluss von Problemen und Pull Requests</strong>, der überwältigend sein kann. Es ist auch der Druck, das Projekt <strong>stetig zu verbessern</strong> und zu aktualisieren, um mit der sich ständig verändernden Technologielandschaft Schritt zu halten. Bei i18next zum Beispiel müssen wir über neue Lokalisierungstrends und -technologien auf dem Laufenden bleiben und die <strong>Kompatibilität mit den neuesten Versionen beliebter Frameworks und Bibliotheken</strong> sicherstellen. Das kann eine Menge sein, vor allem, wenn man auch noch <strong>einen Vollzeitjob, eine Familie und andere Verpflichtungen unter einen Hut bringen muss</strong>.</p>
+<p><img src="../maintaining-open-source/i18next_ecosystem.webp" loading="lazy" width="951" height="544"></p>
+<p>Trotz der Herausforderungen ist die Betreuung eines Open-Source-Projekts eine <strong>belohnende Erfahrung</strong>, die ich gegen nichts eintauschen würde. Das Gefühl der Gemeinschaft und der Zusammenarbeit ist wirklich etwas Besonderes, und es ist eine <strong>Ehre</strong>, ein Teil von etwas zu sein, das so vielen Menschen hilft. Ausserdem gibt es nichts Schöneres als das <strong>Gefühl der Befriedigung</strong>, wenn man endlich einen kniffligen Fehler behebt oder eine neue Funktion implementiert, die das Projekt noch besser macht.</p>
+<p><img src="../maintaining-open-source/satisfaction.jpg" loading="lazy" width="1920" height="1440"></p>
+<p>Ein weiterer Aspekt der Pflege eines Open-Source-Projekts, der eine Herausforderung darstellen kann, ist der <strong>Umgang mit anspruchsvollen Benutzern</strong>. Während die meisten Benutzer die harte Arbeit, die mit der Pflege eines Projekts verbunden ist, verstehen und zu schätzen wissen, können einige sehr anspruchsvoll sein und sogar damit drohen, die Bibliothek nicht mehr zu benutzen, wenn ihr spezieller Wunsch nicht umgesetzt wird. Es kann schwierig sein, mit solchen Situationen umzugehen, da Sie Ihre Benutzer zufrieden stellen wollen, aber auch die allgemeine Richtung und die Ziele des Projekts berücksichtigen müssen. Es ist wichtig daran zu denken, dass Sie als Betreuer das letzte Wort darüber haben, was dem Projekt hinzugefügt wird und was nicht. Es ist auch wichtig, mit den Benutzern zu kommunizieren und die Gründe für bestimmte Entscheidungen zu erklären.</p>
+<p>Wenn Sie ein Open-Source-Projekt betreuen, denken Sie daran, dass <strong>niemand jemanden zwingt, es zu benutzen</strong>. Es ist zwar wichtig, auf Rückmeldungen zu hören und zu versuchen, die Bedürfnisse der Nutzer zu erfüllen, aber es ist auch wichtig, sich daran zu erinnern, dass das Projekt quelloffen und frei zu verwenden ist. Das bedeutet, dass die Nutzer die Freiheit haben, das Projekt zu nutzen oder nicht, und sie haben auch die Möglichkeit, etwas dazu beizutragen oder es sogar zu "forken", wenn sie wichtige Änderungen vornehmen wollen. Als Betreuer sollten wir immer offen für Feedback und Vorschläge sein, aber wir müssen auch Vertrauen in unsere Entscheidungen und die Richtung des Projekts haben. Wir sollten auch nicht vergessen, dass die meisten von uns ehrenamtlich arbeiten, und dass dies für die meisten von uns ein Hobby, eine Leidenschaft oder ein Nebenprojekt ist, und kein bezahlter Job. Wir sollten uns nicht verausgaben, indem wir versuchen, es jedem Benutzer recht zu machen. Wenn Nutzer anfangen, auf <strong>kostenlosen und fortlaufenden Support</strong> zu bestehen, ist das nicht gut.</p>
+<p>Eine häufige Herausforderung bei der Pflege eines Open-Source-Projekts ist der Umgang mit Benutzern, die auf GitHub <strong>Probleme melden, ohne genügend Informationen</strong> zu haben, um das Problem zu reproduzieren und zu untersuchen. Leider ist es nicht ungewöhnlich, dass Benutzer einfach sagen "es gibt einen Fehler" oder "es funktioniert nicht", ohne zusätzliche Details oder Kontext zu liefern. Dies kann es für die Betreuer extrem schwierig machen, das Problem zu verstehen und zu beheben.</p>
+<p>Hier kommt das Konzept eines <a target="_blank" rel="noopener" href="https://minimum-reproduction.wtf/"><strong>minimalen reproduzierbaren Beispiels</strong></a> ins Spiel. Ein minimales reproduzierbares Beispiel ist ein kleiner, in sich geschlossener Codeschnipsel, der das Problem demonstriert. Es sollte alle Informationen enthalten, die der Betreuer benötigt, um das Problem zu reproduzieren, einschliesslich der Version der Bibliothek, der Umgebung und jeder relevanten Konfiguration.</p>
+<p>Die Bereitstellung eines minimalen, reproduzierbaren Beispiels kann den Zeit- und Arbeitsaufwand für die Untersuchung und Behebung eines Problems erheblich reduzieren. Ohne ein solches Beispiel muss der Betreuer möglicherweise Stunden damit verbringen, das Problem zu verstehen und zu reproduzieren, was sowohl für den Betreuer als auch für den Benutzer frustrierend sein kann.</p>
+<p>Es ist wichtig, die Benutzer über die Wichtigkeit der Bereitstellung eines minimalen reproduzierbaren Beispiels aufzuklären, und dies in der Projektdokumentation klar zu kommunizieren. Einige Projektbetreuer haben sogar eine <strong>Vorlage für Fragen</strong> und/oder Pull Request, die den Nutzer auffordert, ein solches Beispiel zu liefern.</p>
+<p><img src="../maintaining-open-source/mre.jpg" loading="lazy" width="2436" height="1468"></p>
+<p>Es ist auch wichtig, geduldig und verständnisvoll zu sein, wenn man mit Benutzern zu tun hat, die mit dem Konzept eines minimalen reproduzierbaren Beispiels vielleicht nicht vertraut sind. Die Pflege eines Open-Source-Projekts ist eine Gemeinschaftsarbeit, und es ist wichtig, zusammenzuarbeiten, um das Projekt besser zu machen. Ausserdem ist ein Pull Request, der einen <strong>negativen Testfall</strong> enthält, sehr wertvoll.</p>
+<p>Manchmal ist es sinnvoll, eine grössere Anleitung oder einen Blog-Post zu schreiben, den die Nutzer durchgehen können, um grundlegende Probleme zu vermeiden.
+Für die Verwendung von i18next in einer React Anwendung haben wir zum Beispiel <a href="../react-i18next-de/">diesen Blog Post</a> geschrieben, der alle anfänglichen Probleme und Hürden behandelt.</p>
+<p>Denken Sie daran, dass Sie als Benutzer einer Open-Source-Bibliothek die Möglichkeit haben, zu ihrer Entwicklung beizutragen und sie noch besser zu machen. Scheuen Sie sich nicht, sich einzubringen und einen Beitrag zu leisten, egal wie klein. Jedes bisschen hilft, und es ist eine grossartige Möglichkeit, der Gemeinschaft <strong>etwas zurückzugeben</strong>. Auch wenn Sie kein Entwickler sind, können Sie auf andere Weise einen Beitrag leisten, z. B. durch das Schreiben von Dokumentation oder die Beantwortung von Fragen anderer Benutzer.</p>
+<p>Der beste Weg, einen Fehler in einer Open-Source-Bibliothek zu beheben, ist, ihn <strong>selbst zu beheben und einen Pull Request</strong> einzureichen. Es ist nicht nur eine grossartige Möglichkeit, der Gemeinschaft etwas zurückzugeben, sondern es hilft Ihnen auch, neue Fähigkeiten zu erlernen und die Codebasis besser zu verstehen und neue Fähigkeiten zu erlernen. Zögern Sie also nicht, die Ärmel hochzukrempeln und sich zu engagieren.</p>
+<p>Zusammenfassend lässt sich sagen, dass die Betreuung eines Open-Source-Projekts eine anspruchsvolle, aber lohnende Erfahrung ist. Es erfordert Hingabe, harte Arbeit und eine Menge Geduld, um ein Open-Source-Projekt reibungslos am Laufen zu halten. Aber der <strong>Gemeinschaftssinn und die Zusammenarbeit</strong>, die mit Open Source einhergehen, machen das Ganze lohnenswert. Als Betreuer ist es wichtig, sich daran zu erinnern, dass <strong>Sie nicht alleine</strong> auf dieser Reise sind, und dass es immer andere Betreuer und Mitwirkende gibt, die bereit sind zu helfen. Als Nutzer sollten Sie sich daran erinnern, dass Sie die <strong>Macht haben, etwas beizutragen</strong> und etwas zu bewirken.</p>
+<p><img src="../maintaining-open-source/contribute.jpg" loading="lazy" width="1920" height="1280"></p>
+<p>Open Source ist ein Gemeinschaftsprojekt, und <strong>jeder spielt eine Rolle</strong> für seinen Erfolg. Betreuer, Mitwirkende und Nutzer haben alle die Verantwortung, zusammenzuarbeiten, um das Projekt zu verbessern. Betreuer sollten offen für Feedback und Vorschläge sein, und Benutzer sollten klare, detaillierte Informationen über ihre Probleme liefern und, wenn möglich, Lösungen vorschlagen oder minimale reproduzierbare Beispiele liefern.</p>
+<p>Kurz gesagt, die Pflege eines Open-Source-Projekts ist eine anspruchsvolle, aber lohnende Erfahrung, die Menschen zusammenbringt, um auf ein gemeinsames Ziel hinzuarbeiten. Es ist wichtig, dass alle zusammenarbeiten. Lassen Sie uns also weiterhin Open-Source-Projekte unterstützen und <strong>einen Beitrag dazu leisten</strong> und die Welt zu einem besseren Ort machen, eine Codezeile nach der anderen.</p>
+<p><img src="../maintaining-open-source/team-work.jpg" loading="lazy" width="1920" height="1310"></p>
+<p>Abschliessend möchte ich mich bei <a href="https://locize.com/i18next.html#official-sponsor">locize</a> für die Unterstützung unserer i18next Community und die Investition in Open Source Aktivitäten bedanken.
+Ohne diese Unterstützung wäre i18next nicht da, wo es heute ist.</p>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "Was ist i18next?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "i18next ist ein in und für JavaScript geschriebenes Internationalisierungs-Framework. Aber es ist viel mehr als das. i18next bietet mehr als nur die Standard-i18n-Funktionen wie (Plural, Kontext, Interpolation, Format). Es bietet Ihnen eine Komplettlösung für die Lokalisierung Ihres Produkts vom Web über das Handy bis zum Desktop."
+      }
+    },{
+      "@type": "Question",
+      "name": "Was sind die Herausforderungen bei der Pflege eines Open-Source-Projekts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sich ständig mit neuen Problemen und Pull-Requests befassen zu müssen, über die neuesten Trends und Technologien auf dem Laufenden zu bleiben, andere Verpflichtungen unter einen Hut zu bringen und mit anspruchsvollen Nutzern umzugehen, sind einige der Herausforderungen bei der Pflege eines Open-Source-Projekts."
+      }
+    },{
+      "@type": "Question",
+      "name": "Wie kann man mit anspruchsvollen Nutzern umgehen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Der Betreuer hat das letzte Wort darüber, was dem Projekt hinzugefügt wird. Es ist wichtig, mit den Nutzern zu kommunizieren, die Gründe für Entscheidungen zu erläutern und daran zu denken, dass das Projekt quelloffen und frei zu nutzen ist."
+      }
+    },{
+      "@type": "Question",
+      "name": "Was ist das für ein Gefühl der Freude und des Stolzes, zu einem Open-Source-Projekt beizutragen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die Mitarbeit an einem Open-Source-Projekt bringt Freude und Stolz, wenn man sieht, dass andere die eigene Arbeit nutzen und schätzen."
+      }
+    },{
+      "@type": "Question",
+      "name": "Ist die Pflege eines Open-Source-Projekts immer einfach?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein, die Pflege eines Open-Source-Projekts kann zuweilen eine große Belastung sein, da ständig neue Probleme und Pull-Requests auftreten und das Projekt ständig verbessert und aktualisiert werden muss."
+      }
+    }]
+  }
+</script>
+<!-- flag of hidden posts -->
+        </div>
+        <footer class="article-footer">
+          
+          
+
+
+
+    <a data-url="https://locize.com/blog/open-source-pflege/" data-id="clewlvmtk002w2szaeulicqrw" class="article-share-link"><i class="fa-solid fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://x.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+          
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+    </section>
+
+
+                          </div>
+                      </section>
+                      <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="x-twitter" href="https://x.com/locize" target="_blank">
+                        <i class="icon fa-brands fa-x-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="youtube" href="https://www.youtube.com/channel/UCPYQjBbbXojUcB8qjeIB3uA" target="_blank">
+                        <i class="icon fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/locize" target="_blank">
+                        <i class="icon fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+    
+    
+        
+        
+        
+            
+            
+        
+        
+            
+            
+                
+            
+        
+    
+
+
+<nav id="article-nav">
+    
+        <a href="/blog/google-translate-accuracy/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Google Translate: Accuracy &amp; Alternatives
+        
+        </p>
+        <i class="icon fa-solid fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/blog/website-lokalisierung/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Was ist Website-Lokalisierung mit Beispielen (Aktualisierung)</p>
+        <i class="icon fa-solid fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/websiteplanet-interview/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/websiteplanet-interview/title.jpg)" alt="Interview with WebsitePlanet" class="thumbnail-image"></span>
+    
+    <!--  -->
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/blog/websiteplanet-interview/" class="title">Interview with WebsitePlanet</a></p>
+                            <p class="item-date"><time datetime="2023-10-23T22:00:00.000Z" itemprop="datePublished">24/10/2023</time></p>
+                        </div>
+                    </li>
+                
+                    
+                        
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/i18n-missverstandnisse/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/i18n-misconceptions/title.jpg)" alt="Häufige Missverständnisse über i18n: Entlarvung der Mythen" class="thumbnail-image"></span>
+    
+    <!--  -->
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/blog/i18n-missverstandnisse/" class="title">Häufige Missverständnisse über i18n: Entlarvung der Mythen</a></p>
+                            <p class="item-date"><time datetime="2023-10-15T22:00:00.000Z" itemprop="datePublished">16/10/2023</time></p>
+                        </div>
+                    </li>
+                
+                    
+                        
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/cat-de/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/cat/title.jpg)" alt="Sag Hallo zu CAT (Computerunterstützten Übersetzung): Der persönliche Übersetzer in deiner Tasche" class="thumbnail-image"></span>
+    
+    <!--  -->
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/blog/cat-de/" class="title">Sag Hallo zu CAT (Computerunterstützten Übersetzung): Der persönliche Übersetzer in deiner Tasche</a></p>
+                            <p class="item-date"><time datetime="2023-10-01T22:00:00.000Z" itemprop="datePublished">02/10/2023</time></p>
+                        </div>
+                    </li>
+                
+                    
+                        
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/was-ist-i18n/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/what-is-i18n/what-is-i18n.webp)" alt="Was ist i18n und was ist sein Zweck (2024) | locize" class="thumbnail-image"></span>
+    
+    <!--  -->
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/blog/was-ist-i18n/" class="title">Was ist i18n und was ist sein Zweck (2024) | locize</a></p>
+                            <p class="item-date"><time datetime="2023-09-28T22:00:00.000Z" itemprop="datePublished">29/09/2023</time></p>
+                        </div>
+                    </li>
+                
+                    
+                        
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/lokalisierung/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/localization/localization.webp)" alt="Lokalisierungskonzept - ein Leitfaden für die Adaption | locize" class="thumbnail-image"></span>
+    
+    <!--  -->
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/blog/lokalisierung/" class="title">Lokalisierungskonzept - ein Leitfaden für die Adaption | locize</a></p>
+                            <p class="item-date"><time datetime="2023-09-20T22:00:00.000Z" itemprop="datePublished">21/09/2023</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/">2023</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/">2022</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/">2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/">2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/">2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/">2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/">2016</a><span class="archive-list-count">6</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/blog/tags/abc/" style="font-size: 10px;">abc</a> <a href="/blog/tags/android/" style="font-size: 10px;">android</a> <a href="/blog/tags/angular/" style="font-size: 10px;">angular</a> <a href="/blog/tags/app-store/" style="font-size: 10px;">app store</a> <a href="/blog/tags/award/" style="font-size: 10px;">award</a> <a href="/blog/tags/aws/" style="font-size: 11.54px;">aws</a> <a href="/blog/tags/backend/" style="font-size: 12.31px;">backend</a> <a href="/blog/tags/beginning/" style="font-size: 10px;">beginning</a> <a href="/blog/tags/best-practices/" style="font-size: 11.54px;">best practices</a> <a href="/blog/tags/brand/" style="font-size: 10px;">brand</a> <a href="/blog/tags/cli/" style="font-size: 10.77px;">cli</a> <a href="/blog/tags/cloud/" style="font-size: 10px;">cloud</a> <a href="/blog/tags/competitors/" style="font-size: 10px;">competitors</a> <a href="/blog/tags/continuous-delivery/" style="font-size: 11.54px;">continuous delivery</a> <a href="/blog/tags/continuous-development/" style="font-size: 11.54px;">continuous development</a> <a href="/blog/tags/continuous-integration/" style="font-size: 11.54px;">continuous integration</a> <a href="/blog/tags/continuous-localization/" style="font-size: 12.31px;">continuous localization</a> <a href="/blog/tags/continuous-translation/" style="font-size: 11.54px;">continuous translation</a> <a href="/blog/tags/cultures/" style="font-size: 10px;">cultures</a> <a href="/blog/tags/customers/" style="font-size: 10px;">customers</a> <a href="/blog/tags/data/" style="font-size: 10px;">data</a> <a href="/blog/tags/dejs/" style="font-size: 10px;">dejs</a> <a href="/blog/tags/deno/" style="font-size: 10px;">deno</a> <a href="/blog/tags/ejs/" style="font-size: 10px;">ejs</a> <a href="/blog/tags/engineering-manager/" style="font-size: 12.31px;">engineering manager</a> <a href="/blog/tags/example/" style="font-size: 10px;">example</a> <a href="/blog/tags/examples/" style="font-size: 10px;">examples</a> <a href="/blog/tags/formatjs/" style="font-size: 12.31px;">formatjs</a> <a href="/blog/tags/g11n/" style="font-size: 11.54px;">g11n</a> <a href="/blog/tags/gatsby/" style="font-size: 10px;">gatsby</a> <a href="/blog/tags/gatsby-plugin-react-i18next/" style="font-size: 10px;">gatsby-plugin-react-i18next</a> <a href="/blog/tags/github/" style="font-size: 10px;">github</a> <a href="/blog/tags/global-localization/" style="font-size: 13.08px;">global localization</a> <a href="/blog/tags/globalisation/" style="font-size: 10px;">globalisation</a> <a href="/blog/tags/globalization/" style="font-size: 11.54px;">globalization</a> <a href="/blog/tags/guest-post/" style="font-size: 11.54px;">guest post</a> <a href="/blog/tags/guide/" style="font-size: 10px;">guide</a> <a href="/blog/tags/how-to-choose/" style="font-size: 10.77px;">how to choose</a> <a href="/blog/tags/i18n/" style="font-size: 17.69px;">i18n</a> <a href="/blog/tags/i18next/" style="font-size: 15.38px;">i18next</a> <a href="/blog/tags/i18next-vue/" style="font-size: 10px;">i18next-vue</a> <a href="/blog/tags/international-strategy/" style="font-size: 13.08px;">international strategy</a> <a href="/blog/tags/internationalization/" style="font-size: 19.23px;">internationalization</a> <a href="/blog/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/blog/tags/jquery-i18next/" style="font-size: 10px;">jquery-i18next</a> <a href="/blog/tags/l10n/" style="font-size: 18.46px;">l10n</a> <a href="/blog/tags/language/" style="font-size: 10px;">language</a> <a href="/blog/tags/language-localization/" style="font-size: 10px;">language localization</a> <a href="/blog/tags/language-translation/" style="font-size: 10px;">language translation</a> <a href="/blog/tags/localization/" style="font-size: 20px;">localization</a> <a href="/blog/tags/localization-project/" style="font-size: 10px;">localization project</a> <a href="/blog/tags/localization-techniques/" style="font-size: 10px;">localization techniques</a> <a href="/blog/tags/localization-tools/" style="font-size: 10px;">localization tools</a> <a href="/blog/tags/locize/" style="font-size: 16.92px;">locize</a> <a href="/blog/tags/locizify/" style="font-size: 11.54px;">locizify</a> <a href="/blog/tags/machine-translation/" style="font-size: 12.31px;">machine translation</a> <a href="/blog/tags/mail/" style="font-size: 10px;">mail</a> <a href="/blog/tags/marketing/" style="font-size: 10.77px;">marketing</a> <a href="/blog/tags/marketing-campaigns/" style="font-size: 10px;">marketing campaigns</a> <a href="/blog/tags/markets/" style="font-size: 10px;">markets</a> <a href="/blog/tags/mobile-app/" style="font-size: 10px;">mobile app</a> <a href="/blog/tags/multi-tenancy/" style="font-size: 10px;">multi-tenancy</a> <a href="/blog/tags/native-language/" style="font-size: 10px;">native language</a> <a href="/blog/tags/next/" style="font-size: 12.31px;">next</a> <a href="/blog/tags/next-i18next/" style="font-size: 11.54px;">next-i18next</a> <a href="/blog/tags/open-source/" style="font-size: 10px;">open-source</a> <a href="/blog/tags/order/" style="font-size: 10px;">order</a> <a href="/blog/tags/polyglot/" style="font-size: 10.77px;">polyglot</a> <a href="/blog/tags/problems/" style="font-size: 10px;">problems</a> <a href="/blog/tags/process/" style="font-size: 10.77px;">process</a> <a href="/blog/tags/products/" style="font-size: 10px;">products</a> <a href="/blog/tags/project-management/" style="font-size: 10px;">project management</a> <a href="/blog/tags/react/" style="font-size: 14.62px;">react</a> <a href="/blog/tags/react-i18next/" style="font-size: 13.85px;">react-i18next</a> <a href="/blog/tags/react-intl/" style="font-size: 10px;">react-intl</a> <a href="/blog/tags/refining-website-content/" style="font-size: 10px;">refining website content</a> <a href="/blog/tags/remix/" style="font-size: 10.77px;">remix</a> <a href="/blog/tags/remix-i18next/" style="font-size: 10.77px;">remix-i18next</a> <a href="/blog/tags/server/" style="font-size: 10.77px;">server</a> <a href="/blog/tags/serverless/" style="font-size: 10.77px;">serverless</a> <a href="/blog/tags/serverside/" style="font-size: 10.77px;">serverside</a> <a href="/blog/tags/service/" style="font-size: 11.54px;">service</a> <a href="/blog/tags/software/" style="font-size: 10px;">software</a> <a href="/blog/tags/software-architecture/" style="font-size: 10px;">software architecture</a> <a href="/blog/tags/software-development/" style="font-size: 10px;">software development</a> <a href="/blog/tags/successful-global-localization/" style="font-size: 10px;">successful global localization</a> <a href="/blog/tags/svelte/" style="font-size: 10px;">svelte</a> <a href="/blog/tags/svelte-i18n/" style="font-size: 10px;">svelte-i18n</a> <a href="/blog/tags/tech-lead/" style="font-size: 12.31px;">tech lead</a> <a href="/blog/tags/technology/" style="font-size: 10px;">technology</a> <a href="/blog/tags/testing/" style="font-size: 10px;">testing</a> <a href="/blog/tags/tms/" style="font-size: 12.31px;">tms</a> <a href="/blog/tags/translation/" style="font-size: 16.15px;">translation</a> <a href="/blog/tags/translation-management/" style="font-size: 12.31px;">translation management</a> <a href="/blog/tags/translation-project-management/" style="font-size: 10px;">translation project management</a> <a href="/blog/tags/translation-tools/" style="font-size: 10px;">translation tools</a> <a href="/blog/tags/transnational-strategy/" style="font-size: 10.77px;">transnational strategy</a> <a href="/blog/tags/types/" style="font-size: 10px;">types</a> <a href="/blog/tags/typescript/" style="font-size: 10px;">typescript</a> <a href="/blog/tags/video-game/" style="font-size: 10px;">video game</a> <a href="/blog/tags/vue/" style="font-size: 11.54px;">vue</a> <a href="/blog/tags/vue-i18n/" style="font-size: 10.77px;">vue-i18n</a> <a href="/blog/tags/vue-i18next/" style="font-size: 10px;">vue-i18next</a> <a href="/blog/tags/web/" style="font-size: 10px;">web</a> <a href="/blog/tags/web-app-translation/" style="font-size: 10.77px;">web app translation</a> <a href="/blog/tags/website-internationalization/" style="font-size: 10.77px;">website internationalization</a> <a href="/blog/tags/workflow/" style="font-size: 10px;">workflow</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://www.i18next.com" target="_blank">i18next</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://locize.com/privacy.html" target="_blank">privacy policy</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://locize.com/terms.html" target="_blank">terms</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                  </div>
+              </div>
+          </div>
+          <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa-solid fa-angle-up"></i></a>
+            <div class="credit">
+                <div style="float: left;">
+                    <h1 class="logo-wrap">
+                        <a href="/blog/" class="logo"></a>
+                    </h1>
+                    <p>© 2023 inweso GmbH</p>
+                    <!-- <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Original theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+          
+
+    
+        
+<script src="/blog/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/blog/js/main.js"></script>
+
+
+<script src="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+    function enableCookies() {
+        var e = document.createElement("script");
+        e.type = "text/javascript";
+        e.async = true;
+        e.src = "https://www.googletagmanager.com/gtag/js?id=G-X50E21BGKG";
+        var a = document.getElementsByTagName("script")[0];
+        a.parentNode.insertBefore(e, a);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-X50E21BGKG', { 'anonymize_ip': true });
+        // gtag('config', 'UA-78143856-1', { 'anonymize_ip': true }); // old google analytics
+    }
+
+    function disableCookies() {
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i];
+            var eqPos = cookie.indexOf("=");
+            var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+    }
+
+    window.cookieconsent.initialise({
+        palette: {
+            popup: {
+                background: "#2196f3",
+                text: "#ffffff"
+            },
+            button: {
+                background: "#1976d2",
+                text: "#ffffff"
+            }
+        },
+        theme: "edgeless",
+        type: "opt-in",
+        content: {
+            message: "This website uses cookies to ensure you get the best experience on our website.",
+            allow: "Accept",
+            dismiss: "Decline",
+            link: "learn",
+            href: "https://locize.com/privacy.html"
+        },
+        elements: {
+            deny: '<a style="font-weight: 100; color: #ffffffa8; font-size: smaller;" aria-label="deny cookies" role="button" tabindex="0" class="cc-btn cc-deny">Decline</a>'
+        },
+        onInitialise: function (status) {
+            var type = this.options.type;
+            var didConsent = this.hasConsented();
+            if (type == 'opt-in' && didConsent) {
+                // enable cookies
+                enableCookies();
+            }
+            if (type == 'opt-out' && !didConsent) {
+                // disable cookies
+                disableCookies();
+            }
+        },
+        onStatusChange: function(status, chosenBefore) {
+            var type = this.options.type;
+            var didConsent = this.hasConsented();
+            if (type == 'opt-in' && didConsent) {
+                // enable cookies
+                enableCookies();
+            }
+            if (type == 'opt-out' && !didConsent) {
+                // disable cookies
+                disableCookies();
+            }
+        },
+        onRevokeChoice: function() {
+            var type = this.options.type;
+            if (type == 'opt-in') {
+                // disable cookies
+                disableCookies();
+            }
+            if (type == 'opt-out') {
+                // enable cookies
+                enableCookies();
+            }
+        }
+    });
+</script>
+      </div>
+  
+  
+
+</body></html>

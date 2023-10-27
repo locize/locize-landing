@@ -1,0 +1,968 @@
+@import "iconfont.css";
+@import "animate.min.css";
+
+/*-----------------------------------------------------------------------------------*/
+/* GENERAL
+/*-----------------------------------------------------------------------------------*/
+
+body{
+	text-align: center;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #fff;
+}
+
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
+	color: #fff;
+	font-weight: 300;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-transform: uppercase;
+}
+
+p{
+	font-size: 1.2em;
+}
+
+.lead{
+	font-weight: 300;
+}
+
+button, .btn {
+	font-family: 'Roboto Condensed', sans-serif;
+	display: inline-block;
+	margin-bottom: 0;
+	margin-bottom: 10px;
+	padding: 6px 12px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	border-radius: 5px;
+	vertical-align: middle;
+	text-align: center;
+	white-space: nowrap;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 1.428571429;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.btn {
+	color: #fff;
+	background: #1976d2;
+	padding: 15px 40px;
+	border: solid 1px #fff;
+	border-radius: 0;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.btn:hover {
+	color: #fff;
+	background: #4B8DCE;
+}
+
+.btn.btn-login {
+	border: solid 1px #1976d2;
+	margin-left: 20px;
+}
+
+.btn.btn-signup {
+	background: #fff;
+	color: #1976d2;
+	border: solid 1px #1976d2;
+}
+
+select {
+
+  /* styling */
+  background-color: transparent;
+	color: #fff;
+  border: 1px solid #fff;
+  border-radius: 0;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+	cursor: pointer;
+
+  /* reset */
+
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select:hover {
+	background: #4B8DCE;
+}
+
+
+/* arrows */
+select.minimal {
+  background-image:
+    linear-gradient(45deg, transparent 50%, #fff 50%),
+    linear-gradient(135deg, #fff 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 18px) calc(1em + 2px),
+    calc(100% - 13px) calc(1em + 2px),
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+select.minimal:focus {
+  background-image:
+    linear-gradient(45deg, green 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, green 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+  border-color: green;
+  outline: 0;
+}
+
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+
+.visibility{
+	visibility: hidden;
+}
+
+.animated{
+	visibility: visible!important;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	KEY COLOR
+/*-----------------------------------------------------------------------------------*/
+
+/*---- Typography ----*/
+header h1,
+.payoff h1,
+.details .carousel,
+.social a:hover{
+	color: rgba(255,255,255,0.5);
+}
+
+.features p{
+	color: #BFBFBF;
+}
+
+/*---- Background ----*/
+.features,
+.detail .carousel-indicators .active {
+	background: rgba(25,118,210,0.5);
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* NAVBAR
+/*-----------------------------------------------------------------------------------*/
+
+nav.navbar{
+	position: fixed;
+	top: -100%;
+	margin-bottom: 0px;
+	padding: 10px 0px 10px 0px;
+	width: 100%;
+	border-radius: 0px;
+	transition: all 0.2s;
+}
+
+.navbar-nav{
+	float: right;
+}
+
+nav.navbar.fixed-to-top{
+	top: 0px;
+}
+
+.navbar-default{
+	border: none;
+	border-bottom: 1px solid #eee;
+	background: #fff;
+	opacity: 0.95;
+	display: none;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #AAA;
+	font-size: 1.2em;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+	color: #3A3A3A;
+	cursor: pointer;
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+
+.navbar-default .navbar-brand{
+	color: #333333;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 2em;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* HEADER
+/*-----------------------------------------------------------------------------------*/
+
+header{
+	padding: 150px 0px 0px 0px;
+	/*height: 960px;*/
+	height: 1060px;
+	background: url('../../img/landingpage/regensburg.jpg');
+	background-color: #fff!important;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: #2196f3;
+}
+
+header .header-btns {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+.header-btns .btn-header-login {
+	background-color: transparent;
+	color: #fff;
+  border: 1px solid #fff;
+  border-radius: 0;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 1.5em 0.5em 1.5em;
+	text-decoration: none;
+	margin-right: 10px;
+	text-transform: uppercase;
+}
+
+.header-btns .btn-header-login:hover {
+	background: #4B8DCE;
+}
+
+header h1{
+	text-transform: uppercase;
+	font-weight: 700;
+	font-weight: 300;
+	font-size: 100px;
+	font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+header p.lead{
+	margin-bottom: -80px;
+	font-size: 36px;
+	color: #ddd;
+}
+
+
+header .carousel-iphone{
+	margin-right: auto;
+	margin-left: auto;
+	width: 320px;
+	height: 672px;
+	background: url('../../img/landingpage/iphone-front.png') no-repeat;
+	background-size: 100%;
+}
+
+header .carousel-macbook {
+	margin-top: 300px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 800px;
+	height: 455px;
+	background: url('../../img/landingpage/macbook.png') no-repeat;
+	background-size: 100%;
+}
+
+header .carousel-inner{
+	height: 352px;
+	background-color: #fff;
+}
+
+/*@media (min-width:560px) {
+	header .carousel-iphone{
+		width: 560px;
+		height: 1176px;
+	}
+}*/
+
+header .carousel {
+	position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 41px 0px 0px 7px;
+  width: 574px;
+}
+
+header .carousel-indicators .active {
+	width: 15px;
+	height: 15px;
+	background: #1976d2;
+}
+
+header .carousel-indicators {
+	bottom: -95px;
+}
+
+header .carousel-indicators li {
+	display: inline-block;
+	margin: 1px;
+	width: 15px;
+	height: 15px;
+	border: 1px solid #666666;
+	border-radius: 10px;
+	text-indent: -999px;
+	cursor: pointer;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/* PURCHASE
+/*-----------------------------------------------------------------------------------*/
+
+.purchase{
+	overflow: hidden;
+	padding: 100px 0px 100px 0px;
+	min-height: 200px;
+	background-color: #fff
+}
+
+.purchase h1{
+	color: #2196f3;
+}
+
+.purchase button.app-store{
+	width: 152px;
+	height: 52px;
+	background: url(../../img/landingpage/badge-appstore.png) #3a3a3a no-repeat 0px 5px;
+	color: white;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	PAYOFF
+/*-----------------------------------------------------------------------------------*/
+
+.payoff{
+	overflow: hidden;
+	padding: 230px 0px 150px 0px;
+	min-height: 600px;
+	background: url('../../img/landingpage/projectspace.jpg');
+	background-position: center top;
+	background-repeat: repeat-x;
+	color: white;
+}
+
+.payoff h1{
+	text-transform: uppercase;
+	font-weight: 300;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 2.8em;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	DETAIL
+/*-----------------------------------------------------------------------------------*/
+
+.detail{
+	overflow: hidden;
+	padding: 50px 0px 0px 0px;
+	min-height: 500px;
+	background: #2196f3;
+}
+
+.detail .title{
+	margin-bottom: 80px;
+	text-align: center;
+}
+
+.detail .features .row{
+	margin-bottom: 40px;
+}
+
+.detail .carousel h1{
+	font-size: 3.8em;
+}
+.detail .carousel h1, .detail p{
+	text-align: left;
+	font-weight: 300;
+}
+
+.detail p{
+	color: #FBFBFB;
+}
+
+.detail .carousel-control{
+	background: none;
+}
+
+.detail .app-screenshot{
+	overflow: hidden;
+	overflow: hidden;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 95px;
+	width: 320px;
+	height: 450px;
+	background: url('../../img/landingpage/iphone-front.png') no-repeat;
+	background-size: 100%;
+}
+
+.detail .app-screenshot img{
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 4px;
+	width: 280px;
+}
+
+.detail .carousel-indicators {
+	position: relative;
+	bottom: 0;
+	left: 0;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding: 5px;
+	padding-bottom: 8px;
+	width: 100%;
+	border-top: 1px solid #eee;
+	background: #ffffff;
+}
+
+.detail .carousel-indicators .active {
+	width: 45px;
+	height: 5px;
+	border: none;
+	border-radius: 0px;
+}
+
+.detail .carousel-indicators li {
+	display: inline-block;
+	margin: 1px;
+	width: 45px;
+	height: 5px;
+	border: none;
+	border-radius: 0px;
+	background: #eeeeee;
+	text-indent: -999px;
+	cursor: pointer;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	FEATURES
+/*-----------------------------------------------------------------------------------*/
+
+.features{
+	background: #006bde;
+	overflow: hidden;
+	padding: 150px 0px 150px 0px;
+	min-height: 400px;
+	color: black;
+}
+
+.features p {
+	text-align: left;
+	font-weight: 400;
+	color: #ddd;
+}
+
+.features h2{
+	text-align: left;
+	color: #ffffff;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.features .circle{
+	box-sizing: border-box;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 28px;
+	width: 150px;
+	height: 150px;
+	border: 2px solid #ffffff;
+	border-radius: 100%;
+	text-align: center;
+
+}
+
+.features span.glyphicon, .features i{
+	margin-top: 3px;
+	color: #ffffff;
+	font-size: 5em;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	SOCIAL
+/*-----------------------------------------------------------------------------------*/
+
+.social{
+	overflow: hidden;
+	padding: 80px 0px 150px 0px;
+	min-height: 350px;
+	background: url('../../img/landingpage/earth.jpg');
+	background-position: center top;
+	background-repeat: repeat-x;
+	color: white;
+}
+
+.social h2{
+	color: white;
+}
+
+.social a {
+	margin-left: 10px;
+	color: #FFF;
+	font-size: 5em;
+	transition: all 0.3s;
+}
+
+.social a:hover{
+	text-decoration: none;
+	cursor: pointer;
+
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	FEATURES INTRO
+/*-----------------------------------------------------------------------------------*/
+
+.features.intro {
+	background: #fff;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	PRICING
+/*-----------------------------------------------------------------------------------*/
+
+.pricing{
+	padding: 80px 0px 0px 0px;
+	background: #006bde;
+}
+
+.pricing p.lead{
+	color: #ddd
+}
+
+.pricing div.pricing-table {
+  min-width: 100%;
+  display: inline-block;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  padding: 1.2em 2em;
+  background: rgba(255,255,255,0.8);
+  text-align: left;
+}
+
+.pricing div.pricing-table table {
+  width: 100%;
+}
+
+.pricing div.pricing-table-context h3, .pricing div.pricing-table-context h4 {
+	color: #333;
+}
+
+.pricing div.pricing-table-context {
+	background: rgba(255,255,255,0.4);
+	font-size: 1.2em;
+}
+
+.pricing div.pricing-table-addon {
+	background: rgba(255,255,255,0.2);
+	font-size: 1.2em;
+}
+
+.pricing div.pricing-table-addon p {
+	color: rgba(255,255,255,0.6);
+}
+
+.pricing div.pricing-table-addon-2 {
+	background: rgba(255,255,255,0.04);
+	font-size: 1.2em;
+}
+
+.pricing div.pricing-table-addon-2 p {
+	color: rgba(255,255,255,0.6);
+}
+
+.pricing div.pricing-table-addon-2 p a {
+	font-size: 3em;
+	color: rgba(255,255,255,0.6);
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*	GET-IT
+/*-----------------------------------------------------------------------------------*/
+
+.get-it{
+	background: #1976d2;
+	padding: 100px 0px 160px 0px;
+	text-align: center;
+}
+
+.get-it h1 {
+	color: #fff;
+}
+
+.get-it button.app-store{
+	width: 152px;
+	height: 52px;
+	background: url(../../img/landingpage/badge-appstore.png) #373737 no-repeat 0px 5px;
+	color: white;
+}
+
+.get-it hr{
+	margin-top: 3em;
+	margin-bottom: 3em;
+}
+
+.get-it ul{
+	list-style-type: none;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+.get-it ul li{
+	display: inline-block;
+	margin-left:30px;
+}
+
+.get-it ul li:first-child{
+	margin-left: 0px;
+}
+
+.get-it ul li a{
+	color: #FBFBFB;
+	font-size: 1.2em;
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+
+.get-it ul li a:hover{
+	color: #3A3A3A;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.get-it .footer-links .footer-link-light {
+	font-weight: 300;
+	font-size: 0.8em;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	MEDIA QUERIES
+/*-----------------------------------------------------------------------------------*/
+
+/*@media (max-width:768px) {
+
+	header{
+		padding-bottom: 50px;
+		height: 100%;
+	}
+
+	.navbar-nav {
+		float: left;
+		text-align: left;
+}
+
+
+}*/
+
+@media (max-width:780px) {
+
+	header{
+		height: 815px;
+	}
+
+	header p.lead{
+		margin-bottom: -100px;
+	}
+
+	.detail .carousel h1, .detail p{
+		text-align: center;
+	}
+
+	header .carousel-macbook {
+		width: 620px;
+	  height: 358px;
+	  margin-top: 150px;
+	}
+
+	.carousel-macbook .detail .app-screenshot{
+		width: 280px;
+	}
+
+	header .carousel, .detail .app-screenshot img{
+		padding-top: 31px;
+		width: 443px;
+		padding-left: 4px;
+	}
+
+	header .carousel-inner {
+	  height: 274px;
+	}
+
+	.detail .app-screenshot img{
+		margin-top: 0px;
+	  padding-top: 0px;
+	  width: 278px;
+	}
+
+	.detail p{
+			margin-bottom: 60px;
+	}
+
+	header{
+		background-position-y: 0px;
+		background-size: 200%;
+	}
+
+	.social{
+		background-position-y: -85px;
+		background-size: 200%;
+		padding: 20px 0;
+		min-height: 150px;
+	}
+
+	.features{
+		padding: 50px 0;
+	}
+
+	.features.intro iframe{
+		width: 400px;
+	}
+
+	.payoff{
+		padding-top: 50px;
+		padding-bottom: 50px;
+		min-height: 200px;
+	}
+
+	.payoff h1{
+		font-size: 24px;
+	}
+
+	.features .col-md-4{
+		margin-bottom: 60px;
+	}
+
+}
+
+@media (max-width:640px){
+
+	header .carousel-iphone, .detail .app-screenshot{
+		width: 280px;
+	}
+
+	header .carousel-macbook {
+		width: 420px;
+		height: 245px;
+		margin-top: 150px;
+	}
+
+	header .carousel-inner{
+		height: 185px;
+	}
+
+	.carousel-macbook .detail .app-screenshot{
+		width: 280px;
+	}
+
+	header .carousel, .detail .app-screenshot img{
+		padding-top: 22px;
+    width: 300px;
+    padding-left: 3px;
+	}
+
+	.detail .app-screenshot img{
+		margin-top: -12px;
+		padding-top: 0px;
+		width: 244px;
+	}
+
+
+	header{
+		height: 560px;
+		padding-top: 30px;
+		padding-bottom: 0px;
+	}
+
+	header h1{
+		font-size: 70px;
+	}
+
+	.features{
+		padding: 50px 0;
+	}
+
+	.features.intro iframe{
+		width: 400px;
+	}
+
+	.purchase{
+		padding-top: 160px;
+	}
+
+	.social{
+		background-position-y: -85px;
+    background-size: 200%;
+    padding: 20px 0;
+    min-height: 150px;
+	}
+
+	.features col-md-4{
+		margin-bottom: 50px;
+	}
+
+	.detail {
+		min-height: 1025px;
+	}
+
+}
+
+@media (max-width:480px){
+	header{
+		height: 400px
+	}
+
+	header p.lead{
+		font-size: 24px;
+	}
+
+	header .carousel-iphone, .detail .app-screenshot{
+		width: 280px;
+	}
+
+	header .carousel-macbook {
+		width: 300px;
+    height: 176px;
+    margin-top: 150px;
+	}
+
+	header .carousel-inner{
+		height: 132px;
+	}
+
+	.carousel-macbook .carousel {
+		width: 216px;
+		padding-top: 15px
+	}
+
+	.detail {
+		min-height: 1050px;
+	}
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Retina-specific stuff here */
+    .purchasebutton.app-store, .get-it button.app-store{
+        background: url(../../img/landingpage/badge-appstore@2x.png) #3a3a3a no-repeat 0px 5px;
+        background-size: 98%;
+    	color: white;
+    }
+}
+
+
+.pricing-slider {
+  width: 400px;
+  margin-left: 10px;
+}
+
+.pricing-fromto {
+  width: 80px;
+  margin: 0 10px;
+}
+
+.pricing-row {
+  display: flex;
+  align-items: center;
+}
+
+.pricing-subResult {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.pricing-label {
+  display: inline-block;
+  width: 150px;
+  margin-right: 10px;
+}
+
+.pricing-results {
+  margin-top: 40px;
+}
+.pricing-resultTotal {
+  font-weight: 700;
+}
+.pricing-sets {
+  margin: 0 0 40px 0;
+}
+
+
+
+#nudgespotInappContainer .nudgespot-launcher .nudgespot-launcher-inner {
+  background-color: #1976D2 !important;
+}
+#nudgespotInappContainer .nudgespot-welcome-bubble .nudgespot-welcome-header {
+  background-color: #1976D2 !important;
+}
+#nudgespotInappConversationsContainer .nudgespot-messages-container .nudgespot-new-conversation-content .nudgespot-welcome-message .nudgespot-welcome-message-header,
+#nudgespotInappMessagesContainer .nudgespot-messages-container .nudgespot-new-conversation-content .nudgespot-welcome-message .nudgespot-welcome-message-header {
+  background-color: #1976D2 !important;
+}
+#nudgespotInappMessagesContainer .nudgespot-messages-container .nudgespot-message-content-container .nudgespot-message-details.nudgespot-message-subscriber .nudgespot-message-body {
+  background-color: #1976D2 !important;
+}
+#nudgespotInappContainer .nudgespot-button,
+#nudgespotInappConversationsContainer .nudgespot-button,
+#nudgespotInappMessagesContainer .nudgespot-button {
+  background-color: #1976D2 !important;
+}
+#nudgespotInappConversationsContainer .nudgespot-messages-container .nudgespot-messages-header .nudgespot-messages-header-contents .nudgespot-unread-count,
+#nudgespotInappMessagesContainer .nudgespot-messages-container .nudgespot-messages-header .nudgespot-messages-header-contents .nudgespot-unread-count {
+  background-color: #1976D2 !important;
+}
+.cc_banner.cc_container.cc_container--open {
+  background-color: rgba(0,0,0,0.7) !important;
+}
+.cc_btn.cc_btn_accept_all {
+  border-radius: 0 !important;
+  color: #fff !important;
+  background-color: #1976D2 !important;
+}

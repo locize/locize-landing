@@ -1,0 +1,898 @@
+<!DOCTYPE html><html lang="de"><head>
+    <meta charset="utf-8">
+    
+    <title>So internationalisieren Sie eine Remix-Anwendung (Teil 2) </title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="canonical" href="https://locize.com/blog/remix-i18next-de/">
+    
+    
+        <meta name="keywords" content="i18next,locize,localization,l10n,internationalization,i18n,translation,react,react-i18next,remix-i18next,remix">
+    
+    <meta name="description" content="Remix-Lokalisierung leicht gemacht mit Fokus auf kontinuierliche Lokalisierung.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="So internationalisieren Sie eine Remix-Anwendung (Teil 2)">
+<meta property="og:url" content="https://locize.com/blog/remix-i18next-de/index.html">
+<meta property="og:site_name" content="locize - localization as a service">
+<meta property="og:description" content="Remix-Lokalisierung leicht gemacht mit Fokus auf kontinuierliche Lokalisierung.">
+<meta property="og:locale" content="de_DE">
+<meta property="og:image" content="https://locize.com/blog/remix-i18next/remix-localization.jpg">
+<meta property="article:published_time" content="2022-03-02T23:00:00.000Z">
+<meta property="article:modified_time" content="2023-08-16T18:49:26.346Z">
+<meta property="article:author" content="inweso GmbH">
+<meta property="article:tag" content="i18next">
+<meta property="article:tag" content="locize">
+<meta property="article:tag" content="localization">
+<meta property="article:tag" content="l10n">
+<meta property="article:tag" content="internationalization">
+<meta property="article:tag" content="i18n">
+<meta property="article:tag" content="translation">
+<meta property="article:tag" content="react">
+<meta property="article:tag" content="react-i18next">
+<meta property="article:tag" content="remix-i18next">
+<meta property="article:tag" content="remix">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://locize.com/blog/remix-i18next/remix-localization.jpg">
+<meta name="twitter:creator" content="@locize">
+<meta property="fb:app_id" content="locize">
+    
+
+    
+
+    
+                        <link rel="alternative" hreflang="en" href="/blog/remix-i18next/">
+                    
+
+    
+        <link rel="icon" href="/blog/favicon.ico">
+    
+
+    <!-- 
+<link rel="stylesheet" href="/blog/libs/font-awesome/css/font-awesome.min.css">
+ -->
+    
+<link rel="stylesheet" href="/blog/libs/fontawesome/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/blog/libs/fontawesome/css/brands.min.css">
+
+    
+<link rel="stylesheet" href="/blog/libs/fontawesome/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/blog/libs/fontawesome/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/blog/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/blog/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+
+    
+<script src="/blog/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    
+    
+    
+    
+        
+<link rel="stylesheet" href="/blog/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        <script type="text/javascript">
+// (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+// (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+// m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+// })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+// ga('create', 'G-X50E21BGKG', 'auto');
+// ga('send', 'pageview');
+// ga('set', 'anonymizeIp', true);
+
+</script>
+    
+    
+
+
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css">
+
+    <script type="application/ld+json">
+{ "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "locize",
+  "url": "https://locize.com",
+  "logo": "https://locize.com/img/locize_color.svg",
+  "sameAs": [""]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "name": "locize",
+  "url": "https://locize.com/blog/",
+  "logo": "https://locize.com/blog/images/locize_color.svg"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://locize.com/blog/remix-i18next-de/"
+  },
+  "headline": "So internationalisieren Sie eine Remix-Anwendung (Teil 2)",
+  "description": "Remix-Lokalisierung leicht gemacht mit Fokus auf kontinuierliche Lokalisierung.",
+  "image": "https://locize.com/blog/remix-i18next/remix-localization.jpg",  
+  "author": {
+    "@type": "Organization",
+    "name": "locize",
+    "url": "https://locize.com"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "locize",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://locize.com/blog/images/locize_color.svg"
+    }
+  },
+  "datePublished": "2022-03-02T23:00:00.000Z",
+  "dateModified": "2023-08-16T18:49:26.346Z"
+}
+</script>
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/blog/atom.xml" title="locize - localization as a service" type="application/atom+xml">
+</head>
+
+  <body>
+      <div id="wrap">
+          <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <!--<a href="/blog/" class="logo"></a>-->
+                        <!-- <a href="https://www.locize.com" class="logo" target="_new"></a> -->
+                        <a href="/" class="logo" style="float: left; margin: 0 15px 0 0;"></a>
+                    </h1>
+                    
+                        <h3 class="subtitle-wrap">
+                            <p class="subtitle">The continuous localization management platform that powers up your development and translation.</p>
+                        </h3>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa-solid fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item">
+                                    <a class="main-nav-list-link" href="/blog/">Home</a>
+                                </li>
+                            
+                            <li class="main-nav-list-item">
+                                <a class="main-nav-list-link" href="https://docs.locize.com" target="_new">Docs</a>
+                                <a class="main-nav-list-link" href="https://www.locize.app/login" target="_new">Login</a>
+                            </li>
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa-solid fa-circle-xmark"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    function htmlDecode(input){
+        var e = document.createElement('textarea');
+        e.innerHTML = input;
+        // handle case of empty input
+        return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+    }
+    var allAlternates = JSON.parse(htmlDecode(`[{&#34;title&#34;:&#34;Angular Lokalisierung - Entfesseln Sie die volle Leistung von i18next&#34;,&#34;label&#34;:&#34;angular-i18next&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;angular-i18next-de/&#34;,&#34;text&#34;:&#34;Reden wir über die Internationalisierung (i18n) für Angular (nicht AngularJS, nicht Angular 2, nur Angular 😉). Wenn es um die JavaScript-Lokalisierun&#34;},{&#34;title&#34;:&#34;Angular Localization - Unleash the full power of i18next&#34;,&#34;label&#34;:&#34;angular-i18next&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;angular-i18next/&#34;,&#34;text&#34;:&#34;Let&amp;#39;s talk about internationalization (i18n) for Angular (not AngularJS, not Angular 2, just Angular 😉). When it comes to JavaScript localization&#34;},{&#34;title&#34;:&#34;Beste Internationalisierung für Gatsby (ein i18next-basierter Leitfaden)&#34;,&#34;label&#34;:&#34;gatsby-i18n&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;gatsby-i18n-de/&#34;,&#34;text&#34;:&#34;Sie kennen Gatsby, richtig? - Wenn nicht, hören Sie auf, diesen Artikel zu lesen und machen Sie etwas anderes. Ja, Gatsby ist ein Open-Source-Framewor&#34;},{&#34;title&#34;:&#34;Best internationalization for Gatsby (an i18next based guide)&#34;,&#34;label&#34;:&#34;gatsby-i18n&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;gatsby-i18n/&#34;,&#34;text&#34;:&#34;You know Gatsby, right? - If not, stop reading this article and make something else. Yes, Gatsby an open-source framework that combines functionality &#34;},{&#34;title&#34;:&#34;Globalisierung vs. Lokalisierung – Was ist der Unterschied?&#34;,&#34;label&#34;:&#34;globalization-vs-localization&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;globalisierung-vs-lokalisierung/&#34;,&#34;text&#34;:&#34;Wissen Sie, was mit Globalisierung versus Lokalisierung gemeint ist? Von aussen könnten diese beiden Begriffe wie völlige Gegensätze erscheinen. Das i&#34;},{&#34;title&#34;:&#34;Globalization vs. Localization - What is the difference&#34;,&#34;label&#34;:&#34;globalization-vs-localization&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;globalization-vs-localization/&#34;,&#34;text&#34;:&#34;Do you know what is meant by globalization versus localization? From the outside, these two terms could appear like complete opposites of each other. &#34;},{&#34;title&#34;:&#34;Smart help for tech leaders and engineering managers&#34;,&#34;label&#34;:&#34;help-tech-leads&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;help-tech-leads/&#34;,&#34;text&#34;:&#34;Tech leaders and engineering managers have probably one of the most schizophrenic and ambitious role. If you are in such a position, you may know why.&#34;},{&#34;title&#34;:&#34;The hidden localization costs&#34;,&#34;label&#34;:&#34;hidden-localization-costs&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;hidden-localization-costs/&#34;,&#34;text&#34;:&#34;Big companies that reach hundreds of countries can spend millions on translation costs alone and still not reach all their audience. There are reveali&#34;},{&#34;title&#34;:&#34;Smarte Hilfe für Technische Teamleiter und Engineering-Manager&#34;,&#34;label&#34;:&#34;help-tech-leads&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;hilfe-tech-leiter/&#34;,&#34;text&#34;:&#34;Technische Teamleiter und Engineering-Manager haben wahrscheinlich eine der schizophrenesten und ansprochsvollsten Rollen. Wenn Sie in einer solchen P&#34;},{&#34;title&#34;:&#34;How does server side internationalization (i18n) look like?&#34;,&#34;label&#34;:&#34;how-does-server-side-internationalization-look-like&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;how-does-server-side-internationalization-look-like/&#34;,&#34;text&#34;:&#34;You may already know how to properly internationalize a client side application, like described in this React based tutorial, this Angular based tutor&#34;},{&#34;title&#34;:&#34;I18N im Multiversum der Formate&#34;,&#34;label&#34;:&#34;i18n-formats-javascript&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;i18n-formate-javascript/&#34;,&#34;text&#34;:&#34;Jede Nacht... träume ich denselben Traum. Und dann... beginnt der Alptraum. Ich tue, was ich tun muss ... um i18n zu schützen. Mit diesem Blogbeitrag &#34;},{&#34;title&#34;:&#34;I18N in the Multiverse of Formats&#34;,&#34;label&#34;:&#34;i18n-formats-javascript&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;i18n-formats-javascript/&#34;,&#34;text&#34;:&#34;Every night... I dream the same dream. And then... the nightmare begins. I do what I have to do... to protect i18n. With this blog post I open a doorw&#34;},{&#34;title&#34;:&#34;Fastest way to unleash the full power of i18next (in 3 steps)&#34;,&#34;label&#34;:&#34;i18next-migrate&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;i18next-migrate/&#34;,&#34;text&#34;:&#34;Internationalization (i18n) and localization (l10n) are crucial for businesses that want to expand globally and reach a wider audience. To do this, yo&#34;},{&#34;title&#34;:&#34;Vue-Lokalisierung – Internationalisieren Sie mit i18next&#34;,&#34;label&#34;:&#34;i18next-vue&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;i18next-vue-de/&#34;,&#34;text&#34;:&#34;Da Vue.js ein zugängliches, leistungsfähiges und vielseitiges Framework zum Erstellen von Web-Benutzeroberflächen ist, benötigt es auch eine erstklass&#34;},{&#34;title&#34;:&#34;Der schnellste Weg, um die volle Leistung von i18next zu entfesseln (in 3 Schritten)&#34;,&#34;label&#34;:&#34;i18next-migrate&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;i18next-migrieren/&#34;,&#34;text&#34;:&#34;Internationalisierung (i18n) und Lokalisierung (l10n) sind für Unternehmen, die global expandieren und ein grösseres Publikum erreichen möchten, von e&#34;},{&#34;title&#34;:&#34;Vue Localization - Internationalize with i18next&#34;,&#34;label&#34;:&#34;i18next-vue&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;i18next-vue/&#34;,&#34;text&#34;:&#34;Since Vue.js is an approachable, performant and versatile framework for building web user interfaces, it also needs a best-in-class internationalizati&#34;},{&#34;title&#34;:&#34;Is your software ready for localization?&#34;,&#34;label&#34;:&#34;is-your-software-ready-for-localization&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;is-your-software-ready-for-localization/&#34;,&#34;text&#34;:&#34;So you want people from all around the world to use and understand your software... ...but how to achieve that? Which format should I use?Think about &#34;},{&#34;title&#34;:&#34;Ist Ihre Software bereit für die Lokalisierung?&#34;,&#34;label&#34;:&#34;is-your-software-ready-for-localization&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;ist-ihre-software-bereit-fur-die-lokalisierung/&#34;,&#34;text&#34;:&#34;Sie möchten also, dass Menschen auf der ganzen Welt Ihre Software verwenden und verstehen... ...aber wie erreicht man das? Welches Format soll ich ver&#34;},{&#34;title&#34;:&#34;Der progressive Leitfaden zur jQuery-Internationalisierung (i18n) mit i18next&#34;,&#34;label&#34;:&#34;jquery-i18next&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;jquery-i18next-de/&#34;,&#34;text&#34;:&#34;Jeder Web-Entwickler ist vielleicht schon einmal auf das mehrjährige Methusalem jQuery gestossen. Erstellt im Januar 2006 bei BarCamp NYC von John Res&#34;},{&#34;title&#34;:&#34;The progressive guide to jQuery internationalization (i18n) using i18next&#34;,&#34;label&#34;:&#34;jquery-i18next&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;jquery-i18next/&#34;,&#34;text&#34;:&#34;Every web developer may have met the perennial Methuselah jQuery. Created back in January 2006 at BarCamp NYC by John Resig and currently maintained b&#34;},{&#34;title&#34;:&#34;Localization concept - a guide to adaption | locize&#34;,&#34;label&#34;:&#34;localization&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;localization/&#34;,&#34;text&#34;:&#34;If you are asking yourself, what is localization, then this blog is here to help you. We take a closer look at what this means and how it can help you&#34;},{&#34;title&#34;:&#34;Lokalisierungskonzept - ein Leitfaden für die Adaption | locize&#34;,&#34;label&#34;:&#34;localization&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;lokalisierung/&#34;,&#34;text&#34;:&#34;Wenn Sie sich fragen, Was ist Lokalisierung, dann ist dieser Blogartikel für Sie da. Wir werfen einen genaueren Blick darauf, was das bedeutet und wie&#34;},{&#34;title&#34;:&#34;The joy, the pride and the burden of maintaining open source&#34;,&#34;label&#34;:&#34;maintaining-open-source&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;maintaining-open-source/&#34;,&#34;text&#34;:&#34;As a maintainer of i18next, an open-source localization library, I can attest that there is nothing quite like the feeling of joy and pride that comes&#34;},{&#34;title&#34;:&#34;Static HTML Export with i18n compatibility in Next.js&#34;,&#34;label&#34;:&#34;next-i18n-static&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;next-i18n-static/&#34;,&#34;text&#34;:&#34;You know Next.js, right? - If not, stop reading this article and make something else. If you&amp;#39;re using Next.js 13 with app directory, have a look a&#34;},{&#34;title&#34;:&#34;Allseitig optimierte Next.js-Übersetzungen (ein next-i18next Leitfaden)&#34;,&#34;label&#34;:&#34;next-i18next&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;next-i18next-de/&#34;,&#34;text&#34;:&#34;Das Schreiben von Next.js-Code verwischt die Grenzen zwischen Client- und Serverseite. Der Code wird einmal geschrieben und dann je nach Bedarf als SS&#34;},{&#34;title&#34;:&#34;Statischer HTML-Export mit i18n-Kompatibilität in Next.js&#34;,&#34;label&#34;:&#34;next-i18n-static&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;next-i18n-statisch/&#34;,&#34;text&#34;:&#34;Sie kennen Next.js, richtig? - Wenn nicht, hören Sie auf, diesen Artikel zu lesen und machen Sie etwas anderes. Wenn Next.js 13 mit app directory verw&#34;},{&#34;title&#34;:&#34;Die Freude, der Stolz und die Last der Pflege von Open Source&#34;,&#34;label&#34;:&#34;maintaining-open-source&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;open-source-pflege/&#34;,&#34;text&#34;:&#34;Als Betreuer von i18next, einer Open-Source-Lokalisierungsbibliothek, kann ich bestätigen, dass es nichts Schöneres gibt als das Gefühl der Freude und&#34;},{&#34;title&#34;:&#34;All side optimized Next.js translations (a next-i18next guide)&#34;,&#34;label&#34;:&#34;next-i18next&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;next-i18next/&#34;,&#34;text&#34;:&#34;Writing Next.js code blurs the lines between client side and server side. The code is written once and depending on your needs it is then executed as &#34;},{&#34;title&#34;:&#34;Beste React Lokalisierung – Internationalisieren Sie mit i18next (ein vollständiger Leitfaden für react-i18next)&#34;,&#34;label&#34;:&#34;react-i18next&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;react-i18next-de/&#34;,&#34;text&#34;:&#34;Die Überwindung der Sprachbarriere für Anwender Ihrer Software ist ein wichtiges Thema. Englisch ist nicht mehr die universelle Sprache des Internets.&#34;},{&#34;title&#34;:&#34;How to internationalize a Remix application (Part 1)&#34;,&#34;label&#34;:&#34;remix-i18n&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;remix-i18n/&#34;,&#34;text&#34;:&#34;Let&amp;#39;s talk about internationalization (i18n) for Remix... When it comes to JavaScript localization, one of the most popular frameworks is i18next &#34;},{&#34;title&#34;:&#34;So internationalisieren Sie eine Remix-Anwendung (Teil 2)&#34;,&#34;label&#34;:&#34;remix-i18next&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;remix-i18next-de/&#34;,&#34;text&#34;:&#34;Im vorherigen Blogbeitrag haben wir auf einfache Weise gelernt, wie wir unsere Remix-App lokalisierungsfertig instrumentieren können, indem wir remix-&#34;},{&#34;title&#34;:&#34;So internationalisieren Sie eine Remix-Anwendung (Teil 1)&#34;,&#34;label&#34;:&#34;remix-i18n&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;remix-i18n-de/&#34;,&#34;text&#34;:&#34;Reden wir über Internationalisierung (i18n) für Remix... Wenn es um JavaScript-Lokalisierung geht, ist eines der beliebtesten Frameworks i18next und e&#34;},{&#34;title&#34;:&#34;Best React Localization - Internationalize with i18next (a complete guide to react-i18next)&#34;,&#34;label&#34;:&#34;react-i18next&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;react-i18next/&#34;,&#34;text&#34;:&#34;Overcoming the language barrier for users who use your software is an important topic. English is no longer the universal language of the internet. As&#34;},{&#34;title&#34;:&#34;Beam your Svelte internationalization up to a new level❕ (a svelte-i18n guide)&#34;,&#34;label&#34;:&#34;svelte-i18n&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;svelte-i18n/&#34;,&#34;text&#34;:&#34;It’s joyful to work with Svelte. The design is elegant and the robust first-party additions which can be coupled with, make building browser apps a pl&#34;},{&#34;title&#34;:&#34;Beamen Sie Ihre Svelte-Internationalisierung auf ein neues Level❕ (ein svelte-i18n Leitfaden)&#34;,&#34;label&#34;:&#34;svelte-i18n&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;svelte-i18n-de/&#34;,&#34;text&#34;:&#34;Es macht Spass, mit Svelte zusammenzuarbeiten. Das Design ist elegant und die robusten First-Party-Ergänzungen, mit denen gekoppelt werden kann, mache&#34;},{&#34;title&#34;:&#34;How to internationalize a Remix application (Part 2)&#34;,&#34;label&#34;:&#34;remix-i18next&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;remix-i18next/&#34;,&#34;text&#34;:&#34;In the previous blog post we learned on a simple way how we can instrumented our Remix app to be ready for localization by using remix-i18next. In thi&#34;},{&#34;title&#34;:&#34;Was ist i18n und was ist sein Zweck (2024) | locize&#34;,&#34;label&#34;:&#34;what-is-i18n&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;was-ist-i18n/&#34;,&#34;text&#34;:&#34;Heute werden Sie in ein Thema eingeführt, das jedes wachsende Unternehmen kennen sollte. Erfahren Sie mehr über den beliebten Big Mac von McDonald&amp;#39&#34;},{&#34;title&#34;:&#34;Die versteckten Lokalisierungskosten&#34;,&#34;label&#34;:&#34;hidden-localization-costs&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;versteckte-lokalisierungskosten/&#34;,&#34;text&#34;:&#34;Grosse Unternehmen, welche Hunderte von Ländern erreichen, können Millionen allein für Übersetzungskosten ausgeben und trotzdem nicht ihr gesamtes Pub&#34;},{&#34;title&#34;:&#34;Dies sind die Best Practices für die Internationalisierung von Webseiten&#34;,&#34;label&#34;:&#34;website-internationalization-best-practices&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;website-internationalisierung-empfohlene-vorgehensweisen/&#34;,&#34;text&#34;:&#34;Wenn es um die Internationalisierung Ihrer Website geht, soll Ihnen dieser Artikel dabei helfen, Ihre Best Practices zu ermitteln. Dies kann das Ergeb&#34;},{&#34;title&#34;:&#34;These are the website internationalization best practices&#34;,&#34;label&#34;:&#34;website-internationalization-best-practices&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;website-internationalization-best-practices/&#34;,&#34;text&#34;:&#34;When it comes to internationalizing your website, this article should assist you in determining your best practices. This could be as a result of a st&#34;},{&#34;title&#34;:&#34;What is website localization with examples (update)&#34;,&#34;label&#34;:&#34;website-localization&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;website-localization/&#34;,&#34;text&#34;:&#34;This is the most comprehensive guide about website localization, the process of adapting an existing website to the language and culture of a target m&#34;},{&#34;title&#34;:&#34;Was ist Website-Lokalisierung mit Beispielen (Aktualisierung)&#34;,&#34;label&#34;:&#34;website-localization&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;website-lokalisierung/&#34;,&#34;text&#34;:&#34;Dies ist der umfassendste Leitfaden zur Website-Lokalisierung, dem Prozess der Anpassung einer bestehenden Website an die Sprache und Kultur eines Zie&#34;},{&#34;title&#34;:&#34;What is i18n and what is its purpose (2024) | locize&#34;,&#34;label&#34;:&#34;what-is-i18n&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;what-is-i18n/&#34;,&#34;text&#34;:&#34;Today you&amp;#39;re going to be introduced to a topic every growing business should be aware of. Find out more about the popular Big Mac from McDonald&amp;#3&#34;},{&#34;title&#34;:&#34;Wie sieht die serverseitige Internationalisierung (i18n) aus?&#34;,&#34;label&#34;:&#34;how-does-server-side-internationalization-look-like&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;wie-sieht-die-serverseitige-internationalisierung-aus/&#34;,&#34;text&#34;:&#34;Möglicherweise wissen Sie bereits, wie Sie eine clientseitige Anwendung ordnungsgemäss internationalisieren, wie in diesem React-basierten Tutorial, d&#34;},{&#34;title&#34;:&#34;Supercharge Your TypeScript App: Mastering i18next for Type-Safe Translations&#34;,&#34;label&#34;:&#34;i18next-typescript&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;i18next-typescript/&#34;,&#34;text&#34;:&#34;As our world becomes increasingly interconnected, the development of web applications that cater to a global audience takes precedence among developer&#34;},{&#34;title&#34;:&#34;TypeScript-App aufwerten: Beherrschen von i18next für typsichere Übersetzungen&#34;,&#34;label&#34;:&#34;i18next-typescript&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;i18next-typescript-de/&#34;,&#34;text&#34;:&#34;Mit der zunehmenden Vernetzung unserer Welt gewinnt die Entwicklung von Webanwendungen für ein globales Publikum unter Entwicklern an Bedeutung. Wenn &#34;},{&#34;title&#34;:&#34;Uniting Swiss Excellence: Locize and Supertext Join Forces for Seamless Software Localization&#34;,&#34;label&#34;:&#34;supertext-partnership&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;supertext-partnership/&#34;,&#34;text&#34;:&#34;In a landmark collaboration that epitomizes Swiss innovation, Locize and Supertext have come together to revolutionize the realm of software localizat&#34;},{&#34;title&#34;:&#34;Vereinigung von Schweizer Exzellenz: Locize und Supertext bündeln ihre Kräfte für nahtlose Softwarelokalisierung&#34;,&#34;label&#34;:&#34;supertext-partnership&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;supertext-partnerschaft/&#34;,&#34;text&#34;:&#34;In einer bahnbrechenden Zusammenarbeit, die für Schweizer Innovation steht, haben sich Locize und Supertext zusammengeschlossen, um den Bereich der So&#34;},{&#34;title&#34;:&#34;Breaking Down Language Barriers: A Look into the Future of Translation and Localization&#34;,&#34;label&#34;:&#34;future-of-translation&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;future-of-translation/&#34;,&#34;text&#34;:&#34;As technology continues to advance, the field of translation and localization is also seeing significant changes. In the coming years, we can expect t&#34;},{&#34;title&#34;:&#34;Sprachbarrieren überwinden: Ein Blick in die Zukunft der Übersetzung und Lokalisierung&#34;,&#34;label&#34;:&#34;future-of-translation&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;zukunft-ubersetzung/&#34;,&#34;text&#34;:&#34;Mit fortschreitender Technologie erfährt auch der Bereich Übersetzung und Lokalisierung erhebliche Veränderungen. In den kommenden Jahren können wir e&#34;},{&#34;title&#34;:&#34;Say Hello to CAT (Computer-Assisted Translation): The Personal Translator in Your Pocket&#34;,&#34;label&#34;:&#34;cat&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;cat/&#34;,&#34;text&#34;:&#34;Welcome to the world of CATs, or Computer-Assisted Translation Software! These handy little programs are like having a personal translator in your poc&#34;},{&#34;title&#34;:&#34;Sag Hallo zu CAT (Computerunterstützten Übersetzung): Der persönliche Übersetzer in deiner Tasche&#34;,&#34;label&#34;:&#34;cat&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;cat-de/&#34;,&#34;text&#34;:&#34;Willkommen in der Welt der CATs, oder Computerunterstützten Übersetzungssoftware! Diese praktischen kleinen Programme sind wie ein persönlicher Überse&#34;},{&#34;title&#34;:&#34;Häufige Missverständnisse über i18n: Entlarvung der Mythen&#34;,&#34;label&#34;:&#34;i18n-misconceptions&#34;,&#34;lang&#34;:&#34;de&#34;,&#34;path&#34;:&#34;i18n-missverstandnisse/&#34;,&#34;text&#34;:&#34;i18n oder Internationalisierung ist ein kritischer Aspekt der Softwareentwicklung, der es Anwendungen ermöglicht, sich an verschiedene Sprachen und ku&#34;},{&#34;title&#34;:&#34;Common Misconceptions About i18n: Debunking the Myths&#34;,&#34;label&#34;:&#34;i18n-misconceptions&#34;,&#34;lang&#34;:&#34;en&#34;,&#34;path&#34;:&#34;i18n-misconceptions/&#34;,&#34;text&#34;:&#34;i18n, or internationalization, is a critical aspect of software development that allows applications to adapt to different languages and cultural norm&#34;}]`));
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/blog/',
+        CONTENT_URL: '/blog/content.json',
+        transformItem: (item) => {
+            if (item.raw && item.raw.indexOf('\nlabel: ') > 0) {
+                var part = item.raw.substring(item.raw.indexOf('\nlabel: ') + 8);
+                var label = part.substring(0, part.indexOf('\n')).trim();
+                const foundAlternate = allAlternates.find((p) => p.label === label && p.lang === window.document.documentElement.lang);
+                if (foundAlternate) return foundAlternate;
+            }
+        }
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/blog/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+          <div class="container">
+              <div class="main-body container-inner">
+                  <div class="main-body-inner">
+                      <section id="main">
+                          <!-- <div class="main-body-header">
+    <h1 class="header">
+    
+    uncategorized
+    </h1>
+</div> -->
+                          <div class="main-body-content">
+                              <article id="post-remix-i18next-de" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+          <header class="article-header">
+              
+
+    
+    
+
+
+    
+        <h1 class="article-title" itemprop="name">
+            
+                So internationalisieren Sie eine Remix-Anwendung <span style="font-size: 24px; font-weight: 200;">(Teil 2)</span>
+            
+            
+                
+                    
+                    
+                    <div class="article-entry-lng" style="float: right; font-size: small;">
+                        <a href="/blog/remix-i18next/"><i class="fa-solid fa-language" aria-hidden="true"></i> en</a>
+                    </div>
+                    
+                
+            
+        </h1>
+    
+
+          </header>
+        
+        
+        <div class="article-subtitle">
+            <a href="/blog/remix-i18next-de/" class="article-date">
+    <time datetime="2022-03-02T23:00:00.000Z" itemprop="datePublished">03/03/2022</time>
+</a>
+            
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/i18n/" rel="tag">i18n</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/i18next/" rel="tag">i18next</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/internationalization/" rel="tag">internationalization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/l10n/" rel="tag">l10n</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/localization/" rel="tag">localization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/locize/" rel="tag">locize</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/react/" rel="tag">react</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/react-i18next/" rel="tag">react-i18next</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/remix/" rel="tag">remix</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/remix-i18next/" rel="tag">remix-i18next</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/translation/" rel="tag">translation</a></li></ul>
+
+        </div>
+        
+        
+
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="../remix-i18next/remix-localization.jpg" alt="Remix-Lokalisierung" title="Remix-Lokalisierungsbeispiel" loading="lazy" width="1920" height="895"></p>
+<p>Im <a href="../remix-i18n-de/">vorherigen Blogbeitrag</a> haben wir auf einfache Weise gelernt, wie wir unsere <a target="_blank" rel="noopener" href="https://remix.run/">Remix</a>-App lokalisierungsfertig instrumentieren können, indem wir <a target="_blank" rel="noopener" href="https://github.com/sergiodxa/remix-i18next">remix-i18next</a> verwenden.
+<br>
+In diesem Blogbeitrag werden wir versuchen, die volle Leistungsfähigkeit von <a target="_blank" rel="noopener" href="https://www.i18next.com/">i18next</a> freizusetzen und uns auf einen kontinuierlichen Lokalisierungsworkflow zu konzentrieren.</p>
+<h3 id="Inhaltsverzeichnis"><a href="#Inhaltsverzeichnis" class="headerlink" title="Inhaltsverzeichnis"></a>Inhaltsverzeichnis</h3><ul>
+<li><a href="#better-translation-management">Besseres Übersetzungsmanagement</a><ul>
+<li><a href="#for-sure">Auf jeden Fall!</a></li>
+<li><a href="#how-look">Wie sieht das aus?</a></li>
+<li><a href="#save-missing">fehlende Übersetzungen speichern</a></li>
+<li><a href="#more">👀 aber es gibt noch mehr...</a></li>
+<li><a href="#production">📦 Bereiten wir uns auf die Produktion vor 🚀</a></li>
+</ul>
+</li>
+<li><a href="#congratulations">🎉🥳 Herzliche Glückwünsche 🎊🎁</a></li>
+</ul>
+<h2 id="Besseres-Ubersetzungsmanagement"><a href="#Besseres-Ubersetzungsmanagement" class="headerlink" title="Besseres Übersetzungsmanagement "></a>Besseres Übersetzungsmanagement <a name="better-translation-management"></a></h2><p>Im vorherigen Blogbeitrag gab es einen <a href="../remix-i18n-de/#voluntary">freiwilligen Teil</a>. Dies war bereits der erste Schritt.</p>
+<p>Indem Sie die Übersetzungen an einige Übersetzer oder Übersetzungsagenturen senden, haben Sie mehr Kontrolle und einen direkten Kontakt mit ihnen. Das bedeutet aber auch mehr Arbeit für Sie.
+Dies ist ein traditioneller Weg. Beachten Sie jedoch, dass das Versenden von Dateien immer einen Overhead verursacht.</p>
+<blockquote>
+<p>Gibt es eine bessere Option?</p>
+</blockquote>
+<h4 id="Auf-jeden-Fall"><a href="#Auf-jeden-Fall" class="headerlink" title="Auf jeden Fall! "></a>Auf jeden Fall! <a name="for-sure"></a></h4><p><a target="_blank" rel="noopener" href="https://www.i18next.com/">i18next</a> hilft dabei, die Anwendung zu übersetzen, und das ist grossartig – aber es steckt noch mehr dahinter.</p>
+<ul>
+<li>Wie integrieren Sie eventuelle Übersetzungsdienste/-agenturen?</li>
+<li>Wie behalten Sie den Überblick über neue oder entfernte Inhalte?</li>
+<li>Wie gehen Sie mit der richtigen Versionierung um?</li>
+<li>Wie stellen Sie Übersetzungsänderungen bereit, ohne Ihre vollständige Anwendung bereitzustellen?</li>
+<li>und vieles mehr...</li>
+</ul>
+<p><strong>Suche Sie nach sowas❓</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://docs.locize.com/integration/instrumenting-your-code#i-18-next">Einfach zu integrieren</a></li>
+<li>Kontinuierlicher Einsatz? <a href="https://locize.com/how-it-works.html#continouslocalization">Kontinuierliche Lokalisierung</a>!</li>
+<li>Einfache Verwaltung der Übersetzungsdateien</li>
+<li><a target="_blank" rel="noopener" href="https://docs.locize.com/guides-tips-and-tricks/working-with-translators">Professionelle Übersetzungen bestellen</a></li>
+<li>Analytik &amp; Statistik</li>
+<li><a target="_blank" rel="noopener" href="https://docs.locize.com/whats-inside/cdn-content-delivery-network">Profitieren Sie von unserem Content Delivery Network (CDN)</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.locize.com/more/versioning">Versionierung Ihrer Übersetzungen</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.locize.com/whats-inside/auto-machine-translation">Automatische und maschinelle Übersetzung auf Abruf</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.locize.com/more/general-questions/how-is-locize-different-from-the-alternatives#service-lock-in">Risikofrei: Nehmen Sie Ihre Daten mit</a></li>
+<li><a href="https://locize.com/pricing.html">Transparente und faire Preisgestaltung</a></li>
+<li>und vieles mehr...</li>
+</ul>
+<h4 id="Wie-sieht-das-aus"><a href="#Wie-sieht-das-aus" class="headerlink" title="Wie sieht das aus? "></a>Wie sieht das aus? <a name="how-look"></a></h4><p>Zuerst müssen Sie sich bei locize <a target="_blank" rel="noopener" href="https://locize.app/register">registrieren</a> und <a target="_blank" rel="noopener" href="https://docs.locize.com/integration/getting-started/create-a-user-account">anmelden</a>.
+Dann <a target="_blank" rel="noopener" href="https://docs.locize.com/integration/getting-started/add-a-new-project">erstellen Sie ein neues Projekt</a> in locize und fügen Ihre Übersetzungen hinzu. Sie können Ihre Übersetzungen entweder über die <a target="_blank" rel="noopener" href="https://github.com/locize/react-tutorial#use-the-locize-cli">CLI</a> oder durch <a target="_blank" rel="noopener" href="https://docs.locize.com/more/general-questions/how-to-import-translations-from-a-file">Importieren der einzelnen json-Dateien</a> oder über die <a target="_blank" rel="noopener" href="https://docs.locize.com/integration/api#update-remove-translations">API</a> bewerkstelligen.</p>
+<p>Danach ändern wir die Art und Weise, wie die Übersetzungen auf der Serverseite und auf der Clientseite geladen werden.</p>
+<p>Derzeit werden die Übersetzungen von locize über CLI heruntergeladen und dann serverseitig im Ordner <code>public/locales</code> bereitgestellt. Dank remix-i18next werden die Übersetzungen dann vom Client heruntergeladen.</p>
+<p>Wir möchten nun, dass die Clientseite die vom <a target="_blank" rel="noopener" href="https://docs.locize.com/whats-inside/cdn-content-delivery-network">locize CDN</a> bereitgestellten Übersetzungen direkt nutzt.
+Stattdessen "bündeln" wir zunächst serverseitig die Übersetzungen.
+Siehe <a target="_blank" rel="noopener" href="https://github.com/locize/locize-remix-i18next-example/blob/main/package.json#L34">downloadLocales script in package.json</a>.
+Wir tun dies, um zu verhindern, dass serverseitig eine erhöhte Anzahl von Downloads generiert wird. <a target="_blank" rel="noopener" href="https://github.com/locize/i18next-locize-backend#important-advice-for-serverless-environments---aws-lambda-google-cloud-functions-azure-functions-etc">Lesen Sie dies</a> für Weitere Informationen zu diesem Thema über serverlose Umgebungen.</p>
+<p>Wir müssen <a target="_blank" rel="noopener" href="https://github.com/locize/i18next-locize-backend">i18next-locize-backend</a> installieren.</p>
+<p><code>npm install i18next-locize-backend</code></p>
+<p>Passen Sie die Datei <code>entry.client.jsx</code> an, um das i18next-locize-backend zu verwenden, und stellen Sie sicher, dass Sie die Projekt-ID und den API-Schlüssel aus Ihrem locize-Projekt kopieren.</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { hydrate } <span class="keyword">from</span> <span class="string">'react-dom'</span></span><br><span class="line"><span class="keyword">import</span> { RemixBrowser } <span class="keyword">from</span> <span class="string">'@remix-run/react'</span></span><br><span class="line"><span class="keyword">import</span> i18next <span class="keyword">from</span> <span class="string">'i18next'</span></span><br><span class="line"><span class="keyword">import</span> LanguageDetector <span class="keyword">from</span> <span class="string">'i18next-browser-languagedetector'</span></span><br><span class="line"><span class="keyword">import</span> { I18nextProvider, initReactI18next } <span class="keyword">from</span> <span class="string">'react-i18next'</span></span><br><span class="line"><span class="keyword">import</span> { getInitialNamespaces } <span class="keyword">from</span> <span class="string">'remix-i18next'</span></span><br><span class="line"><span class="keyword">import</span> Backend <span class="keyword">from</span> <span class="string">'i18next-locize-backend'</span></span><br><span class="line"><span class="keyword">import</span> LastUsed <span class="keyword">from</span> <span class="string">'locize-lastused'</span></span><br><span class="line"><span class="keyword">import</span> { locizePlugin } <span class="keyword">from</span> <span class="string">'locize'</span></span><br><span class="line"><span class="keyword">import</span> i18nextOptions <span class="keyword">from</span> <span class="string">'./i18nextOptions'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> locizeOptions = {</span><br><span class="line">  <span class="attr">projectId</span>: <span class="string">'f6d74b76-9677-4a0d-b400-86e1507397ab'</span>,</span><br><span class="line">  <span class="attr">apiKey</span>: <span class="string">'1c2bbc21-027d-4f41-995a-e8beb451cdef'</span>, <span class="comment">// YOU should not expose your apps API key to production!!!</span></span><br><span class="line">  <span class="attr">version</span>: <span class="string">'latest'</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// initialize i18next using initReactI18next and configuring it</span></span><br><span class="line"><span class="keyword">if</span> (!i18next.isInitialized) { <span class="comment">// prevent i18next to be initialized multiple times</span></span><br><span class="line">  i18next</span><br><span class="line">    <span class="comment">// pass the i18n instance to react-i18next.</span></span><br><span class="line">    .use(initReactI18next)</span><br><span class="line">    <span class="comment">// i18next-locize-backend</span></span><br><span class="line">    <span class="comment">// loads translations from your project, saves new keys to it (saveMissing: true)</span></span><br><span class="line">    <span class="comment">// https://github.com/locize/i18next-locize-backend</span></span><br><span class="line">    .use(Backend)</span><br><span class="line">    <span class="comment">// detect user language</span></span><br><span class="line">    <span class="comment">// learn more: https://github.com/i18next/i18next-browser-languageDetector</span></span><br><span class="line">    .use(LanguageDetector)</span><br><span class="line">    <span class="comment">// init i18next</span></span><br><span class="line">    <span class="comment">// for all options read: https://www.i18next.com/overview/configuration-options</span></span><br><span class="line">    .init({</span><br><span class="line">      ...i18nextOptions,</span><br><span class="line">      <span class="comment">// This function detects the namespaces your routes rendered while SSR use</span></span><br><span class="line">      <span class="comment">// and pass them here to load the translations</span></span><br><span class="line">      <span class="attr">ns</span>: getInitialNamespaces(),</span><br><span class="line">      <span class="attr">detection</span>: {</span><br><span class="line">        <span class="comment">// Here only enable htmlTag detection, we'll detect the language only</span></span><br><span class="line">        <span class="comment">// server-side with remix-i18next, by using the `&lt;html lang&gt;` attribute</span></span><br><span class="line">        <span class="comment">// we can communicate to the client the language detected server-side</span></span><br><span class="line">        <span class="attr">order</span>: [<span class="string">'htmlTag'</span>],</span><br><span class="line">        <span class="comment">// Because we only use htmlTag, there's no reason to cache the language</span></span><br><span class="line">        <span class="comment">// on the browser, so we disable it</span></span><br><span class="line">        <span class="attr">caches</span>: [],</span><br><span class="line">      },</span><br><span class="line">      <span class="attr">backend</span>: locizeOptions</span><br><span class="line">    })</span><br><span class="line">    .then(<span class="function">() =&gt;</span> {</span><br><span class="line">      <span class="comment">// then hydrate your app</span></span><br><span class="line">      <span class="keyword">return</span> hydrate(</span><br><span class="line">        <span class="xml"><span class="tag">&lt;<span class="name">I18nextProvider</span> <span class="attr">i18n</span>=<span class="string">{i18next}</span>&gt;</span></span></span><br><span class="line"><span class="xml">          <span class="tag">&lt;<span class="name">RemixBrowser</span> /&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">I18nextProvider</span>&gt;</span></span>,</span><br><span class="line">        <span class="built_in">document</span></span><br><span class="line">      )</span><br><span class="line">    })</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Die <code>entry.server.jsx</code>-Datei, die <code>root.jsx</code>- und die <code>i18nextOptions.js</code>-Datei sollten immer noch gleich aussehen:</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { renderToString } <span class="keyword">from</span> <span class="string">'react-dom/server'</span></span><br><span class="line"><span class="keyword">import</span> { RemixServer } <span class="keyword">from</span> <span class="string">'remix'</span></span><br><span class="line"><span class="keyword">import</span> { createInstance } <span class="keyword">from</span> <span class="string">'i18next'</span></span><br><span class="line"><span class="keyword">import</span> { I18nextProvider, initReactI18next } <span class="keyword">from</span> <span class="string">'react-i18next'</span></span><br><span class="line"><span class="keyword">import</span> Backend <span class="keyword">from</span> <span class="string">'i18next-fs-backend'</span></span><br><span class="line"><span class="keyword">import</span> { resolve } <span class="keyword">from</span> <span class="string">'node:path'</span></span><br><span class="line"><span class="keyword">import</span> i18nextOptions <span class="keyword">from</span> <span class="string">'./i18nextOptions'</span></span><br><span class="line"><span class="keyword">import</span> i18n <span class="keyword">from</span> <span class="string">'./i18n.server'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">handleRequest</span>(<span class="params"></span></span></span><br><span class="line"><span class="params"><span class="function">  request,</span></span></span><br><span class="line"><span class="params"><span class="function">  statusCode,</span></span></span><br><span class="line"><span class="params"><span class="function">  headers,</span></span></span><br><span class="line"><span class="params"><span class="function">  context</span></span></span><br><span class="line"><span class="params"><span class="function"></span>) </span>{</span><br><span class="line">  <span class="comment">// First, we create a new instance of i18next so every request will have a</span></span><br><span class="line">  <span class="comment">// completely unique instance and not share any state</span></span><br><span class="line">  <span class="keyword">const</span> instance = createInstance()</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Then we could detect locale from the request</span></span><br><span class="line">  <span class="keyword">const</span> lng = <span class="keyword">await</span> i18n.getLocale(request)</span><br><span class="line">  <span class="comment">// And here we detect what namespaces the routes about to render want to use</span></span><br><span class="line">  <span class="keyword">const</span> ns = i18n.getRouteNamespaces(context)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// First, we create a new instance of i18next so every request will have a</span></span><br><span class="line">  <span class="comment">// completely unique instance and not share any state.</span></span><br><span class="line">  <span class="keyword">await</span> instance</span><br><span class="line">    .use(initReactI18next) <span class="comment">// Tell our instance to use react-i18next</span></span><br><span class="line">    .use(Backend) <span class="comment">// Setup our backend.init({</span></span><br><span class="line">    .init({</span><br><span class="line">      ...i18nextOptions, <span class="comment">// use the same configuration as in your client side.</span></span><br><span class="line">      lng, <span class="comment">// The locale we detected above</span></span><br><span class="line">      ns, <span class="comment">// The namespaces the routes about to render want to use</span></span><br><span class="line">      <span class="attr">backend</span>: {</span><br><span class="line">        <span class="attr">loadPath</span>: resolve(<span class="string">'./public/locales/{{lng}}/{{ns}}.json'</span>),</span><br><span class="line">      }</span><br><span class="line">    })</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Then you can render your app wrapped in the I18nextProvider as in the</span></span><br><span class="line">  <span class="comment">// entry.client file</span></span><br><span class="line">  <span class="keyword">const</span> markup = renderToString(</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">I18nextProvider</span> <span class="attr">i18n</span>=<span class="string">{instance}</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">RemixServer</span> <span class="attr">context</span>=<span class="string">{context}</span> <span class="attr">url</span>=<span class="string">{request.url}</span> /&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">I18nextProvider</span>&gt;</span></span></span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  headers.set(<span class="string">"Content-Type"</span>, <span class="string">"text/html"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> Response(<span class="string">"&lt;!DOCTYPE html&gt;"</span> + markup, {</span><br><span class="line">    <span class="attr">status</span>: statusCode,</span><br><span class="line">    <span class="attr">headers</span>: headers,</span><br><span class="line">  })</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> {</span><br><span class="line">  <span class="attr">debug</span>: process.env.NODE_ENV !== <span class="string">'production'</span>,</span><br><span class="line">  <span class="attr">fallbackLng</span>: <span class="string">'en'</span>,</span><br><span class="line">  <span class="attr">supportedLngs</span>: [<span class="string">'en'</span>, <span class="string">'de'</span>],</span><br><span class="line">  <span class="attr">defaultNS</span>: <span class="string">'common'</span>,</span><br><span class="line">  <span class="attr">react</span>: { <span class="attr">useSuspense</span>: <span class="literal">false</span> }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>In der <code>root.jsx</code>-Datei müssen wir <code>useRemixI18Next</code> nur serverseitig aufrufen:</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> {</span><br><span class="line">  Links,</span><br><span class="line">  LiveReload,</span><br><span class="line">  Meta,</span><br><span class="line">  Outlet,</span><br><span class="line">  Scripts,</span><br><span class="line">  ScrollRestoration,</span><br><span class="line">  useLoaderData</span><br><span class="line">} <span class="keyword">from</span> <span class="string">'@remix-run/react'</span></span><br><span class="line"><span class="keyword">import</span> { json } <span class="keyword">from</span> <span class="string">'@remix-run/node'</span></span><br><span class="line"><span class="keyword">import</span> { useChangeLanguage } <span class="keyword">from</span> <span class="string">'remix-i18next'</span></span><br><span class="line"><span class="keyword">import</span> remixI18n <span class="keyword">from</span> <span class="string">'./i18n.server'</span></span><br><span class="line"><span class="keyword">import</span> { useTranslation } <span class="keyword">from</span> <span class="string">'react-i18next'</span></span><br><span class="line"><span class="keyword">import</span> styles <span class="keyword">from</span> <span class="string">'./styles/index.css'</span></span><br><span class="line"><span class="keyword">import</span> { i18nCookie } <span class="keyword">from</span> <span class="string">'./cookie'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> loader = <span class="keyword">async</span> ({ request }) =&gt; {</span><br><span class="line">  <span class="keyword">const</span> locale = <span class="keyword">await</span> remixI18n.getLocale(request)</span><br><span class="line">  <span class="keyword">const</span> t = <span class="keyword">await</span> remixI18n.getFixedT(request, <span class="string">'common'</span>)</span><br><span class="line">  <span class="keyword">const</span> title = t(<span class="string">'headTitle'</span>)</span><br><span class="line">  <span class="keyword">return</span> json({ locale, title }, {</span><br><span class="line">    <span class="attr">headers</span>: {<span class="string">"Set-Cookie"</span>: <span class="keyword">await</span> i18nCookie.serialize(locale)}</span><br><span class="line">  })</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> handle = {</span><br><span class="line">  <span class="comment">// In the handle export, we could add a i18n key with namespaces our route</span></span><br><span class="line">  <span class="comment">// will need to load. This key can be a single string or an array of strings.</span></span><br><span class="line">  <span class="attr">i18n</span>: [<span class="string">'common'</span>]</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">meta</span>(<span class="params">{ data }</span>) </span>{</span><br><span class="line">  <span class="keyword">return</span> { <span class="attr">title</span>: data.title }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> links = <span class="function">() =&gt;</span> {</span><br><span class="line">  <span class="keyword">return</span> [{ <span class="attr">rel</span>: <span class="string">'stylesheet'</span>, <span class="attr">href</span>: styles }]</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>{</span><br><span class="line">  <span class="keyword">const</span> { i18n } = useTranslation()</span><br><span class="line">  <span class="keyword">const</span> { locale } = useLoaderData()</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// This hook will change the i18n instance language to the current locale</span></span><br><span class="line">  <span class="comment">// detected by the loader, this way, when we do something to change the</span></span><br><span class="line">  <span class="comment">// language, this locale will change and i18next will load the correct</span></span><br><span class="line">  <span class="comment">// translation files</span></span><br><span class="line">  useChangeLanguage(locale)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">{i18n.resolvedLanguage}</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charSet</span>=<span class="string">"utf-8"</span> /&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width,initial-scale=1"</span> /&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">Meta</span> /&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">Links</span> /&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">Outlet</span> /&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">ScrollRestoration</span> /&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">Scripts</span> /&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">LiveReload</span> /&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br><span class="line">  )</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Das ist es:</p>
+<p><img src="../remix-i18next/app.jpg" loading="lazy" width="1092" height="652"></p>
+<p>Die App sieht mehr oder weniger gleich aus, aber auf der Clientseite werden die Übersetzungen direkt vom <a target="_blank" rel="noopener" href="https://docs.locize.com/whats-inside/cdn-content-delivery-network">locize CDN</a> abgerufen.
+Das bedeutet, wenn Sie Übersetzungen in locize ändern, stehen sie Ihrer Remix-App zur Verfügung, ohne dass Sie Ihre App ändern oder erneut bereitstellen müssen.
+<em>Nur um die neusten Übersetzungen serverseitig zu haben (z.B. für SEO-Optimierungen) ist ein neues <code>npm run downloadLocales</code> und Rebuild nötig.</em></p>
+<h4 id="fehlende-Ubersetzungen-speichern"><a href="#fehlende-Ubersetzungen-speichern" class="headerlink" title="fehlende Übersetzungen speichern "></a>fehlende Übersetzungen speichern <a name="save-missing"></a></h4><p>Dank der Verwendung der <a target="_blank" rel="noopener" href="https://www.i18next.com/overview/configuration-options#missing-keys">saveMissing-Funktionalität</a> werden während der Entwicklung der App neue Schlüssel zur automatischen Lokalisierung hinzugefügt.</p>
+<p>Übergeben Sie einfach <code>saveMissing: true</code> in den i18next-Optionen:</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { hydrate } <span class="keyword">from</span> <span class="string">'react-dom'</span></span><br><span class="line"><span class="keyword">import</span> { RemixBrowser } <span class="keyword">from</span> <span class="string">'@remix-run/react'</span></span><br><span class="line"><span class="keyword">import</span> i18next <span class="keyword">from</span> <span class="string">'i18next'</span></span><br><span class="line"><span class="keyword">import</span> LanguageDetector <span class="keyword">from</span> <span class="string">'i18next-browser-languagedetector'</span></span><br><span class="line"><span class="keyword">import</span> { I18nextProvider, initReactI18next } <span class="keyword">from</span> <span class="string">'react-i18next'</span></span><br><span class="line"><span class="keyword">import</span> { getInitialNamespaces } <span class="keyword">from</span> <span class="string">'remix-i18next'</span></span><br><span class="line"><span class="keyword">import</span> Backend <span class="keyword">from</span> <span class="string">'i18next-locize-backend'</span></span><br><span class="line"><span class="keyword">import</span> i18nextOptions <span class="keyword">from</span> <span class="string">'./i18nextOptions'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> locizeOptions = {</span><br><span class="line">  <span class="attr">projectId</span>: <span class="string">'f6d74b76-9677-4a0d-b400-86e1507397ab'</span>,</span><br><span class="line">  <span class="attr">apiKey</span>: <span class="string">'1c2bbc21-027d-4f41-995a-e8beb451cdef'</span>, <span class="comment">// YOU should not expose your apps API key to production!!!</span></span><br><span class="line">  <span class="attr">version</span>: <span class="string">'latest'</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// initialize i18next using initReactI18next and configuring it</span></span><br><span class="line"><span class="keyword">if</span> (!i18next.isInitialized) { <span class="comment">// prevent i18next to be initialized multiple times</span></span><br><span class="line">  i18next</span><br><span class="line">    <span class="comment">// pass the i18n instance to react-i18next.</span></span><br><span class="line">    .use(initReactI18next)</span><br><span class="line">    <span class="comment">// i18next-locize-backend</span></span><br><span class="line">    <span class="comment">// loads translations from your project, saves new keys to it (saveMissing: true)</span></span><br><span class="line">    <span class="comment">// https://github.com/locize/i18next-locize-backend</span></span><br><span class="line">    .use(Backend)</span><br><span class="line">    <span class="comment">// detect user language</span></span><br><span class="line">    <span class="comment">// learn more: https://github.com/i18next/i18next-browser-languageDetector</span></span><br><span class="line">    .use(LanguageDetector)</span><br><span class="line">    <span class="comment">// init i18next</span></span><br><span class="line">    <span class="comment">// for all options read: https://www.i18next.com/overview/configuration-options</span></span><br><span class="line">    .init({</span><br><span class="line">      ...i18nextOptions,</span><br><span class="line">      <span class="comment">// This function detects the namespaces your routes rendered while SSR use</span></span><br><span class="line">      <span class="comment">// and pass them here to load the translations</span></span><br><span class="line">      <span class="attr">ns</span>: getInitialNamespaces(),</span><br><span class="line">      <span class="attr">detection</span>: {</span><br><span class="line">        <span class="comment">// Here only enable htmlTag detection, we'll detect the language only</span></span><br><span class="line">        <span class="comment">// server-side with remix-i18next, by using the `&lt;html lang&gt;` attribute</span></span><br><span class="line">        <span class="comment">// we can communicate to the client the language detected server-side</span></span><br><span class="line">        <span class="attr">order</span>: [<span class="string">'htmlTag'</span>],</span><br><span class="line">        <span class="comment">// Because we only use htmlTag, there's no reason to cache the language</span></span><br><span class="line">        <span class="comment">// on the browser, so we disable it</span></span><br><span class="line">        <span class="attr">caches</span>: [],</span><br><span class="line">      },</span><br><span class="line">      <span class="attr">backend</span>: locizeOptions,</span><br><span class="line">      <span class="attr">saveMissing</span>: <span class="literal">true</span></span><br><span class="line">    })</span><br><span class="line">    .then(<span class="function">() =&gt;</span> {</span><br><span class="line">      <span class="comment">// then hydrate your app</span></span><br><span class="line">      <span class="keyword">return</span> hydrate(</span><br><span class="line">        <span class="xml"><span class="tag">&lt;<span class="name">I18nextProvider</span> <span class="attr">i18n</span>=<span class="string">{i18next}</span>&gt;</span></span></span><br><span class="line"><span class="xml">          <span class="tag">&lt;<span class="name">RemixBrowser</span> /&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">I18nextProvider</span>&gt;</span></span>,</span><br><span class="line">        <span class="built_in">document</span></span><br><span class="line">      )</span><br><span class="line">    })</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Jedes Mal, wenn Sie einen neuen Schlüssel verwenden, wird dieser zu locize gesendet, d. h.:</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;{t(<span class="string">'new.key'</span>, <span class="string">'this will be added automatically'</span>)}&lt;/div&gt;</span><br></pre></td></tr></tbody></table></figure>
+
+<p>ergibt in locize das folgende:</p>
+<p><img src="../remix-i18next/missing_key.jpg" alt="missing key" title="locize © inweso GmbH" loading="lazy" width="2304" height="1440"></p>
+<h4 id="👀-aber-es-gibt-noch-mehr"><a href="#👀-aber-es-gibt-noch-mehr" class="headerlink" title="👀 aber es gibt noch mehr... "></a>👀 aber es gibt noch mehr... <a name="more"></a></h4><p>Dank des Plugins <a target="_blank" rel="noopener" href="https://github.com/locize/locize-lastused">locize-lastused</a> können Sie <a target="_blank" rel="noopener" href="https://docs.locize.com/guides-tips-and-tricks/unused-translations">in locize Schlüssel finden und filtern, welche verwendet oder nicht mehr verwendet werden</a>.</p>
+<p>Mit Hilfe des Plugins <a target="_blank" rel="noopener" href="https://github.com/locize/locize">locize</a> können Sie Ihre App im locize <a target="_blank" rel="noopener" href="https://docs.locize.com/more/incontext-editor">InContext Editor</a> verwenden.</p>
+<p>Mit Hilfe des <a target="_blank" rel="noopener" href="https://docs.locize.com/whats-inside/auto-machine-translation">Auto-MachineTranslation-Workflows</a> und der Verwendung der <a target="_blank" rel="noopener" href="https://www.i18next.com/overview/configuration-options#missing-keys">saveMissing-Funktionalität</a> werden während der Entwicklung der App nicht nur neue Schlüssel zur automatischen Lokalisierung hinzugefügt, sondern auch automatisch mittels maschineller Übersetzung in die Zielsprachen übersetzt.</p>
+<p><em>Schauen Sie sich dieses <a target="_blank" rel="noopener" href="https://youtu.be/VfxBpSXarlU">Video</a> an, um zu sehen, wie der Arbeitsablauf der automatischen maschinellen Übersetzung aussieht!</em></p>
+<div class="video-container"><iframe src="https://www.youtube-nocookie.com/embed/VfxBpSXarlU" frameborder="0" loading="lazy" allowfullscreen=""></iframe></div>
+
+<p><code>npm install locize-lastused locize</code></p>
+<p>verwenden Sie sie wie folgt:</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { hydrate } <span class="keyword">from</span> <span class="string">'react-dom'</span></span><br><span class="line"><span class="keyword">import</span> { RemixBrowser } <span class="keyword">from</span> <span class="string">'@remix-run/react'</span></span><br><span class="line"><span class="keyword">import</span> i18next <span class="keyword">from</span> <span class="string">'i18next'</span></span><br><span class="line"><span class="keyword">import</span> LanguageDetector <span class="keyword">from</span> <span class="string">'i18next-browser-languagedetector'</span></span><br><span class="line"><span class="keyword">import</span> { I18nextProvider, initReactI18next } <span class="keyword">from</span> <span class="string">'react-i18next'</span></span><br><span class="line"><span class="keyword">import</span> { getInitialNamespaces } <span class="keyword">from</span> <span class="string">'remix-i18next'</span></span><br><span class="line"><span class="keyword">import</span> Backend <span class="keyword">from</span> <span class="string">'i18next-locize-backend'</span></span><br><span class="line"><span class="keyword">import</span> LastUsed <span class="keyword">from</span> <span class="string">'locize-lastused'</span></span><br><span class="line"><span class="keyword">import</span> { locizePlugin } <span class="keyword">from</span> <span class="string">'locize'</span></span><br><span class="line"><span class="keyword">import</span> i18nextOptions <span class="keyword">from</span> <span class="string">'./i18nextOptions'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> locizeOptions = {</span><br><span class="line">  <span class="attr">projectId</span>: <span class="string">'f6d74b76-9677-4a0d-b400-86e1507397ab'</span>,</span><br><span class="line">  <span class="attr">apiKey</span>: <span class="string">'1c2bbc21-027d-4f41-995a-e8beb451cdef'</span>, <span class="comment">// YOU should not expose your apps API key to production!!!</span></span><br><span class="line">  <span class="attr">version</span>: <span class="string">'latest'</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// initialize i18next using initReactI18next and configuring it</span></span><br><span class="line"><span class="keyword">if</span> (!i18next.isInitialized) { <span class="comment">// prevent i18next to be initialized multiple times</span></span><br><span class="line">  i18next</span><br><span class="line">    <span class="comment">// pass the i18n instance to react-i18next.</span></span><br><span class="line">    .use(initReactI18next)</span><br><span class="line">    <span class="comment">// i18next-locize-backend</span></span><br><span class="line">    <span class="comment">// loads translations from your project, saves new keys to it (saveMissing: true)</span></span><br><span class="line">    <span class="comment">// https://github.com/locize/i18next-locize-backend</span></span><br><span class="line">    .use(Backend)</span><br><span class="line">    <span class="comment">// detect user language</span></span><br><span class="line">    <span class="comment">// learn more: https://github.com/i18next/i18next-browser-languageDetector</span></span><br><span class="line">    .use(LanguageDetector)</span><br><span class="line">    <span class="comment">// locize-lastused</span></span><br><span class="line">    <span class="comment">// sets a timestamp of last access on every translation segment on locize</span></span><br><span class="line">    <span class="comment">// -&gt; safely remove the ones not being touched for weeks/months</span></span><br><span class="line">    <span class="comment">// https://github.com/locize/locize-lastused</span></span><br><span class="line">    .use(LastUsed)</span><br><span class="line">    <span class="comment">// locize-editor</span></span><br><span class="line">    <span class="comment">// InContext Editor of locize</span></span><br><span class="line">    .use(locizePlugin)</span><br><span class="line">    <span class="comment">// init i18next</span></span><br><span class="line">    <span class="comment">// for all options read: https://www.i18next.com/overview/configuration-options</span></span><br><span class="line">    .init({</span><br><span class="line">      ...i18nextOptions,</span><br><span class="line">      <span class="comment">// This function detects the namespaces your routes rendered while SSR use</span></span><br><span class="line">      <span class="comment">// and pass them here to load the translations</span></span><br><span class="line">      <span class="attr">ns</span>: getInitialNamespaces(),</span><br><span class="line">      <span class="attr">detection</span>: {</span><br><span class="line">        <span class="comment">// Here only enable htmlTag detection, we'll detect the language only</span></span><br><span class="line">        <span class="comment">// server-side with remix-i18next, by using the `&lt;html lang&gt;` attribute</span></span><br><span class="line">        <span class="comment">// we can communicate to the client the language detected server-side</span></span><br><span class="line">        <span class="attr">order</span>: [<span class="string">'htmlTag'</span>],</span><br><span class="line">        <span class="comment">// Because we only use htmlTag, there's no reason to cache the language</span></span><br><span class="line">        <span class="comment">// on the browser, so we disable it</span></span><br><span class="line">        <span class="attr">caches</span>: [],</span><br><span class="line">      },</span><br><span class="line">      <span class="attr">backend</span>: locizeOptions,</span><br><span class="line">      <span class="attr">locizeLastUsed</span>: locizeOptions,</span><br><span class="line">      <span class="attr">saveMissing</span>: <span class="literal">true</span></span><br><span class="line">    })</span><br><span class="line">    .then(<span class="function">() =&gt;</span> {</span><br><span class="line">      <span class="comment">// then hydrate your app</span></span><br><span class="line">      <span class="keyword">return</span> hydrate(</span><br><span class="line">        <span class="xml"><span class="tag">&lt;<span class="name">I18nextProvider</span> <span class="attr">i18n</span>=<span class="string">{i18next}</span>&gt;</span></span></span><br><span class="line"><span class="xml">          <span class="tag">&lt;<span class="name">RemixBrowser</span> /&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">I18nextProvider</span>&gt;</span></span>,</span><br><span class="line">        <span class="built_in">document</span></span><br><span class="line">      )</span><br><span class="line">    })</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://docs.locize.com/whats-inside/auto-machine-translation">Automatische maschinelle Übersetzung</a>:</p>
+<p><img src="../remix-i18next/missing_key_auto_mt.jpg" alt="missing key automatisch" title="locize © inweso GmbH" loading="lazy" width="2304" height="1440"></p>
+<p><a href="(https://docs.locize.com/guides-tips-and-tricks/unused-translations)">Filter für zuletzt verwendete Übersetzungen</a>:</p>
+<p><img src="../remix-i18next/last_used.jpg" alt="i18next last used" title="locize © inweso GmbH" loading="lazy" width="634" height="1034"></p>
+<p><a target="_blank" rel="noopener" href="https://docs.locize.com/more/incontext-editor">InContext Editor</a>:</p>
+<p><img src="../remix-i18next/in_context.jpg" alt="i18next inkontext" title="locize © inweso GmbH" loading="lazy" width="3012" height="1166"></p>
+<h4 id="📦-Bereiten-wir-uns-auf-die-Produktion-vor-🚀"><a href="#📦-Bereiten-wir-uns-auf-die-Produktion-vor-🚀" class="headerlink" title="📦 Bereiten wir uns auf die Produktion vor 🚀 "></a>📦 Bereiten wir uns auf die Produktion vor 🚀 <a name="production"></a></h4><p>Jetzt bereiten wir die App für den Produktionsstart vor (<a target="_blank" rel="noopener" href="https://docs.locize.com/guides-tips-and-tricks/going-production">https://docs.locize.com/guides-tips-and-tricks/going-production</a>).</p>
+<p>Erstellen Sie zuerst in locize eine dedizierte Version für die Produktion. Aktivieren Sie die automatische Veröffentlichung für diese Version nicht, sondern veröffentlichen Sie sie manuell oder über die <a target="_blank" rel="noopener" href="https://docs.locize.com/integration/api#publish-version">API</a> oder über die <a target="_blank" rel="noopener" href="https://github.com/locize/locize-cli#publish-version">CLI</a>.
+Schliesslich <a target="_blank" rel="noopener" href="https://docs.locize.com/more/caching">aktivieren Sie auch Cache-Control max-age​</a> für diese Produktionsversion.</p>
+<p>Passen wir die Datei <code>entry.client.jsx</code> an:</p>
+<figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> { hydrate } <span class="keyword">from</span> <span class="string">'react-dom'</span></span><br><span class="line"><span class="keyword">import</span> { RemixBrowser } <span class="keyword">from</span> <span class="string">'@remix-run/react'</span></span><br><span class="line"><span class="keyword">import</span> i18next <span class="keyword">from</span> <span class="string">'i18next'</span></span><br><span class="line"><span class="keyword">import</span> LanguageDetector <span class="keyword">from</span> <span class="string">'i18next-browser-languagedetector'</span></span><br><span class="line"><span class="keyword">import</span> { I18nextProvider, initReactI18next } <span class="keyword">from</span> <span class="string">'react-i18next'</span></span><br><span class="line"><span class="keyword">import</span> { getInitialNamespaces } <span class="keyword">from</span> <span class="string">'remix-i18next'</span></span><br><span class="line"><span class="keyword">import</span> Backend <span class="keyword">from</span> <span class="string">'i18next-locize-backend'</span></span><br><span class="line"><span class="keyword">import</span> LastUsed <span class="keyword">from</span> <span class="string">'locize-lastused'</span></span><br><span class="line"><span class="keyword">import</span> { locizePlugin } <span class="keyword">from</span> <span class="string">'locize'</span></span><br><span class="line"><span class="keyword">import</span> i18nextOptions <span class="keyword">from</span> <span class="string">'./i18nextOptions'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> isProduction = process.env.NODE_ENV === <span class="string">'production'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> locizeOptions = {</span><br><span class="line">  <span class="attr">projectId</span>: <span class="string">'f6d74b76-9677-4a0d-b400-86e1507397ab'</span>,</span><br><span class="line">  <span class="attr">apiKey</span>: !isProduction ? <span class="string">'1c2bbc21-027d-4f41-995a-e8beb451cdef'</span> : <span class="literal">undefined</span>, <span class="comment">// YOU should not expose your apps API key to production!!!</span></span><br><span class="line">  <span class="attr">version</span>: isProduction ? <span class="string">'production'</span> : <span class="string">'latest'</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (!isProduction) {</span><br><span class="line">  <span class="comment">// locize-lastused</span></span><br><span class="line">  <span class="comment">// sets a timestamp of last access on every translation segment on locize</span></span><br><span class="line">  <span class="comment">// -&gt; safely remove the ones not being touched for weeks/months</span></span><br><span class="line">  <span class="comment">// https://github.com/locize/locize-lastused</span></span><br><span class="line">  i18next.use(LastUsed)</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// initialize i18next using initReactI18next and configuring it</span></span><br><span class="line"><span class="keyword">if</span> (!i18next.isInitialized) { <span class="comment">// prevent i18next to be initialized multiple times</span></span><br><span class="line">  i18next</span><br><span class="line">    <span class="comment">// locize-editor</span></span><br><span class="line">    <span class="comment">// InContext Editor of locize</span></span><br><span class="line">    .use(locizePlugin)</span><br><span class="line">    <span class="comment">// i18next-locize-backend</span></span><br><span class="line">    <span class="comment">// loads translations from your project, saves new keys to it (saveMissing: true)</span></span><br><span class="line">    <span class="comment">// https://github.com/locize/i18next-locize-backend</span></span><br><span class="line">    .use(Backend)</span><br><span class="line">    <span class="comment">// detect user language</span></span><br><span class="line">    <span class="comment">// learn more: https://github.com/i18next/i18next-browser-languageDetector</span></span><br><span class="line">    .use(LanguageDetector)</span><br><span class="line">    <span class="comment">// pass the i18n instance to react-i18next.</span></span><br><span class="line">    .use(initReactI18next)</span><br><span class="line">    <span class="comment">// init i18next</span></span><br><span class="line">    <span class="comment">// for all options read: https://www.i18next.com/overview/configuration-options</span></span><br><span class="line">    .init({</span><br><span class="line">      ...i18nextOptions,</span><br><span class="line">      <span class="comment">// This function detects the namespaces your routes rendered while SSR use</span></span><br><span class="line">      <span class="comment">// and pass them here to load the translations</span></span><br><span class="line">      <span class="attr">ns</span>: getInitialNamespaces(),</span><br><span class="line">      <span class="attr">detection</span>: {</span><br><span class="line">        <span class="comment">// Here only enable htmlTag detection, we'll detect the language only</span></span><br><span class="line">        <span class="comment">// server-side with remix-i18next, by using the `&lt;html lang&gt;` attribute</span></span><br><span class="line">        <span class="comment">// we can communicate to the client the language detected server-side</span></span><br><span class="line">        <span class="attr">order</span>: [<span class="string">'htmlTag'</span>],</span><br><span class="line">        <span class="comment">// Because we only use htmlTag, there's no reason to cache the language</span></span><br><span class="line">        <span class="comment">// on the browser, so we disable it</span></span><br><span class="line">        <span class="attr">caches</span>: [],</span><br><span class="line">      },</span><br><span class="line">      <span class="attr">backend</span>: locizeOptions,</span><br><span class="line">      <span class="attr">locizeLastUsed</span>: locizeOptions,</span><br><span class="line">      <span class="attr">saveMissing</span>: !isProduction <span class="comment">// you should not use saveMissing in production</span></span><br><span class="line">    })</span><br><span class="line">    .then(<span class="function">() =&gt;</span> {</span><br><span class="line">      <span class="comment">// then hydrate your app</span></span><br><span class="line">      <span class="keyword">return</span> hydrate(</span><br><span class="line">        <span class="xml"><span class="tag">&lt;<span class="name">I18nextProvider</span> <span class="attr">i18n</span>=<span class="string">{i18next}</span>&gt;</span></span></span><br><span class="line"><span class="xml">          <span class="tag">&lt;<span class="name">RemixBrowser</span> /&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">I18nextProvider</span>&gt;</span></span>,</span><br><span class="line">        <span class="built_in">document</span></span><br><span class="line">      )</span><br><span class="line">    })</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Während der Entwicklung werden Sie nun weiterhin fehlende Schlüssel speichern und die <code>lastused</code> Funktionalität nutzen. =&gt; <code>npm run dev</code></p>
+<p>Und in der Produktionsumgebung sind saveMissing und lastused deaktiviert. =&gt; <code>npm run build &amp;&amp; npm start</code></p>
+<p><a target="_blank" rel="noopener" href="https://docs.locize.com/more/caching">Caching</a>:</p>
+<p><img src="../remix-i18next/caching.jpg" alt="i18next caching" title="locize © inweso GmbH" loading="lazy" width="1152" height="720"></p>
+<p><a target="_blank" rel="noopener" href="https://docs.locize.com/more/versioning#merging-versions">Versionen zusammenführen</a>:</p>
+<p><img src="../remix-i18next/overwrite_version.jpg" alt="Version überschreiben" title="locize © inweso GmbH" loading="lazy" width="1152" height="720"></p>
+<p><em>🧑‍💻 Den vollständigen Code finden Sie <a target="_blank" rel="noopener" href="https://github.com/locize/locize-remix-i18next-example">hier</a>.</em></p>
+<p><em>Sehen Sie sich auch den <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=ds-yEEYP1Ks&amp;t=423s">Teil zur Code-Integration</a> in diesem <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=ds-yEEYP1Ks">YouTube-Video</a>.</em></p>
+<p>Es gibt auch ein <a target="_blank" rel="noopener" href="https://youtu.be/SA_9i4TtxLQ">i18next-Crashkurs-Video</a>.</p>
+<div class="video-container"><iframe src="https://www.youtube-nocookie.com/embed/SA_9i4TtxLQ" frameborder="0" loading="lazy" allowfullscreen=""></iframe></div>
+
+
+<h2 id="🎉🥳-Herzliche-Gluckwunsche-🎊🎁"><a href="#🎉🥳-Herzliche-Gluckwunsche-🎊🎁" class="headerlink" title="🎉🥳 Herzliche Glückwünsche 🎊🎁 "></a>🎉🥳 Herzliche Glückwünsche 🎊🎁 <a name="congratulations"></a></h2><p>Genial! Dank <a target="_blank" rel="noopener" href="https://github.com/sergiodxa/remix-i18next">remix-i18next</a>, <a target="_blank" rel="noopener" href="https://www.i18next.com/">i18next</a>, <a target="_blank" rel="noopener" href="https://react.i18next.com/">react-i18next</a> und <a href="https://locize.com/">locize</a> ist Ihr kontinuierlicher Lokalisierungs-Workflow einsatzbereit.</p>
+<p>Wenn Sie also Ihr i18n-Thema auf die nächste Ebene bringen möchten, lohnt es sich, die <a href="https://locize.com/">Übersetzungs-Management Platform - locize</a> auszuprobieren.</p>
+<p>Die Gründer von <a href="https://locize.com/">locize</a> sind auch die Schöpfer von <a target="_blank" rel="noopener" href="https://www.i18next.com/">i18next</a>. Mit der Nutzung von <a href="https://locize.com/">locize</a> unterstützen Sie also direkt die Zukunft von <a target="_blank" rel="noopener" href="https://www.i18next.com/">i18next</a>.</p>
+<h2 id="👍"><a href="#👍" class="headerlink" title="👍"></a>👍</h2><!-- flag of hidden posts -->
+        </div>
+        <footer class="article-footer">
+          
+          
+
+
+
+    <a data-url="https://locize.com/blog/remix-i18next-de/" data-id="clewlvmtl00382sza0kzccuka" class="article-share-link"><i class="fa-solid fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://x.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+          
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+    </section>
+
+
+                          </div>
+                      </section>
+                      <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="x-twitter" href="https://x.com/locize" target="_blank">
+                        <i class="icon fa-brands fa-x-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="youtube" href="https://www.youtube.com/channel/UCPYQjBbbXojUcB8qjeIB3uA" target="_blank">
+                        <i class="icon fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="https://www.facebook.com/locize" target="_blank">
+                        <i class="icon fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+    
+    
+        
+        
+        
+            
+            
+                
+            
+        
+        
+            
+            
+                
+            
+        
+    
+
+
+<nav id="article-nav">
+    
+        <a href="/blog/next-i18next-de/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Allseitig optimierte Next.js-Übersetzungen (ein next-i18next Leitfaden)
+        
+        </p>
+        <i class="icon fa-solid fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/blog/remix-i18n-de/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">So internationalisieren Sie eine Remix-Anwendung (Teil 1)</p>
+        <i class="icon fa-solid fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">recents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/websiteplanet-interview/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/websiteplanet-interview/title.jpg)" alt="Interview with WebsitePlanet" class="thumbnail-image"></span>
+    
+    <!--  -->
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/blog/websiteplanet-interview/" class="title">Interview with WebsitePlanet</a></p>
+                            <p class="item-date"><time datetime="2023-10-23T22:00:00.000Z" itemprop="datePublished">24/10/2023</time></p>
+                        </div>
+                    </li>
+                
+                    
+                        
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/i18n-missverstandnisse/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/i18n-misconceptions/title.jpg)" alt="Häufige Missverständnisse über i18n: Entlarvung der Mythen" class="thumbnail-image"></span>
+    
+    <!--  -->
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/blog/i18n-missverstandnisse/" class="title">Häufige Missverständnisse über i18n: Entlarvung der Mythen</a></p>
+                            <p class="item-date"><time datetime="2023-10-15T22:00:00.000Z" itemprop="datePublished">16/10/2023</time></p>
+                        </div>
+                    </li>
+                
+                    
+                        
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/cat-de/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/cat/title.jpg)" alt="Sag Hallo zu CAT (Computerunterstützten Übersetzung): Der persönliche Übersetzer in deiner Tasche" class="thumbnail-image"></span>
+    
+    <!--  -->
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/blog/cat-de/" class="title">Sag Hallo zu CAT (Computerunterstützten Übersetzung): Der persönliche Übersetzer in deiner Tasche</a></p>
+                            <p class="item-date"><time datetime="2023-10-01T22:00:00.000Z" itemprop="datePublished">02/10/2023</time></p>
+                        </div>
+                    </li>
+                
+                    
+                        
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/was-ist-i18n/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/what-is-i18n/what-is-i18n.webp)" alt="Was ist i18n und was ist sein Zweck (2024) | locize" class="thumbnail-image"></span>
+    
+    <!--  -->
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/blog/was-ist-i18n/" class="title">Was ist i18n und was ist sein Zweck (2024) | locize</a></p>
+                            <p class="item-date"><time datetime="2023-09-28T22:00:00.000Z" itemprop="datePublished">29/09/2023</time></p>
+                        </div>
+                    </li>
+                
+                    
+                        
+                    
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/lokalisierung/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/localization/localization.webp)" alt="Lokalisierungskonzept - ein Leitfaden für die Adaption | locize" class="thumbnail-image"></span>
+    
+    <!--  -->
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/blog/lokalisierung/" class="title">Lokalisierungskonzept - ein Leitfaden für die Adaption | locize</a></p>
+                            <p class="item-date"><time datetime="2023-09-20T22:00:00.000Z" itemprop="datePublished">21/09/2023</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/">2023</a><span class="archive-list-count">24</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/">2022</a><span class="archive-list-count">20</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/">2021</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/">2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/">2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/">2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/">2016</a><span class="archive-list-count">6</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">tag cloud</h3>
+        <div class="widget tagcloud">
+            <a href="/blog/tags/abc/" style="font-size: 10px;">abc</a> <a href="/blog/tags/android/" style="font-size: 10px;">android</a> <a href="/blog/tags/angular/" style="font-size: 10px;">angular</a> <a href="/blog/tags/app-store/" style="font-size: 10px;">app store</a> <a href="/blog/tags/award/" style="font-size: 10px;">award</a> <a href="/blog/tags/aws/" style="font-size: 11.54px;">aws</a> <a href="/blog/tags/backend/" style="font-size: 12.31px;">backend</a> <a href="/blog/tags/beginning/" style="font-size: 10px;">beginning</a> <a href="/blog/tags/best-practices/" style="font-size: 11.54px;">best practices</a> <a href="/blog/tags/brand/" style="font-size: 10px;">brand</a> <a href="/blog/tags/cli/" style="font-size: 10.77px;">cli</a> <a href="/blog/tags/cloud/" style="font-size: 10px;">cloud</a> <a href="/blog/tags/competitors/" style="font-size: 10px;">competitors</a> <a href="/blog/tags/continuous-delivery/" style="font-size: 11.54px;">continuous delivery</a> <a href="/blog/tags/continuous-development/" style="font-size: 11.54px;">continuous development</a> <a href="/blog/tags/continuous-integration/" style="font-size: 11.54px;">continuous integration</a> <a href="/blog/tags/continuous-localization/" style="font-size: 12.31px;">continuous localization</a> <a href="/blog/tags/continuous-translation/" style="font-size: 11.54px;">continuous translation</a> <a href="/blog/tags/cultures/" style="font-size: 10px;">cultures</a> <a href="/blog/tags/customers/" style="font-size: 10px;">customers</a> <a href="/blog/tags/data/" style="font-size: 10px;">data</a> <a href="/blog/tags/dejs/" style="font-size: 10px;">dejs</a> <a href="/blog/tags/deno/" style="font-size: 10px;">deno</a> <a href="/blog/tags/ejs/" style="font-size: 10px;">ejs</a> <a href="/blog/tags/engineering-manager/" style="font-size: 12.31px;">engineering manager</a> <a href="/blog/tags/example/" style="font-size: 10px;">example</a> <a href="/blog/tags/examples/" style="font-size: 10px;">examples</a> <a href="/blog/tags/formatjs/" style="font-size: 12.31px;">formatjs</a> <a href="/blog/tags/g11n/" style="font-size: 11.54px;">g11n</a> <a href="/blog/tags/gatsby/" style="font-size: 10px;">gatsby</a> <a href="/blog/tags/gatsby-plugin-react-i18next/" style="font-size: 10px;">gatsby-plugin-react-i18next</a> <a href="/blog/tags/github/" style="font-size: 10px;">github</a> <a href="/blog/tags/global-localization/" style="font-size: 13.08px;">global localization</a> <a href="/blog/tags/globalisation/" style="font-size: 10px;">globalisation</a> <a href="/blog/tags/globalization/" style="font-size: 11.54px;">globalization</a> <a href="/blog/tags/guest-post/" style="font-size: 11.54px;">guest post</a> <a href="/blog/tags/guide/" style="font-size: 10px;">guide</a> <a href="/blog/tags/how-to-choose/" style="font-size: 10.77px;">how to choose</a> <a href="/blog/tags/i18n/" style="font-size: 17.69px;">i18n</a> <a href="/blog/tags/i18next/" style="font-size: 15.38px;">i18next</a> <a href="/blog/tags/i18next-vue/" style="font-size: 10px;">i18next-vue</a> <a href="/blog/tags/international-strategy/" style="font-size: 13.08px;">international strategy</a> <a href="/blog/tags/internationalization/" style="font-size: 19.23px;">internationalization</a> <a href="/blog/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/blog/tags/jquery-i18next/" style="font-size: 10px;">jquery-i18next</a> <a href="/blog/tags/l10n/" style="font-size: 18.46px;">l10n</a> <a href="/blog/tags/language/" style="font-size: 10px;">language</a> <a href="/blog/tags/language-localization/" style="font-size: 10px;">language localization</a> <a href="/blog/tags/language-translation/" style="font-size: 10px;">language translation</a> <a href="/blog/tags/localization/" style="font-size: 20px;">localization</a> <a href="/blog/tags/localization-project/" style="font-size: 10px;">localization project</a> <a href="/blog/tags/localization-techniques/" style="font-size: 10px;">localization techniques</a> <a href="/blog/tags/localization-tools/" style="font-size: 10px;">localization tools</a> <a href="/blog/tags/locize/" style="font-size: 16.92px;">locize</a> <a href="/blog/tags/locizify/" style="font-size: 11.54px;">locizify</a> <a href="/blog/tags/machine-translation/" style="font-size: 12.31px;">machine translation</a> <a href="/blog/tags/mail/" style="font-size: 10px;">mail</a> <a href="/blog/tags/marketing/" style="font-size: 10.77px;">marketing</a> <a href="/blog/tags/marketing-campaigns/" style="font-size: 10px;">marketing campaigns</a> <a href="/blog/tags/markets/" style="font-size: 10px;">markets</a> <a href="/blog/tags/mobile-app/" style="font-size: 10px;">mobile app</a> <a href="/blog/tags/multi-tenancy/" style="font-size: 10px;">multi-tenancy</a> <a href="/blog/tags/native-language/" style="font-size: 10px;">native language</a> <a href="/blog/tags/next/" style="font-size: 12.31px;">next</a> <a href="/blog/tags/next-i18next/" style="font-size: 11.54px;">next-i18next</a> <a href="/blog/tags/open-source/" style="font-size: 10px;">open-source</a> <a href="/blog/tags/order/" style="font-size: 10px;">order</a> <a href="/blog/tags/polyglot/" style="font-size: 10.77px;">polyglot</a> <a href="/blog/tags/problems/" style="font-size: 10px;">problems</a> <a href="/blog/tags/process/" style="font-size: 10.77px;">process</a> <a href="/blog/tags/products/" style="font-size: 10px;">products</a> <a href="/blog/tags/project-management/" style="font-size: 10px;">project management</a> <a href="/blog/tags/react/" style="font-size: 14.62px;">react</a> <a href="/blog/tags/react-i18next/" style="font-size: 13.85px;">react-i18next</a> <a href="/blog/tags/react-intl/" style="font-size: 10px;">react-intl</a> <a href="/blog/tags/refining-website-content/" style="font-size: 10px;">refining website content</a> <a href="/blog/tags/remix/" style="font-size: 10.77px;">remix</a> <a href="/blog/tags/remix-i18next/" style="font-size: 10.77px;">remix-i18next</a> <a href="/blog/tags/server/" style="font-size: 10.77px;">server</a> <a href="/blog/tags/serverless/" style="font-size: 10.77px;">serverless</a> <a href="/blog/tags/serverside/" style="font-size: 10.77px;">serverside</a> <a href="/blog/tags/service/" style="font-size: 11.54px;">service</a> <a href="/blog/tags/software/" style="font-size: 10px;">software</a> <a href="/blog/tags/software-architecture/" style="font-size: 10px;">software architecture</a> <a href="/blog/tags/software-development/" style="font-size: 10px;">software development</a> <a href="/blog/tags/successful-global-localization/" style="font-size: 10px;">successful global localization</a> <a href="/blog/tags/svelte/" style="font-size: 10px;">svelte</a> <a href="/blog/tags/svelte-i18n/" style="font-size: 10px;">svelte-i18n</a> <a href="/blog/tags/tech-lead/" style="font-size: 12.31px;">tech lead</a> <a href="/blog/tags/technology/" style="font-size: 10px;">technology</a> <a href="/blog/tags/testing/" style="font-size: 10px;">testing</a> <a href="/blog/tags/tms/" style="font-size: 12.31px;">tms</a> <a href="/blog/tags/translation/" style="font-size: 16.15px;">translation</a> <a href="/blog/tags/translation-management/" style="font-size: 12.31px;">translation management</a> <a href="/blog/tags/translation-project-management/" style="font-size: 10px;">translation project management</a> <a href="/blog/tags/translation-tools/" style="font-size: 10px;">translation tools</a> <a href="/blog/tags/transnational-strategy/" style="font-size: 10.77px;">transnational strategy</a> <a href="/blog/tags/types/" style="font-size: 10px;">types</a> <a href="/blog/tags/typescript/" style="font-size: 10px;">typescript</a> <a href="/blog/tags/video-game/" style="font-size: 10px;">video game</a> <a href="/blog/tags/vue/" style="font-size: 11.54px;">vue</a> <a href="/blog/tags/vue-i18n/" style="font-size: 10.77px;">vue-i18n</a> <a href="/blog/tags/vue-i18next/" style="font-size: 10px;">vue-i18next</a> <a href="/blog/tags/web/" style="font-size: 10px;">web</a> <a href="/blog/tags/web-app-translation/" style="font-size: 10.77px;">web app translation</a> <a href="/blog/tags/website-internationalization/" style="font-size: 10.77px;">website internationalization</a> <a href="/blog/tags/workflow/" style="font-size: 10px;">workflow</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://www.i18next.com" target="_blank">i18next</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://locize.com/privacy.html" target="_blank">privacy policy</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://locize.com/terms.html" target="_blank">terms</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                  </div>
+              </div>
+          </div>
+          <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa-solid fa-angle-up"></i></a>
+            <div class="credit">
+                <div style="float: left;">
+                    <h1 class="logo-wrap">
+                        <a href="/blog/" class="logo"></a>
+                    </h1>
+                    <p>© 2023 inweso GmbH</p>
+                    <!-- <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Original theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+          
+
+    
+        
+<script src="/blog/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/blog/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/blog/js/main.js"></script>
+
+
+<script src="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+    function enableCookies() {
+        var e = document.createElement("script");
+        e.type = "text/javascript";
+        e.async = true;
+        e.src = "https://www.googletagmanager.com/gtag/js?id=G-X50E21BGKG";
+        var a = document.getElementsByTagName("script")[0];
+        a.parentNode.insertBefore(e, a);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-X50E21BGKG', { 'anonymize_ip': true });
+        // gtag('config', 'UA-78143856-1', { 'anonymize_ip': true }); // old google analytics
+    }
+
+    function disableCookies() {
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i];
+            var eqPos = cookie.indexOf("=");
+            var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+    }
+
+    window.cookieconsent.initialise({
+        palette: {
+            popup: {
+                background: "#2196f3",
+                text: "#ffffff"
+            },
+            button: {
+                background: "#1976d2",
+                text: "#ffffff"
+            }
+        },
+        theme: "edgeless",
+        type: "opt-in",
+        content: {
+            message: "This website uses cookies to ensure you get the best experience on our website.",
+            allow: "Accept",
+            dismiss: "Decline",
+            link: "learn",
+            href: "https://locize.com/privacy.html"
+        },
+        elements: {
+            deny: '<a style="font-weight: 100; color: #ffffffa8; font-size: smaller;" aria-label="deny cookies" role="button" tabindex="0" class="cc-btn cc-deny">Decline</a>'
+        },
+        onInitialise: function (status) {
+            var type = this.options.type;
+            var didConsent = this.hasConsented();
+            if (type == 'opt-in' && didConsent) {
+                // enable cookies
+                enableCookies();
+            }
+            if (type == 'opt-out' && !didConsent) {
+                // disable cookies
+                disableCookies();
+            }
+        },
+        onStatusChange: function(status, chosenBefore) {
+            var type = this.options.type;
+            var didConsent = this.hasConsented();
+            if (type == 'opt-in' && didConsent) {
+                // enable cookies
+                enableCookies();
+            }
+            if (type == 'opt-out' && !didConsent) {
+                // disable cookies
+                disableCookies();
+            }
+        },
+        onRevokeChoice: function() {
+            var type = this.options.type;
+            if (type == 'opt-in') {
+                // disable cookies
+                disableCookies();
+            }
+            if (type == 'opt-out') {
+                // enable cookies
+                enableCookies();
+            }
+        }
+    });
+</script>
+      </div>
+  
+  
+
+</body></html>
