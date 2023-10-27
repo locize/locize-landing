@@ -451,7 +451,7 @@ header {
   width: 100%;
   min-height: auto;
   overflow-y: hidden;
-  background-image: url("../img/regensburg.jpg");
+  background: linear-gradient(180deg, #2196f3, #2196f3 59%, #1976d2);
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
@@ -459,14 +459,6 @@ header {
 header #brand-logo {
   margin-left: -10px;
   top: -20px;
-}
-header .header-overlay {
-  background: url("../img/bg-pattern2.png"), rgba(25, 118, 210, 0.3);
-  /* fallback for old browsers */
-  background: url("../img/bg-pattern2.png"), -webkit-linear-gradient(to left, rgba(0, 107, 222, 0.6), rgba(33, 150, 243, 0.4));
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: url("../img/bg-pattern2.png"), linear-gradient(to left, rgba(0, 107, 222, 0.6), rgba(33, 150, 243, 0.4));
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 header .header-content {
   text-align: center;
@@ -538,7 +530,7 @@ header #particles-js {
   header .device-wrapper {
     max-width: 400px;
     max-height: calc(100vh - 100px);
-    margin: 250px auto 0;
+    margin: 200px auto 0;
   }
 }
 @media (min-width: 992px) {
