@@ -101,8 +101,8 @@ html(lang='en')
           a.navbar-brand.page-scroll(href='/#page-top')
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
-            li(id="featuresd").dropdown
-              a(data-toggle='dropdown', href='#featuresd').dropdown-toogle Features
+            li#featuresd.dropdown
+              a.dropdown-toggle(href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Features
                 b.caret
               ul.dropdown-menu
                 li
