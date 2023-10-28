@@ -16,7 +16,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.4.1",
-    "locizify-ssg": "1.0.8"
+    "locizify-ssg": "1.0.10"
   },
   "repository": {
     "type": "git",
