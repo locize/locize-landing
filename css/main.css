@@ -451,6 +451,7 @@ header {
   width: 100%;
   min-height: auto;
   overflow-y: hidden;
+  background: #2196f3;
   background: linear-gradient(180deg, #2196f3, #2196f3 59%, #1976d2);
   background-size: cover;
   background-repeat: no-repeat;
