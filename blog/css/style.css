@@ -401,7 +401,10 @@ code {
   clear: both;
 }
 #header {
-  background: #1976d2;
+  background: -webkit-linear-gradient(270deg, #2196f3, #2196f3 59%, #1976d2);
+  background: -moz-linear-gradient(270deg, #2196f3, #2196f3 59%, #1976d2);
+  background: -ms-linear-gradient(270deg, #2196f3, #2196f3 59%, #1976d2);
+  background: linear-gradient(180deg, #2196f3, #2196f3 59%, #1976d2);
   padding-bottom: 60px;
   position: relative;
 }
@@ -436,7 +439,7 @@ code {
 #header-title .subtitle {
   font-size: 16px;
   line-height: 70px;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.85);
   text-shadow: 0 1px rgba(0,0,0,0.2);
 }
 @media only screen and (max-width: 920px) {
@@ -464,7 +467,7 @@ code {
 }
 .nav-container {
   padding: 0 15px;
-  background: #2196f3;
+  background: #1976d2;
   z-index: 1;
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 -1px 0 rgba(0,0,0,0.2), inset 1px 0 0 rgba(0,0,0,0.2), inset -1px 0 0 rgba(0,0,0,0.2);
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 -1px 0 rgba(0,0,0,0.2), inset 1px 0 0 rgba(0,0,0,0.2), inset -1px 0 0 rgba(0,0,0,0.2);
@@ -545,7 +548,7 @@ code {
   overflow: hidden;
   position: absolute;
   width: 180px;
-  background: #2196f3 url("images/opacity-10.png") repeat;
+  background: #1976d2 url("images/opacity-10.png") repeat;
 }
 .nav-container .nav-container-inner #main-nav .main-nav-list-item .main-nav-list-child li {
   -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.06);
@@ -615,6 +618,12 @@ code {
 .search-form-input.st-ui-search-input::-webkit-search-cancel-button,
 .search-form-input.st-default-search-input::-webkit-search-cancel-button {
   -webkit-appearance: none;
+}
+.search-form-input::placeholder,
+.search-form-input.ins-search-input::placeholder,
+.search-form-input.st-ui-search-input::placeholder,
+.search-form-input.st-default-search-input::placeholder {
+  color: rgba(255,255,255,0.7);
 }
 .search-form-submit {
   display: none;
