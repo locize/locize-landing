@@ -122,13 +122,6 @@
     </url>
 
     <url>
-        <loc>https://locize.com/blog/tags/how-to-choose/</loc>
-        <lastmod>2023-10-15T14:01:48.923Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://locize.com/blog/tags/language-localization/</loc>
         <lastmod>2023-10-15T14:01:48.923Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -137,6 +130,13 @@
 
     <url>
         <loc>https://locize.com/blog/tags/translation-project-management/</loc>
+        <lastmod>2023-10-15T14:01:48.923Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/how-to-choose/</loc>
         <lastmod>2023-10-15T14:01:48.923Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -178,14 +178,14 @@
     </url>
 
     <url>
-        <loc>https://locize.com/blog/tags/international-strategy/</loc>
+        <loc>https://locize.com/blog/tags/global-localization/</loc>
         <lastmod>2023-10-15T14:01:18.404Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://locize.com/blog/tags/global-localization/</loc>
+        <loc>https://locize.com/blog/tags/international-strategy/</loc>
         <lastmod>2023-10-15T14:01:18.404Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -375,14 +375,14 @@
 
     <url>
         <loc>https://locize.com/blog/tags/remix/</loc>
-        <lastmod>2023-08-16T18:49:30.105Z</lastmod>
+        <lastmod>2023-08-17T15:21:02.567Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://locize.com/blog/tags/remix-i18next/</loc>
-        <lastmod>2023-08-16T18:49:30.105Z</lastmod>
+        <lastmod>2023-08-17T15:21:02.567Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -535,13 +535,6 @@
     </url>
 
     <url>
-        <loc>https://locize.com/blog/tags/backend/</loc>
-        <lastmod>2023-02-08T17:05:06.762Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://locize.com/blog/tags/serverside/</loc>
         <lastmod>2023-02-08T17:05:06.762Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -550,6 +543,13 @@
 
     <url>
         <loc>https://locize.com/blog/tags/server/</loc>
+        <lastmod>2023-02-08T17:05:06.762Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/backend/</loc>
         <lastmod>2023-02-08T17:05:06.762Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

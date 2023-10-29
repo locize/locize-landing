@@ -286,7 +286,7 @@ body,
   background: #15419a;
 }
 body {
-  background: #eaeaea;
+  background: #c7c7c7;
   font: 14px "Titillium Web", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif;
   -webkit-text-size-adjust: 100%;
 }
@@ -302,6 +302,12 @@ code {
 .container {
   position: relative;
   padding: 0 20px;
+}
+#wrap > .container {
+  background: -webkit-linear-gradient(270deg, #eaeaea, #dbdbdb 59%, #c7c7c7);
+  background: -moz-linear-gradient(270deg, #eaeaea, #dbdbdb 59%, #c7c7c7);
+  background: -ms-linear-gradient(270deg, #eaeaea, #dbdbdb 59%, #c7c7c7);
+  background: linear-gradient(180deg, #eaeaea, #dbdbdb 59%, #c7c7c7);
 }
 .container-inner {
   max-width: 1280px;
@@ -401,6 +407,7 @@ code {
   clear: both;
 }
 #header {
+  background: #2196f3;
   background: -webkit-linear-gradient(270deg, #2196f3, #2196f3 59%, #1976d2);
   background: -moz-linear-gradient(270deg, #2196f3, #2196f3 59%, #1976d2);
   background: -ms-linear-gradient(270deg, #2196f3, #2196f3 59%, #1976d2);
@@ -1328,7 +1335,7 @@ a.article-title:hover {
   line-height: 1em;
   padding: 6px 15px;
   border-radius: 15px;
-  background: #eaeaea;
+  background: #c7c7c7;
   color: #aaa;
   text-shadow: 0 1px #fff;
   text-decoration: none;
@@ -1402,7 +1409,7 @@ a.article-title:hover {
   line-height: 36px;
 }
 .article-share-links {
-  background: #eaeaea;
+  background: #c7c7c7;
 }
 .article-share-links:before,
 .article-share-links:after {
@@ -1689,7 +1696,7 @@ a.article-title:hover {
   padding: 30px;
 }
 #footer #back-to-top {
-  background: #eaeaea;
+  background: #c7c7c7;
   color: #777;
   overflow: hidden;
   text-align: center;
