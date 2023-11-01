@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://locize.com/blog/next-13-app-dir-i18n/</loc>
+        <lastmod>2023-11-01T06:24:50.890Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://locize.com/blog/websiteplanet-interview/</loc>
         <lastmod>2023-10-23T19:07:37.620Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -139,14 +147,6 @@
     <url>
         <loc>https://locize.com/blog/google-translate-accuracy/</loc>
         <lastmod>2023-09-06T11:37:45.740Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/next-13-app-dir-i18n/</loc>
-        <lastmod>2023-08-28T08:43:31.503Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
