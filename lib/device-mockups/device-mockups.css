@@ -1622,6 +1622,40 @@
     width: 100%;
     height: 100%; }
 
+  .device[data-device="iPhone15ProNoNotch"][data-orientation="portrait"][data-color="black"] {
+    padding-bottom: 203.5%; }
+    .device[data-device="iPhone15ProNoNotch"][data-orientation="portrait"][data-color="black"] .screen {
+      top: 1.9%;
+      left: 4.45%;
+      width: 91.1%;
+      height: 93.6288088643%; }
+    .device[data-device="iPhone15ProNoNotch"][data-orientation="portrait"][data-color="black"]::after {
+      content: '';
+      background-image: url(../device-mockups/iPhone15ProNoNotch/portrait_black.png); }
+    .device[data-device="iPhone15ProNoNotch"][data-orientation="portrait"][data-color="black"] .button {
+      display: none;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%; }
+  
+  .device[data-device="iPhone15ProNoNotch"][data-orientation="landscape"][data-color="black"] {
+    padding-bottom: 50.2770083102%; }
+    .device[data-device="iPhone15ProNoNotch"][data-orientation="landscape"][data-color="black"] .screen {
+      top: 6.3360881543%;
+      left: 3.4626038781%;
+      width: 93.0747922438%;
+      height: 87.3278236915%; }
+    .device[data-device="iPhone15ProNoNotch"][data-orientation="landscape"][data-color="black"]::after {
+      content: '';
+      background-image: url(../device-mockups/iPhone15ProNoNotch/landscape_black.png); }
+    .device[data-device="iPhone15ProNoNotch"][data-orientation="landscape"][data-color="black"] .button {
+      display: none;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%; }
+
 .device[data-device="Pixel"][data-orientation="portrait"][data-color="white"] {
   padding-bottom: 202.620087336%; }
   .device[data-device="Pixel"][data-orientation="portrait"][data-color="white"] .screen {
