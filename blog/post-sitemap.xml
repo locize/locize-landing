@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://locize.com/blog/next-app-dir-i18n/</loc>
+        <lastmod>2023-11-06T08:23:44.058Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://locize.com/blog/next-i18next/</loc>
         <lastmod>2023-11-01T16:04:06.736Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -19,14 +27,6 @@
     <url>
         <loc>https://locize.com/blog/is-sdl-trados-still-relevant/</loc>
         <lastmod>2023-11-01T11:54:24.419Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/next-13-app-dir-i18n/</loc>
-        <lastmod>2023-11-01T06:24:50.890Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
