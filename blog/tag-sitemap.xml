@@ -3,6 +3,34 @@
 
 
     <url>
+        <loc>https://locize.com/blog/tags/language-localization/</loc>
+        <lastmod>2023-11-16T11:05:45.160Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/translation-project-management/</loc>
+        <lastmod>2023-11-16T11:05:45.160Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/how-to-choose/</loc>
+        <lastmod>2023-11-16T11:05:45.160Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/tms/</loc>
+        <lastmod>2023-11-16T11:05:45.160Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://locize.com/blog/tags/next-i18next/</loc>
         <lastmod>2023-11-06T08:32:58.554Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -75,13 +103,6 @@
     <url>
         <loc>https://locize.com/blog/tags/locize/</loc>
         <lastmod>2023-11-06T08:32:58.554Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/tms/</loc>
-        <lastmod>2023-11-01T11:54:24.419Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -180,27 +201,6 @@
     <url>
         <loc>https://locize.com/blog/tags/mobile-app/</loc>
         <lastmod>2023-10-15T14:02:55.466Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/language-localization/</loc>
-        <lastmod>2023-10-15T14:01:48.923Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/translation-project-management/</loc>
-        <lastmod>2023-10-15T14:01:48.923Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/how-to-choose/</loc>
-        <lastmod>2023-10-15T14:01:48.923Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
