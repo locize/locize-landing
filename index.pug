@@ -58,7 +58,7 @@ html(lang='en')
       script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
 
     // LOCIZIFY
-    script(src='https://unpkg.com/locizify@6.0.1')
+    script(src='https://unpkg.com/locizify@6.0.2')
     script.
       window.locizifySSG = function () {
         document.querySelector('meta[property="og:title"]').setAttribute("content", locizify.i18next.t('title'));
@@ -187,7 +187,7 @@ html(lang='en')
     section#customers.customers.customers-logos(translated="")
       .container(style="min-width: 100%;")
         .row
-          section.col-lg-12#customers-slider.slider(data-arrows="true", style="padding: 0;")
+          section.col-lg-12#customers-slider.slider(data-arrows="true", style="padding: 0;", data-locize-editor-ignore="true")
             each image in customerLogos
               .slide
                 img.grayscale(data-lazy='img/customers/' + image, alt=image.split('.').slice(0,-1).join('.'))
