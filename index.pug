@@ -51,14 +51,14 @@ html(lang='en')
     link(rel='stylesheet', href='lib/simple-line-icons/css/simple-line-icons.css')
     link(rel='stylesheet', href='lib/device-mockups/device-mockups.min.css')
     link(href='css/main.min.css', rel='stylesheet')
-    link(rel="stylesheet", href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
+    link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css")
 
     //if lt IE 9
       script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
       script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
 
     // LOCIZIFY
-    script(src='//cdn.jsdelivr.net/npm/locizify@6.0.7')
+    script(src='https://cdn.jsdelivr.net/npm/locizify@6.0.8')
     script.
       window.locizifySSG = function () {
         document.querySelector('meta[property="og:title"]').setAttribute("content", locizify.i18next.t('title'));
@@ -191,13 +191,6 @@ html(lang='en')
             each image in customerLogos
               .slide
                 img.grayscale(data-lazy='img/customers/' + image, alt=image.split('.').slice(0,-1).join('.'))
-
-    section.section-tertiary#video(style="display: none; padding: 50px 0; border-bottom-color: #2096f2; border-bottom-width: thick; border-bottom-style: groove;", translated="")
-      .container
-        .row
-          .col-xs-10.col-xs-offset-1
-            .embed-responsive.embed-responsive-16by9
-              iframe.embed-responsive-item(width='1280', height='720', src='https://www.youtube-nocookie.com/embed/YQryHo1iHb8?rel=0&controls=0&showinfo=0', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
 
     section#testimonials.testimonials
       .container
@@ -686,6 +679,16 @@ html(lang='en')
                 | .
 
 
+    section.section-tertiary#video(style="display: none; padding: 0;", translated="")
+      .video-background.embed-responsive.embed-responsive-16by9
+        iframe(src='https://www.youtube.com/embed/YQryHo1iHb8?controls=1&showinfo=0&rel=0&autoplay=1&loop=1&playlist=YQryHo1iHb8&mute=1' frameborder='0' allowfullscreen='' allow="autoplay;")
+      //- .container
+      //-   .row
+      //-     .col-xs-10.col-xs-offset-1
+      //-       .embed-responsive.embed-responsive-16by9
+      //-         iframe.embed-responsive-item(width='1280', height='720', src='https://www.youtube-nocookie.com/embed/YQryHo1iHb8?rel=0&controls=0&showinfo=0', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+
+
     section.cta
       .cta-content
         .container
@@ -904,7 +907,7 @@ html(lang='en')
         })();
       });
 
-    script(src="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js", data-cfasync="false")
+    script(src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js", data-cfasync="false")
     script.
       function enableCookies() {
           var e = document.createElement("script");

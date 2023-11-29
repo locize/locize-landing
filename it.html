@@ -41,14 +41,14 @@
     <link rel="stylesheet" href="lib/simple-line-icons/css/simple-line-icons.css">
     <link rel="stylesheet" href="lib/device-mockups/device-mockups.min.css">
     <link href="css/main.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <!--if lt IE 9
     script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
     script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
     
     -->
     <!-- LOCIZIFY-->
-    <script src="//cdn.jsdelivr.net/npm/locizify@6.0.7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locizify@6.0.8"></script>
     <script>
       window.locizifySSG = function () {
         document.querySelector('meta[property="og:title"]').setAttribute("content", locizify.i18next.t('title'));
@@ -292,15 +292,9 @@
         </div>
       </div>
     </section>
-    <section class="section-tertiary" id="video" style="display: none; padding: 50px 0; border-bottom-color: #2096f2; border-bottom-width: thick; border-bottom-style: groove;" translated="">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-10 col-xs-offset-1">
-            <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" width="1280" height="720" src="https://www.youtube-nocookie.com/embed/YQryHo1iHb8?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
-            </div>
-          </div>
-        </div>
+    <section class="section-tertiary" id="video" style="display: none; padding: 0;" translated="">
+      <div class="video-background embed-responsive embed-responsive-16by9">
+        <iframe src="https://www.youtube.com/embed/YQryHo1iHb8?controls=1&amp;showinfo=0&amp;rel=0&amp;autoplay=1&amp;loop=1&amp;playlist=YQryHo1iHb8&amp;mute=1" frameborder="0" allowfullscreen="" allow="autoplay;"></iframe>
       </div>
     </section>
     <section class="testimonials" id="testimonials" i18next-orgval-1="
@@ -1366,7 +1360,7 @@
       });
       
     </script>
-    <script src="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
     <script>
       function enableCookies() {
           var e = document.createElement("script");
