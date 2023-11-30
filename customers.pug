@@ -1902,6 +1902,61 @@ block content
                   }
                 }
 
+          .col-lg-6.col-md-4.col-sm-12
+            .testimonial.testimonial-fullwidth
+              .testimonial-title
+                img.grayscale(style='max-height: 50px; max-width: 100%;', src='img/customers/watchduty.svg' alt="Watch Duty" loading="lazy")
+              .testimonial-content
+                p(style="font-size: 20px;") Locize has helped us streamline our gitops approach to UI element translation.
+                p(style="font-size: 20px;") Their machine to human workflow in particular has speed up our development cycle quite a bit, and we are never blocked by translations for our deployments.
+                p(style="font-size: 20px;") The web UI is also great for giving non-technical users an easy way to improve our translations.
+                p(style="font-size: 20px;") This was an easy win for our organization and has saved us time and money.
+              .author
+                hr
+                | David Merrit, CTO
+                br
+                a(href='https://www.watchduty.org' target='_blank') Watch Duty
+              script(type="application/ld+json").
+                {
+                  "@context": "http://schema.org/",
+                  "@type": "Review",
+                  "itemReviewed": {
+                    "@id": "https://locize.com/#software"
+                  },
+                  "author": {
+                    "@type": "Organization",
+                    "name": "Watch Duty",
+                    "url": "https://www.watchduty.org",
+                    "image": "https://locize.com/img/customers/watchduty.svg",
+                    "member": {
+                      "@type": "Person",
+                      "name": "David Merrit"
+                    }
+                  },
+                  "description": "Locize has helped us streamline our gitops approach to UI element translation. Their machine to human workflow in particular has speed up our development cycle quite a bit, and we are never blocked by translations for our deployments. The web UI is also great for giving non-technical users an easy way to improve our translations. This was an easy win for our organization and has saved us time and money.",
+                  "positiveNotes": {
+                    "@type": "ItemList",
+                    "itemListElement": [
+                      {
+                        "@type": "ListItem",
+                        "name": "Locize has helped us streamline our gitops approach to UI element translation."
+                      },
+                      {
+                        "@type": "ListItem",
+                        "name": "Their machine to human workflow in particular has speed up our development cycle quite a bit, and we are never blocked by translations for our deployments."
+                      },
+                      {
+                        "@type": "ListItem",
+                        "name": "The web UI is also great for giving non-technical users an easy way to improve our translations."
+                      },
+                      {
+                        "@type": "ListItem",
+                        "name": "This was an easy win for our organization and has saved us time and money."
+                      }
+                    ]
+                  }
+                }
+
   section#contact.contact.bg-tertiary(i18next-options='{"ns": "common"}')
     .container
       h2 Need some help getting started?
