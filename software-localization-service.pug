@@ -1,8 +1,8 @@
 extends pug/layout.pug
 
 block head
-  title Software Localization Service | locize
-  link(rel="canonical", href="/website-localization-services.html")
+  title Easy to integrate software localization service
+  link(rel="canonical", href="/software-localization-services.html")
 
 block headDescription
   meta(name='description', content='Learn how the locize software-localization-service may assist you in professionally managing the translations of your software.')
@@ -17,34 +17,76 @@ block content
       .row
         .col-md-6
           .section-heading
-            h1 Software localization service 
-            p You look for a service that will save time for the localization of your software? Then locize is for you! Using our localization-software, you'll never have to copy and paste a translation from point A to point B again.
+            h1 Easy to integrate and time saving software localization service 
             br
-            p You can keep your development and translation processes distinct using locize. Continue to translate when your project's development team adds new features. Throughout the translation, locize keeps everything together.
+            p You look for a service that is easy to integrate and will save time for the localization of your software? Then locize is for you! You will never ever need to copy and paste a translation from point A to point B again.
+            br
+            p With locize, you can keep separation between your development and translation processes. When the development team of your project adds new features, keep translating. 
+            br
+            p Throughout the translation, locize maintains consistency.
             br
             br
-            a.btn.btn-primary.btn-xl(href='https://www.locize.app/register') Sign Up Now
+            .row
+            .col-lg-6
+              a#capterra-badge(href='https://www.capterra.com/reviews/180753/Locize?utm_source=vendor&utm_medium=badge&utm_campaign=capterra_reviews_badge')
+              img(style="width: 180px;" border='0', src='https://assets.capterra.com/badge/e6c39eb5c72904eb7aa9a17d0c5f291f.svg?v=2126198&p=180753') 
+              
               
         .col-md-6
-          img.img-responsive(src='img/software-localization-service/software-localization-service.gif', alt='software localization service', loading='lazy')      
+          img.img-responsive(src='img/software-localization-service/software-localization-service.gif', alt='software localization service')
+          br
+          br
+          a.btn.btn-success.btn-xl(href='https://www.locize.app/register') Sign Up Now  
 
 
-  section.section-white.bg-primary#cta(style="margin:1rem 0;")
+
+
+
+  section.section-tertiary#features(, style="padding-bottom:0")
       .container
         .row
-          .col-lg-12   
-            h2 The world's fairest software localization service
-            p
-              | Pay only for what you use, with our service 
-              i(style="font-size: small;") (made in Switzerland)
-              |  you can save money during the localization and growth of your company.
-
+          .col-lg-12
+            img.img-responsive(src='img/translation-management.webp', alt='translation management & memory', loading="lazy")
+            .section-heading
+              br
+              br
+              h2 Features
+              br
+              br
+              .row
+                .col-md-6
+                  ul
+                    li
+                      | Translation management
+                    li
+                      | InContext Editing
+                    li
+                      | Translation memory
+                    li
+                      | Review workflow
+                    
+                .col-md-6
+                  ul
+                    
+                    li
+                      | Auto machine translation
+                    li
+                      | History
+                    li
+                      | Multi tenant
+                    li
+                      | Translation solutions
+                    li
+                      | and more
+        
+  
+            
   section#casestudies.testimonials
       .container
         .row
           .col-lg-12.text-center
             .section-heading
-              h2 Trusted by many international brands
+              h2 Trusted by many developers, project managers and international brands
               p.text-muted Read from our customers who have used the service to take their software to the next level.
               hr
         .row
@@ -96,7 +138,19 @@ block content
             div(style="padding: 50px 0 0")
               a.btn.btn-outline.btn-xl(href='/customers.html') Explore more case studies
 
-  section.section-white#symptoms
+  section.section-white.bg-primary#cta(style="margin:1rem 0;")
+    .container
+      .row
+        .col-lg-12   
+          h2 The world's fairest software localization service
+          p
+              | Pay only for what you use, with our service 
+              i(style="font-size: small;") (made in Switzerland)
+              |  you can save money during the localization and growth of your company.
+          a.btn.btn-success.btn-xl(href='https://www.locize.app/register') Sign Up Now  
+
+  
+  section.section-white#symptoms(style="padding-bottom:0,margin-bottom:0")
     .container
       .row
         .col-lg-12
@@ -120,33 +174,38 @@ block content
               p &#9989 With our InContext Editor, your team can update content quickly and without requiring any development knowledge.
 
           p If you want to reduce these circumstances in your company, read further about our service. This will dramatically reduce your resource input while increasing your output. You will achieve the outcomes that your management or shareholders may desire.
-            
-        
-  section.section-white.gettingstarted#intro(style="padding-top:0;")
+
+  section.section-white.library#service(style="padding-top:0,padding-bottom:0")
     .container
       .row
         .col-lg-12
           .section-heading
-            h2 What is software localization?
-            p The process of tailoring a software product to the linguistic, cultural, and technical needs of a target market is known as software localization. This is a time-consuming process that not only takes a lot of time from the development team.
-            br
-            p Learn more about this topic and continue reading on <a href="/blog/what-is-software-localization/" title="what is software localization">"what software localization is"</a> in our blog post.
+            h2 We provide the parts you need for your project
+            p To localize a software project, numerous procedures must be taken. First and foremost, you should select a framework for instrumentalizing your code. We propose to make use of a good i18n framework like <strong>i18next</strong>. If you've completed this stage, you should think about the translation process. 
+            p Who is responsible for translating the content? Our <strong>translation partners</strong> can help in outsourcing the translation work. Finally, you can effortlessly manage translations through our translation management user interface <strong>locize</strong>.
 
-  section#process.process
-      .container
-        .row
-          .col-md-12
-            h2 What is the software localization process?
-            p The process of translating the language of a web app, game, or other web content to the end user's locality is known as software localization. Because localized products are better for local markets, a translation management platform assists tech organizations and developers in increasing the confidence of new prospective consumers.
+            hr
+            .div(style="display:flex;flex-wrap:wrap;align-items: stretch;")
+              .div(style="width:500px;margin: 2rem;")
+                img.img-responsive(src='img/software-localization-service/ecosystem.png', alt='ecosystem', loading='lazy')    
 
-            p The key advantage of our <b>software localization service</b> is that it simplifies the basic process of localization by providing an easy-to-use translation procedure. Starting with a single line of code, translations may be controlled using a simple interface and deployed independently with no delays.
+              .div(style="width:500px;padding: 3rem 0;")
+                a.btn.btn-primary.btn-md(href='https://www.i18next.com' style="margin: 1rem 0;") Learn how to instrument the code
+                a.btn.btn-primary.btn-md(href='/services.html#translationservices' style="margin: 2rem 0;") Our translation partners
+                |
+                a.btn.btn-primary.btn-md(href='/') Our translation management system
+                |
 
-            img(style='max-width: 100%;', src='img/localization_process.png', alt='localization-process', loading='lazy')
-
-  section.section-white.gettingstarted#advantages
+  section.section-white.gettingstarted#usps(style="margin-bottom:0;padding-bottom:0")
     .container
       .row
         .col-lg-12
+
+          .embed-responsive.embed-responsive-16by9
+              iframe.embed-responsive-item(width='1280', height='720', src='https://www.youtube-nocookie.com/embed/YQryHo1iHb8?rel=0&controls=0&showinfo=0', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+          br 
+          br
+          br
           .section-heading
             h2 The USPs of locize
             .row
@@ -200,77 +259,35 @@ block content
                     h3(style="width:70%") Speed up the translation process
                   p Sections of your software can be handled and translated easily. And for each language you get a clear overview.
 
-  section.section-gray.library#service.text-center
+
+
+            
+        
+  section.section-white.gettingstarted#whatis(style="padding-bottom:0;")
     .container
       .row
-        .col-lg-12.text-center
+        .col-lg-12
           .section-heading
-            h2 We provide the parts you need for your project
-            p To localize a software project, numerous procedures must be taken. First and foremost, you should select a framework for instrumentalizing your code. We propose to make use of a good i18n framework like <strong>i18next</strong>. If you've completed this stage, you should think about the translation process. 
-            p Who is responsible for translating the content? Our <strong>translation partners</strong> can help in outsourcing the translation work. Finally, you can effortlessly manage translations through our translation management user interface <strong>locize</strong>.
+            h2 What is software localization?
+            p The process of tailoring a software product to the linguistic, cultural, and technical needs of a target market is known as software localization. This is a time-consuming process that not only takes a lot of time from the development team.
+            br
+            p Learn more about this topic and continue reading on <a href="/blog/what-is-software-localization/" title="what is software localization">"what software localization is"</a> in our blog post.
 
-            hr
-            .div(style="display:flex;flex-wrap:wrap;align-items: stretch;")
-              .div(style="width:500px;margin: 2rem;")
-                img.img-responsive(src='img/software-localization-service/ecosystem.png', alt='ecosystem', loading='lazy')    
-
-              .div(style="width:500px;padding: 3rem 0;")
-                a.btn.btn-primary.btn-md(href='https://www.i18next.com' style="margin: 1rem 0;") Learn how to instrument the code
-                a.btn.btn-primary.btn-md(href='/services.html#translationservices' style="margin: 2rem 0;") Our translation partners
-                |
-                a.btn.btn-primary.btn-md(href='/') Our translation management system
-                |
-                
-  
-  section.section-white.bg-primary#cta
-    .container
       .row
-        .col-lg-8
-          h2 Turn your translation process into a professional one, right now!
-          p You can effortlessly manage your translations with locize, regardless of your software code. You can keep track of content and code separately in this way. This method of dealing with the localization will make things a lot easier. Future software updates can also be delivered quickly.
-          a.btn.btn-success.btn-xl(href='https://www.locize.app/register' style="margin-left:5px;") join for a free trial 
+        .col-md-12
+          h2 What is the software localization process?
+          p The process of translating the language of a web app, game, or other web content to the end user's locality is known as software localization. Because localized products are better for local markets, a translation management platform assists tech organizations and developers in increasing the confidence of new prospective consumers.
 
+          p The key advantage of our <b>software localization service</b> is that it simplifies the basic process of localization by providing an easy-to-use translation procedure. Starting with a single line of code, translations may be controlled using a simple interface and deployed independently with no delays.
 
-  section.section-white#video(style="display: none;", translated="")
-    .container
-        .row
-          .col-xs-10.col-xs-offset-1
-            .embed-responsive.embed-responsive-16by9
-              iframe.embed-responsive-item(width='1280', height='720', src='https://www.youtube-nocookie.com/embed/YQryHo1iHb8?rel=0&controls=0&showinfo=0', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
-
-  section.section-white#advantages
-    .container
-      .col-lg-12.text-center
-          .section-heading
-            h2 Advantages of using locize
-          .row
-            .col-lg-12
-              .row(style="margin: 2rem 0;")
-                .col-lg-6(style="padding:3rem")
-                  h3 Project becomes fixed 
-                  p Your localization is much easier to plan with locize. You should be able to build trust with your new audience if you enter new markets. Your planning is supported in areas where you can avoid manual work.
-                .col-lg-6(style="background-color:#fffbf0;padding:5rem")
-                  img.img-responsive(src='img/software-localization-service/planning.webp', alt='planning', style='', loading='lazy')
-              .row(style="margin: 2rem 0;")
-                .col-lg-6(style="background-color:#fffbf0;padding:5rem")
-                  img.img-responsive(src='img/software-localization-service/faster.webp', alt='faster', style='', loading='lazy')
-                .col-lg-6(style="padding:3rem")
-                  h3 Ship updates faster
-                  p Translation can occur concurrently with development. Separate translation files will save your project managers time and effort. Software updates can be distributed immediately. As a result, a continuous localization process occurs.
-              .row(style="margin: 2rem 0;")
-                .col-lg-6(style="padding:3rem")
-                  h3 Free up developers
-                  p The developers will spend far less time translating. They keep putting off deploying manual translation files. They only have to do a code implementation once, and then they're free to focus on development and testing. Rather than responding to the translators' requests.
-                .col-lg-6(style="background-color:#fffbf0;padding:5rem")
-                  img.img-responsive(src='img/software-localization-service/coding.webp', alt='coding', style='', loading='lazy')
-                
+          img(style='max-width: 100%;', src='img/localization_process.png', alt='localization-process', loading='lazy')
   
-  section#learn.contact.bg-secondary(style="padding:10rem 0")
+  section#more(style="padding-top:0")
       .container
         .row
           .col-lg-12
             .section-heading.padding
-              h2(style="padding:4rem 0") Related sites
+              h2(style="padding:4rem 0") More about the service
               .row(style="display:flex;justify-content:center;flex-wrap:wrap;")
                 .col-md-4(style="padding:2rem;background-color:#eee;margin:2rem;border-radius:25px;display:flex;justify-content:center;align-items:center;")
                   <div>
@@ -304,8 +321,33 @@ block content
                   </div>
                   a.btn.btn-secondary.btn-xl.page-scroll(href='/blog/globalization-vs-localization/' title="Globalization vs localization") Globalization vs localization
                   </div>
+                .col-md-4(style="padding:2rem;background-color:#eee;margin:2rem;border-radius:25px;display:flex;justify-content:center;align-items:center;")
+                  <div>
+                  <div style="display:flex;justify-content:space-between;">
+                  img.img-responsive(src='img/software-localization-service/vs.jpg', alt='translation management', style='max-width: 100px;', loading='lazy')
+                  h3(style="width:70%") Learn more about translation management
+                  </div>
+                  a.btn.btn-secondary.btn-xl.page-scroll(href='/blog/tms/' title="tms") What is a translation management system?
+                  </div>
+                .col-md-4(style="padding:2rem;background-color:#eee;margin:2rem;border-radius:25px;display:flex;justify-content:center;align-items:center;")
+                  <div>
+                  <div style="display:flex;justify-content:space-between;">
+                  img.img-responsive(src='img/software-localization-service/vs.jpg', alt='pricing', style='max-width: 100px;', loading='lazy')
+                  h3(style="width:70%") Learn more about the pricing
+                  </div>
+                  a.btn.btn-secondary.btn-xl.page-scroll(href='/pricing.html' title="To the pricing") To the pricing
+                  </div>
 
-            
+
+  section.section-white.bg-primary#cta
+    .container
+      .row
+        .col-lg-8
+          h2 Turn your translation process into a professional one, right now!
+          p You can effortlessly manage your translations with locize, regardless of your software code. You can keep track of content and code separately in this way. This method of dealing with the localization will make things a lot easier. Future software updates can also be delivered quickly.
+          a.btn.btn-success.btn-xl(href='https://www.locize.app/register' style="margin-left:5px;") Sign Up Now 
+
+       
 
   script.
     window.enableCookiesHook = function () {
