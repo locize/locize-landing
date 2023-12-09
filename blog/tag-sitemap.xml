@@ -3,35 +3,49 @@
 
 
     <url>
-        <loc>https://locize.com/blog/tags/i18next/</loc>
-        <lastmod>2023-12-05T08:52:41.286Z</lastmod>
+        <loc>https://locize.com/blog/tags/tms/</loc>
+        <lastmod>2023-12-09T09:39:02.017Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/translation/</loc>
+        <lastmod>2023-12-09T09:39:02.017Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://locize.com/blog/tags/i18n/</loc>
-        <lastmod>2023-12-05T08:52:41.286Z</lastmod>
+        <lastmod>2023-12-09T09:39:02.017Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://locize.com/blog/tags/internationalization/</loc>
-        <lastmod>2023-12-05T08:52:41.286Z</lastmod>
+        <lastmod>2023-12-09T09:39:02.017Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://locize.com/blog/tags/l10n/</loc>
-        <lastmod>2023-12-05T08:52:41.286Z</lastmod>
+        <lastmod>2023-12-09T09:39:02.017Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://locize.com/blog/tags/localization/</loc>
+        <lastmod>2023-12-09T09:39:02.017Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/i18next/</loc>
         <lastmod>2023-12-05T08:52:41.286Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -40,13 +54,6 @@
     <url>
         <loc>https://locize.com/blog/tags/locize/</loc>
         <lastmod>2023-12-05T08:52:41.286Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/translation/</loc>
-        <lastmod>2023-12-05T08:51:23.130Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -151,13 +158,6 @@
 
     <url>
         <loc>https://locize.com/blog/tags/how-to-choose/</loc>
-        <lastmod>2023-12-05T08:48:47.468Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/tms/</loc>
         <lastmod>2023-12-05T08:48:47.468Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
