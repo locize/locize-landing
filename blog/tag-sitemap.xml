@@ -4,14 +4,42 @@
 
     <url>
         <loc>https://locize.com/blog/tags/tms/</loc>
-        <lastmod>2023-12-09T09:39:02.017Z</lastmod>
+        <lastmod>2024-01-05T14:44:23.726Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/international-strategy/</loc>
+        <lastmod>2024-01-05T14:44:23.726Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/machine-translation/</loc>
+        <lastmod>2024-01-05T14:44:23.726Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://locize.com/blog/tags/translation/</loc>
-        <lastmod>2023-12-09T09:39:02.017Z</lastmod>
+        <lastmod>2024-01-05T14:44:23.726Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/l10n/</loc>
+        <lastmod>2024-01-05T14:44:23.726Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/localization/</loc>
+        <lastmod>2024-01-05T14:44:23.726Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -25,20 +53,6 @@
 
     <url>
         <loc>https://locize.com/blog/tags/internationalization/</loc>
-        <lastmod>2023-12-09T09:39:02.017Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/l10n/</loc>
-        <lastmod>2023-12-09T09:39:02.017Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/localization/</loc>
         <lastmod>2023-12-09T09:39:02.017Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -144,13 +158,6 @@
 
     <url>
         <loc>https://locize.com/blog/tags/global-localization/</loc>
-        <lastmod>2023-12-05T08:49:01.194Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/international-strategy/</loc>
         <lastmod>2023-12-05T08:49:01.194Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -327,13 +334,6 @@
     <url>
         <loc>https://locize.com/blog/tags/mobile-app/</loc>
         <lastmod>2023-10-15T14:02:55.466Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/machine-translation/</loc>
-        <lastmod>2023-10-15T13:41:59.751Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
