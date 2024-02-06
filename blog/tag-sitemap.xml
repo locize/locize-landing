@@ -3,64 +3,127 @@
 
 
     <url>
+        <loc>https://locize.com/blog/tags/remix/</loc>
+        <lastmod>2024-02-05T15:55:34.683Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/remix-i18next/</loc>
+        <lastmod>2024-02-05T15:55:34.683Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/next-i18next/</loc>
+        <lastmod>2024-02-05T15:55:34.683Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/next/</loc>
+        <lastmod>2024-02-05T15:55:34.683Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/gatsby-plugin-react-i18next/</loc>
+        <lastmod>2024-02-05T15:55:34.683Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/gatsby/</loc>
+        <lastmod>2024-02-05T15:55:34.683Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://locize.com/blog/tags/react-i18next/</loc>
-        <lastmod>2024-01-18T09:02:33.776Z</lastmod>
+        <lastmod>2024-02-05T15:55:34.683Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://locize.com/blog/tags/react/</loc>
-        <lastmod>2024-01-18T09:02:33.776Z</lastmod>
+        <lastmod>2024-02-05T15:55:34.683Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://locize.com/blog/tags/translation/</loc>
-        <lastmod>2024-01-18T09:02:33.776Z</lastmod>
+        <lastmod>2024-02-05T15:55:34.683Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://locize.com/blog/tags/i18next/</loc>
-        <lastmod>2024-01-18T09:02:33.776Z</lastmod>
+        <lastmod>2024-02-05T15:55:34.683Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://locize.com/blog/tags/i18n/</loc>
-        <lastmod>2024-01-18T09:02:33.776Z</lastmod>
+        <lastmod>2024-02-05T15:55:34.683Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://locize.com/blog/tags/internationalization/</loc>
-        <lastmod>2024-01-18T09:02:33.776Z</lastmod>
+        <lastmod>2024-02-05T15:55:34.683Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://locize.com/blog/tags/l10n/</loc>
-        <lastmod>2024-01-18T09:02:33.776Z</lastmod>
+        <lastmod>2024-02-05T15:55:34.683Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://locize.com/blog/tags/localization/</loc>
-        <lastmod>2024-01-18T09:02:33.776Z</lastmod>
+        <lastmod>2024-02-05T15:55:34.683Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://locize.com/blog/tags/locize/</loc>
-        <lastmod>2024-01-18T09:02:33.776Z</lastmod>
+        <lastmod>2024-02-05T15:55:34.683Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/web-app-translation/</loc>
+        <lastmod>2024-02-05T14:39:10.083Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/best-practices/</loc>
+        <lastmod>2024-02-05T14:39:10.083Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/website-internationalization/</loc>
+        <lastmod>2024-02-05T14:39:10.083Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -82,20 +145,6 @@
     <url>
         <loc>https://locize.com/blog/tags/machine-translation/</loc>
         <lastmod>2024-01-05T14:44:23.726Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/remix/</loc>
-        <lastmod>2023-12-05T08:50:22.429Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/remix-i18next/</loc>
-        <lastmod>2023-12-05T08:50:22.429Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -124,20 +173,6 @@
     <url>
         <loc>https://locize.com/blog/tags/vue/</loc>
         <lastmod>2023-12-05T08:50:22.423Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/next-i18next/</loc>
-        <lastmod>2023-12-05T08:50:22.411Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/next/</loc>
-        <lastmod>2023-12-05T08:50:22.411Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -271,27 +306,6 @@
     <url>
         <loc>https://locize.com/blog/tags/translation-project-management/</loc>
         <lastmod>2023-11-17T06:59:03.927Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/web-app-translation/</loc>
-        <lastmod>2023-10-15T14:08:42.130Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/best-practices/</loc>
-        <lastmod>2023-10-15T14:08:42.130Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/website-internationalization/</loc>
-        <lastmod>2023-10-15T14:08:42.130Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -446,20 +460,6 @@
     <url>
         <loc>https://locize.com/blog/tags/typescript/</loc>
         <lastmod>2023-08-21T11:17:22.603Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/gatsby-plugin-react-i18next/</loc>
-        <lastmod>2023-08-16T18:48:27.043Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tags/gatsby/</loc>
-        <lastmod>2023-08-16T18:48:27.043Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

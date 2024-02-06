@@ -9,6 +9,30 @@
 
 
     <url>
+        <loc>https://locize.com/blog/i18next-in-react/</loc>
+        <lastmod>2024-02-05T15:55:34.683Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/next-app-dir-i18n/</loc>
+        <lastmod>2024-02-05T15:21:39.296Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/what-is-i18n/</loc>
+        <lastmod>2024-02-05T14:39:10.083Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://locize.com/blog/react-i18next/</loc>
         <lastmod>2024-01-18T09:02:33.776Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -185,14 +209,6 @@
     </url>
 
     <url>
-        <loc>https://locize.com/blog/next-app-dir-i18n/</loc>
-        <lastmod>2023-11-06T08:23:44.058Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://locize.com/blog/is-sdl-trados-still-relevant/</loc>
         <lastmod>2023-11-01T11:54:24.419Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -211,14 +227,6 @@
     <url>
         <loc>https://locize.com/blog/website-internationalization-best-practices/</loc>
         <lastmod>2023-10-15T14:08:42.130Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/what-is-i18n/</loc>
-        <lastmod>2023-10-15T14:03:06.618Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
