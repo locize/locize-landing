@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://locize.com/blog/localization-strategy/</loc>
+        <lastmod>2024-02-09T11:51:50.249Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://locize.com/blog/i18next-in-react/</loc>
         <lastmod>2024-02-06T19:08:23.149Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -177,14 +185,6 @@
     </url>
 
     <url>
-        <loc>https://locize.com/blog/scalable-localization-strategy/</loc>
-        <lastmod>2023-12-05T08:47:10.976Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://locize.com/blog/translation-project-management/</loc>
         <lastmod>2023-12-05T08:47:00.934Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -347,14 +347,6 @@
     <url>
         <loc>https://locize.com/blog/gatsby-i18n/</loc>
         <lastmod>2023-08-16T18:48:27.043Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/localization-strategy/</loc>
-        <lastmod>2023-08-04T06:43:17.587Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
