@@ -9,6 +9,22 @@
 
 
     <url>
+        <loc>https://locize.com/blog/localization-for-business/</loc>
+        <lastmod>2024-02-10T09:11:05.494Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/translation-distraction/</loc>
+        <lastmod>2024-02-10T09:10:53.840Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://locize.com/blog/localization-strategy/</loc>
         <lastmod>2024-02-09T11:51:50.249Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -51,14 +67,6 @@
     <url>
         <loc>https://locize.com/blog/ai-in-localization/</loc>
         <lastmod>2024-01-05T14:44:23.726Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/localization-for-business/</loc>
-        <lastmod>2023-12-09T09:39:02.017Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -347,14 +355,6 @@
     <url>
         <loc>https://locize.com/blog/gatsby-i18n/</loc>
         <lastmod>2023-08-16T18:48:27.043Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/translation-distraction/</loc>
-        <lastmod>2023-05-08T08:19:08.429Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
