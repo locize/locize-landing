@@ -9,6 +9,22 @@
 
 
     <url>
+        <loc>https://locize.com/blog/globalization-vs-localization/</loc>
+        <lastmod>2024-03-21T15:50:59.482Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/market-expansion/</loc>
+        <lastmod>2024-03-21T15:50:59.482Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://locize.com/blog/what-is-i18n/</loc>
         <lastmod>2024-02-23T09:31:19.196Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -523,14 +539,6 @@
     <url>
         <loc>https://locize.com/blog/grow-online-business/</loc>
         <lastmod>2022-12-02T09:50:09.208Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/globalization-vs-localization/</loc>
-        <lastmod>2022-12-02T09:50:00.994Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
