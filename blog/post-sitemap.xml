@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://locize.com/blog/cat/</loc>
+        <lastmod>2024-04-12T10:39:10.800Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://locize.com/blog/globalization-vs-localization/</loc>
         <lastmod>2024-03-21T15:50:59.482Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -291,14 +299,6 @@
     <url>
         <loc>https://locize.com/blog/a-tale-of-the-last-10-years-in-web-development/</loc>
         <lastmod>2023-10-02T19:49:55.820Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/cat/</loc>
-        <lastmod>2023-10-02T11:43:14.532Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
