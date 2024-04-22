@@ -9,6 +9,22 @@
 
 
     <url>
+        <loc>https://locize.com/blog/tms/</loc>
+        <lastmod>2024-04-22T13:31:27.895Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/how-to-choose-the-right-translation-management-system-with-i18next/</loc>
+        <lastmod>2024-04-22T13:31:27.890Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://locize.com/blog/cat/</loc>
         <lastmod>2024-04-12T10:39:10.800Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -161,14 +177,6 @@
     </url>
 
     <url>
-        <loc>https://locize.com/blog/how-to-choose-the-right-translation-management-system/</loc>
-        <lastmod>2023-12-05T08:48:47.468Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://locize.com/blog/i18n-formats-javascript/</loc>
         <lastmod>2023-12-05T08:48:35.054Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -227,14 +235,6 @@
     <url>
         <loc>https://locize.com/blog/translation-project-management/</loc>
         <lastmod>2023-12-05T08:47:00.934Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/tms/</loc>
-        <lastmod>2023-11-17T06:59:03.927Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
