@@ -9,6 +9,110 @@
 
 
     <url>
+        <loc>https://locize.com/blog/what-is-i18n/</loc>
+        <lastmod>2024-05-24T13:44:47.795Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/supertext-partnership/</loc>
+        <lastmod>2024-05-24T13:44:47.794Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/svelte-i18n/</loc>
+        <lastmod>2024-05-24T13:44:47.794Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/vue-js-from-internationalization-i18n-to-localization-l10n-and-back-again/</loc>
+        <lastmod>2024-05-24T13:44:47.794Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/website-localization/</loc>
+        <lastmod>2024-05-24T13:44:47.794Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/localization/</loc>
+        <lastmod>2024-05-24T13:44:47.792Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/market-expansion/</loc>
+        <lastmod>2024-05-24T13:44:47.792Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/next-i18n-static/</loc>
+        <lastmod>2024-05-24T13:44:47.792Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/future-of-translation/</loc>
+        <lastmod>2024-05-24T13:44:47.791Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/i18next-vue/</loc>
+        <lastmod>2024-05-24T13:44:47.791Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/is-your-software-ready-for-localization/</loc>
+        <lastmod>2024-05-24T13:44:47.791Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/ai-in-localization/</loc>
+        <lastmod>2024-05-24T13:44:47.790Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/continuous-development-integration-and-localization-cd/</loc>
+        <lastmod>2024-05-24T13:44:47.790Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://locize.com/blog/next-app-dir-i18n/</loc>
         <lastmod>2024-05-06T05:53:46.621Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -49,30 +153,6 @@
     </url>
 
     <url>
-        <loc>https://locize.com/blog/market-expansion/</loc>
-        <lastmod>2024-03-21T15:50:59.482Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/what-is-i18n/</loc>
-        <lastmod>2024-02-23T09:31:19.196Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/next-i18n-static/</loc>
-        <lastmod>2024-02-23T09:31:19.195Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://locize.com/blog/next-i18next/</loc>
         <lastmod>2024-02-23T09:31:19.195Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -97,14 +177,6 @@
     </url>
 
     <url>
-        <loc>https://locize.com/blog/localization-for-business/</loc>
-        <lastmod>2024-02-10T09:11:05.494Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://locize.com/blog/translation-distraction/</loc>
         <lastmod>2024-02-10T09:10:53.840Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -115,14 +187,6 @@
     <url>
         <loc>https://locize.com/blog/i18next-in-react/</loc>
         <lastmod>2024-02-06T19:08:23.149Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/ai-in-localization/</loc>
-        <lastmod>2024-01-05T14:44:23.726Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -147,14 +211,6 @@
     <url>
         <loc>https://locize.com/blog/remix-i18next/</loc>
         <lastmod>2023-12-05T08:50:22.429Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/i18next-vue/</loc>
-        <lastmod>2023-12-05T08:50:22.423Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -195,14 +251,6 @@
     <url>
         <loc>https://locize.com/blog/immersive-locize/</loc>
         <lastmod>2023-12-05T08:48:12.828Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/is-your-software-ready-for-localization/</loc>
-        <lastmod>2023-12-05T08:48:06.612Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -281,14 +329,6 @@
     </url>
 
     <url>
-        <loc>https://locize.com/blog/i18n-l10n-t9n-tms/</loc>
-        <lastmod>2023-10-15T14:01:23.249Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://locize.com/blog/hidden-localization-costs/</loc>
         <lastmod>2023-10-15T14:01:18.404Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -305,14 +345,6 @@
     </url>
 
     <url>
-        <loc>https://locize.com/blog/localization/</loc>
-        <lastmod>2023-09-21T13:21:25.600Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://locize.com/blog/what-is-software-localization/</loc>
         <lastmod>2023-09-07T12:24:37.576Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -321,32 +353,8 @@
     </url>
 
     <url>
-        <loc>https://locize.com/blog/future-of-translation/</loc>
-        <lastmod>2023-09-06T11:43:06.148Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://locize.com/blog/google-translate-accuracy/</loc>
         <lastmod>2023-09-06T11:37:45.740Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/supertext-partnership/</loc>
-        <lastmod>2023-08-26T07:00:14.723Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/website-localization/</loc>
-        <lastmod>2023-08-22T07:36:05.970Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -441,22 +449,6 @@
     </url>
 
     <url>
-        <loc>https://locize.com/blog/svelte-i18n/</loc>
-        <lastmod>2023-01-28T15:59:10.650Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/vue-js-from-internationalization-i18n-to-localization-l10n-and-back-again/</loc>
-        <lastmod>2023-01-28T15:58:31.352Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://locize.com/blog/day-zero/</loc>
         <lastmod>2023-01-20T09:25:54.696Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -537,24 +529,8 @@
     </url>
 
     <url>
-        <loc>https://locize.com/blog/grow-online-business/</loc>
-        <lastmod>2022-12-02T09:50:09.208Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://locize.com/blog/eat-our-own-dogfood/</loc>
         <lastmod>2022-12-02T09:49:32.758Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/continuous-development-integration-and-localization-cd/</loc>
-        <lastmod>2022-12-02T09:49:12.645Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
