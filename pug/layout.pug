@@ -80,32 +80,40 @@ html(lang='en')
 
                 li
                   a(href='/#platform') What can our localization platform do?
-                  
+
                 li
                   a(href='/how-it-works.html') How it works
 
                 li
                   a(href='/for-your-team.html') For your team
-
-                li
-                  a(href='/javascript-localization.html') JavaScript localization
-
-                li
-                  a(href='/#testimonials') Customer Testimonials
                   
-            li
-              a(href='/services.html') Services
             li
               a(href='/pricing.html') Pricing
             li
-              a(href='/blog/') Blog
-            li
-              a(href='https://docs.locize.com/') Documentation
-            li
-              a.closeOnClick(href='/#contact') Contact
+              a(href='/customers.html') Success Stories
+
+            li#featuresd.dropdown
+              a.dropdown-toggle(href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') More
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='https://docs.locize.com/') Documentation
+                
+                li
+                  a(href='/services.html') Additional services
+                li 
+                  a(href='/blog/') Blog
+
+                li
+                  a.closeOnClick(href='/#contact') Contact
+            
             li
               a(href='https://www.locize.app/login', target='_blank') Login
                 i.fa-solid.fa-lock(aria-hidden='true', style="margin-left: 5px;")
+
+            li
+              a.btn.btn-outline.btn-xl(href='https://www.locize.app/register', style='background-color: #4caf50; color: white; border: none;') Start your free trial
+
             //- li.dropdown(translated="")
             //-   a.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false')
             //-     span#selectedLng
