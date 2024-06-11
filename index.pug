@@ -101,6 +101,8 @@ html(lang='en')
           a.navbar-brand.page-scroll(href='/#page-top')
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
+            
+            
             li#featuresd.dropdown
               a.dropdown-toggle(href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Features
                 b.caret
@@ -119,29 +121,34 @@ html(lang='en')
 
                 li
                   a(href='/for-your-team.html') For your team
-
-                li
-                  a(href='/javascript-localization.html') JavaScript localization
-
-                li
-                  a(href='/#testimonials') Customer Testimonials
-            
-            li
-              a(href='/services.html') Services
             li
               a(href='/pricing.html') Pricing
             li
-              a(href='/blog/') Blog
+              a(href='/customers.html') Success Stories
 
-            li
-              a(href='https://docs.locize.com/') Documentation
+            
 
-            li
-              a.closeOnClick(href='/#contact') Contact
+            li#featuresd.dropdown
+              a.dropdown-toggle(href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') More
+                b.caret
+              ul.dropdown-menu
+                li
+                  a(href='https://docs.locize.com/') Documentation
+                
+                li
+                  a(href='/services.html') Additional services
+                li 
+                  a(href='/blog/') Blog
+
+                li
+                  a.closeOnClick(href='/#contact') Contact
+               
 
             li
               a(href='https://www.locize.app/login', target='_blank') Login
                 i.fa-solid.fa-lock(aria-hidden='true', style="margin-left: 5px;")
+            li
+              a.btn.btn-outline.btn-xl(href='https://www.locize.app/register', style='background-color: #4caf50; color: white; border: none;') Start your free trial
 
             li.dropdown(translated="")
               a.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false')
@@ -161,7 +168,7 @@ html(lang='en')
                     h1 The continuous localization management platform that powers up your development and translation
                     h3(i18next-key='whatIsLocize') Bridging the gap between translation and development with locize, a modern and affordable localization-management-platform. It makes your website, app, game or whatever your project is, global, vibrant, and more engaging especially when unleashing the continuous localization capabilities.
                     br
-                    a.btn.btn-outline.btn-xl.page-scroll(href='https://www.locize.app/register', target='_blank', style="background: linear-gradient(#15419a,#103276);") Start Now for Free!
+                    a.btn.btn-outline.btn-xl.page-scroll(href='https://www.locize.app/register', style="background-color: #4caf50; color: white; border: none;") Start your free trial
                     a.btn.btn-outline.btn-second-outline.btn-xl.page-scroll#link-video-btn(href='https://youtu.be/YQryHo1iHb8', target='_blank') Story
                     a.btn.btn-outline.btn-second-outline.btn-xl.page-scroll#watch-video-btn(style="display: none;" href='#', data-toggle='modal', data-target='#videoModal', data-thevideo='https://www.youtube-nocookie.com/embed/YQryHo1iHb8?rel=0&controls=0&showinfo=0') Story
                     a.btn.btn-outline.btn-second-outline.btn-xl.page-scroll#link-demo-video-btn(href='https://youtu.be/TFV_vhJs5DY', target='_blank') Demo
@@ -357,7 +364,7 @@ html(lang='en')
         .row
           .col-lg-12.text-center
             .section-heading
-              h2 Grow global &ndash; get locized
+              h2 Features to grow global &ndash; get locized
               p.head
                 | You're in need of a #[strong localization management platform] that keeps up with your vibrant business environment?
               p.head
@@ -506,6 +513,7 @@ html(lang='en')
             .col-md-6
               h2 Pay only for what you use
               p A heavy save in cost for localization management with a varying pricing. <b>Save up to 40% of translation cost </b> compared to traditional services with fixed prices. Check out our <a href="/pricing.html" title="localization pricing">pricing details</a> for more information. There are also more software-localization-tools available on the locize platform for <a href="/services.html" title="">free usage</a>.
+              a.btn.btn-outline.btn-xl(href='https://www.locize.app/register', style='background-color: #4caf50; color: white; border: none;') Start your free trial
 
     section#benefits.benefits
       .container
@@ -588,6 +596,7 @@ html(lang='en')
           .col-md-12
             h2 What is the software localization process?
             p Software-localization is the process of transforming the language of a web app, game or any web content to the end user's locale. A translation management platform helps tech companies and developers to increase the confidence for new potential customers, as localized products are best for local markets. The primary benefit of locize is #[strong to simplify the core process of localization] with a very easy to use translation management platform. Starting with just one piece of code the translations can be managed with an easy interface and can be deployed separately with no delays.
+            a.btn.btn-outline.btn-xl(href='https://www.locize.app/register', style='background-color: #4caf50; color: white; border: none;') Start your free trial
 
             img(style='max-width: 100%;', src='img/localization_process.png', alt='localization-process', loading='lazy')
 
@@ -701,7 +710,7 @@ html(lang='en')
           h3
             | Start by creating a new project and translate your application.
           |
-          a.btn.btn-outline.btn-xl.page-scroll(href='https://www.locize.app/register', target='_blank') Let&apos;s Get Started!
+          a.btn.btn-outline.btn-xl.page-scroll(href='https://www.locize.app/register', style='background-color: #4caf50; color: white; border: none;') Start your free trial
           p.hint * 14d free trial. No credit card needed! No obligations!
       .overlay
 
@@ -712,7 +721,7 @@ html(lang='en')
         h2 Have questions?
         p Building a global business can be challenging. We will help you getting there.
         |
-        a.btn.btn-outline.btn-xl.page-scroll(href='mailto:support@locize.com') Contact us!
+        a.btn.btn-outline.btn-xl.page-scroll(href='mailto:support@locize.com') Send us an email
     footer
       .container
         .row
