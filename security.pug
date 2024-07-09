@@ -1,0 +1,97 @@
+extends pug/layout.pug
+
+block head
+  title locize - security
+
+block content
+
+  section.section-tertiary
+    .container
+      .row
+        .col-lg-12.text-center
+          .section-heading
+            h2 Security at locize
+            hr
+
+  section.section-gray(style="padding: 0;")
+    .container
+      .row
+        .col-md-8.col-md-offset-2(style="position: relative;")
+          .legal(style="background-color: #fff; padding: 20px; border: solid 1px #ccc; position: relative; top: -100px; width: 100%; border-radius: 4px;")
+            div
+              h3 Our policies
+              a.btn.btn-outline(style="background: #2196f3; font-size: 10px;", href="/terms.html") Terms and conditions
+              a.btn.btn-outline(style="background: #2196f3; font-size: 10px;", href="/privacy.html") Privacy policy
+              a.btn.btn-outline(style="background: #2196f3; font-size: 10px;", href="/dpa.html") Data Processing Addendum (GDPR)
+              a.btn.btn-outline(style="background: #2196f3; font-size: 10px;", href="/ccpa.html") CCPA terms
+
+            :markdown-it(linkify)
+
+              ### Internal Security Measures
+
+              #### Organizational Security
+              
+              At locize, the Information Security Policy applies to the entire inweso organization. It is mandatory for all employees and those involved in our business processes. Our Information Security Management System (ISMS) is built on three pillars: people, processes, and technology. We implement a Zero Trust Architecture (ZTA), which operates on the principle of "never trust, always verify." This means access to resources is never implicitly trusted based on the user's or device's location. Instead, strict identity verification and continuous authentication are required for every access attempt, whether from inside or outside the network perimeter. Our Chief Information Security Officer (CISO) is responsible for ensuring the proper protection of information assets and technologies.
+
+              #### Security Training and Awareness
+
+              All employees complete ongoing security and awareness training. We conduct regular access audits and password updates and operate on the principle of least privilege. Role-specific security training is also required.
+
+              #### Access Control
+
+              Access to information assets is granted based on the principle of least privilege. Access rights are reviewed regularly and revoked or updated as necessary. Strong authentication mechanisms, such as passwords and multi-factor authentication (MFA), are implemented to prevent unauthorized access.
+
+              #### Physical Security
+
+              Physical access to our office is restricted to authorized personnel only. Security measures such as access controls, alarms, and surveillance cameras are implemented to prevent unauthorized access and mitigate physical threats.
+              We do not maintain our own server infrastructure. Instead, we rely on Amazon Web Services (AWS) for our computing infrastructure. AWS data centers are equipped with comprehensive physical security measures. Read more about that [here](https://aws.amazon.com/security/).
+
+              #### Software Security
+
+              Our team at locize keeps our software and its dependencies up to date, removing potential security vulnerabilities. We use monitoring solutions to prevent and eliminate site attacks.
+
+              #### Incident Response
+
+              We have an incident response plan in place to address security incidents promptly and effectively. All employees are aware of their roles and responsibilities in the event of a security incident. Incidents are reported to the designated authorities for investigation and remediation.
+
+              #### Compliance
+
+              We are committed to complying with all relevant laws, regulations, and industry standards related to information security and privacy. Regular verifications are conducted to ensure compliance with applicable requirements.
+
+              #### Third-Party & Supplier Security
+
+              locize maintains vendor risk management practices to ensure third parties are scrutinized and maintain expected levels of security controls. Read more about our sub-processors in our [Privacy policy](/privacy.html).
+
+
+              ### Application Security
+
+              #### Secure, reliable infrastructure
+              
+              locize uses Amazon Web Services (AWS) data centers for our computing infrastructure. We have geographical restrictions in place to ensure data processing is limited to specific countries to enhance security. AWS has ISO 27001 certification and has completed multiple SSAE 16 audits. For more information on their security measures, visit the [AWS Cloud Security](https://aws.amazon.com/security/) page.
+              Additionally, our application includes built-in security features such as:
+
+              - Two-Factor Authentication
+              - Single Sign-On via SAML 2.0
+              - REST API Authentication with API token permission control
+              - Role-based permissions
+              - Backups and versioning
+              - Enforced password complexity standards
+
+              #### PCI Obligations
+
+              When you subscribe to a locize account, we do not store any of your billing information on our infrastructure. All payments made to locize go through our partner, Stripe, which is compliant with PCI Security Standards. More details about their security setup can be found on the [Stripe's Security](https://docs.stripe.com/security) page.
+
+              #### Access to Data
+
+              Access to customer data is limited to authorized employees who require it for their job, such as our Support team. Support representatives may only access the files or settings needed to resolve customer issues.
+
+              #### Business Continuity & Disaster Recovery
+
+              We have developed and regularly test and update both a Disaster Recovery Plan and a Business Continuity Plan. These plans outline the procedures and protocols to follow in the event of a disaster or disruption to normal business operations. Their purpose is to minimize downtime, ensure employee safety, protect data and assets, and facilitate the timely restoration of critical business functions.
+
+              ### Contact Us
+
+              If you have any questions about security at locize or would like to submit a vulnerability report, please contact us at [support@locize.com](mailto:support@locize.com).
+
+              We will work with you to assess the issue and fully address any concerns. Emails about security issues are treated with the highest priority. The safety and security of our service are our top priorities.
+
