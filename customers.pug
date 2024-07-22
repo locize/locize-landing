@@ -2124,6 +2124,56 @@ block content
                     ]
                   }
                 }
+
+          .col-lg-4.col-md-4.col-sm-12
+            .testimonial.testimonial-fullwidth
+              .testimonial-title
+                img.grayscale(style='max-height: 50px; max-width: 100%;', src='img/customers/simbase.png' alt="simbase" loading="lazy")
+              .testimonial-content
+                p(style="font-size: 20px;") Integrating locize into our platform at Simbase has been a game-changer.
+                p(style="font-size: 20px;") Their seamless translation management system allows us to offer a truly localized experience to our global users.
+                p(style="font-size: 20px; margin-bottom: 0px;") The ease of use and flexibility have significantly improved our ability to connect with diverse markets, ensuring our IoT solutions are accessible and relevant worldwide.
+              .author
+                hr
+                | Roel van der Meer, CEO
+                br
+                a(href='https://simbase.com' target='_blank') Simbase
+              script(type="application/ld+json").
+                {
+                  "@context": "http://schema.org/",
+                  "@type": "Review",
+                  "itemReviewed": {
+                    "@id": "https://locize.com/#software"
+                  },
+                  "author": {
+                    "@type": "Organization",
+                    "name": "Ocasta",
+                    "url": "https://simbase.com",
+                    "image": "https://locize.com/img/customers/simbase.png",
+                    "member": {
+                      "@type": "Person",
+                      "name": "Roel van der Meer"
+                    }
+                  },
+                  "description": "Integrating locize into our platform at Simbase has been a game-changer. Their seamless translation management system allows us to offer a truly localized experience to our global users. The ease of use and flexibility have significantly improved our ability to connect with diverse markets, ensuring our IoT solutions are accessible and relevant worldwide.",
+                  "positiveNotes": {
+                    "@type": "ItemList",
+                    "itemListElement": [
+                      {
+                        "@type": "ListItem",
+                        "name": "Integrating locize into our platform at Simbase has been a game-changer."
+                      },
+                      {
+                        "@type": "ListItem",
+                        "name": "Their seamless translation management system allows us to offer a truly localized experience to our global users."
+                      },
+                      {
+                        "@type": "ListItem",
+                        "name": "The ease of use and flexibility have significantly improved our ability to connect with diverse markets, ensuring our IoT solutions are accessible and relevant worldwide."
+                      }
+                    ]
+                  }
+                }
         
 
   section#contact.contact.bg-tertiary(i18next-options='{"ns": "common"}')
