@@ -10,7 +10,7 @@
     "font-awesome": "^4.6.3",
     "gulp": "^5.0.0",
     "gulp-clean-css": "^4.2.0",
-    "gulp-header": "^1.8.9",
+    "gulp-header": "^2.0.7",
     "gulp-less": "^5.0.0",
     "gulp-pug": "^5.0.0",
     "gulp-rename": "^1.2.2",
