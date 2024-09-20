@@ -9,6 +9,38 @@
 
 
     <url>
+        <loc>https://locize.com/blog/what-is-software-localization/</loc>
+        <lastmod>2024-09-20T09:22:58.457Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/l10n/</loc>
+        <lastmod>2024-09-20T09:22:58.456Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/i18next-tips-and-tricks/</loc>
+        <lastmod>2024-09-20T09:22:58.455Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/cat/</loc>
+        <lastmod>2024-09-17T20:20:08.117Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://locize.com/blog/react-i18next/</loc>
         <lastmod>2024-07-29T16:57:28.275Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -161,14 +193,6 @@
     </url>
 
     <url>
-        <loc>https://locize.com/blog/cat/</loc>
-        <lastmod>2024-04-12T10:39:10.800Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://locize.com/blog/globalization-vs-localization/</loc>
         <lastmod>2024-03-21T15:50:59.482Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -211,14 +235,6 @@
     <url>
         <loc>https://locize.com/blog/missing-translations/</loc>
         <lastmod>2023-12-05T08:52:41.286Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/i18next-tips-and-tricks/</loc>
-        <lastmod>2023-12-05T08:51:23.130Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -347,14 +363,6 @@
     <url>
         <loc>https://locize.com/blog/a-tale-of-the-last-10-years-in-web-development/</loc>
         <lastmod>2023-10-02T19:49:55.820Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://locize.com/blog/what-is-software-localization/</loc>
-        <lastmod>2023-09-07T12:24:37.576Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
