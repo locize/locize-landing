@@ -2271,7 +2271,56 @@ block content
                     ]
                   }
                 }
-        
+
+          .col-lg-3.col-md-4.col-sm-12
+            .testimonial.testimonial-fullwidth
+              .testimonial-title
+                img.grayscale(style='max-height: 50px; max-width: 100%;', src='img/customers/tontine.svg' alt="Tontine Trust" loading="lazy")
+              .testimonial-content
+                p(style="font-size: 16px;") After trying different frustrating localization solutions, we stumbled upon Locize which solved a lot of problems for us.
+                p(style="font-size: 16px;") Seamless developer integration and not having to rebuild our React and Flutter apps on every little content change saved our small start up team a lot of time and effort.
+                p(style="font-size: 16px; margin-bottom: 0px;") The "InContext Editor" made it very easy for our content writers and designers to be able to edit text content without effort.
+              .author
+                hr
+                | Milosh Spasovski, Head of Frontend Development
+                br
+                a(href='https://tontine.com' target='_blank') Tontine Trust
+              script(type="application/ld+json").
+                {
+                  "@context": "http://schema.org/",
+                  "@type": "Review",
+                  "itemReviewed": {
+                    "@id": "https://locize.com/#software"
+                  },
+                  "author": {
+                    "@type": "Organization",
+                    "name": "Tontine Trust",
+                    "url": "https://tontine.com",
+                    "image": "https://locize.com/img/customers/tontine.svg",
+                    "member": {
+                      "@type": "Person",
+                      "name": "Milosh Spasovski"
+                    }
+                  },
+                  "description": "After trying different frustrating localization solutions, we stumbled upon Locize which solved a lot of problems for us. Seamless developer integration and not having to rebuild our React and Flutter apps on every little content change saved our small start up team a lot of time and effort. The \"InContext Editor\" made it very easy for our content writers and designers to be able to edit text content without effort.",
+                  "positiveNotes": {
+                    "@type": "ItemList",
+                    "itemListElement": [
+                      {
+                        "@type": "ListItem",
+                        "name": "After trying different frustrating localization solutions, we stumbled upon Locize which solved a lot of problems for us."
+                      },
+                      {
+                        "@type": "ListItem",
+                        "name": "Seamless developer integration and not having to rebuild our React and Flutter apps on every little content change saved our small start up team a lot of time and effort."
+                      },
+                      {
+                        "@type": "ListItem",
+                        "name": "The \"InContext Editor\" made it very easy for our content writers and designers to be able to edit text content without effort."
+                      }
+                    ]
+                  }
+                }
 
   section#contact.contact.bg-tertiary(i18next-options='{"ns": "common"}')
     .container
