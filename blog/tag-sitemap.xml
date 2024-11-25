@@ -4,35 +4,35 @@
 
     <url>
         <loc>https://locize.com/blog/tags/Software-Development/</loc>
-        <lastmod>2024-10-28T13:11:52.191Z</lastmod>
+        <lastmod>2024-11-25T14:17:27.479Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://locize.com/blog/tags/Globalization/</loc>
-        <lastmod>2024-10-28T13:11:52.191Z</lastmod>
+        <lastmod>2024-11-25T14:17:27.479Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://locize.com/blog/tags/Business/</loc>
-        <lastmod>2024-10-28T13:11:52.191Z</lastmod>
+        <lastmod>2024-11-25T14:17:27.479Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://locize.com/blog/tags/Localization/</loc>
-        <lastmod>2024-10-28T13:11:52.191Z</lastmod>
+        <lastmod>2024-11-25T14:17:27.479Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://locize.com/blog/tags/Translation/</loc>
-        <lastmod>2024-10-28T13:11:52.191Z</lastmod>
+        <lastmod>2024-11-25T14:17:27.479Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -332,14 +332,14 @@
     </url>
 
     <url>
-        <loc>https://locize.com/blog/tags/service/</loc>
+        <loc>https://locize.com/blog/tags/translation-management/</loc>
         <lastmod>2024-05-24T13:44:47.794Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://locize.com/blog/tags/translation-management/</loc>
+        <loc>https://locize.com/blog/tags/service/</loc>
         <lastmod>2024-05-24T13:44:47.794Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -675,13 +675,6 @@
     </url>
 
     <url>
-        <loc>https://locize.com/blog/tags/backend/</loc>
-        <lastmod>2023-02-08T17:05:06.762Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://locize.com/blog/tags/serverside/</loc>
         <lastmod>2023-02-08T17:05:06.762Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -690,6 +683,13 @@
 
     <url>
         <loc>https://locize.com/blog/tags/server/</loc>
+        <lastmod>2023-02-08T17:05:06.762Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://locize.com/blog/tags/backend/</loc>
         <lastmod>2023-02-08T17:05:06.762Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
