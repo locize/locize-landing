@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style id="antiClickjack">
+      body {
+        display:none !important;
+      }
+    </style>
+    <script type="text/javascript">
+      if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+      } else {
+        top.location = self.location;
+      }
+      
+    </script>
+    <meta name="description" content="locize - Bridging the gap between translation and development. With locize we remove the pain in the translation process. No more delays in shipping your software because of missing translations. Translator could keep up with changes from day one. The continuous localization process keeps up with your demanding business. Stop waiting - start localizing. The translation management system created by the creators of i18next. Designed for every type of i18n framework.">
+    <meta property="og:title" content="locize - continuous localization as a service">
+    <meta property="og:description" content="locize - Bridging the gap between translation and development. With locize we remove the pain in the translation process. No more delays in shipping your software because of missing translations. Translator could keep up with changes from day one. The continuous localization process keeps up with your demanding business. Stop waiting - start localizing.">
+    <meta name="twitter:title" content="locize - continuous localization as a service">
+    <meta name="twitter:description" content="locize - Bridging the gap between translation and development. With locize we remove the pain in the translation process. No more delays in shipping your software because of missing translations. Translator could keep up with changes from day one. The continuous localization process keeps up with your demanding business. Stop waiting - start localizing.">
+    <meta name="author" content="inweso GmbH">
+    <meta name="copyright" content="inweso GmbH">
+    <meta name="keywords" content="localization,internationalization,localize,translate,locize,l10n,i18n,javascript,nodejs,localization as a service,saas translation,saas localization,laas,continuous localization,DevOps,process,free,website localization,service,software,web app,web,mobile,desktop,game,translation management,online,automate,process of localization,localization process,translation service,localization service,translation software,landing page,javascript localize,localization tool,localizing a website,localization solution,cloud localization,cloud translation,serverless,cloud,cdn,react,react.js,reactjs,react-i18next,next,next.js,nextjs,next-i18next,svelte,svelte-i18n,svelte-i18next,angular,vue,vue-js,jquery,nodejs,i18next,json,api,react-native,localization api,translation api,app localization services,localization management platform,localization platform,professional translation and localization services,website translation management,app localization service,online translation management,i18next translation management,i18next translation,manage translations,manage translation files">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://locize.com">
+    <meta property="og:site_name" content="locize - continuous localization as a service">
+    <meta property="og:locale" content="en">
+    <meta property="og:image" content="img/locize_color.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@locize">
+    <meta name="slack-app-id" content="A71NM84Q6">
+    <link href="/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="lib/fontawesome/css/brands.min.css">
+    <link rel="stylesheet" href="lib/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="lib/fontawesome/css/regular.min.css">
+    <link rel="stylesheet" href="/lib/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="/lib/device-mockups/device-mockups.min.css">
+    <link href="/css/main.min.css" rel="stylesheet">
+    <!--if lt IE 9
+    script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+    script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+    
+    -->
+    <link href="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" rel="stylesheet" type="text/css">
+  </head>
+  <body id="page-top">
+    <nav class="navbar navbar-default navbar-fixed-top affix" id="mainNav" i18next-options="{&quot;ns&quot;: &quot;common&quot;}">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><i class="fa-solid fa-bars"></i></button><a class="navbar-brand" href="/"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown" id="featuresd"><a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Features<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/#features">Characteristics</a></li>
+                <li><a href="/#process">What is the software localization process?</a></li>
+                <li><a href="/#platform">What can our localization platform do?</a></li>
+                <li><a href="/how-it-works.html">How it works</a></li>
+                <li><a href="/for-your-team.html">For your team</a></li>
+              </ul>
+            </li>
+            <li><a href="/pricing.html">Pricing</a></li>
+            <li><a href="/customers.html">Success Stories</a></li>
+            <li class="dropdown" id="featuresd"><a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="https://docs.locize.com/">Documentation</a></li>
+                <li><a href="/services.html">Additional services</a></li>
+                <li> <a href="/blog/">Blog</a></li>
+                <li><a class="closeOnClick" href="/#contact">Contact</a></li>
+              </ul>
+            </li>
+            <li><a href="https://www.locize.app/login" target="_blank">Login<i class="fa-solid fa-lock" aria-hidden="true" style="margin-left: 5px;"></i></a></li>
+            <li><a class="btn btn-outline btn-xl" href="https://www.locize.app/register" style="background-color: #4caf50; color: white; border: none;">Start your free trial</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div style="margin-top: 50px;">
+      <section class="section-white" style="padding-bottom: 0;">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <div class="section-heading" style="margin-top: -20px;">
+                <h1>AI-powered Localization</h1>
+                <h2>Revolutionize Localization with AI</h2>
+                <p class="description">
+                  Achieve faster, smarter, and cost-effective localization using AI-powered tools. 
+                  Enhance accuracy and consistency without sacrificing speed.
+                </p><a class="btn btn-primary" href="https://www.locize.app/register">Get Started with AI Localization</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-primary" style="padding-bottom: 20px;">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Why Choose AI Localization?</h2>
+            <div class="benefits-grid">
+              <div class="benefit">
+                <h3><i class="fas fa-tachometer-alt" style="margin-right: 5px;"></i>Faster Time-to-Market</h3>
+                <p>
+                  AI accelerates the translation process, helping your team deliver content 
+                  to global markets faster than ever.
+                </p>
+              </div>
+              <div class="benefit">
+                <h3><i class="fas fa-check-circle" style="margin-right: 5px;"></i>Improved Accuracy</h3>
+                <p>
+                  Advanced machine learning ensures translations are precise and retain 
+                  context and tone.
+                </p>
+              </div>
+              <div class="benefit">
+                <h3><i class="fas fa-hand-holding-usd" style="margin-right: 5px;"></i>Cost-Effective</h3>
+                <p>Reduce localization costs by automating repetitive tasks and enhancing efficiency.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-tertiary">
+        <div class="container">
+          <h2>How AI Localization Works</h2>
+          <div class="steps">
+            <div class="step" style="display: flex; align-items: center; margin-bottom: 10px;">
+              <div class="step-icon"><img class="img-responsive modalify" style="width: 350px; min-width: 300px; max-width: 400px" src="img/screenshots/screen/ai_apikey_s.jpg" full="img/screenshots/screen/ai_apikey.png" alt="AI API Key" loading="lazy"></div>
+              <div class="step-text" style="padding-left: 20px;">
+                <h3>Bring your own API Key</h3>
+                <p>Add your&nbsp;<a href="https://openai.com" target="_blank">OpenAI</a>&nbsp;or&nbsp;<a href="https://mistral.ai" target="_blank">MistralAI</a>&nbsp;API Key this ensures data privacy and ownership. With your API key, you won't be tied to us.</p>
+              </div>
+            </div>
+            <div class="step" style="display: flex; align-items: center; margin-bottom: 10px;">
+              <div class="step-icon"><img class="img-responsive modalify" style="width: 350px; min-width: 300px; max-width: 400px" src="img/screenshots/screen/ai_model_s.jpg" full="img/screenshots/screen/ai_model.png" alt="AI Model" loading="lazy"></div>
+              <div class="step-text" style="padding-left: 20px;">
+                <h3>Select your favourite model</h3>
+                <p>Language Models (LLMs) revolutionize translation efficiency, delivering translations that are 95% ready for publication in real-world UI localization projects.</p>
+              </div>
+            </div>
+            <div class="step" style="display: flex; align-items: center; margin-bottom: 10px;">
+              <div class="step-icon"><img class="img-responsive modalify" style="width: 350px; min-width: 300px; max-width: 400px" src="img/screenshots/screen/ai_context_s.jpg" full="img/screenshots/screen/ai_context.png" alt="AI Context" loading="lazy"></div>
+              <div class="step-text" style="padding-left: 20px;">
+                <h3>Define some custom context</h3>
+                <p>AI’s contextual understanding enhances translation quality, allowing translators to focus on reviewing and refining translations for greater accuracy, while managers leverage AI to streamline and automate the entire process.</p>
+                <p>Receive context-aware translations. At locize, you can provide context per project, language, namespace and key/string levels.</p>
+              </div>
+            </div>
+            <div class="step" style="display: flex; align-items: center; margin-bottom: 10px;">
+              <div class="step-icon"><img class="img-responsive modalify" style="width: 350px; min-width: 300px; max-width: 400px" src="img/screenshots/screen/glossary_example_s.jpg" full="img/screenshots/screen/glossary_example.png" alt="Glossary" loading="lazy"></div>
+              <div class="step-text" style="padding-left: 20px;">
+                <h3>Train AI using your glossaries and translation memories (TMs)</h3>
+                <p>
+                  We automatically provide the relevant terminology and translation memory to train the AI.
+                  You just need to continue to use our normal <a href="https://docs.locize.com/whats-inside/glossary">glossary</a>&nbsp;and&nbsp;<a href="https://docs.locize.com/whats-inside/translation-memory">translation memory</a>&nbsp;features, as usual.
+                </p>
+              </div>
+            </div>
+            <div class="step" style="display: flex; align-items: center; margin-bottom: 10px;">
+              <div class="step-icon"><img class="img-responsive modalify" style="width: 350px; min-width: 300px; max-width: 400px" src="img/screenshots/screen/ai_bulk_s.jpg" full="img/screenshots/screen/ai_bulk.png" alt="AI bulk" loading="lazy"></div>
+              <div class="step-text" style="padding-left: 20px;">
+                <h3>Use it like MT</h3>
+                <p>Like the classic integrated machine translations, you can use the integrated generative AI's for single segments or via <a href="https://docs.locize.com/different-views/global#bulk-actions">bulk actions</a>&nbsp;or via&nbsp;<a href="https://docs.locize.com/whats-inside/auto-machine-translation">automatic translation workflow</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center"><a class="btn btn-primary" href="https://www.locize.app/register">Convince yourself and try it now!</a></div>
+          </div>
+        </div>
+      </section>
+      <section class="use-cases">
+        <div class="container">
+          <h2>AI Localization for All Use Cases</h2>
+          <p class="description">With Locize's generative AI-powered localization tools, you can streamline the translation and adaptation of content across a wide range of software types. From websites to mobile apps, games, and platforms, our AI technology ensures faster, more accurate, and contextually relevant translations for every use case.</p>
+          <div class="use-cases-grid">
+            <div class="use-case">
+              <h3><i class="fas fa-globe" style="margin-right: 5px;"></i>Website Localization</h3>
+              <p>Leverage our generative AI to automate and optimize the translation of web applications, from frontend frameworks like React.js, Angular, and Vue.js to backend systems and landing pages. Ensure your website is perfectly localized for a global audience.</p>
+            </div>
+            <div class="use-case">
+              <h3><i class="fas fa-mobile-alt" style="margin-right: 5px;"></i>Mobile App Localization</h3>
+              <p>Take advantage of AI-driven translation models to simplify and accelerate the localization of mobile apps, ensuring consistency and accuracy across platforms while reducing manual work.</p>
+            </div>
+            <div class="use-case">
+              <h3><i class="fas fa-gamepad" style="margin-right: 5px;"></i>Video Game Localization</h3>
+              <p>Utilize generative AI to automate the translation of in-game content, improving quality and consistency while significantly reducing the time and effort required to localize your game for different languages.</p>
+            </div>
+            <div class="use-case">
+              <h3><i class="fas fa-cogs" style="margin-right: 5px;"></i>Platform Localization</h3>
+              <p>With AI-powered translation models, integrate multiple languages into your platform's software solutions, providing enhanced user experiences for a global audience and ensuring fast and efficient localization.</p>
+            </div>
+            <div class="use-case">
+              <h3><i class="fas fa-pencil-ruler" style="margin-right: 5px;"></i>Website Builders</h3>
+              <p>Use AI-enhanced translation tools specifically designed for website builders like WordPress, Shopify, and others, allowing flexible and scalable localization for a variety of web projects.</p>
+            </div>
+            <div class="use-case">
+              <h3><i class="fas fa-plug" style="margin-right: 5px;"></i>Any Software Integration</h3>
+              <p>Locize’s AI seamlessly integrates with any software through our API, CLI, or GitHub Actions, enabling generative AI translations that synchronize smoothly with your existing codebase and workflows.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cta">
+        <div class="cta-content">
+          <div class="container">
+            <h2>Ready to Experience AI Localization?</h2>
+            <h3>Take the first step toward smarter and faster localization. Try AI localization tools for free today.</h3><a class="btn btn-outline btn-xl page-scroll" href="https://www.locize.app/register" style="background-color: #4caf50; color: white; border: none;">Start your free trial</a>
+          </div>
+        </div>
+        <div class="overlay"></div>
+      </section>
+    </div>
+    <footer i18next-options="{&quot;ns&quot;: &quot;common&quot;}">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4"><img src="/img/locize_color.svg" style="max-width: 120px; margin-left: -5px;" alt="locize logo" loading="lazy">
+            <p><a href="https://tg.chregister.ch/cr-portal/auszug/auszug.xhtml?uid=CHE-412.131.272" target="_blank" style="color: #ffffff4d;" rel="nofollow">inweso GmbH</a></p>
+            <p>Switzerland<span style="color: white; font-size: 20px; position: relative; top: 3px; left: 5px;">🇨🇭</span></p>
+            <ul class="list-unstyled">
+              <li><a href="mailto:support@locize.com">support@locize.com</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li><a href="https://docs.locize.com">Technical Documentation</a></li>
+              <li><a href="https://docs.locize.com/integration/api">API</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/pricing.html">Pricing</a></li>
+              <li><a href="/blog/">Blog</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li>
+                <ul class="list-inline list-social">
+                  <li class="social-twitter"><a href="https://x.com/locize" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                  <li class="social-facebook"><a href="https://www.facebook.com/locize" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                  <li class="social-youtube"><a href="https://www.youtube.com/channel/UCPYQjBbbXojUcB8qjeIB3uA" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+              </li>
+              <li><a href="/privacy.html">Privacy</a></li>
+              <li><a href="/terms.html">Terms</a></li>
+              <li><a href="/security.html">Security</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-center footer-copyright">
+          <p><span class="translated">&copy; 2024 </span><span>inweso GmbH. All Rights Reserved.</span></p>
+        </div>
+      </div>
+    </footer>
+    <div class="modalify-modal" id="modalify-modal">
+      <div class="modal-header">
+        <button class="close modalify-close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div><img class="modal-content" id="img-in-modal" loading="lazy">
+      <div id="caption-in-modal"></div>
+    </div>
+    <script>window.bindAffix = false;</script>
+    <script src="/lib/jquery/jquery.min.js"></script>
+    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="/js/main.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var modal = document.getElementById("modalify-modal");
+      
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var imgs = document.getElementsByClassName("modalify");
+        var modalImg = document.getElementById("img-in-modal");
+        var captionText = document.getElementById("caption-in-modal");
+      
+        for (var i = 0; i < imgs.length; i++) {
+          var img = imgs[i];
+          img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.getAttribute('full');
+            if (this.alt) captionText.innerHTML = this.alt;
+          }
+        }
+      
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("modalify-close")[0];
+      
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+        };
+        modal.onclick = function() { 
+          modal.style.display = "none";
+        };
+      });
+      
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+      function enableCookies() {
+          var e = document.createElement("script");
+          e.type = "text/javascript";
+          e.async = true;
+          e.src = "https://www.googletagmanager.com/gtag/js?id=G-X50E21BGKG";
+          var a = document.getElementsByTagName("script")[0];
+          a.parentNode.insertBefore(e, a);
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-X50E21BGKG', { 'anonymize_ip': true });
+          //- gtag('config', 'UA-78143856-1', { 'anonymize_ip': true });
+      
+          if (typeof window.enableCookiesHook === 'function') window.enableCookiesHook();
+      }
+      
+      function disableCookies() {
+          var cookies = document.cookie.split(";");
+          for (var i = 0; i < cookies.length; i++) {
+              var cookie = cookies[i];
+              var eqPos = cookie.indexOf("=");
+              var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+              document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+          }
+      
+          if (typeof window.disableCookiesHook === 'function') window.disableCookiesHook();
+      }
+      
+      window.cookieconsent.initialise({
+          palette: {
+              popup: {
+                  background: "#2196f3",
+                  text: "#ffffff"
+              },
+              button: {
+                  background: "#1976d2",
+                  text: "#ffffff"
+              }
+          },
+          theme: "edgeless",
+          type: "opt-in",
+          content: {
+              message: "This website uses cookies to ensure you get the best experience on our website.",
+              allow: "Accept",
+              dismiss: "Decline",
+              link: "learn",
+              href: "https://locize.com/privacy.html"
+          },
+          elements: {
+              deny: '<a style="font-weight: 100; color: #ffffffa8; font-size: smaller;" aria-label="deny cookies" role="button" tabindex="0" class="cc-btn cc-deny">Decline</a>'
+          },
+          onInitialise: function (status) {
+              var type = this.options.type;
+              var didConsent = this.hasConsented();
+              if (type == 'opt-in' && didConsent) {
+                  // enable cookies
+                  enableCookies();
+              }
+              if (type == 'opt-out' && !didConsent) {
+                  // disable cookies
+                  disableCookies();
+              }
+          },
+          onStatusChange: function(status, chosenBefore) {
+              var type = this.options.type;
+              var didConsent = this.hasConsented();
+              if (type == 'opt-in' && didConsent) {
+                  // enable cookies
+                  enableCookies();
+              }
+              if (type == 'opt-out' && !didConsent) {
+                  // disable cookies
+                  disableCookies();
+              }
+          },
+          onRevokeChoice: function() {
+              var type = this.options.type;
+              if (type == 'opt-in') {
+                  // disable cookies
+                  disableCookies();
+              }
+              if (type == 'opt-out') {
+                  // enable cookies
+                  enableCookies();
+              }
+          }
+      });
+    </script>
+  </body>
+</html>
