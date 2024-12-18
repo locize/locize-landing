@@ -65,6 +65,11 @@
   }
 
   if (window.locizify && window.locizify.i18next) {
+    window.locizify.i18next.on('initialized', function() {
+      if (window.locizify.i18next.resolvedLanguage) {
+        CookieConsent.setLanguage(window.locizify.i18next.resolvedLanguage);
+      }
+    });
     window.locizify.i18next.on('languageChanged', function(lng) {
       CookieConsent.setLanguage(lng);
     });
