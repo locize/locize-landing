@@ -64,9 +64,11 @@
     }
   }
 
-  window.locizify.i18next.on('languageChanged', function(lng) {
-    CookieConsent.setLanguage(lng);
-  });
+  if (window.locizify && window.locizify.i18next) {
+    window.locizify.i18next.on('languageChanged', function(lng) {
+      CookieConsent.setLanguage(lng);
+    });
+  }
 
   window.CookieConsent.run({
     cookie: {
