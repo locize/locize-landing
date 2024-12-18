@@ -47,7 +47,8 @@
     script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
     
     -->
-    <link href="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/gh/orestbida/iframemanager@1.2.5/dist/iframemanager.css" rel="stylesheet" type="text/css">
     <title>JavaScript localization: A step-by-step introductory guide</title>
     <link rel="canonical" href="/javascript-localization.html">
   </head>
@@ -180,9 +181,9 @@ i18next
               <div class="section-heading" style="margin-bottom: 20px;">
                 <h2>Choose your framework</h2>
                 <p class="head" style="margin-bottom: 20px;">
-                  For famous JavaScript frameworks locize is very easy to integrate through the <a href="https://www.i18next.com/" title="javascript-localization-library">JavaScript localization library</a> i18next.</p><a class="btn btn-outline btn-xl watch-yt-video-btn" href="https://youtu.be/SA_9i4TtxLQ" target="_blank" style="background-color: #15419a!important">Watch: i18next Crash Course</a>
-                <div class="embed-responsive embed-responsive-16by9 yt-video" style="display: none;">
-                  <iframe class="embed-responsive-item" width="100%" height="250" src="https://www.youtube-nocookie.com/embed/SA_9i4TtxLQ?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                  For famous JavaScript frameworks locize is very easy to integrate through the <a href="https://www.i18next.com/" title="javascript-localization-library">JavaScript localization library</a> i18next.</p>
+                <div class="embed-responsive embed-responsive-16by9 yt-video">
+                  <div data-service="youtube" data-autoscale data-id="SA_9i4TtxLQ"></div>
                 </div>
                 <hr>
               </div>
@@ -297,17 +298,17 @@ i18next
                 <h2>Automate translation work (the smart way)</h2>
                 <p>Congratulations you have decided to read about a robotic way to switch the language for any type of software. So this is for you. It's awesome which functionalities you can unleash for a small amount of money. Watch our videos and admire what you get from only five USD per month.</p><br><br>
                 <div class="div" style="display:flex;flex-wrap:wrap;align-items: stretch;">
-                  <div class="div" style="width:500px;margin: 2rem;"><a class="btn btn-outline btn-xl watch-yt-video-btn" href="https://youtu.be/osScyaGMVqo" target="_blank" style="background-color: #15419a!important">Watch: react-i18next and locize</a>
-                    <div class="embed-responsive embed-responsive-16by9 yt-video" style="display: none;">
-                      <iframe class="embed-responsive-item" width="100%" height="250" src="https://www.youtube-nocookie.com/embed/osScyaGMVqo?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                  <div class="div" style="width:500px;margin: 2rem;">
+                    <div class="embed-responsive embed-responsive-16by9 yt-video">
+                      <div data-service="youtube" data-autoscale data-id="osScyaGMVqo"></div>
                     </div>
                   </div>
                   <div class="div" style="width:500px;padding: 2rem;">
                     <p>Use the full power of the i18next library together with locize, a <a href="/" title="localization management platform">localization management platform</a> by the founders of i18next, which can automate the translation workflow in the locize app.</p>
                   </div>
-                  <div class="div" style="width:500px;margin: 2rem;"><a class="btn btn-outline btn-xl watch-yt-video-btn" href="https://youtu.be/VfxBpSXarlU" target="_blank" style="background-color: #15419a!important">Watch: automatic machine translation</a>
-                    <div class="embed-responsive embed-responsive-16by9 yt-video" style="display: none;">
-                      <iframe class="embed-responsive-item" width="100%" height="250" src="https://www.youtube-nocookie.com/embed/VfxBpSXarlU?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+                  <div class="div" style="width:500px;margin: 2rem;">
+                    <div class="embed-responsive embed-responsive-16by9 yt-video">
+                      <div data-service="youtube" data-autoscale data-id="VfxBpSXarlU"></div>
                     </div>
                   </div>
                   <div class="div" style="width:500px;padding: 2rem;">
@@ -522,97 +523,37 @@ i18next
       });
       
     </script>
-    <script src="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <button class="consent-button" type="button" data-cc="show-consentModal" style="position: fixed; bottom: 10px; right: 10px;"><i class="fas fa-cookie"></i></button>
     <script>
-      function enableCookies() {
-          var e = document.createElement("script");
-          e.type = "text/javascript";
-          e.async = true;
-          e.src = "https://www.googletagmanager.com/gtag/js?id=G-X50E21BGKG";
-          var a = document.getElementsByTagName("script")[0];
-          a.parentNode.insertBefore(e, a);
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
-          }
-          gtag('js', new Date());
-          gtag('config', 'G-X50E21BGKG', { 'anonymize_ip': true });
-          //- gtag('config', 'UA-78143856-1', { 'anonymize_ip': true });
-      
-          if (typeof window.enableCookiesHook === 'function') window.enableCookiesHook();
-      }
-      
-      function disableCookies() {
-          var cookies = document.cookie.split(";");
-          for (var i = 0; i < cookies.length; i++) {
-              var cookie = cookies[i];
-              var eqPos = cookie.indexOf("=");
-              var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-              document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-          }
-      
-          if (typeof window.disableCookiesHook === 'function') window.disableCookiesHook();
-      }
-      
-      window.cookieconsent.initialise({
-          palette: {
-              popup: {
-                  background: "#2196f3",
-                  text: "#ffffff"
-              },
-              button: {
-                  background: "#1976d2",
-                  text: "#ffffff"
-              }
-          },
-          theme: "edgeless",
-          type: "opt-in",
-          content: {
-              message: "This website uses cookies to ensure you get the best experience on our website.",
-              allow: "Accept",
-              dismiss: "Decline",
-              link: "learn",
-              href: "https://locize.com/privacy.html"
-          },
-          elements: {
-              deny: '<a style="font-weight: 100; color: #ffffffa8; font-size: smaller;" aria-label="deny cookies" role="button" tabindex="0" class="cc-btn cc-deny">Decline</a>'
-          },
-          onInitialise: function (status) {
-              var type = this.options.type;
-              var didConsent = this.hasConsented();
-              if (type == 'opt-in' && didConsent) {
-                  // enable cookies
-                  enableCookies();
-              }
-              if (type == 'opt-out' && !didConsent) {
-                  // disable cookies
-                  disableCookies();
-              }
-          },
-          onStatusChange: function(status, chosenBefore) {
-              var type = this.options.type;
-              var didConsent = this.hasConsented();
-              if (type == 'opt-in' && didConsent) {
-                  // enable cookies
-                  enableCookies();
-              }
-              if (type == 'opt-out' && !didConsent) {
-                  // disable cookies
-                  disableCookies();
-              }
-          },
-          onRevokeChoice: function() {
-              var type = this.options.type;
-              if (type == 'opt-in') {
-                  // disable cookies
-                  disableCookies();
-              }
-              if (type == 'opt-out') {
-                  // enable cookies
-                  enableCookies();
-              }
-          }
+      // Define dataLayer and the gtag function.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied'
       });
+      
+      //- (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      //- new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      //- j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      //- 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      //- })(window,document,'script','dataLayer','G-X50E21BGKG');
+      
     </script>
+    <script type="text/plain" data-category="analytics" data-service="ga">
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted'
+      });
+      
+    </script>
+    <script type="text/plain" data-category="!analytics" data-service="ga">
+      gtag('consent', 'update', {
+        'analytics_storage': 'denied'
+      });
+      
+    </script>
+    <script src="//cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.umd.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/orestbida/iframemanager@1.2.5/dist/iframemanager.js"></script>
+    <script src="/js/consent.min.js"></script>
   </body>
 </html>

@@ -69,9 +69,8 @@ block content
             a(href="https://www.i18next.com/overview/comparison-to-others", target="_blank") Here you can find more information about why i18next is special.
           br
           h3(style="font-weight: 500") New to i18next?
-          a.btn.btn-outline.btn-xl.watch-yt-video-btn(href='https://youtu.be/SA_9i4TtxLQ', target='_blank', style="background-color: #15419a!important") Then have a look at this i18next crash course video.
-          .embed-responsive.embed-responsive-16by9.yt-video(style="display: none;")
-            iframe.embed-responsive-item(width='100%', height='250', src='https://www.youtube-nocookie.com/embed/SA_9i4TtxLQ?rel=0&controls=0&showinfo=0', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+          .embed-responsive.embed-responsive-16by9.yt-video
+            div(data-service="youtube" data-autoscale data-id="SA_9i4TtxLQ")
 
   section.section-gray#how-does-i18next-work
     .container
@@ -208,9 +207,8 @@ block content
             h2 Already using i18next?
             p.text-muted Then the locize integration will be a breeze and you will manage your translation files with ease.
             hr
-            a.btn.btn-outline.btn-xl.watch-yt-video-btn(href='https://youtu.be/jeRxew3OV64', target='_blank', style="background-color: #15419a!important") Then have a look at this video.
-            .embed-responsive.embed-responsive-16by9.yt-video(style="display: none;")
-              iframe.embed-responsive-item(width='100%', height='250', src='https://www.youtube-nocookie.com/embed/jeRxew3OV64?rel=0&controls=0&showinfo=0', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+            .embed-responsive.embed-responsive-16by9.yt-video
+              div(data-service="youtube" data-autoscale data-id="jeRxew3OV64")
 
       .row
         .col-lg-12
@@ -380,16 +378,6 @@ block content
       h2 Need some assistance?
       p Get any questions you may have about our pricing or platform answered by one of our team members.
       a.btn.btn-outline.btn-xl.page-scroll(href='mailto:support@locize.com') Contact us!
-
-  script.
-    window.enableCookiesHook = function () {
-      $('.yt-video').show();
-      $('.watch-yt-video-btn').hide();
-    };
-    window.disableCookiesHook = function () {
-      $('.yt-video').hide();
-      $('.watch-yt-video-btn').show();
-    };
 
   script(type="application/ld+json").
     {

@@ -76,7 +76,7 @@ gulp.task(
 // Minify JS
 gulp.task("minify-js", function() {
   return gulp
-    .src("js/main.js")
+    .src("js/*.js", { ignore: 'js/*.min.js' })
     .pipe(uglify())
     .pipe(header(banner, { pkg: pkg }))
     .pipe(rename({ suffix: ".min" }))

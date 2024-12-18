@@ -47,7 +47,8 @@
     script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
     
     -->
-    <link href="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/gh/orestbida/iframemanager@1.2.5/dist/iframemanager.css" rel="stylesheet" type="text/css">
     <title>How locize works: For traditionalists, automators or innovators</title>
     <link rel="canonical" href="/how-it-works.html">
   </head>
@@ -386,97 +387,37 @@
       });
       
     </script>
-    <script src="//cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <button class="consent-button" type="button" data-cc="show-consentModal" style="position: fixed; bottom: 10px; right: 10px;"><i class="fas fa-cookie"></i></button>
     <script>
-      function enableCookies() {
-          var e = document.createElement("script");
-          e.type = "text/javascript";
-          e.async = true;
-          e.src = "https://www.googletagmanager.com/gtag/js?id=G-X50E21BGKG";
-          var a = document.getElementsByTagName("script")[0];
-          a.parentNode.insertBefore(e, a);
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
-          }
-          gtag('js', new Date());
-          gtag('config', 'G-X50E21BGKG', { 'anonymize_ip': true });
-          //- gtag('config', 'UA-78143856-1', { 'anonymize_ip': true });
-      
-          if (typeof window.enableCookiesHook === 'function') window.enableCookiesHook();
-      }
-      
-      function disableCookies() {
-          var cookies = document.cookie.split(";");
-          for (var i = 0; i < cookies.length; i++) {
-              var cookie = cookies[i];
-              var eqPos = cookie.indexOf("=");
-              var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-              document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-          }
-      
-          if (typeof window.disableCookiesHook === 'function') window.disableCookiesHook();
-      }
-      
-      window.cookieconsent.initialise({
-          palette: {
-              popup: {
-                  background: "#2196f3",
-                  text: "#ffffff"
-              },
-              button: {
-                  background: "#1976d2",
-                  text: "#ffffff"
-              }
-          },
-          theme: "edgeless",
-          type: "opt-in",
-          content: {
-              message: "This website uses cookies to ensure you get the best experience on our website.",
-              allow: "Accept",
-              dismiss: "Decline",
-              link: "learn",
-              href: "https://locize.com/privacy.html"
-          },
-          elements: {
-              deny: '<a style="font-weight: 100; color: #ffffffa8; font-size: smaller;" aria-label="deny cookies" role="button" tabindex="0" class="cc-btn cc-deny">Decline</a>'
-          },
-          onInitialise: function (status) {
-              var type = this.options.type;
-              var didConsent = this.hasConsented();
-              if (type == 'opt-in' && didConsent) {
-                  // enable cookies
-                  enableCookies();
-              }
-              if (type == 'opt-out' && !didConsent) {
-                  // disable cookies
-                  disableCookies();
-              }
-          },
-          onStatusChange: function(status, chosenBefore) {
-              var type = this.options.type;
-              var didConsent = this.hasConsented();
-              if (type == 'opt-in' && didConsent) {
-                  // enable cookies
-                  enableCookies();
-              }
-              if (type == 'opt-out' && !didConsent) {
-                  // disable cookies
-                  disableCookies();
-              }
-          },
-          onRevokeChoice: function() {
-              var type = this.options.type;
-              if (type == 'opt-in') {
-                  // disable cookies
-                  disableCookies();
-              }
-              if (type == 'opt-out') {
-                  // enable cookies
-                  enableCookies();
-              }
-          }
+      // Define dataLayer and the gtag function.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied'
       });
+      
+      //- (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      //- new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      //- j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      //- 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      //- })(window,document,'script','dataLayer','G-X50E21BGKG');
+      
     </script>
+    <script type="text/plain" data-category="analytics" data-service="ga">
+      gtag('consent', 'update', {
+        'analytics_storage': 'granted'
+      });
+      
+    </script>
+    <script type="text/plain" data-category="!analytics" data-service="ga">
+      gtag('consent', 'update', {
+        'analytics_storage': 'denied'
+      });
+      
+    </script>
+    <script src="//cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.0.1/dist/cookieconsent.umd.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/orestbida/iframemanager@1.2.5/dist/iframemanager.js"></script>
+    <script src="/js/consent.min.js"></script>
   </body>
 </html>
