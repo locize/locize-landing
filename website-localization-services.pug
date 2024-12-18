@@ -45,9 +45,8 @@ block content
             hr
             .row
               .col-md-6
-                a.btn.btn-outline.btn-xl.watch-yt-video-btn(href='https://youtu.be/TFV_vhJs5DY', target='_blank', style="background-color: #15419a!important") Watch: locize showcase
-                .embed-responsive.embed-responsive-16by9.yt-video(style="display: none;")
-                  iframe.embed-responsive-item(width='100%', height='250', src='https://www.youtube-nocookie.com/embed/TFV_vhJs5DY?rel=0&controls=0&showinfo=0', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+                .embed-responsive.embed-responsive-16by9.yt-video
+                  div(data-service="youtube" data-autoscale data-id="TFV_vhJs5DY")
 
               .col-md-6
                 p This video explains <b>how to begin, upload text for translation, and integrate</b> locize into your website's code.

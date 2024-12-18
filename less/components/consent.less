@@ -1,8 +1,42 @@
-.cc_banner.cc_container.cc_container--open {
-  background-color: rgba(0,0,0,0.7) !important;
+#cc-main {
+  /** Change button primary color to black **/
+  --cc-btn-primary-bg: #1976D2;
+  --cc-btn-primary-border-color: #000000;
+  --cc-btn-primary-hover-bg: #213657;
+  --cc-btn-primary-hover-border-color: #444444;
+
+  /** Also make toggles the same color as the button **/
+  --cc-toggle-on-bg: var(--cc-btn-primary-bg);
+
+  /** Make the buttons a bit rounder **/
+  --cc-btn-border-radius: 10px;
 }
-.cc_btn.cc_btn_accept_all {
-  border-radius: 0 !important;
-  color: #fff !important;
-  background-color: #1976D2 !important;
+
+#cc-main .cm {
+  min-width: 300px;
+}
+
+#cc-main .cm__link-group {
+  font-size: .5em !important;
+}
+
+.consent-button {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  padding: 6px 8px;
+  background-color: #1976D2; /* Green background */
+  color: #fff; /* White text */
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  border: none;
+  border-radius: 50%; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.consent-button:hover {
+  background-color: #1761ac; /* Slightly darker */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
 }
