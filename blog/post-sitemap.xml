@@ -9,6 +9,14 @@
 
 
     <url>
+        <loc>https://locize.com/blog/product-localization/</loc>
+        <lastmod>2024-12-24T22:23:45.923Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://locize.com/blog/ai-vs-mt-vs-tm/</loc>
         <lastmod>2024-12-20T08:47:29.252Z</lastmod>
         <changefreq>weekly</changefreq>
