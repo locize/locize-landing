@@ -12,7 +12,7 @@ if (typeof locizify !== 'undefined') {
       if (lng.translated[locizify.i18next.options.backend.version] === undefined || lng.translated[locizify.i18next.options.backend.version] < 0.9) return;
       var optEle = document.createElement('LI');
       var aEle = document.createElement('A')
-      aEle.setAttribute('href', '/?lng=' + l);
+      aEle.setAttribute('href', window.location.pathname + '?lng=' + l);
       aEle.innerHTML = lng.nativeName;
       if (locizify.i18next.resolvedLanguage === l) {
         aEle.style.fontWeight = 'bold';
