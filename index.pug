@@ -58,7 +58,7 @@ html(lang='en')
       script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
 
     // LOCIZIFY
-    script(src='https://cdn.jsdelivr.net/npm/locizify' cdnType='pro')
+    script(src='https://cdn.jsdelivr.net/npm/locizify')
     script.
       window.locizifySSG = function () {
         document.querySelector('meta[property="og:title"]').setAttribute("content", locizify.i18next.t('title'));
@@ -77,7 +77,8 @@ html(lang='en')
           apiKey: 'key', // only needed if you like to add missing segments
           referenceLng: 'en',
           version: 'production',
-          autoPilot: true
+          autoPilot: true,
+          cdnType: 'pro'
         },
         editor: {
           bodyStyle: 'width: calc(100% - 505px);'
