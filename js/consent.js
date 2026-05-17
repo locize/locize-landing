@@ -43,6 +43,7 @@
   });
 
   function loadGoogleTagManagerScript() {
+    return; // shortcut since unused
     if (window.gtmScriptLoaded) return;
     var e = document.createElement("script");
     e.type = "text/javascript";
