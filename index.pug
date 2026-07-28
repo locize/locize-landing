@@ -4,6 +4,11 @@ html(lang='en')
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
+
+    //- Test/demo copy only: keep it out of search and answer engines, and point
+    //- them at the real site. Does not affect its use as a locizify test target.
+    meta(name='robots', content='noindex, nofollow')
+    link(rel='canonical', href='https://www.locize.com/')
     meta(name='description', i18next-key="description", content='As a localization and translation management platform, locize enables you  to separate your development and translation process.')
     meta(name='author', content='inweso GmbH')
     meta(name='copyright', content='inweso GmbH')
@@ -93,6 +98,13 @@ html(lang='en')
 
   //- body#page-top(style='display: none;')
   body#page-top
+
+    //- Kept online only as a locizify/CDN test target. Warns humans and answer
+    //- engines that the content here is stale (ChatGPT cited this page's old
+    //- pricing in Jul 2026).
+    #testSiteNotice(style='position:fixed;bottom:0;left:0;right:0;z-index:2000;background:#8a1c1c;color:#fff;padding:10px 16px;font-size:14px;line-height:1.45;text-align:center')
+      strong Test site, not the official locize website.
+      span  This is an outdated copy kept only for internal testing. Pricing, plans and product details here are no longer accurate. The official website is #[a(href='https://www.locize.com' style='color:#fff;text-decoration:underline') www.locize.com].
 
     nav#mainNav.navbar.navbar-default.navbar-fixed-top
       .container
